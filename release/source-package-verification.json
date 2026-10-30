@@ -1,5 +1,5 @@
 {
-  "verified_utc": "2026-10-30T21:21:38.495871+00:00",
+  "verified_utc": "2026-10-30T21:49:51.898011+00:00",
   "passed": true,
   "checks": [
     {
@@ -140,8 +140,8 @@
     {
       "game": "karnov",
       "passed": true,
-      "rom_sha256": "5460212f3f32fcfa716c13bde39a690abcd3e57d04c273d5f267f38b3eec6882",
-      "patch_sha256": "7bb89522e3d314103e20d66364faed6e94a70e75cbe5556077726ea33fdb3959",
+      "rom_sha256": "68c2e24f1ce5817b50f649a719d02f52416c94f51084f0710afe2266ddec44bb",
+      "patch_sha256": "c73970e374a71dfd4529b91fe43488546df4b07df7f51fa4880099022fc299d6",
       "rebuilt_rom_matches": true,
       "rebuilt_patch_matches": true,
       "ips_round_trip": true
@@ -149,8 +149,8 @@
     {
       "game": "rygar",
       "passed": true,
-      "rom_sha256": "4621fd029190a1382fdfe63966e8d3fd2f603ddb72f701c64abb4f1692cc3264",
-      "patch_sha256": "56697fd478d30295ae13ea02542cc32ec78ba1296d1a79d09eb135b3602e19ba",
+      "rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+      "patch_sha256": "99c9d4f07711881dc45be26cfab7647f5fda6238e9a2cf22b6c4adeb43d823ca",
       "rebuilt_rom_matches": true,
       "rebuilt_patch_matches": true,
       "ips_round_trip": true

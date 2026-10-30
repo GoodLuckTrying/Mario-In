@@ -53,6 +53,7 @@ The original 64 KiB CHR payload is retained byte for byte.
 | Fixed `$D19B`; physical bank 12 `$A0ED` | Stage and checkpoint/life initialization |
 | Physical bank 11 `$A003` | Complete four-cell Mario body; native sprite-zero marker retained |
 | Fixed `$C046` | Palette allocation after the native OAM page is complete |
+| Physical bank 12 `$A01E`; fixed `$E0B1` | Two vertical camera pixels and both terrain upload packets |
 | Fixed `$E093/$E09E` | Vblank palette upload and original CHR-register masking |
 | Fixed `$C969/$CCA7` | Stomp handling and existing enemy damage processing |
 
@@ -69,9 +70,15 @@ free palette is assigned to Mario. During native injury, HUD and weapon sprites
 keep their normal shared shades while Mario keeps his Fire colors. Allocation
 never relies on the previous frame's enemy palette usage.
 
+The lives screen and native entrance use Mario before their first visible DMA.
+Vertical camera strips advance two pixels per update, preserving both original
+tile/attribute packets and any HUD rows. An airborne viewport guard waits for
+an available native scroll instead of treating its lower edge as a pit. Grounded
+support remains native, and falling into a real pit still triggers death.
+
 ## Verification and limits
 
-The current receipt contains 17 checks. The source comparison executes 110
+The current receipt contains 18 checks. The source comparison executes 110
 cases and 15,400 movement updates against verbatim assembled routines from
 `smb1base` commit `46ff88f7d9e854db80bf8d50e5bf74340fcc64ce`, with SMB2J features
 disabled. Separate 6502 cases exercise native enemy damage, stomp rejection,
@@ -85,6 +92,11 @@ repeated floor bounces, the original attack and fireball world speed while the
 camera scrolls. Controlled contacts and native stage selection are used in
 these fixtures. This is not a complete campaign clear or a physical-console
 test, and it does not establish constant 60 Hz in every scene.
+
+The presentation/camera regression checks the first visible life/entrance
+sprites, up/down strip speed and upload timing. Controlled terrain checks
+separately require lower-ground landing, continued support, and real-pit death.
+The physical jump test measures world displacement as the camera moves.
 
 Sprite-sheet credit for the collection: **metalwario64** and **superphanto**.
 Project testing credits: **cecilou**, **jroweboy** and **fanatik**. Original SMB1

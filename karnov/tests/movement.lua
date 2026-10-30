@@ -1,4 +1,5 @@
 local f=0;local entered=nil;local peak=0;local base=0;local maxSpeed=0;local stopped=nil;local jumps=0;local duck=false;local updates=0
+local cameraY=0;local cameraOffset=0
 local function r(a)return emu.read(a,emu.memType.nesDebug)end
 local function w(a,v)emu.write(a,v&255,emu.memType.nesDebug)end
 emu.addEventCallback(function()
@@ -14,8 +15,13 @@ emu.addMemoryCallback(function()
  end
  updates=updates+1
  local t=f-entered
- if t==0 then base=r(0x64)end
- peak=math.max(peak,base-r(0x64));maxSpeed=math.max(maxSpeed,r(H.M_SMB_X_ABS))
+ if t==0 then base=r(0x64);cameraY=r(0x0d)end
+ local delta=r(0x0d)-cameraY
+ if delta>120 then delta=delta-240 elseif delta< -120 then delta=delta+240 end
+ cameraOffset=cameraOffset+delta;cameraY=r(0x0d)
+ -- Camera speed changes screen rise; use world displacement for the first jump.
+ if t<80 then peak=math.max(peak,base-r(0x64)-cameraOffset)end
+ maxSpeed=math.max(maxSpeed,r(H.M_SMB_X_ABS))
  if r(H.M_STATE)~=0 then jumps=jumps+1 end
  if t>=250 and t<280 then
   assert(r(H.M_SMB_X_SPEED)==0,'native ground release brakes to rest')

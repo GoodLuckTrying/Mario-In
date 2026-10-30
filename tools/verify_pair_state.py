@@ -46,6 +46,23 @@ def main(game):
    c=cpu();set_values(c,{0x7d00:0x4d,0x7d5a:14,0x1c:14,0x7d01:1,0x7d31:1,0x4b2:action,0x492:0x80,0x4f2:100,0x512:80,0x4c2:32,0x4d2:224})
    ref=MPU(memory=c.memory.copy());ref.x=0;ref.p&=254;run(ref,0x962b);run(c,h['BeginStep'])
    assert c.memory[4:8]==ref.memory[4:8]and c.memory[0x4c2:0x4d3]==ref.memory[0x4c2:0x4d3]and c.memory[0x7d31]==0,'native tool/script motion retained';cases+=1
+  # Compare the first actual native terrain sample with our eight-pixel shot
+  # point. Keep the original legal actor dimensions and execute native 9273
+  # through the first bitmap read, before it merges a whole actor rectangle.
+  for camx,camy,fraction in [(0,0,0),(1,1,0x80),(127,127,0),(255,239,0),(250,235,1)]:
+   for x in [8,15,16,127,240,248]:
+    for y in [8,15,16,127,208,239]:
+     c=cpu();set_values(c,{0x14:0,0x15:fraction,0x16:camy,0x17:camx,0x1e:0,0x4a2:2,0x4f2:y-4,0x512:x-6,4:0,5:y-4,6:0,7:x-6})
+     for i in range(132):c.memory[0x38a+i]=(i*37+19)&255;c.memory[0x40e+i]=(i*53+71)&255
+     c.x=0;c.pc=0x9273
+     for _ in range(5000):
+      if c.pc==0x93a7:break
+      c.step()
+     assert c.pc==0x93a7,'native first bitmap read reached'
+     expected=int(bool(c.memory[0x38a+c.y]&c.memory[0]))+2*int(bool(c.memory[0x40e+c.y]&c.memory[0]))
+     c.x=x;c.y=y;run(c,h['FirePoint'])
+     assert c.a==expected,('native bitmap point/wrap',camx,camy,fraction,x,y,c.a,expected)
+     cases+=1
  report=dict(rom_sha256=m['output_sha256'],passed=True,cases=cases)
  (p/'build/state-results.json').write_text(json.dumps(report,indent=2));print(f'PASS {game}: {cases} native state/collision/camera cases')
 if __name__=='__main__':main(sys.argv[1])

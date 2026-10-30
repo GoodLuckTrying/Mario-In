@@ -9,6 +9,7 @@
 .export PrepareWait
 .export UpdateCamera
 .export AttackGate
+.export CameraStep,ScrollUpload
 .export M_STATE,M_HELD,M_PREV,M_FACING,M_SMB_X_SPEED,M_SMB_X_FORCE,M_SMB_X_ABS,M_X_FRAC,M_Y_FRAC,M_VY,M_VY_FRAC,M_GRAVITY,M_FALL_FORCE,M_POSE
 .segment "BOOT"
 Boot:
@@ -96,6 +97,7 @@ SpawnReset:
  sta FB
  sta FB+16
  sta M_ART_READY
+ sta M_QUEUE_READY
  lda #$FF
  sta M_PALETTE
  lda #1
@@ -181,7 +183,32 @@ PlayerGate:
 :
  ; Native fire remains available alongside the Mario movement wrapper.
  jsr $FA74
+ jsr CameraBoundary
  jmp $FA06
+CameraBoundary:
+ ; A valid native scroll below the viewport must finish before its bottom
+ ; boundary can mean a pit. Keep the feet on screen while terrain arrives.
+ lda M_STATE
+ beq @done
+ lda $C4
+ bpl @done
+ and #$20
+ bne @done
+ lda M_VY
+ bmi @up
+ lda $64
+ cmp #172
+ bcc @done
+ lda #172
+ sta $64
+@done:rts
+@up:
+ lda $64
+ cmp #72
+ bcs @done
+ lda #72
+ sta $64
+ rts
 AttackGate:
  lda $21
  and #2
@@ -678,6 +705,16 @@ PrepareWait:
  pha
  tya
  pha
+ lda $10
+ cmp #7
+ bne :+
+ jsr DrawLives
+ jmp @wait
+:
+ cmp #8
+ bne :+
+ jsr DrawEntrance
+:
  lda M_ART_READY
  jeq @wait
  lda $10
@@ -863,7 +900,7 @@ ChrWrite:
  rts
 Palette:
  lda $10
- cmp #8
+ cmp #7
  bcc @inactive
  cmp #16
  bcc @active
@@ -1190,6 +1227,8 @@ ContactGate:
  lda $62
  and #$1F
  jmp $C96D
+.include "presentation.inc"
+.include "camera.inc"
 .include "camera-delta.inc"
 .include "mario-animation.inc"
 .include "smb-land.inc"

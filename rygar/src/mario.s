@@ -9,6 +9,7 @@
 .export SpawnReset
 .export StreamArt,DynamicFrames
 .export UpdateCamera
+.export FinishFrame,FirePoint
 .export M_STATE,M_HELD,M_PREV,M_FACING,M_SMB_X_SPEED,M_SMB_X_FORCE,M_SMB_X_ABS,M_X_FRAC,M_Y_FRAC,M_VY,M_VY_FRAC,M_GRAVITY,M_FALL_FORCE,M_POSE
 .segment "BOOT"
 Boot:
@@ -709,9 +710,12 @@ DrawGate:
  bcc @cell
 @dma:
  jsr FireDraw
- lda #2
- sta $4014
  rts
+FinishFrame:
+ ; Prepare the next OAM page after native logic, outside the upload deadline.
+ ; The unchanged NMI entry performs its DMA on the following frame.
+ jsr $8000
+ jmp DrawGate
 Palette:
  lda $0C
  and #$7B

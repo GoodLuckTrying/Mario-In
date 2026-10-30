@@ -65,6 +65,10 @@ FireOne:
  sec
  sbc M_CAM_DELTA_Y
  sta FB+2,x
+ cmp #8
+ jcc @kill
+ cmp #216
+ jcs @kill
  lda FB+7,x
  beq @horizontal
  lda FB+6,x
@@ -77,14 +81,14 @@ FireOne:
  clc
  adc #4
  jcs @kill
- jmp @y
+ jmp @overheadY
 @up:
  sec
  sbc #4
  jcc @kill
-@y:
+@overheadY:
  sta FB+2,x
- jmp @probe
+ jmp @overhead
 @horizontal:
  lda FB+6,x
  and #1
@@ -102,14 +106,39 @@ FireOne:
 @x:
  sta FB+1,x
  lda FB+7,x
- bne @probe
+ jne @overhead
+ ; Only solid tiles at the leading side can stop horizontal travel.
+ ; A floor under the feet must never become a side-wall collision.
+ lda FB+1,x
+ ldy FB+6,x
+ cpy #1
+ beq :+
+ clc
+ adc #7
+:
+ tax
+ ldy M_FB
+ lda FB+2,y
+ clc
+ adc #4
+ tay
+ jsr FirePoint
+ and #2
+ jne @killReload
+ ldx M_FB
  lda FB+4,x
  clc
  adc FB+5,x
  sta FB+5,x
  lda FB+3,x
- adc FB+2,x
- sta FB+2,x
+ adc #0
+ sta M_DIR
+ bpl :+
+ eor #$FF
+ clc
+ adc #1
+:
+ sta M_STEPS
  lda FB+4,x
  clc
  adc #$50
@@ -117,126 +146,170 @@ FireOne:
  lda FB+3,x
  adc #0
  sta FB+3,x
- bmi @probe
+ bmi @vertical
  cmp #4
- bcc @probe
+ bcc @vertical
  lda #4
  sta FB+3,x
-@probe:
+@vertical:
+ lda M_STEPS
+ jeq @enemy
+@pixel:
+ lda M_DIR
+ bmi @rising
+ inc FB+2,x
  lda FB+2,x
- cmp #8
- jcc @kill
- cmp #216
- jcs @kill
- jsr FireProbe
+ clc
+ adc #8
+ bcs @kill
+ tay
+ jsr FireFeet
  ldx M_FB
- lda M_PROBE_COLLISION
- and #$0C
- bne @kill
- lda M_PROBE_COLLISION
- and #3
- beq @enemy
- lda FB+7,x
- bne @kill
- lda FB+3,x
- bmi @kill
+ cmp #0
+ beq @next
+ ; Align the visible eight-pixel ball above the first solid floor pixel.
+ dec FB+2,x
  lda #$FD
  sta FB+3,x
  lda #0
  sta FB+4,x
+ sta FB+5,x
+ jmp @enemy
+@rising:
+ dec FB+2,x
+ lda FB+2,x
+ clc
+ adc #1
+ tay
+ jsr FireFeet
+ ldx M_FB
+ and #2
+ bne @kill
+@next:
+ lda FB+2,x
+ cmp #8
+ bcc @kill
+ cmp #216
+ bcs @kill
+ dec M_STEPS
+ bne @pixel
+ jmp @enemy
+@overhead:
+ lda FB+1,x
+ clc
+ adc #4
+ tay
+ lda FB+2,x
+ clc
+ adc #4
+ sta M_POINT_Y
+ tya
+ tax
+ ldy M_POINT_Y
+ jsr FirePoint
+ ldx M_FB
+ cmp #0
+ bne @kill
+ lda FB+2,x
+ cmp #8
+ bcc @kill
+ cmp #216
+ bcs @kill
 @enemy:
  jsr FireEnemy
 @done:rts
+@killReload:
+ ldx M_FB
 @kill:
  lda #0
  sta FB,x
  rts
-FireProbe:
- lda $1E
- sta M_OLD_ACTOR
- ldx #0
- ldy #0
-@save:
- lda $04A1,y
- sta M_PROBE_SAVE,x
- tya
- clc
- adc #16
- tay
- inx
- cpx #10
- bcc @save
- lda #$80
- sta $04A1
- lda #2
- sta $04B1
- lda #0
- sta $04F1
- sta $0511
- sta $04
- sta $06
- ldx M_FB
- lda FB+2,x
- sec
- sbc #4
- sta $0501
- sta $05
+FireFeet:
+ ; Probe both feet (or both top corners on ascent), never a host actor box.
+ sty M_POINT_Y
  lda FB+1,x
- sec
- sbc #6
- sta $0521
- sta $07
- lda FB+3,x
- asl
- asl
- asl
- asl
- asl
- sta $04D1
- lda #$40
- ldy FB+6,x
- tya
- and #1
- beq :+
- lda #$C0
- bne @vx
-:
- lda #$40
-@vx:
- sta $04E1
- lda #15
- sta $1E
+ clc
+ adc #2
  tax
- jsr $9273
- lda #0
- sta $00
- lda $0531
- ldy #3
-@bits:
- asl
- rol $00
- asl
- dey
- bpl @bits
- lda $00
- and #15
- jsr $90CF
- lda $09
- sta M_PROBE_COLLISION
- ldx #0
- ldy #0
-@restore:
- lda M_PROBE_SAVE,x
- sta $04A1,y
+ jsr FirePoint
+ sta M_POINT_BITS
+ ldx M_FB
+ lda FB+1,x
+ clc
+ adc #5
+ tax
+ ldy M_POINT_Y
+ jsr FirePoint
+ ora M_POINT_BITS
+ rts
+FirePoint:
+ ; Native collision bitmap: 33 wrapping columns, four bytes per column.
+ ; Plane one contains one-way floors; plane two contains solid terrain.
+ ; Keep the native 240-line Y wrap and fractional camera page bits.
  tya
  clc
- adc #16
+ adc $16
+ bcc :+
+ adc #$0F
+:
+ cmp #$F0
+ bcc :+
+ and #$0F
+:
+ sta M_POINT_WORLD_Y
+ lda $15
+ and #$0F
+ sta $01
+ txa
+ clc
+ adc $17
+ bcc :+
+ inc $01
+:
+ lsr $01
+ ror
+ lsr $01
+ ror
+ lsr $01
+ ror
+ sta $00
+ lda #0
+ sta $01
+ lda #33
+ jsr $C55D
+ asl
+ asl
+ sta M_POINT_COLUMN
+ lda M_POINT_WORLD_Y
+ lsr
+ lsr
+ lsr
+ pha
+ and #7
+ tax
+ lda $C555,x
+ sta M_POINT_MASK
+ pla
+ lsr
+ lsr
+ lsr
+ ora M_POINT_COLUMN
  tay
- inx
- cpx #10
- bcc @restore
- lda M_OLD_ACTOR
- sta $1E
+ lda #0
+ sta M_POINT_RESULT
+ lda $038A,y
+ and M_POINT_MASK
+ beq :+
+ inc M_POINT_RESULT
+:
+ lda $040E,y
+ and M_POINT_MASK
+ beq :+
+ lda #2
+ ora M_POINT_RESULT
+ sta M_POINT_RESULT
+:
+ lda M_POINT_RESULT
  rts
 FireEnemy:
  lda $04F3

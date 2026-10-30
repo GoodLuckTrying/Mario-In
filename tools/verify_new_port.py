@@ -26,6 +26,7 @@ def main(game):
   jobs.append((label,args))
  for fixture in ['fire','movement','health']:replay(fixture,f'{game}/tests/{fixture}.lua')
  replay('moving-camera-fire','tools/tests/pair_fire_camera.lua')
+ replay('camera-presentation'if game=='karnov'else'weapon-scroll',f'{game}/tests/'+('camera-presentation.lua'if game=='karnov'else'weapon-scroll.lua'))
  if game=='karnov':
   for stage in range(9):replay(f'graphics-stage-{stage}',f'{game}/tests/graphics.lua',STAGE=stage)
  else:

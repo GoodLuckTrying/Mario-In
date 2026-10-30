@@ -46,6 +46,8 @@ def main():
  put(30,0xD19B,bytes([0x20,h['SpawnReset']&255,h['SpawnReset']>>8,0xEA]),'Clear private motion at native stage initialization','A2 00 A9 00')
  put(12,0xA0ED,bytes([0x20,h['PlayerSpawnReset']&255,h['PlayerSpawnReset']>>8,0xEA]),'Clear private motion on native checkpoint/life restart','A9 00 85 62')
  hook(11,0xA003,'DrawGate','4C 70 A0')
+ hook(12,0xA01E,'CameraStep','4C 43 B6')
+ put(31,0xE0B1,h['ScrollUpload'].to_bytes(2,'little'),'Upload both vertical camera packets','F7 E0')
  hook(30,0xC969,'ContactGate','A5 62 29')
  put(30,0xCCA7,bytes([0x20,h['FireCollision']&255,h['FireCollision']>>8,0xEA,0xEA]),'Mario fireballs share native enemy damage','A6 44 BD 51 06')
  put(31,0xE093,bytes([0x20,h['Palette']&255,h['Palette']>>8,0xEA,0xEA,0xEA]),'Dedicated current-frame player palette','A9 00 85 5F 85 60')

@@ -55,7 +55,7 @@ def main():
  patch.put(5,0xADDF,bytes([0x4C,h['StompBounce']&255,h['StompBounce']>>8,0xEA,0xEA]),'Native stomp updates private Mario bounce','A9 84 8D C2 04')
  patch.put(5,0xADC9,bytes([10]),'Native stomp overlap forgiveness','03')
  patch.hook(5,0xADFA,h['ContactDamage'],'Short protection after native stomp','20 01 AE',True)
- patch.hook(15,0xC10C,h['DrawGate'],'Mario OAM before native DMA','8D 14 40',True)
+ patch.hook(15,0xC14A,h['FinishFrame'],'Prepare Mario OAM after native logic, outside vblank','20 00 80',True)
  patch.hook(15,0xC117,h['Palette'],'Fire palette during native vblank','AD 02 20',True)
  for tile,pair in atlas.items():
   patch.put(0,0x8000+tile*16,pair,'Retired side-view player CHR pair')

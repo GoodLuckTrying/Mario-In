@@ -53,7 +53,9 @@ code and art into RAM. Native PRG switching and CHR-RAM loading remain intact.
 | `$ADDF/$ADFA` | Native stomp bounce and brief contact protection |
 | `$ACF5` | Existing Diskarmor enemy-hit processing, also used by added fireballs |
 
-Fixed-bank `$C10C/$C117` handle final Mario OAM and vblank colors/art. Bank 6
+Fixed-bank `$C14A/$C117` handle final Mario OAM and vblank colors/art. OAM is
+prepared after native logic, leaving the original next-frame DMA at `$C10C`.
+This keeps sprite preparation out of the terrain-upload deadline. Bank 6
 `$8500` resets private state at actual player initialization. Native health,
 actor updates, item stats, dialogue and room transfer handlers stay native.
 
@@ -61,8 +63,10 @@ SMB fractions are kept separately from native fields whose low bits also
 hold collision flags. Grounded terrain detection receives the original
 downward probe without adding that displacement to Mario's free movement.
 Decoded collision response controls walls, ceilings and landing. Fireball
-terrain probes temporarily borrow and restore an actor's data; native actors
-are not removed to make projectile slots. Camera motion is read as integer
+terrain probes read the native two-plane collision bitmap at the visible
+ball's edges, with pixel-by-pixel vertical movement. One-way floors only catch
+descending balls; a rebound cannot be deleted by its former floor overlap.
+Native actors are not borrowed or removed for terrain probes. Camera motion is read as integer
 displacement, separate from native velocity units.
 
 Six side-view poses and the fireballs use retired player patterns. Both the
@@ -77,12 +81,13 @@ retained when drawing behind foreground terrain.
 
 ## Verification and limits
 
-The current receipt contains 16 checks. The motor comparison executes 110
+The current receipt contains 17 checks. The motor comparison executes 110
 cases and 15,400 updates against assembled `smb1base` movement routines at
 commit `46ff88f7d9e854db80bf8d50e5bf74340fcc64ce`, with SMB2J features disabled.
 Additional CPU cases exercise native stomp flags, rejection of ascending
 contacts, paired contacts and fireball damage without moving the Diskarmor.
-Another 631 cases cover native movement handoffs and integer camera wrap.
+Another 811 cases cover native movement handoffs, integer camera wrap and
+shot lookup coordinates compared with the native bitmap-reading instructions.
 
 Mesen checks physical controls, floor bounces with the Diskarmor still active,
 fireball world speed through camera movement, energy damage and death/game-over
@@ -91,6 +96,8 @@ entries and three overhead areas, including actual displayed CHR, front/back
 views, colors and vblank deadlines. Native entry loading and controlled enemy
 contacts isolate those scenarios. The constrained overhead entry uses short
 movement pulses so its art check does not intentionally walk into water.
+Sustained moving/fire stress also checks that rendering resumes before the
+visible scanlines, while the Diskarmor and repeatedly bouncing shots stay active.
 
 These fixtures are not a full campaign clear or a physical-console test.
 Native traversal, camera cadence and scene geometry are intentional host
