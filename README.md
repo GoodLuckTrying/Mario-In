@@ -26,6 +26,11 @@ fixtures are organized by game. Current IPS patches are in [release/](release/).
 | Metroid | [metroid](metroid/) |
 | Ghosts 'n Goblins | [ghosts](ghosts/) |
 | Mike Tyson's Punch-Out!! | [punchout](punchout/) |
+| Karnov | [karnov](karnov/) |
+| Rygar | [rygar](rygar/) |
+
+The trailer covers the original 15 ports. Karnov and Rygar are also included
+in the current 17-patch collection.
 
 ## Build
 

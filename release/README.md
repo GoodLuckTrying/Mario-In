@@ -9,9 +9,14 @@ filenames and SHA-256 values are listed in [catalog.json](catalog.json).
 [SHA256SUMS](SHA256SUMS) lists the patch hashes. Patches include the iNES/NES 2.0
 header; use the exact headered input listed in the catalog.
 
-All 15 patches here match the current installed development builds. The
+All 17 patches here match the current installed development builds. The
 Ghosts 'n Goblins patch includes the color-flashing, injury-CHR and moving-platform support repairs.
 The Zelda patch also fixes the item-lift pose, and WrestleMania preserves the original deformable rope graphics while streaming every Mario/Luigi pose and fireball through native wrestler buffers. Contra fixes the base-room growth animation handoff and small Mario's crouched hitbox while retaining its existing gameplay choices (271 checks). Start updated ports from a fresh boot; older save states contain earlier graphics/RAM state.
+
+Karnov and Rygar start as Fire Mario while retaining native health, equipment,
+attacks and progression. B adds fireballs alongside the native attack. Their
+current suites pass 17 and 16 checks, including assembled SMB1 movement
+comparisons, native damage, scrolling projectiles and displayed graphics.
 
 `verification/` contains the existing hash-bound test receipts for these ROMs,
 and `manifests/` records their build metadata. Most receipts describe tests in the original development workspace, before the sources were reorganized. Zelda and WrestleMania were reverified here after the trailer graphics repairs (41 and 72 checks); `trailer-graphics-regressions.json` records the reproduced earlier failures. Run the included game suites for new builds. Targeted fixtures are not full

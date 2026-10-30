@@ -1,0 +1,539 @@
+{
+  "base_rom": "C:\\nes\\Rygar (USA).nes",
+  "base_sha256": "965330fed9f5b8492452f3b53084752e83b7f899a1f88f3c475ece2fde6f9231",
+  "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+  "output_sha256": "4621fd029190a1382fdfe63966e8d3fd2f603ddb72f701c64abb4f1692cc3264",
+  "mapper": 2,
+  "submapper": 2,
+  "prg_kib": 256,
+  "work_ram_kib": 8,
+  "labels": {
+    "BeginOverhead": 24877,
+    "BeginStep": 24741,
+    "Boot": 57010,
+    "Calculate": 24903,
+    "ContactDamage": 25139,
+    "DrawGate": 25611,
+    "DynamicFrames": 28672,
+    "FB": 32256,
+    "FireDraw": 26631,
+    "FireTiles": 27317,
+    "FireUpdate": 26041,
+    "GetPlayerAnimSpeed": 27451,
+    "Horizontal": 25464,
+    "ImposeFriction": 27516,
+    "Jump": 25372,
+    "M_FACING": 32007,
+    "M_FALL_FORCE": 32023,
+    "M_GRAVITY": 32022,
+    "M_HELD": 32017,
+    "M_POSE": 32027,
+    "M_PREV": 32018,
+    "M_SMB_X_ABS": 32004,
+    "M_SMB_X_FORCE": 32003,
+    "M_SMB_X_SPEED": 32002,
+    "M_STATE": 32001,
+    "M_VY": 32020,
+    "M_VY_FRAC": 32021,
+    "M_X_FRAC": 32036,
+    "M_Y_FRAC": 32037,
+    "MarioTiles": 27293,
+    "Palette": 25983,
+    "Response": 25019,
+    "SpawnReset": 24631,
+    "Step": 25178,
+    "StompBounce": 25088,
+    "StreamArt": 26783,
+    "UpdateCamera": 27127,
+    "Vertical": 25504,
+    "X_Physics": 27329,
+    "XSpdSign": 27598,
+    "LeftFrict": 27535,
+    "RghtFrict": 27568,
+    "SetAbsSpd": 27607,
+    "JoypFrict": 27532,
+    "ProcSkid": 27488,
+    "SetAnimSpd": 27509,
+    "ChkSkid": 27466,
+    "SetRunSpd": 27482,
+    "PlayerAnimTmrData": 27448,
+    "ExitPhy": 27447,
+    "GetXPhy2": 27414,
+    "FastXSp": 27389,
+    "SetRTmr": 27394,
+    "ChkRFast": 27374,
+    "GetXPhy": 27399,
+    "ProcPRun": 27347,
+    "FrictionData": 27326,
+    "MaxRightXSpdData": 27322,
+    "MaxLeftXSpdData": 27319,
+    "FireCell": 26642,
+    "FireEnemy": 26553,
+    "FireProbe": 26389,
+    "FireOne": 26154,
+    "DirectionalPose": 26678,
+    "JumpSpeed": 25459,
+    "FallForce": 25454,
+    "JumpForce": 25449,
+    "AnimateMario": 27209,
+    "AnimateInterval": 27234,
+    "AnimateClimb": 27268,
+    "ResetMotion": 25148,
+    "Init": 24576,
+    "BankEight": 57069
+  },
+  "native": {},
+  "hooks": [
+    {
+      "bank": 15,
+      "cpu": 49152,
+      "size": 16384,
+      "name": "Native engine copied to expanded fixed bank"
+    },
+    {
+      "bank": 8,
+      "cpu": 32768,
+      "size": 8192,
+      "name": "Private WRAM load image"
+    },
+    {
+      "bank": 15,
+      "cpu": 57010,
+      "size": 60,
+      "name": "Conflict-safe private code loader"
+    },
+    {
+      "bank": 15,
+      "cpu": 49152,
+      "size": 3,
+      "name": "Reset loads private work RAM"
+    },
+    {
+      "bank": 6,
+      "cpu": 34048,
+      "size": 4,
+      "name": "Clear private state at native player initialization"
+    },
+    {
+      "bank": 5,
+      "cpu": 41991,
+      "size": 3,
+      "name": "Player-only SMB prediction before native collision"
+    },
+    {
+      "bank": 5,
+      "cpu": 39873,
+      "size": 3,
+      "name": "SMB prediction feeds native terrain probes"
+    },
+    {
+      "bank": 5,
+      "cpu": 40056,
+      "size": 3,
+      "name": "Native overhead tools alongside fireballs"
+    },
+    {
+      "bank": 5,
+      "cpu": 39946,
+      "size": 3,
+      "name": "Reset Mario motion at native terrain contact"
+    },
+    {
+      "bank": 5,
+      "cpu": 44511,
+      "size": 5,
+      "name": "Native stomp updates private Mario bounce"
+    },
+    {
+      "bank": 5,
+      "cpu": 44489,
+      "size": 1,
+      "name": "Native stomp overlap forgiveness"
+    },
+    {
+      "bank": 5,
+      "cpu": 44538,
+      "size": 3,
+      "name": "Short protection after native stomp"
+    },
+    {
+      "bank": 15,
+      "cpu": 49420,
+      "size": 3,
+      "name": "Mario OAM before native DMA"
+    },
+    {
+      "bank": 15,
+      "cpu": 49431,
+      "size": 3,
+      "name": "Fire palette during native vblank"
+    },
+    {
+      "bank": 0,
+      "cpu": 33024,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35072,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33056,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35104,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33088,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35136,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33120,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35168,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33152,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35200,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33184,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35232,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33216,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35264,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33248,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35296,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33280,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35328,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33312,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35360,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33344,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35392,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33376,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35424,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33408,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35456,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33440,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35488,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33472,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35520,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33504,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35552,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33536,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35584,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33568,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35616,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33600,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35648,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33632,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35680,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33664,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35712,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33696,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35744,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33728,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35776,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33760,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35808,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33792,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35840,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 0,
+      "cpu": 33824,
+      "size": 32,
+      "name": "Retired side-view player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 35872,
+      "size": 32,
+      "name": "Retired overhead player CHR pair"
+    },
+    {
+      "bank": 2,
+      "cpu": 34816,
+      "size": 128,
+      "name": "Preloaded complete front pose in first overhead buffer"
+    }
+  ],
+  "poses": [
+    0,
+    1,
+    2,
+    24,
+    4,
+    10
+  ],
+  "player_chr_pairs": [
+    16,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    38,
+    40,
+    42,
+    44,
+    46,
+    48,
+    50,
+    52,
+    54,
+    56,
+    58,
+    60,
+    62,
+    64,
+    66
+  ],
+  "protected_chr_start": 1120,
+  "source_method": "Exact USA byte hooks and physical-bank/native-controller traces",
+  "source_revision": "smb1base 46ff88f7d9e854db80bf8d50e5bf74340fcc64ce; USE_SMB2J_FEATURES=0",
+  "directional_source": {
+    "file": "C:\\Users\\kando\\Documents\\ChatGPT\\Mario In\\assets\\mario-directional-sheet.png",
+    "sha256": "ae395caae88ade3c2d6b3f2503c45e9f2b92ff5c84020d3f1891277a6bcf2a4d",
+    "permission": "User supplied with stated permission, 23 October 2026",
+    "credit": "metalwario64 and superphanto"
+  },
+  "directional_buffers": [
+    0,
+    8
+  ]
+}

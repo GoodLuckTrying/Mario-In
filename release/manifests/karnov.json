@@ -1,0 +1,187 @@
+{
+  "base_rom": "C:\\nes\\Karnov (USA).nes",
+  "base_sha256": "0d49c1120fc13ead1efe4429f7cbb4f01b90e2486c66661c46e922dda6dc830a",
+  "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+  "output_sha256": "5460212f3f32fcfa716c13bde39a690abcd3e57d04c273d5f267f38b3eec6882",
+  "mapper": 4,
+  "prg_kib": 256,
+  "chr_kib": 128,
+  "work_ram_kib": 8,
+  "labels": {
+    "AttackGate": 24860,
+    "Boot": 65138,
+    "ChrWrite": 26112,
+    "ContactGate": 26648,
+    "DrawGate": 25628,
+    "FB": 32256,
+    "FireCollision": 26570,
+    "FireDraw": 26522,
+    "FireUpdate": 26308,
+    "GetPlayerAnimSpeed": 27123,
+    "Horizontal": 25212,
+    "ImposeFriction": 27188,
+    "Jump": 25116,
+    "M_FACING": 32007,
+    "M_FALL_FORCE": 32023,
+    "M_GRAVITY": 32022,
+    "M_HELD": 32017,
+    "M_POSE": 32027,
+    "M_PREV": 32018,
+    "M_SMB_X_ABS": 32004,
+    "M_SMB_X_FORCE": 32003,
+    "M_SMB_X_SPEED": 32002,
+    "M_STATE": 32001,
+    "M_VY": 32020,
+    "M_VY_FRAC": 32021,
+    "M_X_FRAC": 32036,
+    "M_Y_FRAC": 32037,
+    "Palette": 26143,
+    "PlayerGate": 24716,
+    "PlayerSpawnReset": 24883,
+    "PrepareWait": 25806,
+    "SpawnFire": 26242,
+    "SpawnReset": 24620,
+    "Step": 24891,
+    "UpdateCamera": 26825,
+    "Vertical": 25434,
+    "X_Physics": 27001,
+    "XSpdSign": 27270,
+    "LeftFrict": 27207,
+    "RghtFrict": 27240,
+    "SetAbsSpd": 27279,
+    "JoypFrict": 27204,
+    "ProcSkid": 27160,
+    "SetAnimSpd": 27181,
+    "ChkSkid": 27138,
+    "SetRunSpd": 27154,
+    "PlayerAnimTmrData": 27120,
+    "ExitPhy": 27119,
+    "GetXPhy2": 27086,
+    "FastXSp": 27061,
+    "SetRTmr": 27066,
+    "ChkRFast": 27046,
+    "GetXPhy": 27071,
+    "ProcPRun": 27019,
+    "FrictionData": 26998,
+    "MaxRightXSpdData": 26994,
+    "MaxLeftXSpdData": 26991,
+    "AnimateInterval": 26932,
+    "FireCell": 26533,
+    "FireOne": 26318,
+    "PaletteBits": 26103,
+    "DrawBody": 25991,
+    "CloneBases": 26107,
+    "WallCode": 25338,
+    "Point": 25354,
+    "JumpSpeed": 25207,
+    "FallForce": 25202,
+    "JumpForce": 25197,
+    "AnimateMario": 26907,
+    "Floor": 25389,
+    "AnimateClimb": 26966,
+    "Init": 24576
+  },
+  "native": {},
+  "hooks": [
+    {
+      "bank": 16,
+      "cpu": 32768,
+      "size": 8192,
+      "name": "Private code load image"
+    },
+    {
+      "bank": 31,
+      "cpu": 65138,
+      "size": 82,
+      "name": "MMC3 WRAM loader"
+    },
+    {
+      "bank": 31,
+      "cpu": 65532,
+      "size": 2,
+      "name": "Reset vector"
+    },
+    {
+      "bank": 31,
+      "cpu": 62103,
+      "size": 3,
+      "name": "PlayerGate"
+    },
+    {
+      "bank": 31,
+      "cpu": 64116,
+      "size": 3,
+      "name": "AttackGate"
+    },
+    {
+      "bank": 30,
+      "cpu": 49222,
+      "size": 3,
+      "name": "PrepareWait"
+    },
+    {
+      "bank": 30,
+      "cpu": 53659,
+      "size": 4,
+      "name": "Clear private motion at native stage initialization"
+    },
+    {
+      "bank": 12,
+      "cpu": 41197,
+      "size": 4,
+      "name": "Clear private motion on native checkpoint/life restart"
+    },
+    {
+      "bank": 11,
+      "cpu": 40963,
+      "size": 3,
+      "name": "DrawGate"
+    },
+    {
+      "bank": 30,
+      "cpu": 51561,
+      "size": 3,
+      "name": "ContactGate"
+    },
+    {
+      "bank": 30,
+      "cpu": 52391,
+      "size": 5,
+      "name": "Mario fireballs share native enemy damage"
+    },
+    {
+      "bank": 31,
+      "cpu": 57491,
+      "size": 6,
+      "name": "Dedicated current-frame player palette"
+    },
+    {
+      "bank": 31,
+      "cpu": 57502,
+      "size": 5,
+      "name": "Preserve Namcot CHR register masks"
+    }
+  ],
+  "source_method": "Exact USA ROM byte hooks, physical PRG-bank tracing and native controller replays",
+  "source_revision": "smb1base 46ff88f7d9e854db80bf8d50e5bf74340fcc64ce; USE_SMB2J_FEATURES=0",
+  "chr_clone_native_banks": [
+    0,
+    1,
+    2,
+    3,
+    24
+  ],
+  "poses": [
+    0,
+    1,
+    2,
+    24,
+    4,
+    3,
+    10,
+    8,
+    9,
+    11,
+    22
+  ]
+}

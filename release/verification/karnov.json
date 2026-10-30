@@ -1,0 +1,778 @@
+{
+  "rom_sha256": "5460212f3f32fcfa716c13bde39a690abcd3e57d04c273d5f267f38b3eec6882",
+  "passed": true,
+  "checks": [
+    {
+      "name": "base-inputs-IPS-and-native-graphics-integrity",
+      "passed": true
+    },
+    {
+      "name": "native-combat",
+      "passed": true,
+      "seconds": 0.1
+    },
+    {
+      "name": "native-state-adapters",
+      "passed": true,
+      "seconds": 0.4
+    },
+    {
+      "name": "movement",
+      "passed": true,
+      "seconds": 1.99
+    },
+    {
+      "name": "fire",
+      "passed": true,
+      "seconds": 2.56
+    },
+    {
+      "name": "source-physics",
+      "passed": true,
+      "seconds": 2.99
+    },
+    {
+      "name": "health",
+      "passed": true,
+      "seconds": 2.42
+    },
+    {
+      "name": "moving-camera-fire",
+      "passed": true,
+      "seconds": 2.81
+    },
+    {
+      "name": "graphics-stage-0",
+      "passed": true,
+      "seconds": 3.46
+    },
+    {
+      "name": "graphics-stage-1",
+      "passed": true,
+      "seconds": 3.35
+    },
+    {
+      "name": "graphics-stage-2",
+      "passed": true,
+      "seconds": 3.47
+    },
+    {
+      "name": "graphics-stage-3",
+      "passed": true,
+      "seconds": 3.14
+    },
+    {
+      "name": "graphics-stage-4",
+      "passed": true,
+      "seconds": 3.37
+    },
+    {
+      "name": "graphics-stage-5",
+      "passed": true,
+      "seconds": 3.11
+    },
+    {
+      "name": "graphics-stage-6",
+      "passed": true,
+      "seconds": 3.19
+    },
+    {
+      "name": "graphics-stage-7",
+      "passed": true,
+      "seconds": 3.22
+    },
+    {
+      "name": "graphics-stage-8",
+      "passed": true,
+      "seconds": 3.16
+    }
+  ],
+  "originals_unchanged": true,
+  "ips_reconstructs_rom": true,
+  "physics": {
+    "rom_sha256": "5460212f3f32fcfa716c13bde39a690abcd3e57d04c273d5f267f38b3eec6882",
+    "reference_commit": "46ff88f7d9e854db80bf8d50e5bf74340fcc64ce",
+    "cases": 110,
+    "updates": 15400,
+    "matching_cases": 110,
+    "results": [
+      {
+        "direction": 1,
+        "scenario": "walk",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "run",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "release",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "reverse",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "air-turn",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 8,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 9,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 15,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 16,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 24,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 25,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 27,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 28,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 32,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 33,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-1",
+        "initial_speed": 40,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 8,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 9,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 15,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 16,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 24,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 25,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 27,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 28,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 32,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 33,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-2",
+        "initial_speed": 40,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 8,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 9,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 15,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 16,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 24,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 25,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 27,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 28,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 32,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 33,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-8",
+        "initial_speed": 40,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 8,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 9,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 15,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 16,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 24,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 25,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 27,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 28,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 32,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 33,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "jump-25",
+        "initial_speed": 40,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "down-direction",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 1,
+        "scenario": "chain-jump",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "walk",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "run",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "release",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "reverse",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "air-turn",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 8,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 9,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 15,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 16,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 24,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 25,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 27,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 28,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 32,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 33,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-1",
+        "initial_speed": 40,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 8,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 9,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 15,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 16,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 24,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 25,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 27,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 28,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 32,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 33,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-2",
+        "initial_speed": 40,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 8,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 9,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 15,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 16,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 24,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 25,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 27,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 28,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 32,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 33,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-8",
+        "initial_speed": 40,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 8,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 9,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 15,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 16,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 24,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 25,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 27,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 28,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 32,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 33,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "jump-25",
+        "initial_speed": 40,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "down-direction",
+        "initial_speed": 0,
+        "first_difference": null
+      },
+      {
+        "direction": 2,
+        "scenario": "chain-jump",
+        "initial_speed": 0,
+        "first_difference": null
+      }
+    ]
+  },
+  "combat": {
+    "rom_sha256": "5460212f3f32fcfa716c13bde39a690abcd3e57d04c273d5f267f38b3eec6882",
+    "passed": true,
+    "cases": 8,
+    "scope": "Actual native damage/state handlers and patched gates under a 6502 CPU; native sound/score calls are isolated where noted."
+  },
+  "native_state": {
+    "rom_sha256": "5460212f3f32fcfa716c13bde39a690abcd3e57d04c273d5f267f38b3eec6882",
+    "passed": true,
+    "cases": 654
+  },
+  "limits": [
+    "Mesen 2 and isolated 6502 instruction fixtures; no physical-console test or complete campaign clear.",
+    "Native health, collision state machines, equipment and scripted/overhead movement are intentional host adaptations.",
+    "Controlled enemy contacts and native stage/entry loading are used to exercise injury, death and graphics without an unassisted campaign replay.",
+    "The source motor matches isolated SMB1 cases; native terrain, camera cadence and required traversal states remain host-specific."
+  ]
+}
