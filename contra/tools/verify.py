@@ -11,12 +11,14 @@ def main():
  rom_path=ROOT/'dist/Mario and Luigi in Contra.nes'
  file_crc=f'File CRC32: 0x{zlib.crc32(rom_path.read_bytes()):08X}'
  logs=ROOT/'build/verification';logs.mkdir(exist_ok=True)
+ (ROOT/'build/physics-audit').mkdir(exist_ok=True)
  subprocess.run([sys.executable,str(ROOT/'tools/audit_physics.py'),'--candidate','--require-match'],check=True,stdout=subprocess.DEVNULL)
  jobs=[('physics',['tools/verify_physics.py']),('expanded-source-physics',['tools/audit_physics.py','--candidate','--require-match'])]
  jobs.append(('native-collision-equivalence',['tools/verify_collision.py']))
  jobs.append(('source-sprite-pixels',['tools/verify_sprites.py']))
  jobs.append(('source-rifle-aim',['tools/verify_rifle_aim.py']))
  jobs.append(('source-base-art',['tools/verify_base_art.py']))
+ jobs.append(('native-player-crouch-box',['tools/verify_player_box.py']))
  jobs.append(('source-title-and-blink-pixels',['tools/verify_title.py']))
  def replay(name,script,**defs):
   args=['tools/run_mesen.py','tests/'+script+'.lua']
@@ -93,6 +95,7 @@ def main():
  replay('bridges-coop','bridges',COOP='true',POWER=2)
  for stage in [1,3]:
   replay(f'base-advance-{stage}','base-advance',STAGE=stage)
+  for player in [0,1]:replay(f'base-mushroom-{stage}-{player}','base-mushroom',STAGE=stage,PLAYER=player)
   replay(f'base-palettes-{stage}','palette',STAGE=stage)
  for vertical in ['false','true']:replay('camera-'+vertical,'camera',VERTICAL=vertical)
  for power in range(3):

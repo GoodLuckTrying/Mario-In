@@ -145,6 +145,12 @@ Move:
  rts
 SyncNative:
  jsr Init
+ ; A growth pickup can overlap a native base-room walk. Native scripts
+ ; own movement here, but Mario's independent morph timer must still run.
+ lda M_POWER_FREEZE
+ beq :+
+ dec M_POWER_FREEZE
+:
  lda #1
  sta M_SCRIPT
  lda #0

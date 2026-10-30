@@ -8,7 +8,7 @@ from verify_physics import run,set_values
 
 def main():
     manifest=json.loads((ROOT/'build/manifest.json').read_text());H=manifest['labels'];N=manifest['native']
-    ref=json.loads((ROOT.parent/'tests/smb-reference-symbols.json').read_text())['labels']
+    ref=json.loads((ROOT.parent/'kidicarus/tests/smb-reference-symbols.json').read_text())['labels']
     original=Path('C:/nes/Super Mario Bros. (World).nes').read_bytes()[16:0x8010]
     rom=(ROOT/'dist/Mario and Luigi in Contra.nes').read_bytes()
     failures=[];cases=0;updates=0

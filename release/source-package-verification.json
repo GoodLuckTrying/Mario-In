@@ -1,5 +1,5 @@
 {
-  "verified_utc": "2026-10-30T18:19:30.555400+00:00",
+  "verified_utc": "2026-10-30T20:18:20.263872+00:00",
   "passed": true,
   "checks": [
     {
@@ -14,8 +14,8 @@
     {
       "game": "contra",
       "passed": true,
-      "rom_sha256": "543e609d86f5b09b2abe6a93db75c999df684bc72267d3a935a942126efdda0c",
-      "patch_sha256": "41d51d6eac4ca9970386d7b8befca085679566f2e86f1f241820ab67990122e6",
+      "rom_sha256": "6046c9a5f4a4d5ac23700587356f3f0193ab1564d7bc87a7dcdf7b12e7f52928",
+      "patch_sha256": "7532fd686e1f8202b8bca15a928f6ea206cfe69ac332c1a266e7b841b0f89996",
       "rebuilt_rom_matches": true,
       "rebuilt_patch_matches": true,
       "ips_round_trip": true

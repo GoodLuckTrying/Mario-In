@@ -172,3 +172,20 @@ PPU queue. Its previous-section offsets cross the left edge; six signed
 updates verify the original left-edge regression without requiring the
 old excessive swimming speed. This controlled fixture is explicitly
 separate from the natural controller route.
+
+## Base-room growth and crouched collision (30 October 2026)
+
+The power-change timer now advances while Contra owns the base-room walking
+script. Collecting a mushroom immediately before holding Up no longer freezes
+the small back-facing pose until the next room. Both players are exercised in
+both base stages through a real pickup and the native room-advance handler.
+
+Small Mario's stationary grounded crouch now lowers the collision-box head by
+four pixels to match the artwork. Jumping and Down plus movement restore the
+normal small box. A 216-case CPU check covers both players, all forms, native
+jump flags and direction/button combinations. The complete suite passes 271
+checks for this build. Existing weapon, stomp, air-control and supply choices
+are retained; the tester's proposed balance changes were not applied.
+
+Sprite-sheet credit: metalwario64 and superphanto. Testing: cecilou, jroweboy
+and fanatik. See the repository's CREDITS.md for full attribution.

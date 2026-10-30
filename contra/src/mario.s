@@ -1702,22 +1702,29 @@ PlayerBoxGate:
  clc
  adc #10
  sta $0B
- cpx #0
- bne @p1
- lda $6004
+ txa
+ lsr
+ ror
+ tay
+ lda $6004,y
  beq @small
- lda $601D
- bne @small
- beq @big
-@p1:
- lda $6084
- beq @small
- lda $609D
- bne @small
+ lda $601D,y
+ bne @short
 @big:
  lda #28
  bne @height
 @small:
+ ; The supplied Small Mario crouch art lowers his head four pixels.
+ ; Preserve full small height while jumping or holding a diagonal.
+ lda N_PLAYER_JUMP_STATUS,x
+ bne @short
+ lda N_CONTROLLER_STATE,x
+ and #$0F
+ cmp #4
+ bne @short
+ lda #8
+ bne @height
+@short:
  lda #12
 @height:
  clc
