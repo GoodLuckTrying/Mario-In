@@ -58,7 +58,10 @@ def title_card(outro=False):
   text(d,(72,615),'Sources + current IPS patches',34)
   text(d,(72,680),'github.com/kandowontu2',30,GREEN)
   text(d,(72,726),'/Mario-In',43,GREEN)
-  text(d,(72,866),'Mario & Luigi. Across the NES.',28,MUTED)
+  text(d,(72,815),'SPRITE SHEET',20,GREEN)
+  text(d,(72,845),' + '.join(CFG['credits']['sprite_sheet']),30)
+  text(d,(72,895),'TESTING',20,GREEN)
+  text(d,(72,925),' + '.join(CFG['credits']['testing']),30)
  for i,g in enumerate(CFG['games']):
   tile=WORK/('thumb-'+g['game']+'.png');clip=g['clips'][0]
   if not tile.exists():frame_at(clip['capture'],clip['start']+min(1.2,clip['duration']/2),tile)
@@ -93,13 +96,15 @@ def render_card(outro=False):
  run(['ffmpeg','-hide_banner','-y','-loop','1','-framerate',str(FPS),'-i',str(png),'-i',str(wav),'-vf',f'fade=t=in:st=0:d=0.18,fade=t=out:st={duration-.25}:d=0.25','-t',str(duration),'-r',str(FPS),*ENC,str(target)],WORK/(name+'-encode.log'));return target
 
 def main():
- parser=argparse.ArgumentParser();parser.add_argument('--cards-only',action='store_true');parser.add_argument('--game',choices=[g['game']for g in CFG['games']]);args=parser.parse_args();WORK.mkdir(parents=True,exist_ok=True);MEDIA.mkdir(exist_ok=True)
+ parser=argparse.ArgumentParser();parser.add_argument('--cards-only',action='store_true');parser.add_argument('--outro-only',action='store_true');parser.add_argument('--game',choices=[g['game']for g in CFG['games']]);args=parser.parse_args();WORK.mkdir(parents=True,exist_ok=True);MEDIA.mkdir(exist_ok=True)
  if args.cards_only:
   title_card();title_card(True)
   for i,g in enumerate(CFG['games']):panel(i,g)
   return
  intro=WORK/'intro.mkv';outro=WORK/'outro.mkv'
- if args.game:
+ if args.outro_only:
+  outro=render_card(True)
+ elif args.game:
   for i,g in enumerate(CFG['games']):
    if g['game']==args.game:render_game(i,g)
  else:

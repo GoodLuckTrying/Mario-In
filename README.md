@@ -69,3 +69,10 @@ and intentional adaptations. Directional art provenance is in
 art inputs and credits are in its folder. Retain upstream notices and licenses.
 No blanket license is asserted over Nintendo/game artwork, supplied sprite
 sheets, or third-party disassemblies.
+
+## Credits
+
+Sprite sheet: **metalwario64** and **superphanto**.  
+Testing: **cecilou**, **jroweboy** and **fanatik**.
+
+See [CREDITS.md](CREDITS.md) for the retained asset attributions.

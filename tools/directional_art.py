@@ -11,7 +11,7 @@ ROLES={(223,0,0):1,(255,151,54):2,(136,120,9):3}
 def source_info():
     return {'file':str(SOURCE),'sha256':hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
             'permission':'User supplied with stated permission, 23 October 2026',
-            'credit':'Artist name not supplied'}
+            'credit':'metalwario64 and superphanto'}
 
 def rectangle(size,view,state='idle',step=0):
     direction=VIEWS[view]

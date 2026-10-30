@@ -7,6 +7,10 @@
 - Native game video and audio, with captions explaining Mario's mechanics.
 - Embedded game chapters; edit timings are in `trailer-edit.json`.
 
+Sprite sheet: **metalwario64** and **superphanto**.  
+Testing: **cecilou**, **jroweboy** and **fanatik**.
+These credits also appear on the trailer's end card.
+
 ![Trailer poster](trailer-poster.png)
 
 The footage was captured directly from the current ROM hashes in the release

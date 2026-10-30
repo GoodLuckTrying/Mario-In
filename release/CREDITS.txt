@@ -1,0 +1,7 @@
+Mario In - Credits
+
+Sprite sheet: metalwario64 and superphanto.
+Testing: cecilou, jroweboy and fanatik.
+
+Additional front-facing sprite references: CursedMario.
+See ../CREDITS.md and the per-game asset notes for attribution details.

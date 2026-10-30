@@ -1,5 +1,9 @@
 # Current IPS patches
 
+Sprite sheet: **metalwario64** and **superphanto**.
+Testing: **cecilou**, **jroweboy** and **fanatik**.
+Full attribution is in [CREDITS.txt](CREDITS.txt).
+
 Apply one IPS patch to the matching **unmodified** NES ROM. The exact base
 filenames and SHA-256 values are listed in [catalog.json](catalog.json).
 [SHA256SUMS](SHA256SUMS) lists the patch hashes. Patches include the iNES/NES 2.0

@@ -228,5 +228,16 @@
         }
       ]
     }
-  ]
+  ],
+  "credits": {
+    "sprite_sheet": [
+      "metalwario64",
+      "superphanto"
+    ],
+    "testing": [
+      "cecilou",
+      "jroweboy",
+      "fanatik"
+    ]
+  }
 }
