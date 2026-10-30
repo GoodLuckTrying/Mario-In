@@ -1,0 +1,11 @@
+{
+  "rom_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+  "labels": {
+    "MoveObjectHorizontally": 48911,
+    "ImposeGravity": 49111,
+    "FireballObjCore": 46729,
+    "PlayerPhysicsSub": 46160,
+    "PlayerMovementSubs": 45865,
+    "PlayerCtrlRoutine": 45289
+  }
+}

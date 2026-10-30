@@ -1,0 +1,252 @@
+{
+  "base_rom": "C:\\nes\\Kid Icarus (USA, Europe).nes",
+  "base_sha256": "931786d6920dea7f9e183d907d3c4cff123197fcd14ae4066f1e817df32fd02f",
+  "smb_rom": "C:\\nes\\Super Mario Bros. (World).nes",
+  "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+  "output_sha256": "0987da55ab643ec26c27fbd3adc0aeb47281851d4e48c5176c2f8ba23b7a48e8",
+  "mapper": 1,
+  "prg_kib": 256,
+  "source_commit": "46ff88f7d9e854db80bf8d50e5bf74340fcc64ce",
+  "hooks": [
+    {
+      "name": "Bootstrap in replaced Pit friction routine",
+      "cpu": "0xcd9e",
+      "bytes": 160
+    },
+    {
+      "name": "Bootstrap",
+      "cpu": "0xc024",
+      "bytes": 3
+    },
+    {
+      "name": "UpdateBridge",
+      "cpu": "0xcfa9",
+      "bytes": 3
+    },
+    {
+      "name": "RenderBridge",
+      "cpu": "0xc4cd",
+      "bytes": 3
+    },
+    {
+      "name": "DmaBridge",
+      "cpu": "0xeb2e",
+      "bytes": 3
+    },
+    {
+      "name": "FastPalette",
+      "cpu": "0xee42",
+      "bytes": 3
+    },
+    {
+      "name": "AssetsBridge",
+      "cpu": "0xc14d",
+      "bytes": 3
+    },
+    {
+      "name": "FireBridge",
+      "cpu": "0xd4a2",
+      "bytes": 3
+    },
+    {
+      "name": "ContactBridge",
+      "cpu": "0xda09",
+      "bytes": 3
+    },
+    {
+      "name": "HitBridge",
+      "cpu": "0xd990",
+      "bytes": 3
+    },
+    {
+      "name": "HitAltBridge",
+      "cpu": "0xd9bc",
+      "bytes": 3
+    },
+    {
+      "name": "VideoEnableBridge",
+      "cpu": "0xef01",
+      "bytes": 3
+    },
+    {
+      "name": "PickupBridge",
+      "cpu": "0xddcc",
+      "bytes": 3
+    },
+    {
+      "name": "DeathBridge",
+      "cpu": "0xcd8f",
+      "bytes": 3
+    },
+    {
+      "name": "PaletteBridge",
+      "cpu": "0xc3e0",
+      "bytes": 3
+    },
+    {
+      "name": "LifeBridge",
+      "cpu": "0xc0a0",
+      "bytes": 3
+    },
+    {
+      "name": "DyingBridge",
+      "cpu": "0xcc5c",
+      "bytes": 3
+    },
+    {
+      "name": "DamageBridge",
+      "cpu": "0xda69",
+      "bytes": 3
+    },
+    {
+      "name": "ScrollBridge",
+      "cpu": "0xcd02",
+      "bytes": 3
+    },
+    {
+      "name": "StageResetBridge",
+      "cpu": "0xc3bf",
+      "bytes": 3
+    },
+    {
+      "name": "VerticalStream",
+      "bank": 2,
+      "cpu": "0x946a",
+      "bytes": 3
+    },
+    {
+      "name": "HorizontalStream",
+      "bank": 2,
+      "cpu": "0xab71",
+      "bytes": 3
+    },
+    {
+      "name": "VerticalStream",
+      "bank": 3,
+      "cpu": "0x9701",
+      "bytes": 3
+    },
+    {
+      "name": "HammerHudBridge",
+      "bank": 5,
+      "cpu": "0x909d",
+      "bytes": 3
+    },
+    {
+      "name": "FortressStatsBridge",
+      "bank": 5,
+      "cpu": "0x8fb9",
+      "bytes": 3
+    },
+    {
+      "name": "FortressMapBridge",
+      "bank": 5,
+      "cpu": "0x8bae",
+      "bytes": 3
+    },
+    {
+      "name": "Share room text/palette and shop-price bank visit",
+      "bank": 2,
+      "cpu": "0x8145",
+      "bytes": 10
+    },
+    {
+      "name": "Share room text/palette and shop-price bank visit",
+      "bank": 2,
+      "cpu": "0x9ad9",
+      "bytes": 10
+    },
+    {
+      "name": "Share room text/palette and shop-price bank visit",
+      "bank": 3,
+      "cpu": "0x8146",
+      "bytes": 10
+    },
+    {
+      "name": "Share room text/palette and shop-price bank visit",
+      "bank": 3,
+      "cpu": "0x9d82",
+      "bytes": 10
+    },
+    {
+      "name": "Share room text/palette and shop-price bank visit",
+      "bank": 5,
+      "cpu": "0x811c",
+      "bytes": 10
+    },
+    {
+      "name": "Prepare vertical rows after camera movement",
+      "bank": 2,
+      "cpu": "0x80fb",
+      "bytes": 6
+    },
+    {
+      "name": "Prepare horizontal columns after camera movement",
+      "bank": 2,
+      "cpu": "0x9aa0",
+      "bytes": 6
+    },
+    {
+      "name": "Prepare Skyworld rows after camera movement",
+      "bank": 3,
+      "cpu": "0x80fc",
+      "bytes": 6
+    },
+    {
+      "name": "Disable Pit bow charge",
+      "cpu": "0xcf48",
+      "bytes": 1
+    },
+    {
+      "name": "Keep Mario out of Pit hammer control mode",
+      "cpu": "0xec81",
+      "bytes": 1
+    }
+  ],
+  "labels": {
+    "AssetsBridge": 24908,
+    "Bootstrap": 52638,
+    "ContactBridge": 25066,
+    "DamageBridge": 25388,
+    "DeathBridge": 25280,
+    "DmaBridge": 25595,
+    "DyingBridge": 25368,
+    "FastPalette": 28160,
+    "FastTileAt": 39647,
+    "FireBridge": 25025,
+    "FireOne": 35508,
+    "Fireballs": 35377,
+    "FortressMapBridge": 25233,
+    "FortressStatsBridge": 25220,
+    "HammerHudBridge": 25056,
+    "HitAltBridge": 25118,
+    "HitBridge": 25114,
+    "HorizontalStream": 27604,
+    "LifeBridge": 25334,
+    "MarioContact": 35991,
+    "MarioRender": 34585,
+    "MarioUpdate": 32768,
+    "NativeTerrainEffect": 25579,
+    "PaletteBridge": 25313,
+    "PickupBridge": 25245,
+    "RenderBridge": 24868,
+    "ResolveSpawnSides": 34535,
+    "RoomVideoBridge": 25197,
+    "ScrollBridge": 27136,
+    "StageResetBridge": 25415,
+    "TileAt": 25520,
+    "TryStomp": 35795,
+    "UpdateBridge": 24848,
+    "VerticalStream": 27652,
+    "VideoEnableBridge": 24930,
+    "__BRIDGES_LOAD__": 44672,
+    "__BRIDGES_RUN__": 24832,
+    "__BRIDGES_SIZE__": 1742,
+    "__SCROLL_LOAD__": 46414,
+    "__SCROLL_RUN__": 27136,
+    "__SCROLL_SIZE__": 598,
+    "__VBLANK_LOAD__": 47012,
+    "__VBLANK_RUN__": 28160,
+    "__VBLANK_SIZE__": 227
+  }
+}

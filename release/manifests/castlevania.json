@@ -1,0 +1,1727 @@
+{
+  "input_sha256": "5e859d77bc0e3a9f30a7c14d2637b9c2aae6ce19f6520a7c9b252a86974f7800",
+  "output_sha256": "6f2948358135e50d33ecbf5c5ff742709886faea752ec65d71f37f9611152c51",
+  "labels": {
+    "ActorEnd": 58405,
+    "AfterMarioUpdate": 47905,
+    "AirDirection": 48683,
+    "CollisionSetup": 58419,
+    "ConvertWhipDrops": 44250,
+    "CustomSpriteChr": 41054,
+    "DeferredFootCheck": 48093,
+    "DeferredSideCheck": 48072,
+    "DoorUpdate": 48187,
+    "DraculaCooldown": 46049,
+    "DraculaHeadCooldown": 46070,
+    "FarInteractions": 58370,
+    "FarRefreshChr": 65335,
+    "FarScriptedAi": 58378,
+    "FastSpriteSetup": 47899,
+    "FinishHudSetup": 58461,
+    "FireballBrickCollision": 47749,
+    "FireballWalls": 47690,
+    "GameplayDamage": 44332,
+    "GetPlayerCollisionY": 58434,
+    "HudIrq": 63728,
+    "Interactions": 44164,
+    "JumpStart": 48764,
+    "LandingReset": 48146,
+    "LeftLocalBound": 48173,
+    "MainLoopIrq": 59218,
+    "MapperReset": 65322,
+    "MarioDamage": 58446,
+    "MarioUpdate": 47825,
+    "MoveCentered": 48202,
+    "NextOamIndex": 48833,
+    "PlatformCheck": 48622,
+    "PlatformContact": 48644,
+    "PostNativeAi": 59191,
+    "PrepareActorBank": 59207,
+    "PrepareNativeChr": 47680,
+    "ResetMario": 58384,
+    "RightLocalBound": 48161,
+    "RightScrollBoundary": 48199,
+    "ScrollSpawnBridge": 62954,
+    "SelectPlayerSprite": 47934,
+    "SetNativeSpeed": 48692,
+    "SideOffset": 48120,
+    "SpriteBudgetNext": 47888,
+    "SubweaponAction": 48601,
+    "TileAtPoint": 45103,
+    "TileAtPointReturn": 45208,
+    "VerticalMove": 48862
+  },
+  "patches": [
+    {
+      "name": "MMC5 separate background and sprite CHR banks",
+      "file_offset": 6,
+      "length": 3,
+      "before_sha256": "680e41ef39ba955156089ae17055c9c93cde184968b37b29c2db6641039e3326"
+    },
+    {
+      "name": "8KB work RAM and 16KB CHR RAM",
+      "file_offset": 10,
+      "length": 2,
+      "before_sha256": "2ecd8a6b7d2845546659ad4cf443533cf921b19dc81fa83934e83821b4dfdcb7"
+    },
+    {
+      "name": "MMC5 native 16KB PRG switching",
+      "file_offset": 115176,
+      "length": 12,
+      "before_sha256": "816a4974f20f7994cfd2964957911865d547aadcd2bfcbac530025c7cd782848"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4527,
+      "length": 1,
+      "before_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4531,
+      "length": 1,
+      "before_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4606,
+      "length": 1,
+      "before_sha256": "beead77994cf573341ec17b58bbf7eb34d2711c993c1d976b128b3188dc1829a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4609,
+      "length": 1,
+      "before_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4538,
+      "length": 1,
+      "before_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4542,
+      "length": 1,
+      "before_sha256": "ef6cbd2161eaea7943ce8693b9824d23d1793ffb1c0fca05b600d3899b44c977"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4545,
+      "length": 1,
+      "before_sha256": "4d7b3ef7300acf70c892d8327db8272f54434adbc61a4e130a563cb59a0d0f47"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4548,
+      "length": 1,
+      "before_sha256": "c555eab45d08845ae9f10d452a99bfcb06f74a50b988fe7e48dd323789b88ee3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4552,
+      "length": 1,
+      "before_sha256": "f299791cddd3d6664f6670842812ef6053eb6501bd6282a476bbbf3ee91e750c"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4556,
+      "length": 1,
+      "before_sha256": "83891d7fe85c33e52c8b4e5814c92fb6a3b9467299200538a6babaa8b452d879"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4559,
+      "length": 1,
+      "before_sha256": "7cb7c4547cf2653590d7a9ace60cc623d25148adfbc88a89aeb0ef88da7839ba"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4562,
+      "length": 1,
+      "before_sha256": "452ba1ddef80246c48be7690193c76c1d61185906be9401014fe14f1be64b74f"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4566,
+      "length": 1,
+      "before_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4570,
+      "length": 1,
+      "before_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4573,
+      "length": 1,
+      "before_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4576,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4580,
+      "length": 1,
+      "before_sha256": "58f7b0780592032e4d8602a3e8690fb2c701b2e1dd546e703445aabd6469734d"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4584,
+      "length": 1,
+      "before_sha256": "bd4fc42a21f1f860a1030e6eba23d53ecab71bd19297ab6c074381d4ecee0018"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4591,
+      "length": 1,
+      "before_sha256": "8a331fdde7032f33a71e1b2e257d80166e348e00fcb17914f48bdb57a1c63007"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4599,
+      "length": 1,
+      "before_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4603,
+      "length": 1,
+      "before_sha256": "32ebb1abcc1c601ceb9c4e3c4faba0caa5b85bb98c4f1e6612c40faa528a91c9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4613,
+      "length": 1,
+      "before_sha256": "58f7b0780592032e4d8602a3e8690fb2c701b2e1dd546e703445aabd6469734d"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4617,
+      "length": 1,
+      "before_sha256": "bd4fc42a21f1f860a1030e6eba23d53ecab71bd19297ab6c074381d4ecee0018"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4639,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4642,
+      "length": 1,
+      "before_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4624,
+      "length": 1,
+      "before_sha256": "8a331fdde7032f33a71e1b2e257d80166e348e00fcb17914f48bdb57a1c63007"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4632,
+      "length": 1,
+      "before_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4636,
+      "length": 1,
+      "before_sha256": "32ebb1abcc1c601ceb9c4e3c4faba0caa5b85bb98c4f1e6612c40faa528a91c9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4646,
+      "length": 1,
+      "before_sha256": "d03502c43d74a30b936740a9517dc4ea2b2ad7168caa0a774cefe793ce0b33e7"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4651,
+      "length": 1,
+      "before_sha256": "f299791cddd3d6664f6670842812ef6053eb6501bd6282a476bbbf3ee91e750c"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4655,
+      "length": 1,
+      "before_sha256": "83891d7fe85c33e52c8b4e5814c92fb6a3b9467299200538a6babaa8b452d879"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4658,
+      "length": 1,
+      "before_sha256": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4661,
+      "length": 1,
+      "before_sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4665,
+      "length": 1,
+      "before_sha256": "f299791cddd3d6664f6670842812ef6053eb6501bd6282a476bbbf3ee91e750c"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4669,
+      "length": 1,
+      "before_sha256": "83891d7fe85c33e52c8b4e5814c92fb6a3b9467299200538a6babaa8b452d879"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4672,
+      "length": 1,
+      "before_sha256": "72dfcfb0c470ac255cde83fb8fe38de8a128188e03ea5ba5b2a93adbea1062fa"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4675,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4679,
+      "length": 1,
+      "before_sha256": "9652595f37edd08c51dfa26567e6cd76e6fa2709c3e578478ca398d316837a7a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4683,
+      "length": 1,
+      "before_sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4687,
+      "length": 1,
+      "before_sha256": "951dcee3a7a4f3aac67ec76a2ce4469cc76df650f134bf2572bf60a65c982338"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4691,
+      "length": 1,
+      "before_sha256": "09fc96082d34c2dfc1295d92073b5ea1dc8ef8da95f14dfded011ffb96d3e54b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4695,
+      "length": 1,
+      "before_sha256": "d03502c43d74a30b936740a9517dc4ea2b2ad7168caa0a774cefe793ce0b33e7"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4699,
+      "length": 1,
+      "before_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4704,
+      "length": 1,
+      "before_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4708,
+      "length": 1,
+      "before_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4712,
+      "length": 1,
+      "before_sha256": "f67ab10ad4e4c53121b6a5fe4da9c10ddee905b978d3788d2723d7bfacbe28a9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4716,
+      "length": 1,
+      "before_sha256": "44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4720,
+      "length": 1,
+      "before_sha256": "4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4724,
+      "length": 1,
+      "before_sha256": "de5a6f78116eca62d7fc5ce159d23ae6b889b365a1739ad2cf36f925a140d0cc"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4728,
+      "length": 1,
+      "before_sha256": "d03502c43d74a30b936740a9517dc4ea2b2ad7168caa0a774cefe793ce0b33e7"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4732,
+      "length": 1,
+      "before_sha256": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4737,
+      "length": 1,
+      "before_sha256": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4741,
+      "length": 1,
+      "before_sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4745,
+      "length": 1,
+      "before_sha256": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4749,
+      "length": 1,
+      "before_sha256": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4752,
+      "length": 1,
+      "before_sha256": "acac86c0e609ca906f632b0e2dacccb2b77d22b0621f20ebece1a4835b93f6f0"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4755,
+      "length": 1,
+      "before_sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5166,
+      "length": 1,
+      "before_sha256": "4c94485e0c21ae6c41ce1dfe7b6bfaceea5ab68e40a2476f50208e526f506080"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5171,
+      "length": 1,
+      "before_sha256": "6da43b944e494e885e69af021f93c6d9331c78aa228084711429160a5bbd15b5"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5175,
+      "length": 1,
+      "before_sha256": "6da43b944e494e885e69af021f93c6d9331c78aa228084711429160a5bbd15b5"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5180,
+      "length": 1,
+      "before_sha256": "8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5184,
+      "length": 1,
+      "before_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5188,
+      "length": 1,
+      "before_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5192,
+      "length": 1,
+      "before_sha256": "8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5221,
+      "length": 1,
+      "before_sha256": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5225,
+      "length": 1,
+      "before_sha256": "3f39d5c348e5b79d06e842c114e6cc571583bbf44e4b0ebfda1a01ec05745d43"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4869,
+      "length": 1,
+      "before_sha256": "c3641f8544d7c02f3580b07c0f9887f0c6a27ff5ab1d4a3e29caf197cfc299ae"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4874,
+      "length": 1,
+      "before_sha256": "5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4879,
+      "length": 1,
+      "before_sha256": "aaa9402664f1a41f40ebbc52c9993eb66aeb366602958fdfaa283b71e64db123"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4928,
+      "length": 1,
+      "before_sha256": "8d33f520a3c4cef80d2453aef81b612bfe1cb44c8b2025630ad38662763f13d3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4932,
+      "length": 1,
+      "before_sha256": "3e23e8160039594a33894f6564e1b1348bbd7a0088d42c4acb73eeaed59c009d"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4941,
+      "length": 1,
+      "before_sha256": "18ac3e7343f016890c510e93f935261169d9e3f565436429830faf0934f4f8e4"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4945,
+      "length": 1,
+      "before_sha256": "252f10c83610ebca1a059c0bae8255eba2f95be4d1d7bcfa89d7248a82d9f111"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6480,
+      "length": 1,
+      "before_sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5028,
+      "length": 1,
+      "before_sha256": "148de9c5a7a44d19e56cd9ae1a554bf67847afb0c58f6e12fa29ac7ddfca9940"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5858,
+      "length": 1,
+      "before_sha256": "252f10c83610ebca1a059c0bae8255eba2f95be4d1d7bcfa89d7248a82d9f111"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5862,
+      "length": 1,
+      "before_sha256": "aaa9402664f1a41f40ebbc52c9993eb66aeb366602958fdfaa283b71e64db123"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5865,
+      "length": 1,
+      "before_sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5868,
+      "length": 1,
+      "before_sha256": "4c94485e0c21ae6c41ce1dfe7b6bfaceea5ab68e40a2476f50208e526f506080"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5871,
+      "length": 1,
+      "before_sha256": "aaa9402664f1a41f40ebbc52c9993eb66aeb366602958fdfaa283b71e64db123"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5875,
+      "length": 1,
+      "before_sha256": "252f10c83610ebca1a059c0bae8255eba2f95be4d1d7bcfa89d7248a82d9f111"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5878,
+      "length": 1,
+      "before_sha256": "4c94485e0c21ae6c41ce1dfe7b6bfaceea5ab68e40a2476f50208e526f506080"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5881,
+      "length": 1,
+      "before_sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 4967,
+      "length": 1,
+      "before_sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5086,
+      "length": 1,
+      "before_sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5102,
+      "length": 1,
+      "before_sha256": "2d711642b726b04401627ca9fbac32f5c8530fb1903cc4db02258717921a4881"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6843,
+      "length": 1,
+      "before_sha256": "dabd3aff769f07eb2965401eb029974ebba3407afd02b26ddb564ea5f8efae72"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6847,
+      "length": 1,
+      "before_sha256": "62b67e1f685b7fef51102005dddd27774be3fee38c42965c53aab035d0b6b221"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6851,
+      "length": 1,
+      "before_sha256": "c3641f8544d7c02f3580b07c0f9887f0c6a27ff5ab1d4a3e29caf197cfc299ae"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6855,
+      "length": 1,
+      "before_sha256": "df7e70e5021544f4834bbee64a9e3789febc4be81470df629cad6ddb03320a5c"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6859,
+      "length": 1,
+      "before_sha256": "3f39d5c348e5b79d06e842c114e6cc571583bbf44e4b0ebfda1a01ec05745d43"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6863,
+      "length": 1,
+      "before_sha256": "f67ab10ad4e4c53121b6a5fe4da9c10ddee905b978d3788d2723d7bfacbe28a9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6867,
+      "length": 1,
+      "before_sha256": "44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6871,
+      "length": 1,
+      "before_sha256": "6da43b944e494e885e69af021f93c6d9331c78aa228084711429160a5bbd15b5"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6875,
+      "length": 1,
+      "before_sha256": "72dfcfb0c470ac255cde83fb8fe38de8a128188e03ea5ba5b2a93adbea1062fa"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6879,
+      "length": 1,
+      "before_sha256": "8ce86a6ae65d3692e7305e2c58ac62eebd97d3d943e093f577da25c36988246b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6883,
+      "length": 1,
+      "before_sha256": "44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6887,
+      "length": 1,
+      "before_sha256": "6da43b944e494e885e69af021f93c6d9331c78aa228084711429160a5bbd15b5"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5237,
+      "length": 1,
+      "before_sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6892,
+      "length": 1,
+      "before_sha256": "44bd7ae60f478fae1061e11a7739f4b94d1daf917982d33b6fc8a01a63f89c21"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6896,
+      "length": 1,
+      "before_sha256": "6da43b944e494e885e69af021f93c6d9331c78aa228084711429160a5bbd15b5"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6900,
+      "length": 1,
+      "before_sha256": "5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6904,
+      "length": 1,
+      "before_sha256": "8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6908,
+      "length": 1,
+      "before_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6912,
+      "length": 1,
+      "before_sha256": "de5a6f78116eca62d7fc5ce159d23ae6b889b365a1739ad2cf36f925a140d0cc"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6916,
+      "length": 1,
+      "before_sha256": "4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6920,
+      "length": 1,
+      "before_sha256": "bbeebd879e1dff6918546dc0c179fdde505f2a21591c9a9c96e36b054ec5af83"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6924,
+      "length": 1,
+      "before_sha256": "a9253dc8529dd214e5f22397888e78d3390daa47593e26f68c18f97fd7a3876b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6928,
+      "length": 1,
+      "before_sha256": "74cd9ef9c7e15f57bdad73c511462ca65cb674c46c49639c60f1b44650fa1dcb"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5242,
+      "length": 1,
+      "before_sha256": "e7ac0786668e0ff0f02b62bd04f45ff636fd82db63b1104601c975dc005f3a67"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5246,
+      "length": 1,
+      "before_sha256": "dabd3aff769f07eb2965401eb029974ebba3407afd02b26ddb564ea5f8efae72"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5249,
+      "length": 1,
+      "before_sha256": "72dfcfb0c470ac255cde83fb8fe38de8a128188e03ea5ba5b2a93adbea1062fa"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5253,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5257,
+      "length": 1,
+      "before_sha256": "1b16b1df538ba12dc3f97edbb85caa7050d46c148134290feba80f8236c83db9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5261,
+      "length": 1,
+      "before_sha256": "74cd9ef9c7e15f57bdad73c511462ca65cb674c46c49639c60f1b44650fa1dcb"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5264,
+      "length": 1,
+      "before_sha256": "8ce86a6ae65d3692e7305e2c58ac62eebd97d3d943e093f577da25c36988246b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5268,
+      "length": 1,
+      "before_sha256": "62b67e1f685b7fef51102005dddd27774be3fee38c42965c53aab035d0b6b221"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5272,
+      "length": 1,
+      "before_sha256": "e7ac0786668e0ff0f02b62bd04f45ff636fd82db63b1104601c975dc005f3a67"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5276,
+      "length": 1,
+      "before_sha256": "dabd3aff769f07eb2965401eb029974ebba3407afd02b26ddb564ea5f8efae72"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5279,
+      "length": 1,
+      "before_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5283,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5302,
+      "length": 1,
+      "before_sha256": "bbeebd879e1dff6918546dc0c179fdde505f2a21591c9a9c96e36b054ec5af83"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5306,
+      "length": 1,
+      "before_sha256": "bbeebd879e1dff6918546dc0c179fdde505f2a21591c9a9c96e36b054ec5af83"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5311,
+      "length": 1,
+      "before_sha256": "a9253dc8529dd214e5f22397888e78d3390daa47593e26f68c18f97fd7a3876b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5315,
+      "length": 1,
+      "before_sha256": "a9253dc8529dd214e5f22397888e78d3390daa47593e26f68c18f97fd7a3876b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5320,
+      "length": 1,
+      "before_sha256": "58f7b0780592032e4d8602a3e8690fb2c701b2e1dd546e703445aabd6469734d"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5324,
+      "length": 1,
+      "before_sha256": "bd4fc42a21f1f860a1030e6eba23d53ecab71bd19297ab6c074381d4ecee0018"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5327,
+      "length": 1,
+      "before_sha256": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5331,
+      "length": 1,
+      "before_sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5335,
+      "length": 1,
+      "before_sha256": "8a331fdde7032f33a71e1b2e257d80166e348e00fcb17914f48bdb57a1c63007"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5339,
+      "length": 1,
+      "before_sha256": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5343,
+      "length": 1,
+      "before_sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5347,
+      "length": 1,
+      "before_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5351,
+      "length": 1,
+      "before_sha256": "32ebb1abcc1c601ceb9c4e3c4faba0caa5b85bb98c4f1e6612c40faa528a91c9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5354,
+      "length": 1,
+      "before_sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5358,
+      "length": 1,
+      "before_sha256": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5362,
+      "length": 1,
+      "before_sha256": "58f7b0780592032e4d8602a3e8690fb2c701b2e1dd546e703445aabd6469734d"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5366,
+      "length": 1,
+      "before_sha256": "bd4fc42a21f1f860a1030e6eba23d53ecab71bd19297ab6c074381d4ecee0018"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5369,
+      "length": 1,
+      "before_sha256": "72dfcfb0c470ac255cde83fb8fe38de8a128188e03ea5ba5b2a93adbea1062fa"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5373,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5377,
+      "length": 1,
+      "before_sha256": "8a331fdde7032f33a71e1b2e257d80166e348e00fcb17914f48bdb57a1c63007"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5381,
+      "length": 1,
+      "before_sha256": "72dfcfb0c470ac255cde83fb8fe38de8a128188e03ea5ba5b2a93adbea1062fa"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5385,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5389,
+      "length": 1,
+      "before_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5393,
+      "length": 1,
+      "before_sha256": "32ebb1abcc1c601ceb9c4e3c4faba0caa5b85bb98c4f1e6612c40faa528a91c9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5396,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5400,
+      "length": 1,
+      "before_sha256": "72dfcfb0c470ac255cde83fb8fe38de8a128188e03ea5ba5b2a93adbea1062fa"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5561,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5565,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5568,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5571,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5575,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5579,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5582,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5586,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5590,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 5594,
+      "length": 1,
+      "before_sha256": "454349e422f05297191ead13e21d3db520e5abef52055e4964b82fb213f593a1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6933,
+      "length": 1,
+      "before_sha256": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6937,
+      "length": 1,
+      "before_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6941,
+      "length": 1,
+      "before_sha256": "67586e98fad27da0b9968bc039a1ef34c939b9b8e523a8bef89d478608c5ecf6"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6945,
+      "length": 1,
+      "before_sha256": "beead77994cf573341ec17b58bbf7eb34d2711c993c1d976b128b3188dc1829a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6949,
+      "length": 1,
+      "before_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6954,
+      "length": 1,
+      "before_sha256": "ef6cbd2161eaea7943ce8693b9824d23d1793ffb1c0fca05b600d3899b44c977"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6958,
+      "length": 1,
+      "before_sha256": "4d7b3ef7300acf70c892d8327db8272f54434adbc61a4e130a563cb59a0d0f47"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6962,
+      "length": 1,
+      "before_sha256": "c555eab45d08845ae9f10d452a99bfcb06f74a50b988fe7e48dd323789b88ee3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6966,
+      "length": 1,
+      "before_sha256": "f299791cddd3d6664f6670842812ef6053eb6501bd6282a476bbbf3ee91e750c"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6970,
+      "length": 1,
+      "before_sha256": "83891d7fe85c33e52c8b4e5814c92fb6a3b9467299200538a6babaa8b452d879"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6974,
+      "length": 1,
+      "before_sha256": "7cb7c4547cf2653590d7a9ace60cc623d25148adfbc88a89aeb0ef88da7839ba"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6978,
+      "length": 1,
+      "before_sha256": "452ba1ddef80246c48be7690193c76c1d61185906be9401014fe14f1be64b74f"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6983,
+      "length": 1,
+      "before_sha256": "58f7b0780592032e4d8602a3e8690fb2c701b2e1dd546e703445aabd6469734d"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6987,
+      "length": 1,
+      "before_sha256": "bd4fc42a21f1f860a1030e6eba23d53ecab71bd19297ab6c074381d4ecee0018"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6991,
+      "length": 1,
+      "before_sha256": "9652595f37edd08c51dfa26567e6cd76e6fa2709c3e578478ca398d316837a7a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6995,
+      "length": 1,
+      "before_sha256": "36a9e7f1c95b82ffb99743e0c5c4ce95d83c9a430aac59f84ef3cbfab6145068"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 6999,
+      "length": 1,
+      "before_sha256": "8a331fdde7032f33a71e1b2e257d80166e348e00fcb17914f48bdb57a1c63007"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7003,
+      "length": 1,
+      "before_sha256": "09fc96082d34c2dfc1295d92073b5ea1dc8ef8da95f14dfded011ffb96d3e54b"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7008,
+      "length": 1,
+      "before_sha256": "951dcee3a7a4f3aac67ec76a2ce4469cc76df650f134bf2572bf60a65c982338"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7012,
+      "length": 1,
+      "before_sha256": "32ebb1abcc1c601ceb9c4e3c4faba0caa5b85bb98c4f1e6612c40faa528a91c9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7017,
+      "length": 1,
+      "before_sha256": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7021,
+      "length": 1,
+      "before_sha256": "d03502c43d74a30b936740a9517dc4ea2b2ad7168caa0a774cefe793ce0b33e7"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7026,
+      "length": 1,
+      "before_sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7030,
+      "length": 1,
+      "before_sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7035,
+      "length": 1,
+      "before_sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7039,
+      "length": 1,
+      "before_sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7044,
+      "length": 1,
+      "before_sha256": "2c624232cdd221771294dfbb310aca000a0df6ac8b66b696d90ef06fdefb64a3"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7048,
+      "length": 1,
+      "before_sha256": "e7ac0786668e0ff0f02b62bd04f45ff636fd82db63b1104601c975dc005f3a67"
+    },
+    {
+      "name": "preserve native sprite tile reference",
+      "file_offset": 7053,
+      "length": 1,
+      "before_sha256": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+    },
+    {
+      "name": "preserve direct native subweapon HUD sprite",
+      "file_offset": 106853,
+      "length": 1,
+      "before_sha256": "8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+    },
+    {
+      "name": "preserve direct native subweapon HUD sprite",
+      "file_offset": 106854,
+      "length": 1,
+      "before_sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3"
+    },
+    {
+      "name": "MMC5 reset and graphics bridges",
+      "file_offset": 130874,
+      "length": 21,
+      "before_sha256": "be32a73016f6f55b580adcc7041010de62e3826440e837554869647d66ad1727"
+    },
+    {
+      "name": "MMC5 reset vector",
+      "file_offset": 131084,
+      "length": 2,
+      "before_sha256": "b4245e1880553d8150dee978e237c0f06d7b4b16d776c0816f07a3c2a7b6e361"
+    },
+    {
+      "name": "MMC5 HUD IRQ vector",
+      "file_offset": 131086,
+      "length": 2,
+      "before_sha256": "b9c663ca8c1622b3ac665e093e039c9679ce2d745bc6c5ad25480191fc2f05c1"
+    },
+    {
+      "name": "interrupt-driven HUD split replaces raster polling",
+      "file_offset": 129239,
+      "length": 75,
+      "before_sha256": "bd9afa03f3d58ca154c311d5d2fdd28c6ba1a8e7d6f79d41763b1e90fc8225e1"
+    },
+    {
+      "name": "MainLoopIrq",
+      "file_offset": 114764,
+      "length": 3,
+      "before_sha256": "380437875a989453626f7ef4c2df7405830ac5607605e6599d9ff89fa23994b0"
+    },
+    {
+      "name": "FinishHudSetup",
+      "file_offset": 114845,
+      "length": 3,
+      "before_sha256": "1aff596140c70be6bae746988936f0dd6cc92fd88a47ea7b9476f20860615992"
+    },
+    {
+      "name": "FinishHudSetup",
+      "file_offset": 114910,
+      "length": 3,
+      "before_sha256": "1aff596140c70be6bae746988936f0dd6cc92fd88a47ea7b9476f20860615992"
+    },
+    {
+      "name": "FarRefreshChr",
+      "file_offset": 130439,
+      "length": 3,
+      "before_sha256": "3e2fdbc2a4ecfda9e82d812903504ba3bd620ae01bfaf93558dfc66e07c2857a"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 112634,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 112735,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 112780,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 112952,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 113049,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 116396,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 116748,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 116800,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 116810,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "PrepareNativeChr",
+      "file_offset": 117079,
+      "length": 3,
+      "before_sha256": "23392519ae74382d4dde8ce67d117656ba8295d55a127a096be330d416101c10"
+    },
+    {
+      "name": "bank0",
+      "file_offset": 15136,
+      "length": 1201,
+      "before_sha256": "4272b7e123664d097a0df38de37b6f7d812004af2f7de676a16c7f0c609b1bde"
+    },
+    {
+      "name": "bank5",
+      "file_offset": 89696,
+      "length": 5557,
+      "before_sha256": "65c85913fa123364eb0adc26c8558ee7eb8df2539da88732765fff19f65bd5f4"
+    },
+    {
+      "name": "bank6",
+      "file_offset": 113232,
+      "length": 1440,
+      "before_sha256": "333e0d6cb69b42d3e10970274437bd7d250ee18cd25df2f5fc9e7bfd024735ca"
+    },
+    {
+      "name": "fixed bridges in disabled whip collision code",
+      "file_offset": 123922,
+      "length": 100,
+      "before_sha256": "1db4a963df23ef6198ab08e3ce289cdc005f17ec06a0b6b9b1cafdd52f116d23"
+    },
+    {
+      "name": "bank-safe native AI returns in displaced health handler",
+      "file_offset": 124743,
+      "length": 31,
+      "before_sha256": "1574a8ed0f3846787fd0e6adeec5d3ed858dee176f769e40ff82fbdaed82ecb5"
+    },
+    {
+      "name": "PrepareActorBank",
+      "file_offset": 125279,
+      "length": 3,
+      "before_sha256": "74cbff0095799921e22697ec4d40a7710ff103a66dd8685b12c20c4e2eacad4f"
+    },
+    {
+      "name": "FarScriptedAi",
+      "file_offset": 115627,
+      "length": 3,
+      "before_sha256": "2bdeb3c8e37effad430b7e3a986203f1e72e4a78ab77f6eea70bc340ec77d4fd"
+    },
+    {
+      "name": "FarScriptedAi",
+      "file_offset": 115962,
+      "length": 3,
+      "before_sha256": "2bdeb3c8e37effad430b7e3a986203f1e72e4a78ab77f6eea70bc340ec77d4fd"
+    },
+    {
+      "name": "FarScriptedAi",
+      "file_offset": 100003,
+      "length": 3,
+      "before_sha256": "2bdeb3c8e37effad430b7e3a986203f1e72e4a78ab77f6eea70bc340ec77d4fd"
+    },
+    {
+      "name": "SMB simultaneous-direction input",
+      "file_offset": 118496,
+      "length": 3,
+      "before_sha256": "f09a9144a5bac5e053bb204aee40824371b4f1992161df8aab966b445eeaef6c"
+    },
+    {
+      "name": "MarioUpdate",
+      "file_offset": 103260,
+      "length": 3,
+      "before_sha256": "cc9d64e301f3b1a4c2fa66277538a53f81d4cdb2c6bce235f954a81c1f339d5d"
+    },
+    {
+      "name": "AfterMarioUpdate",
+      "file_offset": 118541,
+      "length": 3,
+      "before_sha256": "3e513a257124c8e39562b68db54132b646a046f2631f4c48f07f85607da2d355"
+    },
+    {
+      "name": "post-player bank switch padding",
+      "file_offset": 118544,
+      "length": 2,
+      "before_sha256": "4f6edddc705a22d39d46cb87501ec26f4636de1c0816579b9f5bef74deb87cc7"
+    },
+    {
+      "name": "JumpStart",
+      "file_offset": 103447,
+      "length": 3,
+      "before_sha256": "483a5d50c90dba640107a591181c2bfb330d7fb2693a7f665c0d33fec84aa473"
+    },
+    {
+      "name": "AirDirection",
+      "file_offset": 103582,
+      "length": 3,
+      "before_sha256": "7947494209a702e8a4912cc2887595e7339746df2caf78ba6b594c8774707e14"
+    },
+    {
+      "name": "VerticalMove",
+      "file_offset": 103639,
+      "length": 3,
+      "before_sha256": "2089fb8da60fbad736e0e8621277bcb4647da65439e7b08f59be364bba4e7231"
+    },
+    {
+      "name": "SideOffset",
+      "file_offset": 106316,
+      "length": 3,
+      "before_sha256": "641c1fd87ff531a0a8f9a0e61361fb8549db3da4f1a99c0043cc4ffdd26fc8e4"
+    },
+    {
+      "name": "DeferredSideCheck",
+      "file_offset": 106206,
+      "length": 3,
+      "before_sha256": "09867e1c0b7076e48f266c53e21b65e4d18e99b3cdcb99c74ee26b32ddb4f85e"
+    },
+    {
+      "name": "DeferredFootCheck",
+      "file_offset": 106112,
+      "length": 3,
+      "before_sha256": "ed23b4f0246d81c4c5f31398a35aa3d3af4a2707c7f0fd3a12bd6f5f345c735c"
+    },
+    {
+      "name": "side offset hook padding",
+      "file_offset": 106319,
+      "length": 1,
+      "before_sha256": "86be9a55762d316a3026c2836d044f5fc76e34da10e1b45feee5f18be7edb177"
+    },
+    {
+      "name": "LandingReset",
+      "file_offset": 103692,
+      "length": 3,
+      "before_sha256": "cc36e9cde5286e4d284652674acdfca16da02ca7f491133cfe97c5f10e3f4936"
+    },
+    {
+      "name": "SMB left foot probe at sprite-left +3",
+      "file_offset": 106127,
+      "length": 1,
+      "before_sha256": "e52d9c508c502347344d8c07ad91cbd6068afc75ff6292f062a09ca381c89e71"
+    },
+    {
+      "name": "FireballWalls",
+      "file_offset": 108600,
+      "length": 3,
+      "before_sha256": "a8d0826a119b0b51146cacb67f1c9abcbb917b2926d6f3d72e756f386edc230a"
+    },
+    {
+      "name": "FireballBrickCollision",
+      "file_offset": 108712,
+      "length": 3,
+      "before_sha256": "bd6ebb770f9622eb20537be2c709527d11c0aee28a76717b17cf953253a9e517"
+    },
+    {
+      "name": "return fireball wall overlap to native handler",
+      "file_offset": 108715,
+      "length": 3,
+      "before_sha256": "4ff8db91491bace484cb9d14095449dac4edc4e6fe0dc9e625932584d959bfb6"
+    },
+    {
+      "name": "DoorUpdate",
+      "file_offset": 115619,
+      "length": 3,
+      "before_sha256": "8e1dbb041d98ee4390e71223233e99929bfc7af72b63bf69c6724275dcef41df"
+    },
+    {
+      "name": "RightScrollBoundary",
+      "file_offset": 104569,
+      "length": 3,
+      "before_sha256": "cd430d68ad572f61e075a10094ec0743b68d0e7f635a3012b26e899456043e4e"
+    },
+    {
+      "name": "MoveCentered",
+      "file_offset": 104618,
+      "length": 3,
+      "before_sha256": "b26449e15f55b64bc180e782cc525d7547873dc840482f42b13e57c0ab4ed30b"
+    },
+    {
+      "name": "RightLocalBound",
+      "file_offset": 104667,
+      "length": 3,
+      "before_sha256": "65fbe17a27c7396c087e690f39cde4c8708455d15ec8acfa63c0edc04d398bd6"
+    },
+    {
+      "name": "right bound padding",
+      "file_offset": 104670,
+      "length": 1,
+      "before_sha256": "41b805ea7ac014e23556e98bb374702a08344268f92489a02f0880849394a1e4"
+    },
+    {
+      "name": "LeftLocalBound",
+      "file_offset": 104697,
+      "length": 3,
+      "before_sha256": "a758bba4e410a6409d622e4846b23cd382db434a3fa76c40d6a8ffafa26b9006"
+    },
+    {
+      "name": "left bound padding",
+      "file_offset": 104700,
+      "length": 1,
+      "before_sha256": "1f18d650d205d71d934c3646ff5fac1c096ba52eba4cf758b865364f4167d3cd"
+    },
+    {
+      "name": "advance streaming strips each frame",
+      "file_offset": 128579,
+      "length": 2,
+      "before_sha256": "b55fe22128223dcb5cb20555b7ed8560311969ab02bf9e4a55e2aff0c2549883"
+    },
+    {
+      "name": "load streaming strips each frame",
+      "file_offset": 128663,
+      "length": 2,
+      "before_sha256": "9c9a95842e9bd707e15575b5d555c7c838373970ad483b3ab5605844939a6c5a"
+    },
+    {
+      "name": "scroll spawn bridge with exact world placement",
+      "file_offset": 128506,
+      "length": 27,
+      "before_sha256": "f1a8a620a798bb6c026b4e8471f341705d329e984d1ea551bbd16c08eeaf6c41"
+    },
+    {
+      "name": "SMB crouch keeps normal movement and jump dispatch",
+      "file_offset": 103520,
+      "length": 3,
+      "before_sha256": "b8d00bc31ac6984710345a6374e9800141980b1add5efa715d45b9eff2ee5f62"
+    },
+    {
+      "name": "SetNativeSpeed",
+      "file_offset": 109919,
+      "length": 3,
+      "before_sha256": "e6a2b38894c479746465bb4773e5fa25b146d47095639f7fce576f3e066fe736"
+    },
+    {
+      "name": "PlatformCheck",
+      "file_offset": 109696,
+      "length": 3,
+      "before_sha256": "e738c9d6e2fb5e7aa3139d52ae18a756948e777c241e02118d7afc615238255d"
+    },
+    {
+      "name": "PlatformContact",
+      "file_offset": 109840,
+      "length": 3,
+      "before_sha256": "3af195201958cbb1d5ea4d83c29e87f117cca6cc273ea280da876247d8a33d84"
+    },
+    {
+      "name": "SelectPlayerSprite",
+      "file_offset": 150,
+      "length": 3,
+      "before_sha256": "4bda86a8a526c908fb991aa8fa2493f400ff1e282d8cdcdae18d78bbadd955e5"
+    },
+    {
+      "name": "FastSpriteSetup",
+      "file_offset": 130,
+      "length": 3,
+      "before_sha256": "b17251872817c1862a41f5dd93bf7135dd456ec3e4d92a234c4253663fa5e392"
+    },
+    {
+      "name": "fast native OAM permutation",
+      "file_offset": 197,
+      "length": 7,
+      "before_sha256": "8b275c4c72d0372e7cd90ec484b6221265257ea6cf16f0e9a64107d84c2b9f76"
+    },
+    {
+      "name": "fast native OAM permutation",
+      "file_offset": 306,
+      "length": 7,
+      "before_sha256": "8b275c4c72d0372e7cd90ec484b6221265257ea6cf16f0e9a64107d84c2b9f76"
+    },
+    {
+      "name": "SpriteBudgetNext",
+      "file_offset": 315,
+      "length": 3,
+      "before_sha256": "d5cf4cafcaae250fd8661802743ef148563f3b113deace566b142147db094378"
+    },
+    {
+      "name": "ResetMario",
+      "file_offset": 117146,
+      "length": 3,
+      "before_sha256": "6dbcb291ca1b903f069311e79380abb17137ebc6e2b3ff65623e42c33e47c164"
+    },
+    {
+      "name": "health reset hook padding",
+      "file_offset": 117149,
+      "length": 1,
+      "before_sha256": "3f39d5c348e5b79d06e842c114e6cc571583bbf44e4b0ebfda1a01ec05745d43"
+    },
+    {
+      "name": "FarInteractions",
+      "file_offset": 118569,
+      "length": 3,
+      "before_sha256": "2bdeb3c8e37effad430b7e3a986203f1e72e4a78ab77f6eea70bc340ec77d4fd"
+    },
+    {
+      "name": "CollisionSetup",
+      "file_offset": 123919,
+      "length": 3,
+      "before_sha256": "a8d0826a119b0b51146cacb67f1c9abcbb917b2926d6f3d72e756f386edc230a"
+    },
+    {
+      "name": "GetPlayerCollisionY",
+      "file_offset": 124691,
+      "length": 3,
+      "before_sha256": "6bc10e524d19f42133d9e53d9f0d8dfa369df0d384126e223ef73f1f3ee7d47b"
+    },
+    {
+      "name": "SMB player horizontal combat radius",
+      "file_offset": 124672,
+      "length": 2,
+      "before_sha256": "f3102a905cb6f678f715318391d166259c64ee6f279005a5ed7b47a48f5ef2d3"
+    },
+    {
+      "name": "MarioDamage",
+      "file_offset": 124740,
+      "length": 3,
+      "before_sha256": "23a2e32482ac37bff27802d1407effb54ed5285f68b72bbc4efb095c9c0892d5"
+    },
+    {
+      "name": "ActorEnd",
+      "file_offset": 125430,
+      "length": 3,
+      "before_sha256": "ba775983841fb8ded3a977372f12ac9e4b4e0f8e91d8dc3bac508b6d6ea18605"
+    },
+    {
+      "name": "DraculaCooldown",
+      "file_offset": 87300,
+      "length": 3,
+      "before_sha256": "c67433e45e49dbe0f77486859a7e7e6a1f83bf5b4e75ed723d36df4127eee5f3"
+    },
+    {
+      "name": "DraculaCooldown",
+      "file_offset": 87344,
+      "length": 3,
+      "before_sha256": "c67433e45e49dbe0f77486859a7e7e6a1f83bf5b4e75ed723d36df4127eee5f3"
+    },
+    {
+      "name": "DraculaHeadCooldown",
+      "file_offset": 123804,
+      "length": 3,
+      "before_sha256": "390fda15eb033fae9ac1a86d6d11570cbe71f7ebd71f45e49b7def1946a61305"
+    },
+    {
+      "name": "SubweaponAction",
+      "file_offset": 105018,
+      "length": 3,
+      "before_sha256": "a8d0826a119b0b51146cacb67f1c9abcbb917b2926d6f3d72e756f386edc230a"
+    },
+    {
+      "name": "Mario palette",
+      "file_offset": 118267,
+      "length": 4,
+      "before_sha256": "e0df5b35d1ea5d59746d282bc36b305692bdc6c6d6b9dfd8b976fba10faea6dd"
+    },
+    {
+      "name": "native sprite palette retains Mario form",
+      "file_offset": 118037,
+      "length": 2,
+      "before_sha256": "8f7853ef9b82177566bc1f377743ab5b16299ce0b2ee3a2ae2248639e9050aa4"
+    },
+    {
+      "name": "native sprite palette retains Mario form",
+      "file_offset": 118067,
+      "length": 2,
+      "before_sha256": "8f7853ef9b82177566bc1f377743ab5b16299ce0b2ee3a2ae2248639e9050aa4"
+    }
+  ],
+  "native_sprite_remap": {
+    "0": 1,
+    "2": 3,
+    "4": 5,
+    "6": 7,
+    "8": 9,
+    "10": 11,
+    "12": 13,
+    "14": 15,
+    "16": 17,
+    "18": 19,
+    "20": 21,
+    "22": 23,
+    "24": 49,
+    "26": 51,
+    "28": 53,
+    "30": 55,
+    "32": 57,
+    "34": 59,
+    "36": 61,
+    "38": 63,
+    "40": 65,
+    "42": 67,
+    "44": 69,
+    "46": 71,
+    "48": 73,
+    "50": 75,
+    "52": 77,
+    "54": 79,
+    "56": 81,
+    "58": 83,
+    "60": 85,
+    "62": 87,
+    "64": 89,
+    "66": 91,
+    "68": 93,
+    "70": 95,
+    "72": 97,
+    "74": 99,
+    "76": 101,
+    "78": 103,
+    "80": 105,
+    "82": 107,
+    "84": 109,
+    "86": 111,
+    "88": 113,
+    "90": 115,
+    "92": 125,
+    "94": 127,
+    "96": 129,
+    "98": 131,
+    "100": 141,
+    "102": 143,
+    "104": 157,
+    "106": 181,
+    "108": 209,
+    "110": 211,
+    "112": 213,
+    "114": 215,
+    "116": 217,
+    "118": 219,
+    "120": 221
+  }
+}

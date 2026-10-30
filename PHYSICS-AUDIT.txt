@@ -1,0 +1,188 @@
+MARIO PORT PHYSICS AUDIT — 23 October 2026
+
+The criticism is partly correct. Several ports use SMB1's constants but do not
+execute its complete movement sequence. All ten installed games were reviewed.
+No gameplay code or ROM was changed during this audit.
+
+The reference is the supplied local vendor/smb1base source, with its configured
+USE_SMB2J_FEATURES=0. The audit assembles verbatim movement, input filtering,
+friction, jump, horizontal integration and gravity routines from player.s and
+common.s. It runs those 6502 instructions against the installed port code.
+Only reference variable addresses and test entry points are supplied by the
+harness; movement formulas are not recreated in Python.
+
+The six platforming comparisons total 2,724 controlled cases and 359,342
+movement updates. These counts include intentionally different inputs and
+host-game behavior; they are not a percentage score for each game. Mesen
+controller replays separately reproduce the principal differences below.
+
+GAME-BY-GAME FINDINGS
+
+1. KID ICARUS
+   Strongest match. All 360 expanded land cases matched, across all three forms
+   and both directions, including acceleration, running, release, reversals,
+   jump-speed boundaries, variable height, crouch jumps, chained jumps and
+   stepping off a ledge after a fast jump. The existing 90-case/7,200-update
+   test also passed, including its swimming and climbing fixtures. A fresh
+   controller-driven opening jump passed in Mesen.
+   This does not make Kid Icarus's terrain adapters identical to SMB1's block
+   collision engine. The final stage's flight is an intentional adaptation.
+   Relevant code: src/mario.s:566, :804, :876, :1046.
+
+2. CONTRA
+   Ordinary acceleration, top speeds, braking, reversals, jump forces and arcs
+   match in the controlled cases. The expanded audit found input/stance and
+   ledge differences: Small Mario can move with Down+Left/Right, whereas SMB1
+   suppresses those horizontal inputs on the ground; tall forms crouch on the
+   same combined input where SMB1's controller wrapper clears Down too.
+   Leaving support resets the falling force to $70. After a fast jump, SMB1
+   retains the selected $90 falling force, so the next ledge fall differs.
+   Both controllers reproduced the movement traces in Mesen (2,760 updates).
+   These are distinct from the intentionally retained drop-throughs, aiming,
+   water-to-shore behavior and scripted Contra room transitions.
+   Relevant code: contra/src/engine.inc:78, :421, :495, :862.
+
+3. RESCUE RANGERS
+   Ordinary movement and the tested jump arcs match. Crouching is cleared every
+   movement update, including while airborne: a tall crouch jump becomes a
+   standing-height body on its second update. SMB1 retains the crouch during
+   flight. Mesen reproduced this with Mario/Super and Luigi/Fire forms.
+   Down+direction filtering also differs as in Contra. Native carrying,
+   throwing, box hiding, drop-throughs and object support are separate host
+   mechanics and should remain available when correcting the SMB core.
+   Relevant code: rangers/src/mario.s:240, :471, :487, :716.
+
+4. KUNG FU
+   Needs a substantial core correction for exact SMB1 movement. Vertical
+   velocity is updated before position, every normal jump starts at -4 rather
+   than selecting SMB1's speed-dependent -4/-5 launch, and the fall limit is
+   different. Horizontal friction runs even with neutral airborne controls;
+   animation/skid processing and timer updates occur in a different order.
+   The input-normalization branch can also write facing=0 on neutral input.
+   All three forms reproduced 20-pixel tap jumps and 60-pixel held jumps in
+   Mesen, against SMB1's 24 and 64 pixels for the same from-rest inputs.
+   A running jump reaches 60 pixels in the isolated port test against SMB1's
+   80-pixel fast-jump case. Braking/reversal traces also differ.
+   The native melee controls, boss barriers and staircase movement are deliberate
+   integrations; they do not require keeping these ordinary movement errors.
+   Relevant code: kungfu/src/mario.s:186 through :357.
+
+5. TETRIS
+   Grounded walk/run acceleration and top speeds match in the flat-floor test.
+   Air control does not: friction is applied with no left/right input, and
+   facing changes in the air. Jump selection happens after horizontal
+   acceleration/friction rather than before it. Falling is clamped at exactly
+   4.0 pixels/update instead of reproducing SMB1's fractional cap logic.
+   Mesen measured a drop from 40/16 to 35/16 pixels/update during neutral air
+   input, where the SMB1 reference retains 40/16. The 4.0 descent cap was also
+   observed. A stationary 25-frame held jump still reaches the same 64-pixel
+   apex, but its later descent differs by a pixel before landing.
+   Shared piece controls, fixed well bounds, piece pushes, head breaking and
+   stomps are deliberate Tetris rules. Down's soft-drop behavior should remain.
+   Relevant code: tetris/src/mario.s:197, :480, :524.
+
+6. SUPER MARIO BROS. 2 USA
+   Horizontal acceleration/speed/friction values match in the existing tests,
+   but the native position integrator uses magnitude-based negative movement
+   and 1/16-pixel velocities. Leftward/reversal pixel timing therefore differs
+   even when velocity values match. Native gravity/control/position call order
+   and conversion of vertical fractions also alter the jump path.
+   Mesen measured a 20-pixel one-frame tap and a 63-pixel 25-frame held jump,
+   against SMB1's 24 and 64. Both measurements match the expanded CPU audit.
+   SMB2's charged high jump, heart health, enemy-head standing/carrying,
+   quicksand, climbing and room transitions are intentional retained mechanics.
+   Relevant code: smb2/src/control.asm:2 and :154; the native normal-state
+   sequence is in smb2/build/source/src/prg-0-1.asm:1961 and its integrator :2909.
+
+7. GRADIUS
+   Deliberately different movement: native horizontal flight plus custom gravity
+   and hold-Up lift, with speed-capsule scaling. It does not execute SMB1's
+   ground/jump controller. This matches the chosen floating/swimming design.
+   Re-ran the assembled CPU checks and a Luigi gravity/lift/Options/pause replay.
+   No new movement defect was established in this audit.
+   Relevant code: gradius/src/mario.s:306; gradius/tests/float.lua.
+
+8. SNAKE RATTLE 'N' ROLL
+   Retains native isometric movement/momentum and changes native jump strength
+   and held-A gravity. This is Mario-inspired jumping, not an exact SMB1
+   trajectory or its horizontal controller. The Moon's native gravity is kept.
+   Re-ran the assembled jump/gravity checks and the two-player stage-0 replay.
+   No new defect beyond that known difference was established.
+   Relevant code: snake/src/mario.s:321, :428 and :437.
+
+9. THE LEGEND OF ZELDA
+   Uses native four-direction overhead walking, terrain and item movement;
+   there is no SMB1 ground/jump controller. The fireball speed cycle projects
+   a bounce along a straight axis by design. Re-ran CPU checks and the actual
+   vertical-walking/standing-recovery replay. No new movement defect was found.
+   Relevant code: zelda/README.md; zelda/tools/build.py; zelda/tests/walk.lua.
+
+10. WWF WRESTLEMANIA
+   Uses native wrestling movement, running, aerial actions and opponent stats,
+   with Mario/Luigi artwork and independent fireballs. It does not use SMB1
+   acceleration or jumping. Re-ran CPU checks and both brothers' controller
+   replays. One initial replay missed an expected melee pose; repeating the
+   same-ROM replay passed, and the Luigi replay passed. This is an unresolved
+   coverage-stability issue in a replay with live opponent behavior, rather
+   than evidence that its retained native movement differs unexpectedly.
+   Relevant code: wwf/src/mario.s:137; wwf/tests/game.lua:43.
+
+MEASURED UPDATE SPEED
+
+Correct formulas per movement update do not guarantee the original real-time
+feel if the NES cannot finish a game update every video frame. Current-ROM
+fixtures produced these measurements:
+
+  Rescue Rangers, solo Small: 395 updates / 400 video frames (~59.3 per second).
+  Rescue Rangers, solo Fire: 354 / 400 (~53.1 per second).
+  Rescue Rangers, Fire co-op: 202 / 400 (~30.3 per second).
+  Contra, Fire/gun co-op, stage 0: 405 / 600 (~40.5 per second).
+  Contra, Fire/gun co-op, stage 6: 361 / 600 (~36.1 per second).
+  Kung Fu, native-enemy stress: 4,300 / 4,300 active frames.
+
+These are fixture measurements, not whole-campaign frame-rate guarantees or
+an attribution of every CPU cycle to the mod rather than the native engine.
+Rangers and Contra slowdown can make even a matching trajectory feel slower.
+
+CORRECTION PRIORITY
+
+First: share the exact SMB1 update sequence in Kung Fu and Tetris, including
+neutral-air coasting, speed-dependent launch, fraction integration and falling
+cap behavior. Preserve each game's required attacks and piece interactions.
+
+Second: fix SMB2's velocity-to-position integration while preserving its native
+collision callbacks, charged jump, carrying and heart system.
+
+Third: repair Rescue Rangers' airborne crouch and the Contra/Rangers input
+differences where they are not needed for native aiming or object actions;
+preserve Contra's selected falling force across landings/ledge departures.
+
+Separately: profile the crowded Contra and Rangers scenes. Copying constants
+alone will not correct their reduced update rate.
+
+Keep the requested Gradius float, Zelda overhead movement, Snake isometric
+movement, and WrestleMania wrestling controls as explicit adaptations.
+
+EVIDENCE AND REPRODUCTION
+
+  build/physics-audit/inventory.json: all ten installed ROM hashes, checked
+  against each dist ROM, manifest and existing verification receipt.
+  build/physics-audit/{kidicarus,rangers,tetris,kungfu,smb2}.json: detailed
+  source comparisons, first state/motion differences and measured travel.
+  contra/build/physics-audit/results.json: expanded Contra comparisons.
+  build/physics-audit/*-mesen*.log: actual controller measurements/replays.
+  contra/build/physics-audit/mesen-{0,1}.log: full Contra trace reproduction.
+  build/physics-audit/*existing.log: re-run pre-existing CPU verification.
+  build/physics-audit/*solo*.log, *coop*.log: update-rate measurements.
+
+  python contra/tools/audit_physics.py
+  python tools/audit_all_physics.py
+
+The added tests named physics-audit.lua reproduce the observed differences;
+their PASS messages mean the measurement was reproduced, not that a port now
+has perfect SMB1 physics. No fixes or new ROMs have been installed.
+
+The comparison fixtures isolate ordinary movement on synthetic flat terrain,
+without native enemies/camera effects unless a replay explicitly includes them.
+They do not certify all collision quirks, water transitions, enemy/platform
+interactions, every level, physical hardware timing or unassisted campaign play.

@@ -1,0 +1,507 @@
+{
+  "base_sha256": "2275213352411a23df7428496ad03991348ddee3034ac6db83d2d16f0d1f8554",
+  "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+  "output_sha256": "43096d542f4300a559686993afd245d99b322bfd0b8cfb51919542b4ea443fe8",
+  "labels": {
+    "AnimGate": 25383,
+    "Boot": 33368,
+    "BossBlocks": 25330,
+    "BottomSplitGate": 27384,
+    "Contacts": 26014,
+    "DamageGate": 25712,
+    "DmaGate": 26807,
+    "Draw": 26995,
+    "Fireballs": 26173,
+    "FrameTail": 26911,
+    "GripGate": 25784,
+    "HitEnemy": 25845,
+    "HurtBox": 25574,
+    "Init": 24576,
+    "LifeGate": 24635,
+    "MeleeBottom": 25662,
+    "MeleeTop": 25636,
+    "MenuGate": 26947,
+    "MoveGate": 24727,
+    "NativeActorDrawGate": 27363,
+    "NativeAnimGate": 25403,
+    "ReleaseGrips": 25803,
+    "SelectFrame": 26459,
+    "StairSpriteBank": 27377,
+    "Step": 24754,
+    "Stomps": 25882,
+    "SyncNativeAnimation": 25436
+  },
+  "native": {},
+  "hooks": [
+    {
+      "address": 33368,
+      "length": 100
+    },
+    {
+      "address": 33513,
+      "length": 3
+    },
+    {
+      "address": 33516,
+      "length": 2
+    },
+    {
+      "address": 33630,
+      "length": 3
+    },
+    {
+      "address": 33894,
+      "length": 3
+    },
+    {
+      "address": 33897,
+      "length": 1
+    },
+    {
+      "address": 34770,
+      "length": 3
+    },
+    {
+      "address": 34862,
+      "length": 3
+    },
+    {
+      "address": 43046,
+      "length": 3
+    },
+    {
+      "address": 45777,
+      "length": 3
+    },
+    {
+      "address": 45780,
+      "length": 1
+    },
+    {
+      "address": 35701,
+      "length": 3
+    },
+    {
+      "address": 34287,
+      "length": 3
+    },
+    {
+      "address": 50274,
+      "length": 3
+    },
+    {
+      "address": 49334,
+      "length": 3
+    },
+    {
+      "address": 50811,
+      "length": 3
+    },
+    {
+      "address": 50816,
+      "length": 3
+    },
+    {
+      "address": 36482,
+      "length": 3
+    },
+    {
+      "address": 44545,
+      "length": 3
+    },
+    {
+      "address": 44548,
+      "length": 1
+    },
+    {
+      "address": 35332,
+      "length": 1
+    },
+    {
+      "address": 32891,
+      "length": 1
+    },
+    {
+      "address": 32970,
+      "length": 1
+    },
+    {
+      "address": 32892,
+      "length": 1
+    },
+    {
+      "address": 32971,
+      "length": 1
+    },
+    {
+      "address": 32893,
+      "length": 1
+    },
+    {
+      "address": 32972,
+      "length": 1
+    },
+    {
+      "address": 32894,
+      "length": 1
+    },
+    {
+      "address": 32973,
+      "length": 1
+    },
+    {
+      "address": 32895,
+      "length": 1
+    },
+    {
+      "address": 32974,
+      "length": 1
+    },
+    {
+      "address": 32896,
+      "length": 1
+    },
+    {
+      "address": 32975,
+      "length": 1
+    },
+    {
+      "address": 32897,
+      "length": 1
+    },
+    {
+      "address": 32976,
+      "length": 1
+    },
+    {
+      "address": 32898,
+      "length": 1
+    },
+    {
+      "address": 32977,
+      "length": 1
+    },
+    {
+      "address": 32899,
+      "length": 1
+    },
+    {
+      "address": 32978,
+      "length": 1
+    },
+    {
+      "address": 32900,
+      "length": 1
+    },
+    {
+      "address": 32979,
+      "length": 1
+    },
+    {
+      "address": 32901,
+      "length": 1
+    },
+    {
+      "address": 32980,
+      "length": 1
+    },
+    {
+      "address": 32902,
+      "length": 1
+    },
+    {
+      "address": 32981,
+      "length": 1
+    },
+    {
+      "address": 32903,
+      "length": 1
+    },
+    {
+      "address": 32982,
+      "length": 1
+    },
+    {
+      "address": 32904,
+      "length": 1
+    },
+    {
+      "address": 32983,
+      "length": 1
+    },
+    {
+      "address": 32905,
+      "length": 1
+    },
+    {
+      "address": 32984,
+      "length": 1
+    },
+    {
+      "address": 32906,
+      "length": 1
+    },
+    {
+      "address": 32985,
+      "length": 1
+    },
+    {
+      "address": 32907,
+      "length": 1
+    },
+    {
+      "address": 32986,
+      "length": 1
+    },
+    {
+      "address": 32908,
+      "length": 1
+    },
+    {
+      "address": 32987,
+      "length": 1
+    },
+    {
+      "address": 32909,
+      "length": 1
+    },
+    {
+      "address": 32988,
+      "length": 1
+    },
+    {
+      "address": 32910,
+      "length": 1
+    },
+    {
+      "address": 32989,
+      "length": 1
+    },
+    {
+      "address": 32911,
+      "length": 1
+    },
+    {
+      "address": 32990,
+      "length": 1
+    },
+    {
+      "address": 32912,
+      "length": 1
+    },
+    {
+      "address": 32991,
+      "length": 1
+    },
+    {
+      "address": 32913,
+      "length": 1
+    },
+    {
+      "address": 32992,
+      "length": 1
+    },
+    {
+      "address": 32914,
+      "length": 1
+    },
+    {
+      "address": 32993,
+      "length": 1
+    },
+    {
+      "address": 32915,
+      "length": 1
+    },
+    {
+      "address": 32994,
+      "length": 1
+    },
+    {
+      "address": 32916,
+      "length": 1
+    },
+    {
+      "address": 32995,
+      "length": 1
+    },
+    {
+      "address": 32917,
+      "length": 1
+    },
+    {
+      "address": 32996,
+      "length": 1
+    },
+    {
+      "address": 32918,
+      "length": 1
+    },
+    {
+      "address": 32997,
+      "length": 1
+    },
+    {
+      "address": 32919,
+      "length": 1
+    },
+    {
+      "address": 32998,
+      "length": 1
+    },
+    {
+      "address": 32920,
+      "length": 1
+    },
+    {
+      "address": 32999,
+      "length": 1
+    },
+    {
+      "address": 32921,
+      "length": 1
+    },
+    {
+      "address": 33000,
+      "length": 1
+    },
+    {
+      "address": 32922,
+      "length": 1
+    },
+    {
+      "address": 33001,
+      "length": 1
+    },
+    {
+      "address": 32923,
+      "length": 1
+    },
+    {
+      "address": 33002,
+      "length": 1
+    },
+    {
+      "address": 32924,
+      "length": 1
+    },
+    {
+      "address": 33003,
+      "length": 1
+    },
+    {
+      "address": 32925,
+      "length": 1
+    },
+    {
+      "address": 33004,
+      "length": 1
+    },
+    {
+      "address": 32926,
+      "length": 1
+    },
+    {
+      "address": 33005,
+      "length": 1
+    },
+    {
+      "address": 32927,
+      "length": 1
+    },
+    {
+      "address": 33006,
+      "length": 1
+    },
+    {
+      "address": 32928,
+      "length": 1
+    },
+    {
+      "address": 33007,
+      "length": 1
+    },
+    {
+      "address": 32929,
+      "length": 1
+    },
+    {
+      "address": 33008,
+      "length": 1
+    },
+    {
+      "address": 32930,
+      "length": 1
+    },
+    {
+      "address": 33009,
+      "length": 1
+    },
+    {
+      "address": 32931,
+      "length": 1
+    },
+    {
+      "address": 33010,
+      "length": 1
+    },
+    {
+      "address": 32932,
+      "length": 1
+    },
+    {
+      "address": 33011,
+      "length": 1
+    }
+  ],
+  "mario_tiles": [
+    6,
+    7,
+    8,
+    9,
+    12,
+    13,
+    15,
+    214
+  ],
+  "extra_tiles": [
+    215,
+    216,
+    230,
+    231
+  ],
+  "melee_banks": {
+    "small": [
+      26,
+      27,
+      17,
+      18,
+      19,
+      21
+    ],
+    "big": [
+      3,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "fire_tile": 239,
+  "stair_banks": {
+    "31": 0,
+    "32": 1,
+    "33": 12,
+    "34": 13
+  },
+  "stair_hud": [
+    91,
+    188,
+    189,
+    253,
+    254
+  ],
+  "scene_bank": 35,
+  "mapper": "CNROM with WRAM"
+}

@@ -1,0 +1,232 @@
+{
+  "title": "Mario In",
+  "intro_seconds": 3.5,
+  "outro_seconds": 5.0,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "games": [
+    {
+      "game": "kidicarus",
+      "title": "KID ICARUS",
+      "mechanics": "SMB jumps and stomps.\nCollect and swing hammers.",
+      "tagline": "A new way up the underworld.",
+      "clips": [
+        {
+          "capture": "kidicarus-baseline",
+          "start": 8.3,
+          "duration": 3.6
+        },
+        {
+          "capture": "kidicarus-hammers",
+          "start": 10.3,
+          "duration": 2.0
+        }
+      ]
+    },
+    {
+      "game": "contra",
+      "title": "CONTRA",
+      "mechanics": "Contra guns + Mario fireballs.\nJump on the opposition.",
+      "tagline": "Two brothers. Every gun.",
+      "clips": [
+        {
+          "capture": "contra-video",
+          "start": 16.6,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "rangers",
+      "title": "CHIP 'N DALE:\nRESCUE RANGERS",
+      "mechanics": "Pick up and throw objects.\nStomp enemies, Mario style.",
+      "tagline": "Keep the teamwork.",
+      "clips": [
+        {
+          "capture": "rangers-carry",
+          "start": 10.9,
+          "duration": 3.1
+        },
+        {
+          "capture": "rangers-combat",
+          "start": 10.0,
+          "duration": 2.5
+        }
+      ]
+    },
+    {
+      "game": "gradius",
+      "title": "GRADIUS",
+      "mechanics": "Hold Up to stay afloat.\nFireball volleys + Mario Options.",
+      "tagline": "The plumber takes flight.",
+      "clips": [
+        {
+          "capture": "gradius-options",
+          "start": 9.1,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "kungfu",
+      "title": "KUNG FU",
+      "mechanics": "Mario movement.\nPunches, kicks and fireballs.",
+      "tagline": "A different kind of power punch.",
+      "clips": [
+        {
+          "capture": "kungfu-melee",
+          "start": 38.0,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "snake",
+      "title": "SNAKE RATTLE\n'N ROLL",
+      "mechanics": "Tongue pickups + fireballs.\nMario and Luigi go isometric.",
+      "tagline": "The Pibbles still matter.",
+      "clips": [
+        {
+          "capture": "snake-runtime",
+          "start": 13.0,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "tetris",
+      "title": "TETRIS",
+      "mechanics": "Dodge falling pieces.\nBreak blocks. Escape the well.",
+      "tagline": "The puzzle becomes a platformer.",
+      "clips": [
+        {
+          "capture": "tetris-runtime",
+          "start": 11.3,
+          "duration": 1.8
+        },
+        {
+          "capture": "tetris-head-break",
+          "start": 10.6,
+          "duration": 1.9
+        },
+        {
+          "capture": "tetris-interaction",
+          "start": 10.7,
+          "duration": 1.9
+        }
+      ]
+    },
+    {
+      "game": "smb2",
+      "title": "SUPER MARIO\nBROS. 2",
+      "mechanics": "SMB1 movement + fireballs.\nSMB2 hearts, carrying and jumps.",
+      "tagline": "Subcon gets a new moveset.",
+      "clips": [
+        {
+          "capture": "smb2-runtime",
+          "start": 6.9,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "zelda",
+      "title": "THE LEGEND\nOF ZELDA",
+      "mechanics": "Throw fire in four directions.\nKeep collecting Link's tools.",
+      "tagline": "A plumber in Hyrule.",
+      "clips": [
+        {
+          "capture": "zelda-visual",
+          "start": 2.85,
+          "duration": 5.0
+        }
+      ]
+    },
+    {
+      "game": "wwf",
+      "title": "WWF\nWRESTLEMANIA",
+      "mechanics": "Wrestling moves + fireballs.\nThe original roster fights back.",
+      "tagline": "Step into the ring.",
+      "clips": [
+        {
+          "capture": "wwf-game",
+          "start": 23.4,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "megaman2",
+      "title": "MEGA MAN 2",
+      "mechanics": "Native shots + bouncing fire.\nMario takes on the robots.",
+      "tagline": "Boss weapons stay in play.",
+      "clips": [
+        {
+          "capture": "megaman2-gameplay",
+          "start": 23.3,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "metroid",
+      "title": "METROID",
+      "mechanics": "Beam shots + fireballs.\nStomps change close combat.",
+      "tagline": "Explore Zebes as Fire Mario.",
+      "clips": [
+        {
+          "capture": "metroid-arrival_and_shots",
+          "start": 9.0,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "ghosts",
+      "title": "GHOSTS 'N\nGOBLINS",
+      "mechanics": "Native weapons + fireballs.\nStomp foes. Armor becomes power.",
+      "tagline": "Mario braves the graveyard.",
+      "clips": [
+        {
+          "capture": "ghosts-combat",
+          "start": 17.6,
+          "duration": 3.1
+        },
+        {
+          "capture": "ghosts-gameplay",
+          "start": 30.0,
+          "duration": 2.5
+        }
+      ]
+    },
+    {
+      "game": "punchout",
+      "title": "MIKE TYSON'S\nPUNCH-OUT!!",
+      "mechanics": "Boxing meets bouncing fireballs.\nDodge, counter and knock down.",
+      "tagline": "A new contender.",
+      "clips": [
+        {
+          "capture": "punchout-fire_visuals",
+          "start": 38.2,
+          "duration": 5.6
+        }
+      ]
+    },
+    {
+      "game": "castlevania",
+      "title": "CASTLEVANIA",
+      "mechanics": "Whip, subweapons + fireballs.\nMario momentum through the castle.",
+      "tagline": "SMB momentum. Vampire hunting.",
+      "clips": [
+        {
+          "capture": "castlevania-playthrough",
+          "start": 23.2,
+          "duration": 5.6
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "base_sha256": "38c44e0e6f531a2779271f10cd4daa08ee2616c59c49d476b6f4e9dc482bf5f3",
+  "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+  "output_sha256": "901272163fba47a64b06bc236b2d29f9fe8f9cf02e295a41ee4e19af9e0169a0",
+  "labels": {
+    "BlankGate": 27096,
+    "Boot": 65472,
+    "BusyHud": 24771,
+    "BusySplit": 24749,
+    "CheatInput": 25147,
+    "CombatGate": 25558,
+    "Compose": 27097,
+    "ContactDone": 25614,
+    "DeathGate": 26949,
+    "DmaGate": 27857,
+    "DoubleFire": 25252,
+    "DrawArms": 27705,
+    "DrawGate": 26962,
+    "EarlyCombat": 25564,
+    "ExtraSweep": 25888,
+    "FinishCombat": 25631,
+    "FireFrame0": 27847,
+    "FireFrame1": 27852,
+    "FireGate": 25232,
+    "FireLoop": 26525,
+    "FloatGate": 24922,
+    "FloatStep": 24960,
+    "Init": 24576,
+    "InputGate": 24849,
+    "NmiGate": 24655,
+    "PaletteGate": 24800,
+    "PauseGate": 25141,
+    "ResetFloat": 24895,
+    "ScrollGate": 24624,
+    "SpawnAEnd": 26488,
+    "SpawnBEnd": 26501,
+    "SwapShots": 25455,
+    "Swim": 27020,
+    "TerrainGate": 25692,
+    "TerrainTail": 25674
+  },
+  "native": {},
+  "hooks": [
+    {
+      "address": 65472,
+      "length": 58
+    },
+    {
+      "address": 32868,
+      "length": 3
+    },
+    {
+      "address": 32883,
+      "length": 3
+    },
+    {
+      "address": 32921,
+      "length": 3
+    },
+    {
+      "address": 32924,
+      "length": 3
+    },
+    {
+      "address": 32932,
+      "length": 3
+    },
+    {
+      "address": 32935,
+      "length": 3
+    },
+    {
+      "address": 32941,
+      "length": 3
+    },
+    {
+      "address": 32901,
+      "length": 3
+    },
+    {
+      "address": 32904,
+      "length": 2
+    },
+    {
+      "address": 49622,
+      "length": 3
+    },
+    {
+      "address": 32944,
+      "length": 3
+    },
+    {
+      "address": 41446,
+      "length": 3
+    },
+    {
+      "address": 41549,
+      "length": 3
+    },
+    {
+      "address": 41571,
+      "length": 3
+    },
+    {
+      "address": 41027,
+      "length": 3
+    },
+    {
+      "address": 41193,
+      "length": 3
+    },
+    {
+      "address": 39536,
+      "length": 3
+    },
+    {
+      "address": 39620,
+      "length": 3
+    },
+    {
+      "address": 49860,
+      "length": 3
+    },
+    {
+      "address": 49866,
+      "length": 3
+    },
+    {
+      "address": 35486,
+      "length": 3
+    },
+    {
+      "address": 35489,
+      "length": 3
+    },
+    {
+      "address": 35492,
+      "length": 3
+    },
+    {
+      "address": 36352,
+      "length": 2
+    },
+    {
+      "address": 36364,
+      "length": 2
+    }
+  ],
+  "chr_pairs": [
+    8,
+    10,
+    12,
+    222,
+    106,
+    114
+  ],
+  "swim_frames": [
+    5,
+    6,
+    7
+  ],
+  "title_chr_bank": 13,
+  "chr_kib": 128,
+  "reference_commit": "314625258387309119e69e37aaf3365197235119"
+}

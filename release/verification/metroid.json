@@ -1,0 +1,114 @@
+{
+  "rom_sha256": "a4f7368a2a75b29729f0df260f2129436af776d28c512b445efa7c0717385621",
+  "passed": true,
+  "verified_utc": "2026-10-30T04:04:34.133306+00:00",
+  "checks": [
+    {
+      "name": "All source-identified shared pickup, weapon and native object CHR tiles preserved",
+      "cases": 77,
+      "passed": true
+    },
+    {
+      "name": "Crawler, swooper and Mellow stomps route through native defeat flags and share bounce grace",
+      "cases": 3,
+      "passed": true
+    },
+    {
+      "name": "All six enemy slots retain original OAM across four species, both facings/forms and live fireball slots",
+      "cases": 96,
+      "passed": true
+    },
+    {
+      "name": "NMI preserves registers/scratch RAM and defers mirroring while every native MMC1 transaction byte is interrupted",
+      "cases": 91,
+      "passed": true
+    },
+    {
+      "name": "Complete normal-land controller matches assembled SMB1 source (112 cases / 15,680 updates)",
+      "cases": 112,
+      "passed": true,
+      "log": "metroid\\build\\verification-logs\\physics.log",
+      "log_sha256": "be9858f52d2a0971fd3aca99dcd81e4a6257d3ef28e4092a820dab9dfb258d3c"
+    },
+    {
+      "name": "150 visible arrival frames; native horizontal/up shots plus independent bouncing balls; full native shot pool and pause",
+      "cases": 1,
+      "passed": true,
+      "log": "metroid\\build\\verification-logs\\arrival-and-shots.log",
+      "log_sha256": "7c6cde1860faec80eb2826d629ff3b2e53c9dc7219e0ba4504112287656be491"
+    },
+    {
+      "name": "Five ordinary enemies plus Mellows and live fireball objects preserve separate native/player rendering",
+      "cases": 1,
+      "passed": true,
+      "log": "metroid\\build\\verification-logs\\crowded-render.log",
+      "log_sha256": "e6d0d1fff964bdd977ae3a0d47a6ed73554ee3e7a853832a0d9168bb7177fce4"
+    },
+    {
+      "name": "Real A-button jump and native crawler AI through stomp, bounce and native defeat",
+      "cases": 1,
+      "passed": true,
+      "log": "metroid\\build\\verification-logs\\stomp-approach.log",
+      "log_sha256": "db764d96777b30a5f7192ede92cc364edcb496124dfccbde38c62a4c88b046f2"
+    },
+    {
+      "name": "Native energy, jump heights, Boots, Morph Ball gating, bombs, missiles, beams, stomps, side/boss damage and pause",
+      "cases": 20,
+      "passed": true,
+      "log": "metroid\\build\\verification-logs\\gameplay.log",
+      "log_sha256": "799295c5e8a82c1b339e6bf82a32ab447974cd774dbd28d001c8f6a3f5d19667"
+    },
+    {
+      "name": "Native injury, death animation, game-over and password flow without reset",
+      "cases": 1,
+      "passed": true,
+      "log": "metroid\\build\\verification-logs\\death.log",
+      "log_sha256": "256cdeb44bbb4841f92e26f05ff59585af2ec66617ff582f8829bfcc590b3573"
+    },
+    {
+      "name": "1,500-frame moving/shooting replay with native enemies, visible-VRAM and original mapper-write guards",
+      "cases": 1500,
+      "passed": true,
+      "log": "metroid\\build\\verification-logs\\replay.log",
+      "log_sha256": "028fce3a8f9e0c60d53be2fe63f37fc7662e896673d8ba78e75899ca429df8a0"
+    }
+  ],
+  "source_revision": "efbd348d7251463d6179775fc6e901207d210610",
+  "dependencies": {
+    "tools\\native_port_common.py": "371580ee979829082fe75ffeee10cbb2474396863babcc6302f254cc54421e7a",
+    "tools\\build_port_references.py": "66a0d60eb05a6ca3972fdfca07b918afe7fde33ddd64e43d856a6ef60774fb4d",
+    "tools\\check_new_port_cpu.py": "2871d4fb32aac384a117820a7af51d79798adab84dba2038b3ddcb91ffdeb354",
+    "tools\\verify_new_ports.py": "e76c296d8df6539a08d92f16a5113027bdde807521eee73182a64f414c09e811",
+    "tools\\build.py": "f06069cd18ceb3b0d721ac38f05b83592ec195a335b107bfaeef9b13daf95ea8",
+    "src\\smb-land.inc": "be2a01143cca50756b203d28652c2abfa8fb298ddd9555424d6ac35d12615a28",
+    "tests\\new_port_replay.lua": "9f6b492f695869beda68f250f83cfddec0e75520c1454bf09f48f92c6d64ac0c",
+    "metroid\\src\\art.inc": "0881694441b9a545f891cffb7c266b2b41152732a2d9a022282df99f105b763c",
+    "metroid\\src\\hack.cfg": "582a5b4233a515ae3a83a618114ef8f8ac2b5c583cd464356d4c4e86363011f4",
+    "metroid\\src\\mario.s": "410daf64f35361986e0ff3c7a197ee739d8c6ee4ac9d169728b64ea2a45c1056",
+    "metroid\\src\\native.inc": "025b807d2ba376389daea6f4b2aedd8f572263840aaf6369ff5628b8f78ab1a3",
+    "metroid\\src\\state.inc": "eee61f7e5fb6b852083bfd3b8540c1ae36ce70fc30a2917ac414bd5d2d47704d",
+    "metroid\\tools\\audit_physics.py": "4c59686e4713f7f55133f9d606bd96fac39b619da6d1cae1b5cc6564f6a038e5",
+    "metroid\\tools\\build.py": "779c7651a82e75cc23a75fd804e02f3a37b35d90754bc7b485e2ee406a7c93bd",
+    "metroid\\tests\\arrival_and_shots.lua": "46e3712ea699f551b13b087ea2e0a13ab64f1512194fe9cca7316a05cbc5e68a",
+    "metroid\\tests\\boot_probe.lua": "b4bb7ec738b4878931ef3bb08d696b1b361203c52f3d49b16f04403a3cd30195",
+    "metroid\\tests\\crowded_render.lua": "8f6a263e331f284f8a8166f1dc75d22b75f34aa12b11196c1da079f7dfe79a90",
+    "metroid\\tests\\death.lua": "071e9c1c088023e2c4f2c81de756147c5127da6e79fda771d8eaf83f69f015d1",
+    "metroid\\tests\\gameplay.lua": "1519522701100880341200a311a91035a4de4e2d3f9223e618e82794a5d26ecb",
+    "metroid\\tests\\jump_probe.lua": "af7cfab632bc5c2dd4d212ee0cd15b1ca112ab460d4689e16190f5cb79e0208a",
+    "metroid\\tests\\mapper_trace.lua": "96fc05cc150189e04869b41dca3c7293ff232d661a577479459ff023be197f93",
+    "metroid\\tests\\small_probe.lua": "bcd2859c8bd512dc46c25e1fcc8ec89cfbf8631e26406de54cc468e3815bc59f",
+    "metroid\\tests\\stomp_approach.lua": "26fa0001b8cf3bb107ace26d821719d98481fb18a0af371bf8c07c1b1108d87a",
+    "metroid\\tests\\trace.lua": "93eced4b65246c51210afb632aa534cdfed3f2d67e2db4980d2bc99c857727c2"
+  },
+  "replay": {
+    "video_frames": 1500,
+    "player_updates": 1481,
+    "max_player_path_cycles": 67775,
+    "visible_vram_writes": 0,
+    "unexpected_mapper_writes": 0
+  },
+  "limits": [
+    "Campaign has not been cleared end to end.",
+    "Measured replay performance does not prove constant 60 Hz in every scene."
+  ]
+}

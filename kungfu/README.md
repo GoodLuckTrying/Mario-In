@@ -1,0 +1,36 @@
+# Mario in Kung Fu
+
+A native NES port built from the local Japan/USA English Kung Fu ROM and SMB1 graphics. The original ROM is not modified.
+
+Load `C:/nes/Mario in Kung Fu.nes` from a fresh reset. Old Kung Fu save states are incompatible with the added character state and mapper.
+
+Controls:
+- Left/right: SMB acceleration and friction; hold B to run.
+- Up: jump; hold for a higher jump.
+- Down: crouch. Super Mario has a shorter crouching hurtbox.
+- A: the original kick.
+- B: the original punch, plus a fireball with Fire Flower power.
+- Start: the original pause/menu behavior.
+- Title menu: Select or Down/Right cycles forward through the original four A/B and one/two-player modes; Up/Left cycles backward. Hold a direction without repeatedly changing the mode, then press Start.
+
+Each life starts as Small Mario. Four enemy defeats grant growth; four more grant Fire Flower power. Further defeats keep Fire Flower. A hit while powered shrinks Mario and grants a short damage grace period; a hit while small loses a life. Power survives floor transitions. Landing on an enemy from above damages it and bounces Mario; adjacent enemies are checked together. Stomps sweep each native enemy's head height, including snakes and the final landing tick, and resolve before body contact. Ordinary enemies and bosses hurt Mario on side contact. Native grabs are replaced with this contact behavior, preventing stranded or intangible grippers. Sylvia is excluded from attacks and contact damage. Two fireballs can be active. Mario has distinct punch and kick poses for standing, crouching, and jumping, with wind-up/recovery poses and an extended limb facing the same way as the attack. Small, Super, and Fire Mario use the appropriate size. Large Mario punches from the chest with a distinct shirt-colored shoulder/sleeve and skin-colored forearm/fist; native punch hitboxes follow the raised fist, including crouching and aerial punches. Extra blank sprite cells stay hidden to conserve the NES scanline sprite budget.
+
+All five floors, bosses, native scoring, attacks, music, and stage transitions remain in the original engine. Mario is drawn with sprites; Thomas's original background pose scripts are disabled. Native scenery, enemy, knife, hit-spark, smoke and score pattern data are retained in every gameplay animation bank. The CHR audit includes direct projectile and effect writers as well as actor pose scripts; Mario uses separate cells for his extended attacks and fireballs. Native melee and projectile damage use Mario's actual height. Mario's jump, hurt recovery, and attack states are synchronized with the original engine's legal animation counters, preventing invalid pose/VRAM table reads. Disabled Thomas pose scripts do not erase the wall or floor while Mario jumps or attacks. The death fall ignores further damage, clips sprite rows at the screen edge, and hides Mario once the native actor is removed. The original next-life and game-over sequences then proceed normally. On the first four floor exits, Mario faces the scripted direction and uses his walking poses and gameplay sprite pattern table while the original staircase actor handles movement. Dedicated stair banks preserve the native HUD art from its original pattern table. The lower scroll split is delayed until below the floor so the staircase stays connected. Thomas's duplicate sprite body is hidden, stale jump/attack/blink state is cleared, and Mario leaves the screen before the native bonus and next-floor sequence.
+
+Build: `python kungfu/tools/build.py` from the parent workspace. Verify both ports: `python tools/verify_ports.py`. Install after verification: `python kungfu/tools/build.py --install`.
+
+Mario's CHR bank and palette updates yield during the large native death/stair/room background transfers. Unchanged banks are cached, and normal frames restore Mario's colors after native palette commands. Fire Mario uses SMB1's cream/skin/red color order. The Thomas-only stair palette command yields to Mario's colors. The scripted entrance before each floor draws Mario at the native moving player position, including its idle/walk animation. Story intermissions (separate from the playable-floor entrance) restore the complete native CHR bank (including the hard-coded heart sprites), retain their native palette and hide reserved Mario cells; the actual Sylvia ending keeps Mario visible even while native health is counted down for bonus points. This preserves the native vblank budget on the transition frame, including restoring rendering before the visible screen begins.
+
+Requires the exact original ROMs in `C:/nes`; their SHA-256 values are checked by the builder. `dist/Mario in Kung Fu.ips` reconstructs the output from the original Kung Fu ROM. Source requires the bundled cc65 tools, Python, py65, and Mesen for integration tests.
+
+Verification covers actual assembled 6502 routines, cold boot, stage openings on all five floors, controller movement/jumping/attacks, growth, repeated hits during ground/air deaths on all five floors, next-life and game-over transitions, all 36 melee size/stance/facing combinations through physical controller input on floors 1 and 5, displayed melee CHR/mirroring, all 256 animation-counter values, background tile/palette preservation through repeated stationary jumps/attacks on every floor, 5,000-frame controller stress fixtures among native enemies, native enemy/scenery pattern preservation, sprite DMA timing, complete controller-driven boss/exit/stair/bonus/new-floor sequences on all four stair exits with both directions and all Mario forms, raised punch pixels inside the matching native hitbox, and IPS reconstruction. It is not a full unassisted campaign clear or a hardware test. See `dist/verification.json` for the tested ROM hash and results.
+
+Research reference: https://github.com/shantanugoel/kungfu_nes_rl_rust/blob/main/RAM_MAP.md
+
+The running update scans boss barriers once per frame instead of once per movement pixel, and body contact skips empty enemy groups. Long controller replays also measure active-frame updates to catch dropped frames. These changes reduce redundant work; they do not remove the NES limit of eight sprites per scanline.
+
+Video regression coverage additionally includes 14 full native stomp/fireball defeat lifecycles, gripper cleanup, visible original knife pixels during extended punches, ordinary and boss body damage, low-enemy landing bounces, all five boss body heights, protected Sylvia actors, the final boss/Sylvia/bonus/story sequence, and actual lower-scroll timing during stairs.
+
+Entrance regressions follow a normal Start press through all five floor entrances and verify Mario stays visible, moves with the native script, and displays SMB idle/walk pixels before control begins.
+
+Source physics correction (23 October 2026): ordinary movement now uses SMB1's complete update order, speed-dependent launch, neutral-air coasting, persistent airborne crouching, fractional position/gravity integration and fractional falling limit. From rest, tap/held jumps reproduce SMB1's 24/64-pixel apexes. Native punches, kicks, boss barriers, floor geometry and staircase scripts remain available. Expanded comparisons cover 348 cases and 45,240 updates against assembled SMB1base source, plus actual controller jumps in all forms.

@@ -1,0 +1,714 @@
+{
+  "rom_sha256": "34cabf29a74605b696be2cb761fe869617540cad18148f8858dc95e1853929dc",
+  "passed": true,
+  "checks": [
+    {
+      "name": "SMB1 horizontal acceleration, run limits, friction, reversal and air steering match original instructions for both brothers and sizes",
+      "passed": true,
+      "cases": 4800
+    },
+    {
+      "name": "all native vertical collision velocities import into exact SMB1 position/fraction/gravity instructions",
+      "passed": true,
+      "cases": 256
+    },
+    {
+      "name": "carry-0-False-False",
+      "passed": true,
+      "seconds": 2.04
+    },
+    {
+      "name": "carry-0-False-True",
+      "passed": true,
+      "seconds": 1.97
+    },
+    {
+      "name": "carry-0-True-False",
+      "passed": true,
+      "seconds": 2.34
+    },
+    {
+      "name": "carry-0-True-True",
+      "passed": true,
+      "seconds": 2.34
+    },
+    {
+      "name": "carry-3-False-False",
+      "passed": true,
+      "seconds": 2.27
+    },
+    {
+      "name": "carry-3-False-True",
+      "passed": true,
+      "seconds": 2.41
+    },
+    {
+      "name": "carry-3-True-False",
+      "passed": true,
+      "seconds": 2.46
+    },
+    {
+      "name": "carry-3-True-True",
+      "passed": true,
+      "seconds": 2.37
+    },
+    {
+      "name": "charged-jump-0-False-False",
+      "passed": true,
+      "seconds": 2.49
+    },
+    {
+      "name": "charged-jump-0-False-True",
+      "passed": true,
+      "seconds": 2.49
+    },
+    {
+      "name": "charged-jump-0-True-False",
+      "passed": true,
+      "seconds": 2.63
+    },
+    {
+      "name": "charged-jump-0-True-True",
+      "passed": true,
+      "seconds": 2.68
+    },
+    {
+      "name": "charged-jump-3-False-False",
+      "passed": true,
+      "seconds": 2.74
+    },
+    {
+      "name": "charged-jump-3-False-True",
+      "passed": true,
+      "seconds": 2.74
+    },
+    {
+      "name": "charged-jump-3-True-False",
+      "passed": true,
+      "seconds": 3.74
+    },
+    {
+      "name": "charged-jump-3-True-True",
+      "passed": true,
+      "seconds": 3.71
+    },
+    {
+      "name": "climb-0-False-False",
+      "passed": true,
+      "seconds": 2.0
+    },
+    {
+      "name": "climb-0-False-True",
+      "passed": true,
+      "seconds": 2.0
+    },
+    {
+      "name": "climb-0-True-False",
+      "passed": true,
+      "seconds": 2.12
+    },
+    {
+      "name": "climb-0-True-True",
+      "passed": true,
+      "seconds": 2.19
+    },
+    {
+      "name": "climb-3-False-False",
+      "passed": true,
+      "seconds": 2.12
+    },
+    {
+      "name": "climb-3-False-True",
+      "passed": true,
+      "seconds": 2.12
+    },
+    {
+      "name": "climb-3-True-False",
+      "passed": true,
+      "seconds": 2.92
+    },
+    {
+      "name": "climb-3-True-True",
+      "passed": true,
+      "seconds": 2.52
+    },
+    {
+      "name": "door-0-False",
+      "passed": true,
+      "seconds": 1.91
+    },
+    {
+      "name": "door-0-True",
+      "passed": true,
+      "seconds": 2.36
+    },
+    {
+      "name": "door-3-False",
+      "passed": true,
+      "seconds": 2.36
+    },
+    {
+      "name": "door-3-True",
+      "passed": true,
+      "seconds": 2.38
+    },
+    {
+      "name": "enemy-head-0-False-jump",
+      "passed": true,
+      "seconds": 2.0
+    },
+    {
+      "name": "enemy-head-0-False-pickup",
+      "passed": true,
+      "seconds": 2.0
+    },
+    {
+      "name": "enemy-head-0-False-stand",
+      "passed": true,
+      "seconds": 2.01
+    },
+    {
+      "name": "enemy-head-0-False-walk",
+      "passed": true,
+      "seconds": 1.89
+    },
+    {
+      "name": "enemy-head-0-True-jump",
+      "passed": true,
+      "seconds": 2.43
+    },
+    {
+      "name": "enemy-head-0-True-pickup",
+      "passed": true,
+      "seconds": 2.49
+    },
+    {
+      "name": "enemy-head-0-True-stand",
+      "passed": true,
+      "seconds": 2.34
+    },
+    {
+      "name": "enemy-head-0-True-walk",
+      "passed": true,
+      "seconds": 2.43
+    },
+    {
+      "name": "enemy-head-3-False-jump",
+      "passed": true,
+      "seconds": 2.38
+    },
+    {
+      "name": "enemy-head-3-False-pickup",
+      "passed": true,
+      "seconds": 2.46
+    },
+    {
+      "name": "enemy-head-3-False-stand",
+      "passed": true,
+      "seconds": 2.22
+    },
+    {
+      "name": "enemy-head-3-False-walk",
+      "passed": true,
+      "seconds": 2.22
+    },
+    {
+      "name": "enemy-head-3-True-jump",
+      "passed": true,
+      "seconds": 2.48
+    },
+    {
+      "name": "enemy-head-3-True-pickup",
+      "passed": true,
+      "seconds": 2.35
+    },
+    {
+      "name": "enemy-head-3-True-stand",
+      "passed": true,
+      "seconds": 2.49
+    },
+    {
+      "name": "enemy-head-3-True-walk",
+      "passed": true,
+      "seconds": 2.25
+    },
+    {
+      "name": "expanded SMB1 source movement comparison",
+      "passed": true
+    },
+    {
+      "name": "extra-heart hurt knockback stays bounded, points away from contact and preserves the native upward reaction",
+      "passed": true,
+      "cases": 256
+    },
+    {
+      "name": "fire-0-bounce",
+      "passed": true,
+      "seconds": 2.16
+    },
+    {
+      "name": "fire-0-hit",
+      "passed": true,
+      "seconds": 2.14
+    },
+    {
+      "name": "fire-3-bounce",
+      "passed": true,
+      "seconds": 2.46
+    },
+    {
+      "name": "fire-3-hit",
+      "passed": true,
+      "seconds": 2.49
+    },
+    {
+      "name": "fire-bounds-0-bottom",
+      "passed": true,
+      "seconds": 2.04
+    },
+    {
+      "name": "fire-bounds-0-bottom-edge",
+      "passed": true,
+      "seconds": 2.03
+    },
+    {
+      "name": "fire-bounds-0-left",
+      "passed": true,
+      "seconds": 1.9
+    },
+    {
+      "name": "fire-bounds-0-page",
+      "passed": true,
+      "seconds": 2.03
+    },
+    {
+      "name": "fire-bounds-0-right",
+      "passed": true,
+      "seconds": 2.03
+    },
+    {
+      "name": "fire-bounds-0-spawn-left",
+      "passed": true,
+      "seconds": 2.01
+    },
+    {
+      "name": "fire-bounds-0-spawn-right",
+      "passed": true,
+      "seconds": 2.03
+    },
+    {
+      "name": "fire-bounds-0-top",
+      "passed": true,
+      "seconds": 2.03
+    },
+    {
+      "name": "fire-bounds-0-wrap-left",
+      "passed": true,
+      "seconds": 2.03
+    },
+    {
+      "name": "fire-bounds-0-wrap-right",
+      "passed": true,
+      "seconds": 2.14
+    },
+    {
+      "name": "fire-bounds-0-y-page",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "fire-bounds-3-bottom",
+      "passed": true,
+      "seconds": 2.17
+    },
+    {
+      "name": "fire-bounds-3-bottom-edge",
+      "passed": true,
+      "seconds": 2.1
+    },
+    {
+      "name": "fire-bounds-3-left",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "fire-bounds-3-page",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "fire-bounds-3-right",
+      "passed": true,
+      "seconds": 2.25
+    },
+    {
+      "name": "fire-bounds-3-spawn-left",
+      "passed": true,
+      "seconds": 2.22
+    },
+    {
+      "name": "fire-bounds-3-spawn-right",
+      "passed": true,
+      "seconds": 2.16
+    },
+    {
+      "name": "fire-bounds-3-top",
+      "passed": true,
+      "seconds": 2.07
+    },
+    {
+      "name": "fire-bounds-3-wrap-left",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "fire-bounds-3-wrap-right",
+      "passed": true,
+      "seconds": 2.17
+    },
+    {
+      "name": "fire-bounds-3-y-page",
+      "passed": true,
+      "seconds": 2.04
+    },
+    {
+      "name": "five-frame fireball chirp releases the music channel and defers to native queued effects",
+      "passed": true,
+      "cases": 6
+    },
+    {
+      "name": "hearts-0-15",
+      "passed": true,
+      "seconds": 2.33
+    },
+    {
+      "name": "hearts-0-31",
+      "passed": true,
+      "seconds": 2.51
+    },
+    {
+      "name": "hearts-0-47",
+      "passed": true,
+      "seconds": 2.08
+    },
+    {
+      "name": "hearts-0-63",
+      "passed": true,
+      "seconds": 2.09
+    },
+    {
+      "name": "hearts-3-15",
+      "passed": true,
+      "seconds": 2.76
+    },
+    {
+      "name": "hearts-3-31",
+      "passed": true,
+      "seconds": 2.86
+    },
+    {
+      "name": "hearts-3-47",
+      "passed": true,
+      "seconds": 2.36
+    },
+    {
+      "name": "hearts-3-63",
+      "passed": true,
+      "seconds": 2.29
+    },
+    {
+      "name": "live-SMB1-arc-0-1",
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "live-SMB1-arc-0-25",
+      "passed": true,
+      "seconds": 1.98
+    },
+    {
+      "name": "live-SMB1-arc-3-1",
+      "passed": true,
+      "seconds": 2.47
+    },
+    {
+      "name": "live-SMB1-arc-3-25",
+      "passed": true,
+      "seconds": 2.46
+    },
+    {
+      "name": "moving-enemy-head-0-False",
+      "passed": true,
+      "seconds": 2.01
+    },
+    {
+      "name": "moving-enemy-head-0-True",
+      "passed": true,
+      "seconds": 2.37
+    },
+    {
+      "name": "moving-enemy-head-3-False",
+      "passed": true,
+      "seconds": 2.37
+    },
+    {
+      "name": "moving-enemy-head-3-True",
+      "passed": true,
+      "seconds": 2.47
+    },
+    {
+      "name": "mushroom-0",
+      "passed": true,
+      "seconds": 1.51
+    },
+    {
+      "name": "mushroom-3",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "native boss HP, hit cooldowns and Wart closed/open mouth rules remain enforced for fireballs",
+      "passed": true,
+      "cases": 5
+    },
+    {
+      "name": "native heart damage, extra-heart protection and last-heart death remain intact",
+      "passed": true,
+      "cases": 4
+    },
+    {
+      "name": "only big forms fire, each brother has two shots and each shot uses an initialized native projectile slot",
+      "passed": true,
+      "cases": 4
+    },
+    {
+      "name": "opening-controller-0",
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "opening-controller-3",
+      "passed": true,
+      "seconds": 2.67
+    },
+    {
+      "name": "original hashes, exact native reference, original gameplay CHR and IPS reconstruction",
+      "passed": true
+    },
+    {
+      "name": "pause-0",
+      "passed": true,
+      "seconds": 1.76
+    },
+    {
+      "name": "pause-3",
+      "passed": true,
+      "seconds": 2.34
+    },
+    {
+      "name": "pluck-0-False",
+      "passed": true,
+      "seconds": 2.12
+    },
+    {
+      "name": "pluck-0-True",
+      "passed": true,
+      "seconds": 2.34
+    },
+    {
+      "name": "pluck-3-False",
+      "passed": true,
+      "seconds": 2.41
+    },
+    {
+      "name": "pluck-3-True",
+      "passed": true,
+      "seconds": 2.54
+    },
+    {
+      "name": "small-palette-reload-0",
+      "passed": true,
+      "seconds": 2.06
+    },
+    {
+      "name": "small-palette-reload-3",
+      "passed": true,
+      "seconds": 2.52
+    },
+    {
+      "name": "tap and held jumps reproduce exact SMB1 24/64-pixel apexes with full-precision integration",
+      "passed": true,
+      "cases": 200
+    },
+    {
+      "name": "two-brother-menu",
+      "passed": true,
+      "seconds": 1.55
+    },
+    {
+      "name": "walk-cycle-0-False",
+      "passed": true,
+      "seconds": 2.07
+    },
+    {
+      "name": "walk-cycle-0-True",
+      "passed": true,
+      "seconds": 2.14
+    },
+    {
+      "name": "walk-cycle-3-False",
+      "passed": true,
+      "seconds": 2.22
+    },
+    {
+      "name": "walk-cycle-3-True",
+      "passed": true,
+      "seconds": 2.78
+    },
+    {
+      "name": "world-hardware-0-0-False",
+      "passed": true,
+      "seconds": 2.74
+    },
+    {
+      "name": "world-hardware-0-0-True",
+      "passed": true,
+      "seconds": 2.97
+    },
+    {
+      "name": "world-hardware-0-3-False",
+      "passed": true,
+      "seconds": 3.16
+    },
+    {
+      "name": "world-hardware-0-3-True",
+      "passed": true,
+      "seconds": 3.21
+    },
+    {
+      "name": "world-hardware-1-0-False",
+      "passed": true,
+      "seconds": 2.53
+    },
+    {
+      "name": "world-hardware-1-0-True",
+      "passed": true,
+      "seconds": 2.76
+    },
+    {
+      "name": "world-hardware-1-3-False",
+      "passed": true,
+      "seconds": 2.8
+    },
+    {
+      "name": "world-hardware-1-3-True",
+      "passed": true,
+      "seconds": 2.79
+    },
+    {
+      "name": "world-hardware-2-0-False",
+      "passed": true,
+      "seconds": 2.42
+    },
+    {
+      "name": "world-hardware-2-0-True",
+      "passed": true,
+      "seconds": 2.76
+    },
+    {
+      "name": "world-hardware-2-3-False",
+      "passed": true,
+      "seconds": 2.98
+    },
+    {
+      "name": "world-hardware-2-3-True",
+      "passed": true,
+      "seconds": 2.76
+    },
+    {
+      "name": "world-hardware-3-0-False",
+      "passed": true,
+      "seconds": 2.64
+    },
+    {
+      "name": "world-hardware-3-0-True",
+      "passed": true,
+      "seconds": 2.66
+    },
+    {
+      "name": "world-hardware-3-3-False",
+      "passed": true,
+      "seconds": 2.91
+    },
+    {
+      "name": "world-hardware-3-3-True",
+      "passed": true,
+      "seconds": 2.78
+    },
+    {
+      "name": "world-hardware-4-0-False",
+      "passed": true,
+      "seconds": 2.75
+    },
+    {
+      "name": "world-hardware-4-0-True",
+      "passed": true,
+      "seconds": 2.73
+    },
+    {
+      "name": "world-hardware-4-3-False",
+      "passed": true,
+      "seconds": 2.88
+    },
+    {
+      "name": "world-hardware-4-3-True",
+      "passed": true,
+      "seconds": 2.86
+    },
+    {
+      "name": "world-hardware-5-0-False",
+      "passed": true,
+      "seconds": 2.72
+    },
+    {
+      "name": "world-hardware-5-0-True",
+      "passed": true,
+      "seconds": 2.68
+    },
+    {
+      "name": "world-hardware-5-3-False",
+      "passed": true,
+      "seconds": 2.98
+    },
+    {
+      "name": "world-hardware-5-3-True",
+      "passed": true,
+      "seconds": 2.88
+    },
+    {
+      "name": "world-hardware-6-0-False",
+      "passed": true,
+      "seconds": 2.72
+    },
+    {
+      "name": "world-hardware-6-0-True",
+      "passed": true,
+      "seconds": 2.52
+    },
+    {
+      "name": "world-hardware-6-3-False",
+      "passed": true,
+      "seconds": 2.99
+    },
+    {
+      "name": "world-hardware-6-3-True",
+      "passed": true,
+      "seconds": 2.87
+    }
+  ],
+  "originals_unchanged": true,
+  "ips_reconstructs_rom": true,
+  "limits": [
+    "Actor/position fixtures isolate mechanics. These tests are not a full unassisted campaign or physical NES test."
+  ]
+}

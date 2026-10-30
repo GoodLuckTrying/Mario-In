@@ -1,0 +1,275 @@
+{
+  "rom_sha256": "e5266f884fd20559395028eba9430b0e5db94aa89c5c89f84c6e0614facae081",
+  "passed": true,
+  "checks": [
+    {
+      "name": "two eaten Pibbles per upgrade; weight and 1-Ups never change the form",
+      "passed": true
+    },
+    {
+      "name": "shared room continuation preserves form; real death resets it",
+      "passed": true
+    },
+    {
+      "name": "both forms reserve atomic OAM cells, with correct visible heights and independent clothing/skin palettes",
+      "passed": true
+    },
+    {
+      "name": "Mario jump replaces native player jump strength",
+      "passed": true
+    },
+    {
+      "name": "damage shrinks either player without losing puzzle weight",
+      "passed": true
+    },
+    {
+      "name": "fireballs use the native isometric world projection",
+      "passed": true
+    },
+    {
+      "name": "two fireballs per player with separate world positions",
+      "passed": true
+    },
+    {
+      "name": "both players fire in the eight independently measured native screen-space movement directions",
+      "passed": true
+    },
+    {
+      "name": "all original scenery and CHR audio/code banks preserved",
+      "passed": true
+    },
+    {
+      "name": "variable gravity preserves the Moon level physics",
+      "passed": true
+    },
+    {
+      "name": "both players need an active tongue to capture food with native color and score",
+      "passed": true
+    },
+    {
+      "name": "native cover, door, Pibble, HUD, tongue and NPC source banks and tile numbers preserved",
+      "passed": true
+    },
+    {
+      "name": "all 75 source-exact directional frames and approved Fire pixel roles are present in the ROM",
+      "passed": true
+    },
+    {
+      "name": "all eight isometric directions, small/big/Fire forms and idle/walk/jump frames select independently for both players",
+      "passed": true
+    },
+    {
+      "name": "all 24 manhole entries work and missing entries return without locking",
+      "passed": true
+    },
+    {
+      "name": "B reaches both attacks, preserves native eating state, and fires once per press",
+      "passed": true
+    },
+    {
+      "name": "fireballs damage and defeat the Moon boss through native HP logic",
+      "passed": true
+    },
+    {
+      "name": "boss-fire-0",
+      "passed": true,
+      "seconds": 5.27
+    },
+    {
+      "name": "boss-fire-1",
+      "passed": true,
+      "seconds": 5.24
+    },
+    {
+      "name": "controller-facing",
+      "passed": true,
+      "seconds": 18.83
+    },
+    {
+      "name": "directional-source-0",
+      "passed": true,
+      "seconds": 53.92
+    },
+    {
+      "name": "directional-source-8",
+      "passed": true,
+      "seconds": 65.11
+    },
+    {
+      "name": "fire-and-shared-palettes",
+      "passed": true,
+      "seconds": 4.41
+    },
+    {
+      "name": "graphics-0",
+      "passed": true,
+      "seconds": 9.93
+    },
+    {
+      "name": "graphics-4",
+      "passed": true,
+      "seconds": 9.92
+    },
+    {
+      "name": "graphics-8",
+      "passed": true,
+      "seconds": 10.22
+    },
+    {
+      "name": "manholes-0",
+      "passed": true,
+      "seconds": 5.89
+    },
+    {
+      "name": "manholes-1",
+      "passed": true,
+      "seconds": 5.83
+    },
+    {
+      "name": "motion-scroll-0",
+      "passed": true,
+      "seconds": 14.03
+    },
+    {
+      "name": "motion-scroll-1",
+      "passed": true,
+      "seconds": 13.19
+    },
+    {
+      "name": "motion-scroll-10",
+      "passed": true,
+      "seconds": 14.5
+    },
+    {
+      "name": "motion-scroll-2",
+      "passed": true,
+      "seconds": 12.77
+    },
+    {
+      "name": "motion-scroll-3",
+      "passed": true,
+      "seconds": 12.75
+    },
+    {
+      "name": "motion-scroll-4",
+      "passed": true,
+      "seconds": 13.19
+    },
+    {
+      "name": "motion-scroll-5",
+      "passed": true,
+      "seconds": 12.6
+    },
+    {
+      "name": "motion-scroll-6",
+      "passed": true,
+      "seconds": 13.79
+    },
+    {
+      "name": "motion-scroll-7",
+      "passed": true,
+      "seconds": 12.09
+    },
+    {
+      "name": "motion-scroll-8",
+      "passed": true,
+      "seconds": 11.92
+    },
+    {
+      "name": "motion-scroll-9",
+      "passed": true,
+      "seconds": 12.5
+    },
+    {
+      "name": "motion-scroll-solo",
+      "passed": true,
+      "seconds": 12.89
+    },
+    {
+      "name": "rooms-0",
+      "passed": true,
+      "seconds": 8.31
+    },
+    {
+      "name": "rooms-1",
+      "passed": true,
+      "seconds": 8.31
+    },
+    {
+      "name": "solo",
+      "passed": true,
+      "seconds": 5.33
+    },
+    {
+      "name": "stage-0",
+      "passed": true,
+      "seconds": 5.51
+    },
+    {
+      "name": "stage-1",
+      "passed": true,
+      "seconds": 5.26
+    },
+    {
+      "name": "stage-10",
+      "passed": true,
+      "seconds": 6.2
+    },
+    {
+      "name": "stage-2",
+      "passed": true,
+      "seconds": 5.44
+    },
+    {
+      "name": "stage-3",
+      "passed": true,
+      "seconds": 5.59
+    },
+    {
+      "name": "stage-4",
+      "passed": true,
+      "seconds": 5.39
+    },
+    {
+      "name": "stage-5",
+      "passed": true,
+      "seconds": 5.25
+    },
+    {
+      "name": "stage-6",
+      "passed": true,
+      "seconds": 5.68
+    },
+    {
+      "name": "stage-7",
+      "passed": true,
+      "seconds": 5.27
+    },
+    {
+      "name": "stage-8",
+      "passed": true,
+      "seconds": 5.7
+    },
+    {
+      "name": "stage-9",
+      "passed": true,
+      "seconds": 5.45
+    },
+    {
+      "name": "tongue-0",
+      "passed": true,
+      "seconds": 12.12
+    },
+    {
+      "name": "tongue-1",
+      "passed": true,
+      "seconds": 11.53
+    }
+  ],
+  "original_unchanged": true,
+  "ips_reconstructs_rom": true,
+  "native_prg_outside_documented_hooks_unchanged": true,
+  "limits": [
+    "Stage openings and deterministic integration fixtures were tested in Mesen; this is not a full unassisted campaign clear or a hardware test."
+  ]
+}

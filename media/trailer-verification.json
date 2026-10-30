@@ -1,0 +1,139 @@
+{
+  "sha256": "14b1bbfb7b4fdbb2eccd3ff8741d3e4c40ff4f66b9f6103f76bad14baa5a1dde",
+  "bytes": 7795210,
+  "seconds": 91.899,
+  "frames": 5514,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "chapters": 15,
+  "full_decode_passed": true,
+  "audio_mean_db": -20.5,
+  "audio_peak_db": -3.2,
+  "av_duration_delta": 0.0010000000000047748,
+  "native_av_capture": true,
+  "sources": [
+    {
+      "game": "kidicarus",
+      "capture": "kidicarus-baseline",
+      "rom_sha256": "0987da55ab643ec26c27fbd3adc0aeb47281851d4e48c5176c2f8ba23b7a48e8",
+      "fixture_sha256": "3eb905d156e541fdd26302b162783018f1a1dbd02d9edc9d205f19ffcc37b4b2"
+    },
+    {
+      "game": "kidicarus",
+      "capture": "kidicarus-hammers",
+      "rom_sha256": "0987da55ab643ec26c27fbd3adc0aeb47281851d4e48c5176c2f8ba23b7a48e8",
+      "fixture_sha256": "2d43e2fcb70d9c70f0076a7be6a1840611fa1dd6bb54909e68fdd9f747b48b7a"
+    },
+    {
+      "game": "contra",
+      "capture": "contra-video",
+      "rom_sha256": "543e609d86f5b09b2abe6a93db75c999df684bc72267d3a935a942126efdda0c",
+      "fixture_sha256": "d3d22eee277980d8a86fe7c2a6c29ba38ac388a70bb91516fbb55af8cf567ac8"
+    },
+    {
+      "game": "rangers",
+      "capture": "rangers-carry",
+      "rom_sha256": "f7bab12c3fd98fd12784cd91eae3def7a719081f77745eff13b82201aefb1d41",
+      "fixture_sha256": "bb6900b2dde3ffce360d9d258cf3ebc01c1c5ee212da0f8d2f296ae64b43bf46"
+    },
+    {
+      "game": "rangers",
+      "capture": "rangers-combat",
+      "rom_sha256": "f7bab12c3fd98fd12784cd91eae3def7a719081f77745eff13b82201aefb1d41",
+      "fixture_sha256": "b2b64838dcd209c53ae446b306cfec008e19ec0f87e569b0ad63aab9837c9bb4"
+    },
+    {
+      "game": "gradius",
+      "capture": "gradius-options",
+      "rom_sha256": "901272163fba47a64b06bc236b2d29f9fe8f9cf02e295a41ee4e19af9e0169a0",
+      "fixture_sha256": "baae9bf4fdd6dd21b34e3e7726867a05bfd71341290b6fddf6577ff86afcd5fc"
+    },
+    {
+      "game": "kungfu",
+      "capture": "kungfu-melee",
+      "rom_sha256": "43096d542f4300a559686993afd245d99b322bfd0b8cfb51919542b4ea443fe8",
+      "fixture_sha256": "7022d4370c8f8d008b6520c5a51e55cd1a96eba1974ee1f3174df683c170f950"
+    },
+    {
+      "game": "snake",
+      "capture": "snake-runtime",
+      "rom_sha256": "e5266f884fd20559395028eba9430b0e5db94aa89c5c89f84c6e0614facae081",
+      "fixture_sha256": "e4f259af61df8ab3ccdb20f61d45c8506d2fefab0fe1644ee9dc00ff5fb00bd6"
+    },
+    {
+      "game": "tetris",
+      "capture": "tetris-runtime",
+      "rom_sha256": "391c961eb4d75bc13aadc784d32dba3df58fbf73c5e92681837546c7680c7675",
+      "fixture_sha256": "c092fbd9224ed0bc73b78d2b73d8e48ac7df42959c81dcb452433f22af43708d"
+    },
+    {
+      "game": "tetris",
+      "capture": "tetris-head-break",
+      "rom_sha256": "391c961eb4d75bc13aadc784d32dba3df58fbf73c5e92681837546c7680c7675",
+      "fixture_sha256": "a70aff04427533d366412dc73b55bb58427cfd5c2f6157dda81f8551bbaaeacc"
+    },
+    {
+      "game": "tetris",
+      "capture": "tetris-interaction",
+      "rom_sha256": "391c961eb4d75bc13aadc784d32dba3df58fbf73c5e92681837546c7680c7675",
+      "fixture_sha256": "04426e2c57737b3ba1a65c6fe62499a157d52adf37275b10af22f89eb9042f4e"
+    },
+    {
+      "game": "smb2",
+      "capture": "smb2-runtime",
+      "rom_sha256": "34cabf29a74605b696be2cb761fe869617540cad18148f8858dc95e1853929dc",
+      "fixture_sha256": "6a073b3a9dadbc91b4da4a4449524129860f8b4e6f602e3acc8a6e37f9ef024f"
+    },
+    {
+      "game": "zelda",
+      "capture": "zelda-visual",
+      "rom_sha256": "257d2216d0e2cd81b45dd5b09be4a89f5333ac66609f80ebcc992b6eff0cb821",
+      "fixture_sha256": "9c11db371bbfed04efdbe41bfe120e06ce5e6256f0b8ffaffdb7cc21dcd5871e"
+    },
+    {
+      "game": "wwf",
+      "capture": "wwf-game",
+      "rom_sha256": "36bedfd032103e301a0c349b09ce1748ce679b333c826cef4ca2cbe77dd78d50",
+      "fixture_sha256": "e24b15482297e10f9635a93f5d434159382b64ca390846f8cba14eb85ed4207b"
+    },
+    {
+      "game": "megaman2",
+      "capture": "megaman2-gameplay",
+      "rom_sha256": "48ea669b0c5186c6812a4a69ed7d6d89df239833f1abe015ec1e3bb870abdeb5",
+      "fixture_sha256": "0081fdb5e88394a28f83a88f681f0bf189a3ef2035819b2ee3568af3c3144a4e"
+    },
+    {
+      "game": "metroid",
+      "capture": "metroid-arrival_and_shots",
+      "rom_sha256": "a4f7368a2a75b29729f0df260f2129436af776d28c512b445efa7c0717385621",
+      "fixture_sha256": "46e3712ea699f551b13b087ea2e0a13ab64f1512194fe9cca7316a05cbc5e68a"
+    },
+    {
+      "game": "ghosts",
+      "capture": "ghosts-combat",
+      "rom_sha256": "f0637e62f08205686784b3267a1538d7b2e4aecb47797acce9dcececf5dcc700",
+      "fixture_sha256": "15fe169ec9e7c2c2e130adc0089863ce9c1055faec3be7c74c82d8c9c3af0a47"
+    },
+    {
+      "game": "ghosts",
+      "capture": "ghosts-gameplay",
+      "rom_sha256": "f0637e62f08205686784b3267a1538d7b2e4aecb47797acce9dcececf5dcc700",
+      "fixture_sha256": "f6ed855de79659980350494c807aab65aee90cbcfbf4f9ac5ad4dc45ac010ea4"
+    },
+    {
+      "game": "punchout",
+      "capture": "punchout-fire_visuals",
+      "rom_sha256": "ef99a7b03c55a4f85115c84c520b52262a4916780fc5eed010b15d4930cdd2c2",
+      "fixture_sha256": "75f0a173fa3679342d24c670675f57e39ce1c3143f45304ca06d24907ce24337"
+    },
+    {
+      "game": "castlevania",
+      "capture": "castlevania-playthrough",
+      "rom_sha256": "6f2948358135e50d33ecbf5c5ff742709886faea752ec65d71f37f9611152c51",
+      "fixture_sha256": "72d3c86913987052fae60698398fa15d697be95bae7b5b2215c92c99b1404748"
+    }
+  ]
+}

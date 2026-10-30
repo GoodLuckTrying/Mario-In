@@ -1,0 +1,409 @@
+{
+  "rom_sha256": "36bedfd032103e301a0c349b09ce1748ce679b333c826cef4ca2cbe77dd78d50",
+  "passed": true,
+  "checks": [
+    {
+      "name": "two independent fireball slots per human, cooldown, lifetime and cleanup",
+      "cases": 8,
+      "passed": true
+    },
+    {
+      "name": "fireball horizontal bounds never wrap for either owner/direction",
+      "cases": 1024,
+      "passed": true
+    },
+    {
+      "name": "both fireball owners damage only the defender energy/actor, for all six original identities, with hit grace",
+      "cases": 192,
+      "passed": true
+    },
+    {
+      "name": "native ring polygon, both actors/all depth bytes, legal-coordinate preservation, settled correction, pause and native special-state ownership",
+      "cases": 5134,
+      "passed": true
+    },
+    {
+      "name": "both projectile owners preserve native rope/climbing immunity and script state for all original identities",
+      "cases": 12,
+      "passed": true
+    },
+    {
+      "name": "all eight native modes keep chosen human brothers and valid original CPU identities",
+      "cases": 16,
+      "passed": true
+    },
+    {
+      "name": "all 21 immutable/streamed body, melee and directional poses exactly reconstruct",
+      "cases": 16128,
+      "passed": true
+    },
+    {
+      "name": "native six-phase CHR packets, both owners, directional poses and original CPU packet preservation",
+      "cases": 120,
+      "passed": true
+    },
+    {
+      "name": "both controllers select the distinct punch and kick recovery poses",
+      "cases": 4,
+      "passed": true
+    },
+    {
+      "name": "exact original hash, output manifest hash and IPS reconstruction",
+      "passed": true
+    },
+    {
+      "name": "all six original portraits/stats, native timer and original wrestler CHR streaming retained",
+      "passed": true
+    },
+    {
+      "name": "canonical HUD and ring graphics captured from the exact original ROM boot",
+      "passed": true
+    },
+    {
+      "name": "controller-game",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-game.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "luigi-controller-game",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\luigi-controller-game.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "two-player-hardware",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\two-player-hardware.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "cpu-mixed-hardware",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\cpu-mixed-hardware.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "six-player-tournament-menu",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\six-player-tournament-menu.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "win-transition",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\win-transition.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "loss-transition",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\loss-transition.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "directional-source-hardware",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\directional-source-hardware.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "movement-pose-continuity",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\movement-pose-continuity.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "ring-reentry-0-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\ring-reentry-0-0.txt"
+    },
+    {
+      "name": "ring-reentry-0-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\ring-reentry-0-1.txt"
+    },
+    {
+      "name": "ring-reentry-1-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\ring-reentry-1-0.txt"
+    },
+    {
+      "name": "ring-reentry-1-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\ring-reentry-1-1.txt"
+    },
+    {
+      "name": "rope-pin-recovery-0-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\rope-pin-recovery-0-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "rope-pin-recovery-0-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\rope-pin-recovery-0-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "rope-pin-recovery-1-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\rope-pin-recovery-1-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "rope-pin-recovery-1-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\rope-pin-recovery-1-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "selection-raster-and-original-roster",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\selection-raster-and-original-roster.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "two-player-selection-raster",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\two-player-selection-raster.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "defender-energy-bars-case-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\defender-energy-bars-case-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "defender-energy-bars-case-2",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\defender-energy-bars-case-2.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "defender-energy-bars-case-3",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\defender-energy-bars-case-3.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "defender-energy-bars-case-4",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\defender-energy-bars-case-4.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "original-opponent-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\original-opponent-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "original-opponent-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\original-opponent-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "original-opponent-2",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\original-opponent-2.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "original-opponent-3",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\original-opponent-3.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "original-opponent-4",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\original-opponent-4.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "original-opponent-5",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\original-opponent-5.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-original-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-original-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-original-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-original-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-original-2",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-original-2.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-original-3",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-original-3.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-original-4",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-original-4.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-original-5",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-original-5.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-1-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-1-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-1-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-1-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-0-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-0-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "controller-full-match-0-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\controller-full-match-0-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "combat-raster-original-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\combat-raster-original-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "combat-raster-original-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\combat-raster-original-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "combat-raster-original-2",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\combat-raster-original-2.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "combat-raster-original-3",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\combat-raster-original-3.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "combat-raster-original-4",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\combat-raster-original-4.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "combat-raster-original-5",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\combat-raster-original-5.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "portrait-full-slide-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\portrait-full-slide-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "portrait-full-slide-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\portrait-full-slide-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "two-player-portrait-slides",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\two-player-portrait-slides.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "six-player-portrait-slides",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\six-player-portrait-slides.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "held-pin-at-rope-0-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\held-pin-at-rope-0-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "held-pin-at-rope-0-2",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\held-pin-at-rope-0-2.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "held-pin-at-rope-1-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\held-pin-at-rope-1-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "held-pin-at-rope-1-2",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\held-pin-at-rope-1-2.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "injury-anchor-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\injury-anchor-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "injury-anchor-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\injury-anchor-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "full-post-victory-flow-0",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\full-post-victory-flow-0.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "full-post-victory-flow-1",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\full-post-victory-flow-1.txt",
+      "reused_same_rom": true
+    },
+    {
+      "name": "unfrozen-bam-bam-full-match",
+      "passed": true,
+      "log": "${DEVELOPMENT_WORKSPACE}\\wwf\\build\\verification-logs\\unfrozen-bam-bam-full-match.txt",
+      "reused_same_rom": true
+    }
+  ],
+  "elapsed_seconds": 42.63,
+  "limits": "Mesen controller replays include full-energy fireball defeats and real Down+A pins through victory for both controllers and all six original opponents. Most CPU pin replays suppress AI input without seeding health/positions/defeat/referee flags; an additional complete Bam Bam match and separate combat replays retain unfrozen AI. Rope-pin cases use position-only fixtures after a real controller defeat. New rope-pin recovery cases also select the RNG result for a legal native Up kick-out, then require actual inward walking and subsequent native melee damage. Ring reentry fixtures seed only coordinates and preserve native controls/actions. These replays compare complete HUD/portrait CHR against their clean match setup. Injury fixtures position the actors before real controller attacks. Post-victory Standard/Tournament scene tests use a referee fixture and continue into a second playable match. Static HUD/ring CHR is compared against a fresh original-ROM boot, excluding native generated name glyphs and the reserved split marker. Assembled 6502 tests are also included. Not an unassisted tournament clear or physical-console test."
+}

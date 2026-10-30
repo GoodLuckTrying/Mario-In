@@ -1,0 +1,142 @@
+{
+  "verified_utc": "2026-10-30T13:59:49.980214+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "game": "kidicarus",
+      "passed": true,
+      "rom_sha256": "0987da55ab643ec26c27fbd3adc0aeb47281851d4e48c5176c2f8ba23b7a48e8",
+      "patch_sha256": "069320ab7fc531ccda4fb983d7c2ff119bcf82a7157813c690ef1de3647ebb5e",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "contra",
+      "passed": true,
+      "rom_sha256": "543e609d86f5b09b2abe6a93db75c999df684bc72267d3a935a942126efdda0c",
+      "patch_sha256": "41d51d6eac4ca9970386d7b8befca085679566f2e86f1f241820ab67990122e6",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "rangers",
+      "passed": true,
+      "rom_sha256": "f7bab12c3fd98fd12784cd91eae3def7a719081f77745eff13b82201aefb1d41",
+      "patch_sha256": "e7959d74f7c2e7f219db52c53ac2794d55c0308baa0ad869bf4d3055c2b9c649",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "gradius",
+      "passed": true,
+      "rom_sha256": "901272163fba47a64b06bc236b2d29f9fe8f9cf02e295a41ee4e19af9e0169a0",
+      "patch_sha256": "ad6bb443d27b89c3a464fdf1de53fe02825bfcaaf370dc62ee938fe85f923462",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "kungfu",
+      "passed": true,
+      "rom_sha256": "43096d542f4300a559686993afd245d99b322bfd0b8cfb51919542b4ea443fe8",
+      "patch_sha256": "1ad693a48d57dfe65412cac6ab0148897b909b8e517c16b0f92aab4600c16727",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "snake",
+      "passed": true,
+      "rom_sha256": "e5266f884fd20559395028eba9430b0e5db94aa89c5c89f84c6e0614facae081",
+      "patch_sha256": "8b5f97e5fa43fa044e3fc205cc4db8e8506c86ab6404c6aea50b331ddf3de403",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "tetris",
+      "passed": true,
+      "rom_sha256": "391c961eb4d75bc13aadc784d32dba3df58fbf73c5e92681837546c7680c7675",
+      "patch_sha256": "2d1e04281e6809daff3c7bf8909ac9095754f91defea5496d05b42ba36491278",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "smb2",
+      "passed": true,
+      "rom_sha256": "34cabf29a74605b696be2cb761fe869617540cad18148f8858dc95e1853929dc",
+      "patch_sha256": "533d0d2b47066575ff40b4bc96d2d3b6f88126f300648f3166c8c30e3eadb55a",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "zelda",
+      "passed": true,
+      "rom_sha256": "257d2216d0e2cd81b45dd5b09be4a89f5333ac66609f80ebcc992b6eff0cb821",
+      "patch_sha256": "a0300d4a279a9194733c5e70d6b07db234629e16ecfe79668e0fa402a0e6adf7",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "wwf",
+      "passed": true,
+      "rom_sha256": "36bedfd032103e301a0c349b09ce1748ce679b333c826cef4ca2cbe77dd78d50",
+      "patch_sha256": "6cb63867a5bff14633a0b909f88b4017bb8caeb176cc50407462db1445970060",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "megaman2",
+      "passed": true,
+      "rom_sha256": "48ea669b0c5186c6812a4a69ed7d6d89df239833f1abe015ec1e3bb870abdeb5",
+      "patch_sha256": "1582f4d05555b4e5cd4d0c5a790399e570eda740bb03d009393a26f2140a0fc3",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "metroid",
+      "passed": true,
+      "rom_sha256": "a4f7368a2a75b29729f0df260f2129436af776d28c512b445efa7c0717385621",
+      "patch_sha256": "07415c9639cb7c9c2dc448126ac33a35c2acfa71fabe2ba1065f23f1f8388160",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "ghosts",
+      "passed": true,
+      "rom_sha256": "f0637e62f08205686784b3267a1538d7b2e4aecb47797acce9dcececf5dcc700",
+      "patch_sha256": "fc83dec40f932c168155f5ebdadddd591158c194a45696f3054d575d25ca4613",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "punchout",
+      "passed": true,
+      "rom_sha256": "ef99a7b03c55a4f85115c84c520b52262a4916780fc5eed010b15d4930cdd2c2",
+      "patch_sha256": "1ad2425b6af43f0b12d67cecba447a5923b3032ffae9d88e320e98ef27584b5c",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    },
+    {
+      "game": "castlevania",
+      "passed": true,
+      "rom_sha256": "6f2948358135e50d33ecbf5c5ff742709886faea752ec65d71f37f9611152c51",
+      "patch_sha256": "77db3cdd3c6d1ad751a6909ddadb39ab38122238350516fb4b53260c230c90df",
+      "rebuilt_rom_matches": true,
+      "rebuilt_patch_matches": true,
+      "ips_round_trip": true
+    }
+  ],
+  "scope": "Reorganized sources rebuilt with pinned local ROM inputs. These are reproducibility and IPS checks, separate from historical gameplay receipts."
+}

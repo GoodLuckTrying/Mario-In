@@ -1,0 +1,170 @@
+{
+  "format_version": 1,
+  "patches": [
+    {
+      "game": "kidicarus",
+      "name": "Mario in Kid Icarus",
+      "patch": "Mario in Kid Icarus.ips",
+      "patch_sha256": "069320ab7fc531ccda4fb983d7c2ff119bcf82a7157813c690ef1de3647ebb5e",
+      "rom_sha256": "0987da55ab643ec26c27fbd3adc0aeb47281851d4e48c5176c2f8ba23b7a48e8",
+      "base_filename": "Kid Icarus (USA, Europe).nes",
+      "base_sha256": "931786d6920dea7f9e183d907d3c4cff123197fcd14ae4066f1e817df32fd02f",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 82
+    },
+    {
+      "game": "contra",
+      "name": "Mario and Luigi in Contra",
+      "patch": "Mario and Luigi in Contra.ips",
+      "patch_sha256": "41d51d6eac4ca9970386d7b8befca085679566f2e86f1f241820ab67990122e6",
+      "rom_sha256": "543e609d86f5b09b2abe6a93db75c999df684bc72267d3a935a942126efdda0c",
+      "base_filename": "Contra (USA).nes",
+      "base_sha256": "1f4a9b3f04e2f828688512c0b83611a87c3fc1bd4f85ed91da1b19abc5816d73",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 266
+    },
+    {
+      "game": "rangers",
+      "name": "Mario and Luigi in Rescue Rangers",
+      "patch": "Mario and Luigi in Rescue Rangers.ips",
+      "patch_sha256": "e7959d74f7c2e7f219db52c53ac2794d55c0308baa0ad869bf4d3055c2b9c649",
+      "rom_sha256": "f7bab12c3fd98fd12784cd91eae3def7a719081f77745eff13b82201aefb1d41",
+      "base_filename": "Chip 'n Dale - Rescue Rangers (USA).nes",
+      "base_sha256": "8d5e3d9ce20fa0a61b23e93dbc975606803f2d5e7a264514b02b96f832a63181",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 288
+    },
+    {
+      "game": "gradius",
+      "name": "Mario in Gradius",
+      "patch": "Mario in Gradius.ips",
+      "patch_sha256": "ad6bb443d27b89c3a464fdf1de53fe02825bfcaaf370dc62ee938fe85f923462",
+      "rom_sha256": "901272163fba47a64b06bc236b2d29f9fe8f9cf02e295a41ee4e19af9e0169a0",
+      "base_filename": "Gradius (USA).nes",
+      "base_sha256": "38c44e0e6f531a2779271f10cd4daa08ee2616c59c49d476b6f4e9dc482bf5f3",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 52
+    },
+    {
+      "game": "kungfu",
+      "name": "Mario in Kung Fu",
+      "patch": "Mario in Kung Fu.ips",
+      "patch_sha256": "1ad693a48d57dfe65412cac6ab0148897b909b8e517c16b0f92aab4600c16727",
+      "rom_sha256": "43096d542f4300a559686993afd245d99b322bfd0b8cfb51919542b4ea443fe8",
+      "base_filename": "Kung Fu (Japan, USA) (En).nes",
+      "base_sha256": "2275213352411a23df7428496ad03991348ddee3034ac6db83d2d16f0d1f8554",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 82
+    },
+    {
+      "game": "snake",
+      "name": "Mario and Luigi in Snake Rattle n Roll",
+      "patch": "Mario and Luigi in Snake Rattle n Roll.ips",
+      "patch_sha256": "8b5f97e5fa43fa044e3fc205cc4db8e8506c86ab6404c6aea50b331ddf3de403",
+      "rom_sha256": "e5266f884fd20559395028eba9430b0e5db94aa89c5c89f84c6e0614facae081",
+      "base_filename": "Snake Rattle n Roll (USA).nes",
+      "base_sha256": "4e456a9b3872631f9937f2e14747022fe7a91a9dd9b4773ab326715411cc73a9",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 56
+    },
+    {
+      "game": "tetris",
+      "name": "Mario in Tetris",
+      "patch": "Mario in Tetris.ips",
+      "patch_sha256": "2d1e04281e6809daff3c7bf8909ac9095754f91defea5496d05b42ba36491278",
+      "rom_sha256": "391c961eb4d75bc13aadc784d32dba3df58fbf73c5e92681837546c7680c7675",
+      "base_filename": "Tetris (USA).nes",
+      "base_sha256": "ddb876c302cfd4ee19fabff8e3ede0b6801ded70c49980d1682a32d352953082",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 118
+    },
+    {
+      "game": "smb2",
+      "name": "SMB1 Mario and Luigi in Super Mario Bros 2",
+      "patch": "SMB1 Mario and Luigi in Super Mario Bros 2.ips",
+      "patch_sha256": "533d0d2b47066575ff40b4bc96d2d3b6f88126f300648f3166c8c30e3eadb55a",
+      "rom_sha256": "34cabf29a74605b696be2cb761fe869617540cad18148f8858dc95e1853929dc",
+      "base_filename": "Super Mario Bros. 2 (USA).nes",
+      "base_sha256": "41300bc4942a8a4f9b53148b404dd5cae3dd708ebdd9b617888d290a51a83e43",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 141
+    },
+    {
+      "game": "zelda",
+      "name": "Mario in The Legend of Zelda",
+      "patch": "Mario in The Legend of Zelda.ips",
+      "patch_sha256": "a0300d4a279a9194733c5e70d6b07db234629e16ecfe79668e0fa402a0e6adf7",
+      "rom_sha256": "257d2216d0e2cd81b45dd5b09be4a89f5333ac66609f80ebcc992b6eff0cb821",
+      "base_filename": "Legend of Zelda, The (USA).nes",
+      "base_sha256": "1dff2d002168e0234d206938afc5189a79eb0ec055ada12f2cd4e105f713fc7d",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 41
+    },
+    {
+      "game": "wwf",
+      "name": "Mario and Luigi in WWF WrestleMania",
+      "patch": "Mario and Luigi in WWF WrestleMania.ips",
+      "patch_sha256": "6cb63867a5bff14633a0b909f88b4017bb8caeb176cc50407462db1445970060",
+      "rom_sha256": "36bedfd032103e301a0c349b09ce1748ce679b333c826cef4ca2cbe77dd78d50",
+      "base_filename": "WWF WrestleMania (USA).nes",
+      "base_sha256": "0d294769d55984684f8fe3299f47b7f4da8667b1dabb94ab8e4c620750bf7f87",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 70
+    },
+    {
+      "game": "megaman2",
+      "name": "Mario in Mega Man 2",
+      "patch": "Mario in Mega Man 2.ips",
+      "patch_sha256": "1582f4d05555b4e5cd4d0c5a790399e570eda740bb03d009393a26f2140a0fc3",
+      "rom_sha256": "48ea669b0c5186c6812a4a69ed7d6d89df239833f1abe015ec1e3bb870abdeb5",
+      "base_filename": "Mega Man 2 (USA).nes",
+      "base_sha256": "9f5fa21062933e89c4f923d7755b6df185b054e84d9b5a6ef54216ac4dd67070",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 22
+    },
+    {
+      "game": "metroid",
+      "name": "Mario in Metroid",
+      "patch": "Mario in Metroid.ips",
+      "patch_sha256": "07415c9639cb7c9c2dc448126ac33a35c2acfa71fabe2ba1065f23f1f8388160",
+      "rom_sha256": "a4f7368a2a75b29729f0df260f2129436af776d28c512b445efa7c0717385621",
+      "base_filename": "Metroid (USA).nes",
+      "base_sha256": "88ad02b0b53012712f3c773a62073847551cec191aeda5d3ec19b22b594640eb",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 11
+    },
+    {
+      "game": "ghosts",
+      "name": "Mario in Ghosts n Goblins",
+      "patch": "Mario in Ghosts n Goblins.ips",
+      "patch_sha256": "fc83dec40f932c168155f5ebdadddd591158c194a45696f3054d575d25ca4613",
+      "rom_sha256": "f0637e62f08205686784b3267a1538d7b2e4aecb47797acce9dcececf5dcc700",
+      "base_filename": "Ghosts'n Goblins (USA).nes",
+      "base_sha256": "a263db625853b563aca356a8651f69c9092428dd2b665b6fd5c75ea5b1439d31",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 35
+    },
+    {
+      "game": "punchout",
+      "name": "Mario in Mike Tyson's Punch-Out!!",
+      "patch": "Mario in Mike Tyson's Punch-Out!!.ips",
+      "patch_sha256": "1ad2425b6af43f0b12d67cecba447a5923b3032ffae9d88e320e98ef27584b5c",
+      "rom_sha256": "ef99a7b03c55a4f85115c84c520b52262a4916780fc5eed010b15d4930cdd2c2",
+      "base_filename": "Mike Tyson's Punch-Out!! (Japan, USA) (En) (Rev 1).nes",
+      "base_sha256": "e1e7ea03309e370240e90ad80815b484e1c537107d8620e2479f8169cf237c8f",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 31
+    },
+    {
+      "game": "castlevania",
+      "name": "Mario in Castlevania",
+      "patch": "Mario in Castlevania.ips",
+      "patch_sha256": "77db3cdd3c6d1ad751a6909ddadb39ab38122238350516fb4b53260c230c90df",
+      "rom_sha256": "6f2948358135e50d33ecbf5c5ff742709886faea752ec65d71f37f9611152c51",
+      "base_filename": "Castlevania (USA) (Rev 1).nes",
+      "base_sha256": "5e859d77bc0e3a9f30a7c14d2637b9c2aae6ce19f6520a7c9b252a86974f7800",
+      "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+      "verification_checks": 46
+    }
+  ]
+}

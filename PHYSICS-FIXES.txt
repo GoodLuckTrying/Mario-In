@@ -1,0 +1,138 @@
+MARIO PORT PHYSICS FIXES - 23 October 2026
+
+Installed the verified updates in C:\nes. The original game ROMs and the
+local SMB1base source are unchanged. Start each updated ROM from a fresh reset;
+old emulator save states contain the previous code and private player state.
+
+CHANGES
+
+Contra: grounded Down+direction uses SMB1 input filtering. Walking off a
+ledge retains the falling force chosen by the preceding jump. Native gun
+controls, water/shore behavior, platform drops and room scripts remain.
+Fireballs share an enemy collision-box calculation across a volley and refresh
+it after damage changes native actor state.
+
+Rescue Rangers: crouch jumps retain the short body throughout flight, and
+grounded Down+direction uses SMB1 filtering. Native carrying, throws, box
+hiding and Sparky hazards remain. Sprite rows reuse coordinates, native OAM
+copies use a precomputed bound, and state transfers use unrolled copies in
+private cartridge RAM. The full 64-sprite output and all stage palettes pass.
+
+Kung Fu: restored SMB1 input/update order, speed-dependent jump launch,
+neutral-air coasting, facing, retained airborne crouching, fractional movement,
+gravity after position, and the source's fractional fall limit. From-rest tap
+and held jump apexes are 24 and 64 pixels. Punches/kicks, native boss barriers,
+deaths, entrances and staircase scripts remain and pass their replays.
+
+Tetris: restored neutral-air momentum/facing, jump selection before horizontal
+acceleration, fractional falling behavior and selected force on ledge falls.
+Floor contact resolves at the feet during the landing update. Native Tetris
+piece controls, modes, CPU play, safe head breaks and piece pushes/stomps pass.
+
+SMB2 USA: normal player movement now uses signed position fractions and full
+8.8 vertical velocity. Position advances using the old velocity before SMB1
+gravity is applied. Native collision velocity changes are imported, while
+moving supports add their displacement without changing persistent velocity.
+Native scripted states and deep quicksand retain their native integrator.
+Hearts, charged jumps, climbing, carrying, throws and room transitions pass.
+Mario/Luigi from-rest tap/held jumps reproduce 24/64-pixel apexes.
+
+Kid Icarus needed no ordinary land-physics change; its fresh source comparison
+passes. Gradius's floating flight, Snake's isometric movement, Zelda's overhead
+movement and WrestleMania's wrestling movement remain intentional adaptations.
+Their ROM bytes are unchanged.
+
+WrestleMania's replay coverage was stabilized without changing its ROM: the
+A/B pose fixture starts before AI can interrupt it with a grab; the graphics
+stress fixture keeps native energy high so it can exercise the full 1,200-frame
+interval with live AI. Its private-RAM guard recognizes the precise custom
+name/portrait bridge writes. The full native Standard return through the intro,
+title, selection and second match has enough host time while retaining its
+emulated-frame bound. Separate real damage, defeat and pin replays still pass.
+
+VERIFICATION
+
+Reference: unchanged vendor/smb1base commit
+46ff88f7d9e854db80bf8d50e5bf74340fcc64ce, USE_SMB2J_FEATURES=0.
+The harness assembles verbatim source routines and executes both versions as
+6502 instructions; the movement reference is not a Python approximation.
+
+All 2,724 controlled source-comparison cases match, over 358,868 updates:
+
+  Kid Icarus       360 cases / 46,326 updates
+  Contra           696 cases / 97,440 updates
+  Rescue Rangers   720 cases / 92,652 updates
+  Kung Fu          348 cases / 45,240 updates
+  Tetris           120 cases / 15,442 updates
+  SMB2 USA         480 cases / 61,768 updates
+
+The five changed ROMs pass 867 recorded checks: Contra 238, Rescue Rangers 288,
+Kung Fu 82, Tetris 118 and SMB2 USA 141. These include live Mesen controller
+replays, source comparisons, native gameplay/graphics regressions, original
+hashes and exact IPS reconstruction. WrestleMania's unchanged ROM passes its
+57 refreshed checks. Passing logs are reused only for the exact same ROM hash
+and unchanged dependent scripts; changed fixtures are rerun.
+
+Installation guards require a successful receipt for the exact candidate hash.
+All ten installed ROMs were checked against their dist ROMs, build manifests
+and successful receipts; all ten original game ROM hashes and the SMB1 ROM
+were rechecked. Hash-named backups of all five replaced modified ROMs exist.
+
+PERFORMANCE AND LIMITS
+
+These are fixed opening replays, not whole-campaign frame-rate guarantees.
+
+  Rescue Rangers, 400 video frames:
+    Small solo: 395 -> 396 game updates
+    Fire solo: 354 -> 369
+    Fire co-op: 202 -> 207
+    Fire co-op mean work: about 32,451 -> 31,366 CPU cycles/update
+
+  Contra, corrected-physics co-op profile, 600 video frames:
+    Before volley optimization: 390 game updates
+    After: 422 (the full-suite run measured 421)
+    Mean main logic: about 18,379 -> 17,548 CPU cycles/update
+    The final late-stage 6 replay measured 366/600 updates.
+
+Heavy co-op slowdown remains. In particular, the Rangers Fire co-op fixture is
+still about 31 game updates per second. Reducing redundant work improves it
+but does not establish constant 60-Hz updates on the NES.
+
+Source comparisons isolate ordinary movement on controlled terrain. Native
+collisions, water, object support and scripted actions retain host behavior.
+The tests do not certify every SMB1 collision quirk, every campaign situation,
+a full unassisted campaign clear, or physical NES timing.
+
+EVIDENCE
+
+  build/physics-repair/installed.json: final installed hashes, backups, original
+    hashes, receipt counts and source-comparison totals.
+  build/physics-repair/{kidicarus,rangers,kungfu,tetris,smb2}.json
+  contra/build/physics-repair/results.json
+  build/physics-repair/*-verification.log and *-profile-*.log
+  Each updated game's dist/verification.json and individual emulator logs.
+
+PHYSICS-AUDIT.txt remains the historical, pre-fix audit. This document records
+the subsequent repairs and installation.
+
+INSTALLED FILES AND BACKUPS
+
+C:\nes\Mario and Luigi in Contra.nes
+  SHA-256 c31bbb7d9d45becd175a3fa446e6e77fd36e71e927f3dc2c950b2c8d70c32527
+  Backup: C:\nes\Mario and Luigi in Contra - backup 066007ab.nes
+
+C:\nes\Mario and Luigi in Rescue Rangers.nes
+  SHA-256 f7bab12c3fd98fd12784cd91eae3def7a719081f77745eff13b82201aefb1d41
+  Backup: C:\nes\Mario and Luigi in Rescue Rangers - backup 19221361.nes
+
+C:\nes\Mario in Kung Fu.nes
+  SHA-256 43096d542f4300a559686993afd245d99b322bfd0b8cfb51919542b4ea443fe8
+  Backup: C:\nes\Mario in Kung Fu - backup a57d606d.nes
+
+C:\nes\Mario in Tetris.nes
+  SHA-256 391c961eb4d75bc13aadc784d32dba3df58fbf73c5e92681837546c7680c7675
+  Backup: C:\nes\Mario in Tetris - backup b7a9fd03.nes
+
+C:\nes\SMB1 Mario and Luigi in Super Mario Bros 2.nes
+  SHA-256 34cabf29a74605b696be2cb761fe869617540cad18148f8858dc95e1853929dc
+  Backup: C:\nes\SMB1 Mario and Luigi in Super Mario Bros 2 - backup 502f3278.nes

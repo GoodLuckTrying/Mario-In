@@ -1,0 +1,213 @@
+{
+  "rom_sha256": "257d2216d0e2cd81b45dd5b09be4a89f5333ac66609f80ebcc992b6eff0cb821",
+  "passed": true,
+  "checks": [
+    {
+      "name": "all four screen edges and byte overflows despawn shots without wrapping",
+      "passed": true,
+      "cases": 8
+    },
+    {
+      "name": "all non-player common and demo/weapon CHR bytes are preserved",
+      "passed": true
+    },
+    {
+      "name": "directional-action-visual-captures",
+      "passed": true,
+      "seconds": 1.33
+    },
+    {
+      "name": "dungeon-art-1",
+      "passed": true,
+      "seconds": 1.32
+    },
+    {
+      "name": "dungeon-art-2",
+      "passed": true,
+      "seconds": 1.33
+    },
+    {
+      "name": "dungeon-art-3",
+      "passed": true,
+      "seconds": 1.33
+    },
+    {
+      "name": "dungeon-art-4",
+      "passed": true,
+      "seconds": 1.35
+    },
+    {
+      "name": "dungeon-art-5",
+      "passed": true,
+      "seconds": 1.29
+    },
+    {
+      "name": "dungeon-art-6",
+      "passed": true,
+      "seconds": 1.27
+    },
+    {
+      "name": "dungeon-art-7",
+      "passed": true,
+      "seconds": 1.34
+    },
+    {
+      "name": "dungeon-art-8",
+      "passed": true,
+      "seconds": 1.28
+    },
+    {
+      "name": "dungeon-art-9",
+      "passed": true,
+      "seconds": 1.34
+    },
+    {
+      "name": "dungeon-vertical-walking",
+      "passed": true,
+      "seconds": 1.02
+    },
+    {
+      "name": "fireball OAM uses only free sprites and preserves HUD, sprite zero and Mario",
+      "passed": true,
+      "cases": 3
+    },
+    {
+      "name": "four straight directions follow the fixed-point bounce-speed curve without perpendicular drift",
+      "passed": true,
+      "cases": 1280
+    },
+    {
+      "name": "front/back idle, walking and throwing art matches the newly supplied sheet pixel-for-pixel",
+      "passed": true
+    },
+    {
+      "name": "hardware-directional-art",
+      "passed": true,
+      "seconds": 1.36
+    },
+    {
+      "name": "item-0",
+      "passed": true,
+      "seconds": 1.06
+    },
+    {
+      "name": "item-1",
+      "passed": true,
+      "seconds": 1.04
+    },
+    {
+      "name": "item-2",
+      "passed": true,
+      "seconds": 1.04
+    },
+    {
+      "name": "item-4",
+      "passed": true,
+      "seconds": 1.03
+    },
+    {
+      "name": "item-5",
+      "passed": true,
+      "seconds": 0.97
+    },
+    {
+      "name": "item-6",
+      "passed": true,
+      "seconds": 1.03
+    },
+    {
+      "name": "item-7",
+      "passed": true,
+      "seconds": 0.92
+    },
+    {
+      "name": "item-8",
+      "passed": true,
+      "seconds": 1.03
+    },
+    {
+      "name": "native collection retains swords, every B item, raft, ladder, rings, book, shield, keys, bracelet, letter and dungeon map/compass",
+      "passed": true,
+      "cases": 27
+    },
+    {
+      "name": "native fire damage, immunity, hit grace, enemy death and room-item restoration remain correct",
+      "passed": true,
+      "cases": 4
+    },
+    {
+      "name": "native heart health and both defensive ring upgrades keep their damage reduction",
+      "passed": true,
+      "cases": 3
+    },
+    {
+      "name": "native-death-continue",
+      "passed": true,
+      "seconds": 1.75
+    },
+    {
+      "name": "native-enemy",
+      "passed": true,
+      "seconds": 1.05
+    },
+    {
+      "name": "native-save-reload",
+      "passed": true,
+      "seconds": 1.44
+    },
+    {
+      "name": "new-save-opening",
+      "passed": true,
+      "seconds": 1.27
+    },
+    {
+      "name": "one-handed equipment and two-handed triforce lifts use matching Mario body halves",
+      "passed": true,
+      "cases": 2
+    },
+    {
+      "name": "overworld walkable exceptions and dungeon wall thresholds stop fireballs",
+      "passed": true,
+      "cases": 8
+    },
+    {
+      "name": "pause-inventory",
+      "passed": true,
+      "seconds": 1.19
+    },
+    {
+      "name": "room-transition",
+      "passed": true,
+      "seconds": 1.23
+    },
+    {
+      "name": "the original inventory still equips all eight usable B item slots",
+      "passed": true,
+      "cases": 8
+    },
+    {
+      "name": "two-shot cap is independent of native weapon slots and halted states cannot fire",
+      "passed": true,
+      "cases": 5
+    },
+    {
+      "name": "unchanged originals, exact native disassembly reproduction and IPS reconstruction",
+      "passed": true
+    },
+    {
+      "name": "vertical renderer selects separate strides, standing and attacks including scripted room/stair walks",
+      "passed": true,
+      "cases": 36
+    },
+    {
+      "name": "vertical-walking",
+      "passed": true,
+      "seconds": 1.01
+    }
+  ],
+  "originals_unchanged": true,
+  "ips_reconstructs_rom": true,
+  "limits": [
+    "Mechanics fixtures seed inventory or actors. This is not a full unassisted campaign or physical NES playthrough."
+  ]
+}

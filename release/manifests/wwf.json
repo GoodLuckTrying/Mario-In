@@ -1,0 +1,200 @@
+{
+  "base_sha256": "0d294769d55984684f8fe3299f47b7f4da8667b1dabb94ab8e4c620750bf7f87",
+  "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+  "output_sha256": "36bedfd032103e301a0c349b09ce1748ce679b333c826cef4ca2cbe77dd78d50",
+  "labels": {
+    "ChoiceLimitBridge": 65458,
+    "ChoiceMaxBridge": 65447,
+    "ColourBridge": 65402,
+    "ConstrainHumanPositions": 37722,
+    "ConstrainRing": 37749,
+    "ControlBridge": 65493,
+    "Draw": 35803,
+    "DrawBridge": 65351,
+    "FireHit": 37906,
+    "Init": 32801,
+    "InitBridge": 65330,
+    "MenuInfoBridge": 65427,
+    "MenuPalette": 33478,
+    "MenuPaletteBridge": 65395,
+    "NameBridge": 65434,
+    "PatternCopy": 65330,
+    "PortraitBridge": 65405,
+    "Prepare": 33792,
+    "Roster": 33013,
+    "RosterBridge": 65385,
+    "SelectPose": 33512,
+    "Spawn": 37813,
+    "StageDirectional": 34024,
+    "Update": 37511,
+    "UpdateBridge": 65375
+  },
+  "native": {},
+  "graphics": {
+    "unique_tiles": 55,
+    "slots": [
+      131,
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
+      182,
+      183,
+      184,
+      185
+    ],
+    "poses": [
+      "idle",
+      "walk1",
+      "walk2",
+      "walk3",
+      "punch",
+      "kick",
+      "air",
+      "crouch",
+      "guard/grapple",
+      "climb/win",
+      "down",
+      "front",
+      "front-step1",
+      "front-step2",
+      "back",
+      "back-step1",
+      "back-step2",
+      "front-diagonal",
+      "front-diagonal-step",
+      "back-diagonal",
+      "back-diagonal-step"
+    ],
+    "source": "SMB1 side and existing Kung Fu melee art; supplied directional cells through the native CHR streamer",
+    "directional_source": {
+      "file": "${DEVELOPMENT_WORKSPACE}\\assets\\mario-directional-sheet.png",
+      "sha256": "ae395caae88ade3c2d6b3f2503c45e9f2b92ff5c84020d3f1891277a6bcf2a4d",
+      "permission": "User supplied with stated permission, 23 October 2026",
+      "credit": "Artist name not supplied"
+    },
+    "streamed_pose_bytes": 1920,
+    "work_ram_kib": 8
+  },
+  "hooks": [
+    {
+      "bank": 1,
+      "cpu": "0x8407",
+      "length": 6
+    },
+    {
+      "bank": 2,
+      "cpu": "0x8975",
+      "length": 6
+    },
+    {
+      "bank": 3,
+      "cpu": "0x80cf",
+      "length": 6
+    },
+    {
+      "cpu": "0xa040",
+      "length": 3
+    },
+    {
+      "cpu": "0xad67",
+      "length": 3
+    },
+    {
+      "cpu": "0xa704",
+      "length": 11
+    },
+    {
+      "cpu": "0xae52",
+      "length": 3
+    },
+    {
+      "cpu": "0xaf4d",
+      "length": 3
+    },
+    {
+      "cpu": "0xad08",
+      "length": 1
+    },
+    {
+      "cpu": "0xa0a0",
+      "length": 1
+    },
+    {
+      "cpu": "0xa001",
+      "length": 3
+    },
+    {
+      "cpu": "0xa00f",
+      "length": 3
+    },
+    {
+      "cpu": "0xa017",
+      "length": 1
+    },
+    {
+      "cpu": "0x9f31",
+      "length": 3
+    },
+    {
+      "cpu": "0x8daa",
+      "length": 3
+    },
+    {
+      "cpu": "0x8e1c",
+      "length": 3
+    },
+    {
+      "cpu": "0xd603",
+      "length": 3
+    }
+  ],
+  "mapper": 7,
+  "prg_kib": 256
+}

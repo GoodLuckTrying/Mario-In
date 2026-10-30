@@ -1,0 +1,40 @@
+[submodule "vendor/smb1base"]
+	path = vendor/smb1base
+	url = https://github.com/smbstudio/smb1base.git
+	ignore = untracked
+[submodule "vendor/contra-us"]
+	path = vendor/contra-us
+	url = https://github.com/vermiceli/nes-contra-us.git
+	ignore = untracked
+[submodule "vendor/tetris-nes"]
+	path = vendor/tetris-nes
+	url = https://github.com/CelestialAmber/TetrisNESDisasm.git
+	ignore = untracked
+[submodule "vendor/smb2"]
+	path = vendor/smb2
+	url = https://github.com/Xkeeper0/smb2.git
+	ignore = untracked
+[submodule "vendor/zelda"]
+	path = vendor/zelda
+	url = https://github.com/aldonunez/zelda1-disassembly.git
+	ignore = untracked
+[submodule "vendor/mm2-reference"]
+	path = vendor/mm2-reference
+	url = https://github.com/plasticsmoke/megaman2-disassembly-ca65.git
+	ignore = untracked
+[submodule "vendor/metroid-reference"]
+	path = vendor/metroid-reference
+	url = https://github.com/metroidret/m1disasm.git
+	ignore = untracked
+[submodule "vendor/punchout-disassembly"]
+	path = vendor/punchout-disassembly
+	url = https://github.com/nmikstas/mike-tysons-punch-out-disassembly.git
+	ignore = untracked
+[submodule "castlevania/reference/smb"]
+	path = castlevania/reference/smb
+	url = https://github.com/threecreepio/smb-disassembly.git
+	ignore = untracked
+[submodule "castlevania/reference/castlevania"]
+	path = castlevania/reference/castlevania
+	url = https://github.com/josephstevenspgh/Castlevania-Labelled-Disassembly.git
+	ignore = untracked

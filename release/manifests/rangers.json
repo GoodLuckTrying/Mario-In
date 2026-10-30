@@ -1,0 +1,148 @@
+{
+  "base_sha256": "8d5e3d9ce20fa0a61b23e93dbc975606803f2d5e7a264514b02b96f832a63181",
+  "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
+  "output_sha256": "f7bab12c3fd98fd12784cd91eae3def7a719081f77745eff13b82201aefb1d41",
+  "labels": {
+    "Actions": 29094,
+    "ActorGate": 30066,
+    "Boot": 64585,
+    "ClearGate": 30542,
+    "Collect": 29445,
+    "CollectibleGate": 29542,
+    "CollisionGate": 29595,
+    "Compose": 30960,
+    "ContactGate": 29548,
+    "Damage": 29468,
+    "DeathGate": 29517,
+    "DmaGate": 30556,
+    "DrawFire": 32018,
+    "DrawGate": 30569,
+    "DrawItems": 31766,
+    "Fireballs": 30294,
+    "GetPlayerAnimSpeed": 32262,
+    "ImposeFriction": 32327,
+    "Jump": 28307,
+    "LoadState": 24576,
+    "Move": 27675,
+    "MoveGate": 27623,
+    "MoveX": 28471,
+    "MoveY": 28789,
+    "ObjectHitGate": 30115,
+    "PaletteUpload": 30740,
+    "Palettes": 30582,
+    "PickupObjectGate": 29414,
+    "Render": 31297,
+    "ResetGate": 30235,
+    "SaveState": 27136,
+    "SpriteGate": 30531,
+    "Stomp": 29751,
+    "Support": 28270,
+    "Tile": 28141,
+    "X_Physics": 32140,
+    "__CODE_LOAD__": 32768,
+    "__CODE_RUN__": 27136,
+    "__CODE_SIZE__": 5286,
+    "__FAST_LOAD__": 38054,
+    "__FAST_RUN__": 24576,
+    "__FAST_SIZE__": 542,
+    "__FRAMES_LOAD__": 38596,
+    "__FRAMES_RUN__": 25856,
+    "__FRAMES_SIZE__": 416
+  },
+  "native": {},
+  "hooks": [
+    {
+      "bank": 15,
+      "address": 64585,
+      "length": 439
+    },
+    {
+      "bank": 15,
+      "address": 65127,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 51438,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 51255,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 49185,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 49188,
+      "length": 2
+    },
+    {
+      "bank": 15,
+      "address": 49694,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 53724,
+      "length": 3
+    },
+    {
+      "bank": 5,
+      "address": 33065,
+      "length": 3
+    },
+    {
+      "bank": 6,
+      "address": 32821,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 63787,
+      "length": 3
+    },
+    {
+      "bank": 6,
+      "address": 32777,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 63863,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 49717,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 60172,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 63592,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 49262,
+      "length": 3
+    },
+    {
+      "bank": 15,
+      "address": 60246,
+      "length": 2
+    }
+  ],
+  "chr_tiles": 79,
+  "prg_kib": 256,
+  "wram_kib": 8
+}

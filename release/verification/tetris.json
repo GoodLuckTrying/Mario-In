@@ -1,0 +1,600 @@
+{
+  "rom_sha256": "391c961eb4d75bc13aadc784d32dba3df58fbf73c5e92681837546c7680c7675",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Auto bypasses the VS climb-height veto while VS retains it",
+      "passed": true,
+      "cases": 2
+    },
+    {
+      "name": "Auto chooses available Tetrises at every gravity tier",
+      "passed": true,
+      "cases": 5
+    },
+    {
+      "name": "Auto plans all seven families legally on uneven boards without level or Mario-position influence",
+      "passed": true,
+      "cases": 280
+    },
+    {
+      "name": "Auto preserves blocked, exhausted and unreachable pieces and uses native top-out",
+      "passed": true,
+      "cases": 3
+    },
+    {
+      "name": "Auto scoring and starting-level thresholds exactly match the native engine",
+      "passed": true,
+      "cases": 150
+    },
+    {
+      "name": "CPU dodges a stomp and diverts around a blocked pursuit path",
+      "cases": 3,
+      "passed": true
+    },
+    {
+      "name": "CPU rejects a line clear that would expose a deep sealed pit",
+      "cases": 1,
+      "passed": true
+    },
+    {
+      "name": "VS opens the top across the entire well while Solo retains its roof",
+      "cases": 130,
+      "passed": true
+    },
+    {
+      "name": "active targeting increases gradually with a bounded CPU budget",
+      "cases": 5,
+      "passed": true
+    },
+    {
+      "name": "active-hunt-corner",
+      "passed": true,
+      "seconds": 1.87
+    },
+    {
+      "name": "active-hunt-divert",
+      "passed": true,
+      "seconds": 1.84
+    },
+    {
+      "name": "active-hunt-dodge",
+      "passed": true,
+      "seconds": 1.87
+    },
+    {
+      "name": "active-hunt-level-10",
+      "passed": true,
+      "seconds": 2.31
+    },
+    {
+      "name": "active-hunt-level-19",
+      "passed": true,
+      "seconds": 2.17
+    },
+    {
+      "name": "active-hunt-level-29",
+      "passed": true,
+      "seconds": 2.22
+    },
+    {
+      "name": "active-hunt-level-9",
+      "passed": true,
+      "seconds": 2.34
+    },
+    {
+      "name": "active-hunt-level-99",
+      "passed": true,
+      "seconds": 2.23
+    },
+    {
+      "name": "all seven families choose legal falling paths, preserve climbable surfaces and fit a per-frame CPU budget",
+      "cases": 168,
+      "passed": true
+    },
+    {
+      "name": "attract-return",
+      "passed": true,
+      "seconds": 13.54
+    },
+    {
+      "name": "auto-classic-gravity-19",
+      "passed": true,
+      "seconds": 13.62
+    },
+    {
+      "name": "auto-classic-gravity-29",
+      "passed": true,
+      "seconds": 14.53
+    },
+    {
+      "name": "auto-classic-unassisted",
+      "passed": true,
+      "seconds": 22.79
+    },
+    {
+      "name": "auto-native-high-start-threshold",
+      "passed": true,
+      "seconds": 2.06
+    },
+    {
+      "name": "auto-native-pause",
+      "passed": true,
+      "seconds": 1.87
+    },
+    {
+      "name": "auto-native-reset",
+      "passed": true,
+      "seconds": 3.68
+    },
+    {
+      "name": "auto-native-ten-lines",
+      "passed": true,
+      "seconds": 2.06
+    },
+    {
+      "name": "auto-native-tetris",
+      "passed": true,
+      "seconds": 1.39
+    },
+    {
+      "name": "auto-native-topout",
+      "passed": true,
+      "seconds": 1.65
+    },
+    {
+      "name": "auto-shortcut-a-only",
+      "passed": true,
+      "seconds": 1.25
+    },
+    {
+      "name": "auto-shortcut-held",
+      "passed": true,
+      "seconds": 1.4
+    },
+    {
+      "name": "auto-shortcut-plain",
+      "passed": true,
+      "seconds": 1.55
+    },
+    {
+      "name": "auto-shortcut-submenu",
+      "passed": true,
+      "seconds": 1.39
+    },
+    {
+      "name": "auto-shortcut-together",
+      "passed": true,
+      "seconds": 1.48
+    },
+    {
+      "name": "b-ending",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "b-height-0",
+      "passed": true,
+      "seconds": 1.97
+    },
+    {
+      "name": "b-height-1",
+      "passed": true,
+      "seconds": 1.96
+    },
+    {
+      "name": "b-height-2",
+      "passed": true,
+      "seconds": 1.92
+    },
+    {
+      "name": "b-height-3",
+      "passed": true,
+      "seconds": 1.97
+    },
+    {
+      "name": "b-height-4",
+      "passed": true,
+      "seconds": 1.92
+    },
+    {
+      "name": "b-height-5",
+      "passed": true,
+      "seconds": 1.91
+    },
+    {
+      "name": "b-type-shared-controls",
+      "passed": true,
+      "seconds": 2.19
+    },
+    {
+      "name": "blocked spawns and exhausted safe plans yield instead of trapping or topping out Mario",
+      "cases": 3,
+      "passed": true
+    },
+    {
+      "name": "both VS opponents retain spawn grace and a reaction floor at every gravity tier",
+      "cases": 900,
+      "passed": true
+    },
+    {
+      "name": "committed falling pieces track Mario in both directions above level nine",
+      "cases": 8,
+      "passed": true
+    },
+    {
+      "name": "death finishes in native game over without vertical wrapping",
+      "cases": 79,
+      "passed": true
+    },
+    {
+      "name": "escape advances current level once, clears terrain and preserves opponent, score and lines",
+      "cases": 12,
+      "passed": true
+    },
+    {
+      "name": "every mino in all 19 orientations can be stomped before locking, with a bounce",
+      "cases": 152,
+      "passed": true
+    },
+    {
+      "name": "expanded SMB1 source movement comparison",
+      "passed": true
+    },
+    {
+      "name": "fresh-reset",
+      "passed": true,
+      "seconds": 2.87
+    },
+    {
+      "name": "full Mario body probes include middle cells at unaligned positions",
+      "cases": 1000,
+      "passed": true
+    },
+    {
+      "name": "head",
+      "passed": true,
+      "seconds": 2.54
+    },
+    {
+      "name": "head breaking cannot damage or escape the top boundary",
+      "cases": 65,
+      "passed": true
+    },
+    {
+      "name": "head breaks touch only settled cells above Mario and coalesce all redraw positions",
+      "cases": 3510,
+      "passed": true
+    },
+    {
+      "name": "head hits use occupied cells, preserving gaps and empty shape corners",
+      "cases": 5168,
+      "passed": true
+    },
+    {
+      "name": "head-break-alignment-0",
+      "passed": true,
+      "seconds": 1.96
+    },
+    {
+      "name": "head-break-alignment-1",
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "head-break-alignment-2",
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "head-break-alignment-3",
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "head-break-alignment-4",
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "head-break-alignment-5",
+      "passed": true,
+      "seconds": 1.94
+    },
+    {
+      "name": "head-break-alignment-6",
+      "passed": true,
+      "seconds": 1.96
+    },
+    {
+      "name": "head-break-alignment-7",
+      "passed": true,
+      "seconds": 1.93
+    },
+    {
+      "name": "head-break-busy",
+      "passed": true,
+      "seconds": 2.01
+    },
+    {
+      "name": "head-break-just-locked",
+      "passed": true,
+      "seconds": 1.84
+    },
+    {
+      "name": "held A gives a higher jump; both jumps land on the floor",
+      "cases": 200,
+      "passed": true
+    },
+    {
+      "name": "increasing level changes a neutral placement toward Mario",
+      "cases": 1,
+      "passed": true
+    },
+    {
+      "name": "levels zero through nine retain pure Tetris plans",
+      "cases": 10,
+      "passed": true
+    },
+    {
+      "name": "line",
+      "passed": true,
+      "seconds": 1.99
+    },
+    {
+      "name": "live-SMB1-air-coasting-and-fall-fractions",
+      "passed": true,
+      "seconds": 2.29
+    },
+    {
+      "name": "live-piece collision matches all occupied cells and preserves shape gaps",
+      "cases": 4845,
+      "passed": true
+    },
+    {
+      "name": "live-sides-pin",
+      "passed": true,
+      "seconds": 2.03
+    },
+    {
+      "name": "live-sides-push",
+      "passed": true,
+      "seconds": 1.96
+    },
+    {
+      "name": "live-sides-push-left",
+      "passed": true,
+      "seconds": 2.08
+    },
+    {
+      "name": "live-sides-rotate",
+      "passed": true,
+      "seconds": 2.19
+    },
+    {
+      "name": "live-sides-walk",
+      "passed": true,
+      "seconds": 1.86
+    },
+    {
+      "name": "live-sides-walk-left",
+      "passed": true,
+      "seconds": 1.87
+    },
+    {
+      "name": "lock",
+      "passed": true,
+      "seconds": 1.94
+    },
+    {
+      "name": "low-level CPU takes a four-line Tetris over other placements",
+      "cases": 1,
+      "passed": true
+    },
+    {
+      "name": "moving every piece shape pushes Mario sideways without head damage or terrain changes",
+      "cases": 38,
+      "passed": true
+    },
+    {
+      "name": "native-piece-and-board-equivalence-0",
+      "passed": true,
+      "frames": 180
+    },
+    {
+      "name": "native-piece-and-board-equivalence-19",
+      "passed": true,
+      "frames": 180
+    },
+    {
+      "name": "native-piece-and-board-equivalence-29",
+      "passed": true,
+      "frames": 180
+    },
+    {
+      "name": "native-piece-and-board-equivalence-9",
+      "passed": true,
+      "frames": 180
+    },
+    {
+      "name": "original hashes, exact native reference, documented PRG changes, code bounds and IPS reconstruction",
+      "passed": true
+    },
+    {
+      "name": "pause",
+      "passed": true,
+      "seconds": 1.87
+    },
+    {
+      "name": "piece-0-hack",
+      "passed": true,
+      "seconds": 2.11
+    },
+    {
+      "name": "piece-0-original",
+      "passed": true,
+      "seconds": 2.0
+    },
+    {
+      "name": "piece-19-hack",
+      "passed": true,
+      "seconds": 2.28
+    },
+    {
+      "name": "piece-19-original",
+      "passed": true,
+      "seconds": 2.07
+    },
+    {
+      "name": "piece-29-hack",
+      "passed": true,
+      "seconds": 2.38
+    },
+    {
+      "name": "piece-29-original",
+      "passed": true,
+      "seconds": 2.09
+    },
+    {
+      "name": "piece-9-hack",
+      "passed": true,
+      "seconds": 2.22
+    },
+    {
+      "name": "piece-9-original",
+      "passed": true,
+      "seconds": 2.02
+    },
+    {
+      "name": "pixel lookup agrees with native locked grid and all four well bounds",
+      "cases": 21809,
+      "passed": true
+    },
+    {
+      "name": "round-clear-a",
+      "passed": true,
+      "seconds": 2.6
+    },
+    {
+      "name": "round-clear-auto",
+      "passed": true,
+      "seconds": 2.97
+    },
+    {
+      "name": "round-clear-start",
+      "passed": true,
+      "seconds": 2.61
+    },
+    {
+      "name": "shared-controls-and-hardware-graphics",
+      "passed": true,
+      "seconds": 2.25
+    },
+    {
+      "name": "solo-vs-menu-and-back",
+      "passed": true,
+      "seconds": 1.59
+    },
+    {
+      "name": "stomp",
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "stomps cannot destroy solidified pieces",
+      "cases": 76,
+      "passed": true
+    },
+    {
+      "name": "terrain changes preserve falling trajectories and unsupported pieces resume descent",
+      "cases": 2,
+      "passed": true
+    },
+    {
+      "name": "vs-cpu-frame-budget-level-19",
+      "passed": true,
+      "seconds": 8.3
+    },
+    {
+      "name": "vs-cpu-frame-budget-level-29",
+      "passed": true,
+      "seconds": 8.02
+    },
+    {
+      "name": "vs-cpu-frame-budget-level-9",
+      "passed": true,
+      "seconds": 8.23
+    },
+    {
+      "name": "vs-cpu-native-tetris",
+      "passed": true,
+      "seconds": 2.35
+    },
+    {
+      "name": "vs-cpu-normal-tetrises",
+      "passed": true,
+      "seconds": 15.69
+    },
+    {
+      "name": "vs-cpu-ten-line-level-up",
+      "passed": true,
+      "seconds": 2.38
+    },
+    {
+      "name": "vs-escape-permanent-levels",
+      "passed": true,
+      "seconds": 2.39
+    },
+    {
+      "name": "vs-exit-needs-jump",
+      "passed": true,
+      "seconds": 1.85
+    },
+    {
+      "name": "vs-exit-pending-score",
+      "passed": true,
+      "seconds": 1.71
+    },
+    {
+      "name": "vs-falling-head-death",
+      "passed": true,
+      "seconds": 2.59
+    },
+    {
+      "name": "vs-human-controller-roles",
+      "passed": true,
+      "seconds": 2.37
+    },
+    {
+      "name": "vs-pause-cpu",
+      "passed": true,
+      "seconds": 2.16
+    },
+    {
+      "name": "vs-pause-human",
+      "passed": true,
+      "seconds": 1.9
+    },
+    {
+      "name": "walking and running remain inside both walls",
+      "cases": 540,
+      "passed": true
+    },
+    {
+      "name": "walking cannot enter any live-piece side from either direction",
+      "cases": 3008,
+      "passed": true
+    },
+    {
+      "name": "walls and settled blocks stop a push without crushing or teleporting Mario",
+      "cases": 2,
+      "passed": true
+    }
+  ],
+  "originals_unchanged": true,
+  "ips_reconstructs_rom": true,
+  "controls": "Solo shared / VS P1 Mario, P2 or CPU pieces / Select+Start Auto-Classic",
+  "limits": [
+    "Emulator replays and deterministic seeded interaction fixtures are not an unassisted full game or a physical hardware test."
+  ]
+}

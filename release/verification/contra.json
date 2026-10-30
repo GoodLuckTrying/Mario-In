@@ -1,0 +1,1598 @@
+{
+  "rom_sha256": "543e609d86f5b09b2abe6a93db75c999df684bc72267d3a935a942126efdda0c",
+  "passed": true,
+  "checks": [
+    {
+      "name": "base-advance-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "base-advance-3",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "base-palettes-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "base-palettes-3",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-fire-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-fire-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-shape-0-perspective",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-shape-0-side",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-shape-0-top",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-shape-1-perspective",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-shape-1-side",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-shape-1-top",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-small-gun-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "boss-small-gun-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "braking-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "braking-0-HOLD_B",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "braking-0-REVERSE",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "braking-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "braking-1-HOLD_B",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "braking-1-REVERSE",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "bridges-coop",
+      "passed": true,
+      "seconds": 9.43
+    },
+    {
+      "name": "bridges-signed-solo",
+      "passed": true,
+      "seconds": 9.34
+    },
+    {
+      "name": "bridges-solo",
+      "passed": true,
+      "seconds": 9.04
+    },
+    {
+      "name": "bullet-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "bullet-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "camera-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "camera-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "capsule-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "capsule-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "cheat-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "cheat-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "cheat-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "cheat-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "cheat-held-a",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "cheat-no-up",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "cheat-outside",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "cheat-wrong",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "coop",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "damage-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "damage-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "damage-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "damage-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "damage-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "damage-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "demo-complete-cycle",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "demo-players",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "demo-start-natural-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "demo-start-natural-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "demo-start-select-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "demo-start-select-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "demo-start-start-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "demo-start-start-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-blocked-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-blocked-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-no-lower-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-no-lower-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-solid-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-solid-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-vertical-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "drop-vertical-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "exit-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "exit-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "exit-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "exit-3",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "exit-4",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "exit-5",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "exit-6",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "expanded-source-physics",
+      "passed": true,
+      "seconds": 20.98
+    },
+    {
+      "name": "fire-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "fire-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "fire-0-3",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "fire-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "fire-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "fire-1-3",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "fire-native-kill",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-0-0-flame",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-0-0-spikes",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-0-1-flame",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-0-1-spikes",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-0-2-flame",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-0-2-spikes",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-1-0-flame",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-1-0-spikes",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-1-1-flame",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-1-1-spikes",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-1-2-flame",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "hazard-1-2-spikes",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "independent-title-blinks",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "jump-top-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "jump-top-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "jump-top-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "landing-pose-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "landing-pose-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "landing-pose-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "landing-pose-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "landing-pose-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "landing-pose-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-0-cart",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-0-edge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-0-ledge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-0-tunnel",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-1-cart",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-1-edge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-1-ledge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-1-tunnel",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-2-cart",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-2-edge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-2-ledge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-0-2-tunnel",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-0-cart",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-0-edge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-0-ledge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-0-tunnel",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-1-cart",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-1-edge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-1-ledge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-1-tunnel",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-2-cart",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-2-edge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-2-ledge",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "late-terrain-1-2-tunnel",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "live-source-physics-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "live-source-physics-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "lives-screen-false-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "lives-screen-false-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "lives-screen-true-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "lives-screen-true-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "native-collision-equivalence",
+      "passed": true,
+      "seconds": 0.82
+    },
+    {
+      "name": "opening-supplies",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "overhead-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "overhead-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "overhead-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "overhead-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "overhead-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "overhead-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "performance-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "performance-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "performance-5",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "performance-6",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "physics",
+      "passed": true,
+      "seconds": 2.0
+    },
+    {
+      "name": "pickups-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "pickups-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "retry-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "retry-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "rifle-aim-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "rifle-aim-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "rifle-aim-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "rifle-base-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "rifle-base-3",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "rifle-hardware",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "rifle-swimming-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "rifle-swimming-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-0-false-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-0-false-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-0-true-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-0-true-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-1-false-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-1-false-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-1-true-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-1-true-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-2-false-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-2-false-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-2-true-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-0-2-true-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-0-false-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-0-false-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-0-true-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-0-true-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-1-false-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-1-false-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-1-true-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-1-true-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-2-false-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-2-false-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-2-true-false",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-1-2-true-true",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-ceiling-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-ceiling-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-high-wall-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-high-wall-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-solid-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-solid-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-solid-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-solid-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-solid-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-solid-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-under-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-under-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-under-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-under-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-under-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "shore-under-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "simultaneous-title-blinks",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "source-base-art",
+      "passed": true,
+      "seconds": 0.64
+    },
+    {
+      "name": "source-rifle-aim",
+      "passed": true,
+      "seconds": 1.38
+    },
+    {
+      "name": "source-sprite-pixels",
+      "passed": true,
+      "seconds": 0.56
+    },
+    {
+      "name": "source-title-and-blink-pixels",
+      "passed": true,
+      "seconds": 0.64
+    },
+    {
+      "name": "stomp-pair-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "stomp-pair-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "stomp-pair-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "stomp-pair-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "stomp-pair-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "stomp-pair-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "supplied-title-hardware",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "title-demo-transition-coop-pixels",
+      "passed": true,
+      "seconds": 13.2
+    },
+    {
+      "name": "title-demo-transition-pixels",
+      "passed": true,
+      "seconds": 13.15
+    },
+    {
+      "name": "video-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-2-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-3-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-4-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-5-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-6-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "video-7-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "water-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "water-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "water-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "water-entry-0-false",
+      "passed": true,
+      "seconds": 2.9
+    },
+    {
+      "name": "water-entry-0-true",
+      "passed": true,
+      "seconds": 2.88
+    },
+    {
+      "name": "water-entry-1-false",
+      "passed": true,
+      "seconds": 2.75
+    },
+    {
+      "name": "water-entry-1-true",
+      "passed": true,
+      "seconds": 2.69
+    },
+    {
+      "name": "water-entry-2-false",
+      "passed": true,
+      "seconds": 2.64
+    },
+    {
+      "name": "water-entry-2-true",
+      "passed": true,
+      "seconds": 2.73
+    },
+    {
+      "name": "water-jungle",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-2-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-2-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-3-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-3-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-4-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-0-4-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-2-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-2-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-3-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-3-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-4-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-1-4-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-0-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-0-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-0-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-0-3",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-0-4",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-1-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-1-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-1-2",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-1-3",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-base-1-4",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-super-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapon-super-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapons-coop-0",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    },
+    {
+      "name": "weapons-coop-1",
+      "passed": true,
+      "seconds": 0,
+      "reused_same_rom": true
+    }
+  ],
+  "physics": {
+    "cases": 108,
+    "matched_updates": 8640,
+    "failures": []
+  },
+  "originals_unchanged": true,
+  "ips_reconstructs_rom": true,
+  "native_prg_matches_base": true,
+  "limits": [
+    "Integration fixtures are not a full unassisted campaign clear.",
+    "All eight stage openings are tested; the full campaign and ending have not been cleared.",
+    "Dense two-player volleys can still slow down; rifle sprites and recoil have a measured CPU cost versus the previous build.",
+    "The exact live physics trace and controlled snow performance fixtures disable DMC before controller reads to isolate the native DMC pad-read glitch; other replays retain audio. The snow fixture pins its RNG/frame sequence and must meet the pre-title ROM benchmark of 429 updates per 600 frames; its unpinned enemy/weather sequence changes when title timing changes."
+  ]
+}

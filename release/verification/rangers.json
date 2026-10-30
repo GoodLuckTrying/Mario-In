@@ -1,0 +1,1449 @@
+{
+  "rom_sha256": "f7bab12c3fd98fd12784cd91eae3def7a719081f77745eff13b82201aefb1d41",
+  "checks": [
+    {
+      "name": "original hashes and exact IPS reconstruction",
+      "passed": true,
+      "detail": "Separate output ROM; original byte hash and complete patch round trip"
+    },
+    {
+      "name": "SMB1 differential movement",
+      "passed": true,
+      "detail": "{\"cases\": 108, \"matched_updates\": 8640, \"failures\": []}\n"
+    },
+    {
+      "name": "viewport and native corner terrain bounds",
+      "passed": true,
+      "detail": "PASS 1525 viewport probes and native top-left phantom-hazard regression\n"
+    },
+    {
+      "name": "horizontal full-speed collision boundaries",
+      "passed": true,
+      "detail": "PASS 8352 full-speed horizontal boundary cases, both controllers, forms, directions, pages and fractional steps\n"
+    },
+    {
+      "name": "expanded SMB1 source differential movement",
+      "passed": true,
+      "detail": "{\n  \"game\": \"rangers\",\n  \"rom_sha256\": \"f7bab12c3fd98fd12784cd91eae3def7a719081f77745eff13b82201aefb1d41\",\n  \"cases\": 720,\n  \"updates\": 92652,\n  \"matching_cases\": 720,\n  \"matching_motion_cases\": 720,\n  \"scenarios\": {\n    \"walk\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"run\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"release\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"reverse\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"air-turn\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"chain-jump\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"down-direction\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"crouch-direction\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"duck-jump\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"duck-jump-release\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"walk-off\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"fast-jump-walk-off\": {\n      \"cases\": 12,\n      \"matching_cases\": 12,\n      \"example\": null\n    },\n    \"jump-1\": {\n      \"cases\": 144,\n      \"matching_cases\": 144,\n      \"example\": null\n    },\n    \"jump-2\": {\n      \"cases\": 144,\n      \"matching_cases\": 144,\n      \"example\": null\n    },\n    \"jump-8\": {\n      \"cases\": 144,\n      \"matching_cases\": 144,\n      \"example\": null\n    },\n    \"jump-25\": {\n      \"cases\": 144,\n      \"matching_cases\": 144,\n      \"example\": null\n    }\n  }\n}\nPASS source differential comparisons\n"
+    },
+    {
+      "name": "performance POWER=0,COOP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\performance_POWER-0_COOP-False.txt"
+    },
+    {
+      "name": "play ",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\play_.txt"
+    },
+    {
+      "name": "boxes ",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\boxes_.txt"
+    },
+    {
+      "name": "upperroute ",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\upperroute_.txt"
+    },
+    {
+      "name": "performance POWER=0,COOP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\performance_POWER-0_COOP-True.txt"
+    },
+    {
+      "name": "performance POWER=2,COOP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\performance_POWER-2_COOP-False.txt"
+    },
+    {
+      "name": "performance POWER=2,COOP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\performance_POWER-2_COOP-True.txt"
+    },
+    {
+      "name": "performance POWER=1,COOP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\performance_POWER-1_COOP-False.txt"
+    },
+    {
+      "name": "rendercapacity COOP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\rendercapacity_COOP-False.txt"
+    },
+    {
+      "name": "performance POWER=1,COOP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\performance_POWER-1_COOP-True.txt"
+    },
+    {
+      "name": "rendercapacity COOP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\rendercapacity_COOP-True.txt"
+    },
+    {
+      "name": "palettes STAGE=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-1.txt"
+    },
+    {
+      "name": "palettes STAGE=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-0.txt"
+    },
+    {
+      "name": "palettes STAGE=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-2.txt"
+    },
+    {
+      "name": "palettes STAGE=3",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-3.txt"
+    },
+    {
+      "name": "palettes STAGE=4",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-4.txt"
+    },
+    {
+      "name": "palettes STAGE=5",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-5.txt"
+    },
+    {
+      "name": "palettes STAGE=7",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-7.txt"
+    },
+    {
+      "name": "palettes STAGE=6",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-6.txt"
+    },
+    {
+      "name": "palettes STAGE=8",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-8.txt"
+    },
+    {
+      "name": "palettes STAGE=10",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-10.txt"
+    },
+    {
+      "name": "palettes STAGE=9",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_STAGE-9.txt"
+    },
+    {
+      "name": "palettes COOP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\palettes_COOP-True.txt"
+    },
+    {
+      "name": "stages STAGE=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-1.txt"
+    },
+    {
+      "name": "stages STAGE=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-2.txt"
+    },
+    {
+      "name": "stages STAGE=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-0.txt"
+    },
+    {
+      "name": "stages STAGE=3",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-3.txt"
+    },
+    {
+      "name": "stages STAGE=5",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-5.txt"
+    },
+    {
+      "name": "stages STAGE=7",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-7.txt"
+    },
+    {
+      "name": "stages STAGE=4",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-4.txt"
+    },
+    {
+      "name": "stages STAGE=6",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-6.txt"
+    },
+    {
+      "name": "stages STAGE=8",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-8.txt"
+    },
+    {
+      "name": "stages STAGE=10",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-10.txt"
+    },
+    {
+      "name": "stages STAGE=9",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\stages_STAGE-9.txt"
+    },
+    {
+      "name": "physics-audit PLAYER=0,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\physics-audit_PLAYER-0_POWER-1.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=0,COOP=False,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-0_COOP-False_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "collectibles PLAYER=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\collectibles_PLAYER-0.txt"
+    },
+    {
+      "name": "physics-audit PLAYER=0,POWER=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\physics-audit_PLAYER-0_POWER-2.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=0,COOP=False,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-0_COOP-False_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=0,COOP=False,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-0_COOP-False_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=0,COOP=False,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-0_COOP-False_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=0,COOP=True,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-0_COOP-True_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=0,COOP=True,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-0_COOP-True_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=0,COOP=True,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-0_COOP-True_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=0,COOP=True,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-0_COOP-True_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=0,UPPER=False,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 0 upper false left false run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=0,UPPER=False,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 0 upper false left true run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=0,UPPER=False,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 0 upper false left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=0,UPPER=False,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 0 upper false left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=0,UPPER=True,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 0 upper true left false run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "corner PLAYER=0,POWER=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-0_POWER-0.txt"
+    },
+    {
+      "name": "corner PLAYER=0,POWER=0,FIXTURE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-0_POWER-0_FIXTURE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=0,MOVING=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-0_MOVING-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=0,EDGE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-0_EDGE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=0,AIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-0_AIR-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=0,UP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-0_UP-False.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=0,UP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-0_UP-True.txt"
+    },
+    {
+      "name": "electricterrain PLAYER=0,POWER=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\electricterrain_PLAYER-0_POWER-0.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=0,MODE=hazard,HAZARD_KIND=32",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-0_MODE-hazard_HAZARD_KIND-32.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=0,MODE=hazard,HAZARD_KIND=33",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-0_MODE-hazard_HAZARD_KIND-33.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=0,MODE=hazard,HAZARD_KIND=34",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-0_MODE-hazard_HAZARD_KIND-34.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=0,MODE=stomp",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-0_MODE-stomp.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=0,MODE=damage",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-0_MODE-damage.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=0,MODE=overhead",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-0_MODE-overhead.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=0,MODE=stomp,PAIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-0_MODE-stomp_PAIR-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=0,UPPER=True,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 0 upper true left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=0,UPPER=True,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 0 upper true left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=0,UPPER=True,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 0 upper true left true run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=0,MODE=ceiling",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nceiling x 120 y 164 min 148 objectY 180 cameraY 0 state 0\nPASS terrain ceiling player 0 form 0\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=0,MODE=landing",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nlanding x 120 y 116 min 116 objectY 180 cameraY 0 state 0\nPASS terrain landing player 0 form 0\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=0,MODE=drop",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\ndrop x 120 y 180 min 118 objectY 180 cameraY 0 state 0\nPASS terrain drop player 0 form 0\n\n\n"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=1,COOP=False,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-1_COOP-False_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=1,COOP=False,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-1_COOP-False_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=1,COOP=False,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-1_COOP-False_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=1,COOP=False,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-1_COOP-False_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=1,COOP=True,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-1_COOP-True_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=1,COOP=True,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-1_COOP-True_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=1,COOP=True,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-1_COOP-True_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=1,COOP=True,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-1_COOP-True_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=0,MODE=wall",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nwall x 136 y 180 min 180 objectY 180 cameraY 0 state 0\nPASS terrain wall player 0 form 0\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=1,UPPER=False,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 1 upper false left false run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=1,UPPER=False,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 1 upper false left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=1,UPPER=False,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 1 upper false left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=0,MODE=object",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nobject x 120 y 156 min 156 objectY 180 cameraY 0 state 0\nPASS terrain object player 0 form 0\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=1,UPPER=True,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 1 upper true left false run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=1,UPPER=False,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 1 upper false left true run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "corner PLAYER=0,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-0_POWER-1.txt"
+    },
+    {
+      "name": "corner PLAYER=0,POWER=1,FIXTURE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-0_POWER-1_FIXTURE-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=1,UPPER=True,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 1 upper true left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=1,MOVING=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-1_MOVING-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=1,EDGE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-1_EDGE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=1,AIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-1_AIR-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=1,UP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-1_UP-False.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=1,UP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-1_UP-True.txt"
+    },
+    {
+      "name": "electricterrain PLAYER=0,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\electricterrain_PLAYER-0_POWER-1.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=1,MODE=hazard,HAZARD_KIND=33",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-1_MODE-hazard_HAZARD_KIND-33.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=1,MODE=hazard,HAZARD_KIND=32",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-1_MODE-hazard_HAZARD_KIND-32.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=1,MODE=stomp",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-1_MODE-stomp.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=1,MODE=hazard,HAZARD_KIND=34",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-1_MODE-hazard_HAZARD_KIND-34.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=1,MODE=overhead",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-1_MODE-overhead.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=1,MODE=damage",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-1_MODE-damage.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=1,MODE=stomp,PAIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-1_MODE-stomp_PAIR-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=1,UPPER=True,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 1 upper true left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=1,UPPER=True,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 1 upper true left true run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=1,MODE=landing",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nlanding x 120 y 116 min 116 objectY 180 cameraY 0 state 0\nPASS terrain landing player 0 form 1\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=1,MODE=drop",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\ndrop x 120 y 180 min 118 objectY 180 cameraY 0 state 0\nPASS terrain drop player 0 form 1\n\n\n"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=2,COOP=False,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-2_COOP-False_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=2,COOP=False,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-2_COOP-False_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=2,COOP=False,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-2_COOP-False_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=2,COOP=False,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-2_COOP-False_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=2,COOP=True,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-2_COOP-True_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=1,MODE=wall",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nwall x 136 y 180 min 180 objectY 180 cameraY 0 state 0\nPASS terrain wall player 0 form 1\n\n\n"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=2,COOP=True,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-2_COOP-True_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=2,COOP=True,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-2_COOP-True_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=0,POWER=2,COOP=True,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-0_POWER-2_COOP-True_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=1,MODE=ceiling",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nceiling x 120 y 164 min 164 objectY 180 cameraY 0 state 0\nPASS terrain ceiling player 0 form 1\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=2,UPPER=False,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 2 upper false left false run true pickup frame 728\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=2,UPPER=False,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 2 upper false left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=1,MODE=object",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nobject x 120 y 156 min 156 objectY 180 cameraY 0 state 0\nPASS terrain object player 0 form 1\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=2,UPPER=False,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 2 upper false left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=2,UPPER=True,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 2 upper true left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=2,UPPER=False,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 2 upper false left true run true pickup frame 728\n\n\n"
+    },
+    {
+      "name": "corner PLAYER=0,POWER=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-0_POWER-2.txt"
+    },
+    {
+      "name": "corner PLAYER=0,POWER=2,FIXTURE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-0_POWER-2_FIXTURE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=2,MOVING=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-2_MOVING-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=2,EDGE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-2_EDGE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=2,AIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-2_AIR-True.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=2,UP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-2_UP-False.txt"
+    },
+    {
+      "name": "carry PLAYER=0,POWER=2,UP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_POWER-2_UP-True.txt"
+    },
+    {
+      "name": "electricterrain PLAYER=0,POWER=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\electricterrain_PLAYER-0_POWER-2.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=2,MODE=hazard,HAZARD_KIND=32",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-2_MODE-hazard_HAZARD_KIND-32.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=2,MODE=hazard,HAZARD_KIND=33",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-2_MODE-hazard_HAZARD_KIND-33.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=2,MODE=hazard,HAZARD_KIND=34",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-2_MODE-hazard_HAZARD_KIND-34.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=2,UPPER=True,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 2 upper true left false run true pickup frame 728\n\n\n"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=2,MODE=stomp",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-2_MODE-stomp.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=2,MODE=damage",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-2_MODE-damage.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=2,MODE=overhead",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-2_MODE-overhead.txt"
+    },
+    {
+      "name": "combat PLAYER=0,POWER=2,MODE=stomp,PAIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_POWER-2_MODE-stomp_PAIR-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=2,UPPER=True,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 2 upper true left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=0,POWER=2,UPPER=True,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 0 form 2 upper true left true run true pickup frame 728\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=2,MODE=landing",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nlanding x 120 y 116 min 116 objectY 180 cameraY 0 state 0\nPASS terrain landing player 0 form 2\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=2,MODE=drop",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\ndrop x 120 y 180 min 118 objectY 180 cameraY 0 state 0\nPASS terrain drop player 0 form 2\n\n\n"
+    },
+    {
+      "name": "carry PLAYER=0,OBJECT=34,UP=False,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_OBJECT-34_UP-False_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=0,OBJECT=34,UP=True,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_OBJECT-34_UP-True_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=0,OBJECT=36,UP=False,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_OBJECT-36_UP-False_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=0,OBJECT=36,UP=True,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_OBJECT-36_UP-True_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=0,OBJECT=37,UP=False,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_OBJECT-37_UP-False_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=0,OBJECT=37,UP=True,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-0_OBJECT-37_UP-True_POWER-1.txt"
+    },
+    {
+      "name": "coop CARRIER=0,POWER=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\coop_CARRIER-0_POWER-0.txt"
+    },
+    {
+      "name": "coop CARRIER=0,POWER=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\coop_CARRIER-0_POWER-2.txt"
+    },
+    {
+      "name": "combat PLAYER=0,MODE=damage,RETRY=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-0_MODE-damage_RETRY-True.txt"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=2,MODE=wall",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nwall x 136 y 180 min 180 objectY 185 cameraY 0 state 0\nPASS terrain wall player 0 form 2\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=2,MODE=ceiling",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nceiling x 120 y 164 min 164 objectY 180 cameraY 0 state 0\nPASS terrain ceiling player 0 form 2\n\n\n"
+    },
+    {
+      "name": "boss PLAYER=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\boss_PLAYER-0.txt"
+    },
+    {
+      "name": "physics-audit PLAYER=1,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\physics-audit_PLAYER-1_POWER-1.txt"
+    },
+    {
+      "name": "physics-audit PLAYER=1,POWER=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\physics-audit_PLAYER-1_POWER-2.txt"
+    },
+    {
+      "name": "collectibles PLAYER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\collectibles_PLAYER-1.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=0,COOP=False,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-0_COOP-False_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=0,COOP=False,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-0_COOP-False_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=0,COOP=False,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-0_COOP-False_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=0,COOP=False,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-0_COOP-False_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=0,COOP=True,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-0_COOP-True_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=0,COOP=True,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-0_COOP-True_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=0,COOP=True,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-0_COOP-True_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "terrain PLAYER=0,POWER=2,MODE=object",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nobject x 120 y 156 min 156 objectY 180 cameraY 0 state 0\nPASS terrain object player 0 form 2\n\n\n"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=0,COOP=True,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-0_COOP-True_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "fire PLAYER=0,MODE=hit",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nmaximum 2 enemy 28\nPASS fire hit player 0 coop nil\n\n\n"
+    },
+    {
+      "name": "fire PLAYER=0,MODE=limit",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nmaximum 2 enemy 1\nPASS fire limit player 0 coop nil\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=0,UPPER=False,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 0 upper false left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=0,UPPER=False,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 0 upper false left false run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=0,UPPER=False,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 0 upper false left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=0,UPPER=False,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 0 upper false left true run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=0,UPPER=True,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 0 upper true left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "corner PLAYER=1,POWER=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-1_POWER-0.txt"
+    },
+    {
+      "name": "corner PLAYER=1,POWER=0,FIXTURE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-1_POWER-0_FIXTURE-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=0,UPPER=True,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 0 upper true left false run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=0,MOVING=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-0_MOVING-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=0,EDGE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-0_EDGE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=0,AIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-0_AIR-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=0,UP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-0_UP-False.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=0,UP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-0_UP-True.txt"
+    },
+    {
+      "name": "electricterrain PLAYER=1,POWER=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\electricterrain_PLAYER-1_POWER-0.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=0,MODE=hazard,HAZARD_KIND=32",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-0_MODE-hazard_HAZARD_KIND-32.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=0,MODE=hazard,HAZARD_KIND=33",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-0_MODE-hazard_HAZARD_KIND-33.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=0,MODE=hazard,HAZARD_KIND=34",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-0_MODE-hazard_HAZARD_KIND-34.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=0,MODE=damage",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-0_MODE-damage.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=0,MODE=stomp",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-0_MODE-stomp.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=0,MODE=overhead",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-0_MODE-overhead.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=0,MODE=stomp,PAIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-0_MODE-stomp_PAIR-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=0,UPPER=True,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 0 upper true left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=0,UPPER=True,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 0 upper true left true run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=0,MODE=wall",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nwall x 136 y 180 min 180 objectY 180 cameraY 0 state 0\nPASS terrain wall player 1 form 0\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=0,MODE=drop",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\ndrop x 120 y 180 min 118 objectY 180 cameraY 0 state 0\nPASS terrain drop player 1 form 0\n\n\n"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=1,COOP=False,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-1_COOP-False_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=1,COOP=False,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-1_COOP-False_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=1,COOP=False,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-1_COOP-False_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=1,COOP=False,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-1_COOP-False_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=1,COOP=True,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-1_COOP-True_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=1,COOP=True,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-1_COOP-True_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=1,COOP=True,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-1_COOP-True_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=1,COOP=True,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-1_COOP-True_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=0,MODE=landing",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nlanding x 120 y 116 min 116 objectY 180 cameraY 0 state 0\nPASS terrain landing player 1 form 0\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=0,MODE=ceiling",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nceiling x 120 y 164 min 148 objectY 180 cameraY 0 state 0\nPASS terrain ceiling player 1 form 0\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=1,UPPER=False,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 1 upper false left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=0,MODE=object",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nobject x 120 y 156 min 156 objectY 180 cameraY 0 state 0\nPASS terrain object player 1 form 0\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=1,UPPER=False,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 1 upper false left false run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=1,UPPER=False,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 1 upper false left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=1,UPPER=True,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 1 upper true left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=1,UPPER=False,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 1 upper false left true run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "corner PLAYER=1,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-1_POWER-1.txt"
+    },
+    {
+      "name": "corner PLAYER=1,POWER=1,FIXTURE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-1_POWER-1_FIXTURE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=1,MOVING=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-1_MOVING-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=1,EDGE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-1_EDGE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=1,AIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-1_AIR-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=1,UP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-1_UP-False.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=1,UP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-1_UP-True.txt"
+    },
+    {
+      "name": "electricterrain PLAYER=1,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\electricterrain_PLAYER-1_POWER-1.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=1,MODE=hazard,HAZARD_KIND=32",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-1_MODE-hazard_HAZARD_KIND-32.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=1,MODE=hazard,HAZARD_KIND=33",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-1_MODE-hazard_HAZARD_KIND-33.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=1,UPPER=True,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 1 upper true left false run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=1,MODE=hazard,HAZARD_KIND=34",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-1_MODE-hazard_HAZARD_KIND-34.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=1,MODE=stomp",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-1_MODE-stomp.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=1,MODE=damage",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-1_MODE-damage.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=1,MODE=overhead",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-1_MODE-overhead.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=1,MODE=stomp,PAIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-1_MODE-stomp_PAIR-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=1,UPPER=True,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 1 upper true left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=1,UPPER=True,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 1 upper true left true run true pickup frame 723\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=1,MODE=landing",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nlanding x 120 y 116 min 116 objectY 180 cameraY 0 state 0\nPASS terrain landing player 1 form 1\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=1,MODE=drop",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\ndrop x 120 y 180 min 118 objectY 180 cameraY 0 state 0\nPASS terrain drop player 1 form 1\n\n\n"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=2,COOP=False,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-2_COOP-False_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=2,COOP=False,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-2_COOP-False_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=2,COOP=False,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-2_COOP-False_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=2,COOP=False,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-2_COOP-False_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=2,COOP=True,CARRY=False,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-2_COOP-True_CARRY-False_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=2,COOP=True,CARRY=False,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-2_COOP-True_CARRY-False_RUN-True.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=2,COOP=True,CARRY=True,RUN=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-2_COOP-True_CARRY-True_RUN-False.txt"
+    },
+    {
+      "name": "doorway PLAYER=1,POWER=2,COOP=True,CARRY=True,RUN=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\doorway_PLAYER-1_POWER-2_COOP-True_CARRY-True_RUN-True.txt"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=1,MODE=wall",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nwall x 136 y 180 min 180 objectY 180 cameraY 0 state 0\nPASS terrain wall player 1 form 1\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=1,MODE=object",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nobject x 120 y 156 min 156 objectY 180 cameraY 0 state 0\nPASS terrain object player 1 form 1\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=1,MODE=ceiling",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nceiling x 120 y 164 min 164 objectY 180 cameraY 0 state 0\nPASS terrain ceiling player 1 form 1\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=2,UPPER=False,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 2 upper false left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=2,UPPER=False,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 2 upper false left false run true pickup frame 728\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=2,UPPER=False,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 2 upper false left true run true pickup frame 728\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=2,UPPER=False,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 2 upper false left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=2,UPPER=True,LEFT=False,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 2 upper true left false run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "corner PLAYER=1,POWER=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-1_POWER-2.txt"
+    },
+    {
+      "name": "corner PLAYER=1,POWER=2,FIXTURE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\corner_PLAYER-1_POWER-2_FIXTURE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=2,MOVING=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-2_MOVING-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=2,EDGE=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-2_EDGE-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=2,AIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-2_AIR-True.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=2,UP=False",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-2_UP-False.txt"
+    },
+    {
+      "name": "carry PLAYER=1,POWER=2,UP=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_POWER-2_UP-True.txt"
+    },
+    {
+      "name": "electricterrain PLAYER=1,POWER=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\electricterrain_PLAYER-1_POWER-2.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=2,MODE=hazard,HAZARD_KIND=32",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-2_MODE-hazard_HAZARD_KIND-32.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=2,MODE=hazard,HAZARD_KIND=33",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-2_MODE-hazard_HAZARD_KIND-33.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=2,MODE=hazard,HAZARD_KIND=34",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-2_MODE-hazard_HAZARD_KIND-34.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=2,MODE=stomp",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-2_MODE-stomp.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=2,MODE=damage",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-2_MODE-damage.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=2,MODE=overhead",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-2_MODE-overhead.txt"
+    },
+    {
+      "name": "combat PLAYER=1,POWER=2,MODE=stomp,PAIR=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_POWER-2_MODE-stomp_PAIR-True.txt"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=2,UPPER=True,LEFT=False,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 2 upper true left false run true pickup frame 728\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=2,UPPER=True,LEFT=True,MOVING=False",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 2 upper true left true run false pickup frame 720\n\n\n"
+    },
+    {
+      "name": "mapboxes PLAYER=1,POWER=2,UPPER=True,LEFT=True,MOVING=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nPASS actual map box player 1 form 2 upper true left true run true pickup frame 728\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=2,MODE=drop",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\ndrop x 120 y 180 min 118 objectY 180 cameraY 0 state 0\nPASS terrain drop player 1 form 2\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=2,MODE=landing",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nlanding x 120 y 116 min 116 objectY 180 cameraY 0 state 0\nPASS terrain landing player 1 form 2\n\n\n"
+    },
+    {
+      "name": "carry PLAYER=1,OBJECT=34,UP=False,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_OBJECT-34_UP-False_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=1,OBJECT=34,UP=True,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_OBJECT-34_UP-True_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=1,OBJECT=36,UP=False,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_OBJECT-36_UP-False_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=1,OBJECT=36,UP=True,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_OBJECT-36_UP-True_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=1,OBJECT=37,UP=False,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_OBJECT-37_UP-False_POWER-1.txt"
+    },
+    {
+      "name": "carry PLAYER=1,OBJECT=37,UP=True,POWER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\carry_PLAYER-1_OBJECT-37_UP-True_POWER-1.txt"
+    },
+    {
+      "name": "coop CARRIER=1,POWER=0",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\coop_CARRIER-1_POWER-0.txt"
+    },
+    {
+      "name": "coop CARRIER=1,POWER=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\coop_CARRIER-1_POWER-2.txt"
+    },
+    {
+      "name": "combat PLAYER=1,MODE=damage,RETRY=True",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\combat_PLAYER-1_MODE-damage_RETRY-True.txt"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=2,MODE=wall",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nwall x 136 y 180 min 180 objectY 185 cameraY 0 state 0\nPASS terrain wall player 1 form 2\n\n\n"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=2,MODE=ceiling",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nceiling x 120 y 164 min 164 objectY 180 cameraY 0 state 0\nPASS terrain ceiling player 1 form 2\n\n\n"
+    },
+    {
+      "name": "boss PLAYER=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\boss_PLAYER-1.txt"
+    },
+    {
+      "name": "terrain PLAYER=1,POWER=2,MODE=object",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nobject x 120 y 156 min 156 objectY 180 cameraY 0 state 0\nPASS terrain object player 1 form 2\n\n\n"
+    },
+    {
+      "name": "rooms ROOM=1",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\rooms_ROOM-1.txt"
+    },
+    {
+      "name": "rooms ROOM=2",
+      "passed": true,
+      "detail": "Reused unchanged script and exact-ROM passing log: ${DEVELOPMENT_WORKSPACE}\\rangers\\build\\logs\\rooms_ROOM-2.txt"
+    },
+    {
+      "name": "fire PLAYER=1,MODE=hit",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nmaximum 2 enemy 28\nPASS fire hit player 1 coop nil\n\n\n"
+    },
+    {
+      "name": "fire PLAYER=1,MODE=limit",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nmaximum 2 enemy 1\nPASS fire limit player 1 coop nil\n\n\n"
+    },
+    {
+      "name": "fire MODE=limit,COOP=True",
+      "passed": true,
+      "detail": "------------------------------------------------------\nLoading rom: Mario and Luigi in Rescue Rangers.nes\nFile CRC32: 0xA71C8390\nPRG CRC32: 0x3567AA0D\nPRG+CHR CRC32: 0x6B3F8AFA\n[iNes] NES 2.0 file: Yes\n[iNes] Mapper: 1 Sub: 0\n[iNes] PRG ROM: 256 KB\n[iNes] CHR ROM: 128 KB\n[iNes] CHR RAM: 0 KB\n[iNes] CHR Save RAM: 0 KB\n[iNes] Work RAM: 8 KB\n[iNes] Save RAM: 0 KB\n[iNes] Mirroring: Horizontal\n[iNes] Battery: No\n[Input] 2 NES controllers connected\nmaximum 4 enemy 1\nPASS fire limit player 0 coop true\n\n\n"
+    }
+  ],
+  "passed": 288,
+  "total": 288,
+  "elapsed_seconds": 68.0,
+  "coverage_limit": "Fixtures seed RAM to isolate mechanics. Stage openings and room/boss fixtures are not a full campaign clear."
+}

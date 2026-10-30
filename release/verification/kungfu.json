@@ -1,0 +1,393 @@
+{
+  "rom_sha256": "43096d542f4300a559686993afd245d99b322bfd0b8cfb51919542b4ea443fe8",
+  "passed": true,
+  "checks": [
+    {
+      "name": "small death, shrink, and damage grace",
+      "passed": true
+    },
+    {
+      "name": "actual small/large hurtboxes at multiple heights",
+      "passed": true
+    },
+    {
+      "name": "SMB acceleration and idle friction",
+      "passed": true
+    },
+    {
+      "name": "variable jump height and exact landing",
+      "passed": true
+    },
+    {
+      "name": "adjacent enemy stomps kill and bounce before damage",
+      "passed": true
+    },
+    {
+      "name": "kill-earned growth and capped Fire Flower",
+      "passed": true
+    },
+    {
+      "name": "two independent fireball slots",
+      "passed": true
+    },
+    {
+      "name": "fireball uses native enemy damage and death",
+      "passed": true
+    },
+    {
+      "name": "floor transitions retain power; new lives reset small",
+      "passed": true
+    },
+    {
+      "name": "Super Mario ducks with a matching hurtbox",
+      "passed": true
+    },
+    {
+      "name": "punch and kick heights follow Mario in the air and on ground",
+      "passed": true
+    },
+    {
+      "name": "native boss barriers prevent skipping boss fights",
+      "passed": true
+    },
+    {
+      "name": "repeated contacts leave native death HP, actor removal and fall progress intact",
+      "passed": true
+    },
+    {
+      "name": "off-screen death rows are clipped and removed actors hide all Mario/projectile cells",
+      "passed": true
+    },
+    {
+      "name": "distinct small/large standing, crouching and airborne attacks track native windup and extension",
+      "passed": true
+    },
+    {
+      "name": "all scenery and native enemy CHR outside audited Mario cells preserved in every animation bank",
+      "passed": true
+    },
+    {
+      "name": "all 256 animation counter values normalize to legal native states and VRAM pose commands during jumps, attacks and hurt recovery",
+      "passed": true
+    },
+    {
+      "name": "obsolete Thomas background poses are empty scripts; original pose data and stage tiles remain intact",
+      "passed": true
+    },
+    {
+      "name": "all stair directions/forms use Mario walking cells, clear frozen attack state, keep the sprite table and hide only after climbing",
+      "passed": true
+    },
+    {
+      "name": "native Thomas render is skipped without removing his actor; enemy sprites still render",
+      "passed": true
+    },
+    {
+      "name": "Big Mario standing/crouching/air punch art is raised to the chest with matching native hitboxes",
+      "passed": true
+    },
+    {
+      "name": "native knives, hit sparks, smoke, debris and score effects survive every Mario attack/stair bank",
+      "passed": true
+    },
+    {
+      "name": "every stompable enemy and boss initializes a legal native defeat and frees its actor slot",
+      "passed": true
+    },
+    {
+      "name": "ordinary enemies, low snakes and all bosses damage grounded Mario but cannot hit a clear jump",
+      "passed": true
+    },
+    {
+      "name": "Mario contact cannot create a grab stack; interrupted stacks release their live actors",
+      "passed": true
+    },
+    {
+      "name": "the floor-landing tick can stomp a short enemy and reactivate the bounce",
+      "passed": true
+    },
+    {
+      "name": "native title/story bank preserves every tile including hard-coded story hearts outside actor scripts",
+      "passed": true
+    },
+    {
+      "name": "Sylvia is protected from Mario stomps and fireballs",
+      "passed": true
+    },
+    {
+      "name": "boss-0",
+      "passed": true,
+      "seconds": 4.01
+    },
+    {
+      "name": "boss-1",
+      "passed": true,
+      "seconds": 4.28
+    },
+    {
+      "name": "boss-2",
+      "passed": true,
+      "seconds": 4.3
+    },
+    {
+      "name": "boss-3",
+      "passed": true,
+      "seconds": 4.51
+    },
+    {
+      "name": "boss-4",
+      "passed": true,
+      "seconds": 4.73
+    },
+    {
+      "name": "death-0",
+      "passed": true,
+      "seconds": 3.7
+    },
+    {
+      "name": "death-1",
+      "passed": true,
+      "seconds": 3.87
+    },
+    {
+      "name": "death-2",
+      "passed": true,
+      "seconds": 3.75
+    },
+    {
+      "name": "death-3",
+      "passed": true,
+      "seconds": 3.96
+    },
+    {
+      "name": "death-4",
+      "passed": true,
+      "seconds": 4.42
+    },
+    {
+      "name": "death-game-over",
+      "passed": true,
+      "seconds": 4.32
+    },
+    {
+      "name": "death-in-air",
+      "passed": true,
+      "seconds": 4.31
+    },
+    {
+      "name": "entrance-0",
+      "passed": true,
+      "seconds": 2.16
+    },
+    {
+      "name": "entrance-1",
+      "passed": true,
+      "seconds": 2.16
+    },
+    {
+      "name": "entrance-2",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "entrance-3",
+      "passed": true,
+      "seconds": 2.16
+    },
+    {
+      "name": "entrance-4",
+      "passed": true,
+      "seconds": 2.16
+    },
+    {
+      "name": "expanded SMB1 source movement comparison",
+      "passed": true
+    },
+    {
+      "name": "final-ending",
+      "passed": true,
+      "seconds": 11.38
+    },
+    {
+      "name": "jump-background-0",
+      "passed": true,
+      "seconds": 9.33
+    },
+    {
+      "name": "jump-background-1",
+      "passed": true,
+      "seconds": 10.79
+    },
+    {
+      "name": "jump-background-2",
+      "passed": true,
+      "seconds": 10.84
+    },
+    {
+      "name": "jump-background-3",
+      "passed": true,
+      "seconds": 11.05
+    },
+    {
+      "name": "jump-background-4",
+      "passed": true,
+      "seconds": 10.6
+    },
+    {
+      "name": "jump-stress-0-1",
+      "passed": true,
+      "seconds": 37.6
+    },
+    {
+      "name": "jump-stress-0-2",
+      "passed": true,
+      "seconds": 37.94
+    },
+    {
+      "name": "jump-stress-4-2",
+      "passed": true,
+      "seconds": 38.82
+    },
+    {
+      "name": "live-SMB1-jump-arcs",
+      "passed": true,
+      "seconds": 8.71
+    },
+    {
+      "name": "melee-0",
+      "passed": true,
+      "seconds": 14.32
+    },
+    {
+      "name": "melee-4",
+      "passed": true,
+      "seconds": 14.49
+    },
+    {
+      "name": "menu-down-0",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "menu-down-1",
+      "passed": true,
+      "seconds": 2.08
+    },
+    {
+      "name": "menu-down-2",
+      "passed": true,
+      "seconds": 2.25
+    },
+    {
+      "name": "menu-down-3",
+      "passed": true,
+      "seconds": 2.25
+    },
+    {
+      "name": "menu-hold",
+      "passed": true,
+      "seconds": 2.15
+    },
+    {
+      "name": "menu-select-0",
+      "passed": true,
+      "seconds": 2.21
+    },
+    {
+      "name": "menu-select-1",
+      "passed": true,
+      "seconds": 2.13
+    },
+    {
+      "name": "menu-select-2",
+      "passed": true,
+      "seconds": 2.09
+    },
+    {
+      "name": "menu-select-3",
+      "passed": true,
+      "seconds": 2.14
+    },
+    {
+      "name": "menu-up",
+      "passed": true,
+      "seconds": 2.08
+    },
+    {
+      "name": "stage-0",
+      "passed": true,
+      "seconds": 3.35
+    },
+    {
+      "name": "stage-1",
+      "passed": true,
+      "seconds": 3.35
+    },
+    {
+      "name": "stage-2",
+      "passed": true,
+      "seconds": 3.33
+    },
+    {
+      "name": "stage-3",
+      "passed": true,
+      "seconds": 3.33
+    },
+    {
+      "name": "stage-4",
+      "passed": true,
+      "seconds": 3.3
+    },
+    {
+      "name": "stairs-0-0",
+      "passed": true,
+      "seconds": 14.32
+    },
+    {
+      "name": "stairs-0-1",
+      "passed": true,
+      "seconds": 14.23
+    },
+    {
+      "name": "stairs-0-2",
+      "passed": true,
+      "seconds": 13.55
+    },
+    {
+      "name": "stairs-1-0",
+      "passed": true,
+      "seconds": 14.78
+    },
+    {
+      "name": "stairs-1-1",
+      "passed": true,
+      "seconds": 14.77
+    },
+    {
+      "name": "stairs-1-2",
+      "passed": true,
+      "seconds": 14.88
+    },
+    {
+      "name": "stairs-2-2",
+      "passed": true,
+      "seconds": 14.01
+    },
+    {
+      "name": "stairs-3-2",
+      "passed": true,
+      "seconds": 15.76
+    },
+    {
+      "name": "video-combat-regressions",
+      "passed": true,
+      "seconds": 16.67
+    }
+  ],
+  "original_unchanged": true,
+  "ips_reconstructs_rom": true,
+  "native_prg_outside_documented_hooks_unchanged": true,
+  "limits": [
+    "Stage openings and deterministic integration fixtures were tested in Mesen; this is not a full unassisted campaign clear or a hardware test."
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "rom_sha256": "48ea669b0c5186c6812a4a69ed7d6d89df239833f1abe015ec1e3bb870abdeb5",
+  "passed": true,
+  "verified_utc": "2026-10-30T04:04:34.095644+00:00",
+  "checks": [
+    {
+      "name": "All source-identified shared pickup, weapon and native object CHR tiles preserved",
+      "cases": 23,
+      "passed": true
+    },
+    {
+      "name": "Native enemy weapon immunities and damage tables retained",
+      "cases": 8,
+      "passed": true
+    },
+    {
+      "name": "All 12 native weapon/utility selections spawn the correct native object in both directions",
+      "cases": 24,
+      "passed": true
+    },
+    {
+      "name": "Independent Mario shots coexist with all 12 selected guns/items in both facings",
+      "cases": 24,
+      "passed": true
+    },
+    {
+      "name": "Original selected-weapon enemy/boss damage dispatch matches original ROM",
+      "cases": 18,
+      "passed": true
+    },
+    {
+      "name": "Mario fireballs use buster damage independently of all selected weapons, including bosses",
+      "cases": 24,
+      "passed": true
+    },
+    {
+      "name": "Descending stomps precede damage; neighbors have bounce grace; ascending, side, shield and spiked contacts remain dangerous",
+      "cases": 30,
+      "passed": true
+    },
+    {
+      "name": "Native left/right conveyor carry is independent of Mario momentum",
+      "cases": 2,
+      "passed": true
+    },
+    {
+      "name": "Complete normal-land controller matches assembled SMB1 source (112 cases / 15,680 updates)",
+      "cases": 112,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\physics.log",
+      "log_sha256": "be9858f52d2a0971fd3aca99dcd81e4a6257d3ef28e4092a820dab9dfb258d3c"
+    },
+    {
+      "name": "Native stage 1 menu entry, Mario CHR, health, repeated jumps/fireballs and pause/resume",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\stage-1.log",
+      "log_sha256": "e810eb6fde28154efc5437fd60c9c5989a85df5580853051fa8cae27fb9cdf4c"
+    },
+    {
+      "name": "Native stage 0 menu entry, Mario CHR, health, repeated jumps/fireballs and pause/resume",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\stage-0.log",
+      "log_sha256": "93b399bde310d4935be10353dc7e7efff7da058f192a17e82a99b179fb17c3f9"
+    },
+    {
+      "name": "Native stage 2 menu entry, Mario CHR, health, repeated jumps/fireballs and pause/resume",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\stage-2.log",
+      "log_sha256": "a14c806706ec2119f25d3323b256b93c2dabd86a06dad23c2211cb6fbc3df3de"
+    },
+    {
+      "name": "Native stage 3 menu entry, Mario CHR, health, repeated jumps/fireballs and pause/resume",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\stage-3.log",
+      "log_sha256": "3a92f69c49f102dda1ae485a1b3015c11b8a29309d4041875b1e5297038a4b2a"
+    },
+    {
+      "name": "Native stage 4 menu entry, Mario CHR, health, repeated jumps/fireballs and pause/resume",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\stage-4.log",
+      "log_sha256": "2a3e29dad18988db37b2c13b4021c57aaa6c4b751184966f13b83d46c04110e2"
+    },
+    {
+      "name": "Native stage 5 menu entry, Mario CHR, health, repeated jumps/fireballs and pause/resume",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\stage-5.log",
+      "log_sha256": "85100d116dd9d303ab921daabf73f53d13dee73f99322ebcaa4dd11178310b41"
+    },
+    {
+      "name": "Native stage 6 menu entry, Mario CHR, health, repeated jumps/fireballs and pause/resume",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\stage-6.log",
+      "log_sha256": "527784b91a5fd8bbdfc6300010235832f135f175c68e24c7e1651bf101029dfd"
+    },
+    {
+      "name": "Native stage 7 menu entry, Mario CHR, health, repeated jumps/fireballs and pause/resume",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\stage-7.log",
+      "log_sha256": "60aad9a997d4d6fde1867579699ecdc950829619d7a47ff43fdb3763ba777f68"
+    },
+    {
+      "name": "Native ladder grab, climbing art, ladder shooting and drop/control handoff",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\ladder.log",
+      "log_sha256": "e96dd4e96abdf1bf28cd755b27a78e96e18620541fee8dda61699633bea8572d"
+    },
+    {
+      "name": "Real underwater checkpoint, swimming strokes, water art and running-to-water speed reset",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\swimming.log",
+      "log_sha256": "fcb12a13a473002a2a22fe99236a3e8d4615493397e9f8d0b838f0b5f06819ac"
+    },
+    {
+      "name": "Full unskipped prologue, complete rooftop Mario and title CHR/VRAM timing",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\intro.log",
+      "log_sha256": "cf275ae5127cfa16be8780c46286115e41a94b7ebd747fa2c4aec0114144009e"
+    },
+    {
+      "name": "Native post-victory weapon portrait, password and return, simultaneous native and Mario shots, blanked CHR uploads",
+      "cases": 1,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\scenes.log",
+      "log_sha256": "1fc3253f6d9a9206155b548a173410b0edd386ba2208805efed3f0233e088fa4"
+    },
+    {
+      "name": "1,500-frame moving/shooting replay with native enemies, visible-VRAM and original mapper-write guards",
+      "cases": 1500,
+      "passed": true,
+      "log": "megaman2\\build\\verification-logs\\replay.log",
+      "log_sha256": "7c15ff5a1e7c0c51c0630be2a4e18fd1d7baaa9046f2533a5648532d55eed5dc"
+    }
+  ],
+  "source_revision": "da9b91ae1793db0c736f92d96554eb724882326d",
+  "dependencies": {
+    "tools\\native_port_common.py": "371580ee979829082fe75ffeee10cbb2474396863babcc6302f254cc54421e7a",
+    "tools\\build_port_references.py": "66a0d60eb05a6ca3972fdfca07b918afe7fde33ddd64e43d856a6ef60774fb4d",
+    "tools\\check_new_port_cpu.py": "2871d4fb32aac384a117820a7af51d79798adab84dba2038b3ddcb91ffdeb354",
+    "tools\\verify_new_ports.py": "e76c296d8df6539a08d92f16a5113027bdde807521eee73182a64f414c09e811",
+    "tools\\build.py": "f06069cd18ceb3b0d721ac38f05b83592ec195a335b107bfaeef9b13daf95ea8",
+    "src\\smb-land.inc": "be2a01143cca50756b203d28652c2abfa8fb298ddd9555424d6ac35d12615a28",
+    "tests\\new_port_replay.lua": "9f6b492f695869beda68f250f83cfddec0e75520c1454bf09f48f92c6d64ac0c",
+    "megaman2\\src\\art.inc": "056afb8fa47fbf70c86dc5c94d5b0d7ea4fa76a5be79e65e9d03fface9bd9807",
+    "megaman2\\src\\hack.cfg": "a8e77464d3e73abfd56dd72333ca88cb4e2756219a80cf21807e3551a2b4bf02",
+    "megaman2\\src\\mario.s": "ac9897ee6113656543a7eee2fc22372c263d0b5f86fbd668eeeb1344e3fc9531",
+    "megaman2\\src\\menus.inc": "531f7f01ac235bbca4c58484c9f37fab6226c59e8799bda41931843c583113e3",
+    "megaman2\\src\\native.inc": "6ef81234277d904ccf3ef643f1bfcc12dcc2d3b7a145b3cdd2d87338f814b468",
+    "megaman2\\src\\state.inc": "f6e2c009f6e90a9b2cab011342e39cc6ef272edf8c9672ed42a795691752cbf4",
+    "megaman2\\src\\stomp.inc": "29df6e9e07c8381980decbd50ce872d8ebf2fcaa6399b74192ee73280e23f6f1",
+    "megaman2\\tools\\audit_physics.py": "8790114f8dfd493a5c6f74c23268f461d18ba0e3f56b6cfc12ee5f5d8160012c",
+    "megaman2\\tools\\build.py": "08332fff3ed338f85bc61920b7344e526e4603455c14f98cd0e9f0eb7ffbd2ae",
+    "megaman2\\tests\\boot_probe.lua": "4caf455fb3b638e719a76a491c69f0084028a22b0ac082c48387e6cb8becefd7",
+    "megaman2\\tests\\gameplay.lua": "0081fdb5e88394a28f83a88f681f0bf189a3ef2035819b2ee3568af3c3144a4e",
+    "megaman2\\tests\\intro.lua": "a38f3de92d36548ce083a54fdc8c95ec6374eecf8a2d325b3d9e4d0cbf9782d7",
+    "megaman2\\tests\\jump_probe.lua": "a50fca1ee73325b2b6833af10d57d3f2b37e50b4a5b7cff8fdae1836c8abc3ff",
+    "megaman2\\tests\\ladder.lua": "5b6be7d016751b4f764ec0115663fcf2cae3f04426dfd17b24ee6923be66c67a",
+    "megaman2\\tests\\scenes.lua": "9e264c7127cf701c482d3db39a4b03fefee80b003dd39222b1600a2d6e271ec5",
+    "megaman2\\tests\\swimming.lua": "10120cbf2e1d6f39836fc6893d27490aa3ff0bce6292e5505f0b99ff165a3583"
+  },
+  "replay": {
+    "video_frames": 1500,
+    "player_updates": 1500,
+    "max_player_path_cycles": 7181,
+    "visible_vram_writes": 0,
+    "unexpected_mapper_writes": 0
+  },
+  "limits": [
+    "Campaign has not been cleared end to end.",
+    "Measured replay performance does not prove constant 60 Hz in every scene."
+  ]
+}

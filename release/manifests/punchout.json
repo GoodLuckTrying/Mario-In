@@ -1,0 +1,171 @@
+{
+  "name": "Mario in Mike Tyson's Punch-Out!!",
+  "rom_sha256": "ef99a7b03c55a4f85115c84c520b52262a4916780fc5eed010b15d4930cdd2c2",
+  "output_sha256": "ef99a7b03c55a4f85115c84c520b52262a4916780fc5eed010b15d4930cdd2c2",
+  "base_rom": "C:\\nes\\Mike Tyson's Punch-Out!! (Japan, USA) (En) (Rev 1).nes",
+  "base_sha256": "e1e7ea03309e370240e90ad80815b484e1c537107d8620e2479f8169cf237c8f",
+  "labels": {
+    "FightInit": 63606,
+    "FireCombat": 56024,
+    "FireHit": 37497,
+    "FireUpdate": 37216,
+    "MarioVblank": 55586,
+    "OptionalVram": 55820,
+    "PaletteRead": 55847,
+    "PaletteUpload": 55913,
+    "PortraitDraw": 36160,
+    "PortraitEntry": 56030,
+    "PrepareMario": 55553,
+    "RenderMario": 55392,
+    "ResetMario": 63600,
+    "ShadowFrame": 40192,
+    "MoveFire": 37396,
+    "ClearFire": 37381,
+    "ShadowCopy": 40264,
+    "PortraitAttr": 36283,
+    "PortraitTiles": 36321,
+    "LaunchY": 56166,
+    "LaunchX": 56068,
+    "FireTiles": 56052,
+    "DrawFireColumn": 55795,
+    "Bounce": 56264,
+    "RestoreFireColumn": 55763,
+    "ClearState": 63636
+  },
+  "changes": [
+    {
+      "bank": 14,
+      "cpu": 55392,
+      "size": 888,
+      "name": "fixed1"
+    },
+    {
+      "bank": 15,
+      "cpu": 63600,
+      "size": 66,
+      "name": "fixed2"
+    },
+    {
+      "bank": 7,
+      "cpu": 37216,
+      "size": 385,
+      "name": "fire"
+    },
+    {
+      "bank": 6,
+      "cpu": 40192,
+      "size": 130,
+      "name": "shadow"
+    },
+    {
+      "bank": 9,
+      "cpu": 36160,
+      "size": 209,
+      "name": "portrait"
+    },
+    {
+      "bank": 6,
+      "cpu": 32785,
+      "size": 381,
+      "name": "Mario background animation commands"
+    },
+    {
+      "bank": 13,
+      "cpu": 40965,
+      "size": 3,
+      "name": "ResetMario"
+    },
+    {
+      "bank": 11,
+      "cpu": 32768,
+      "size": 3,
+      "name": "RenderMario"
+    },
+    {
+      "bank": 11,
+      "cpu": 32777,
+      "size": 3,
+      "name": "PrepareMario"
+    },
+    {
+      "bank": 13,
+      "cpu": 42460,
+      "size": 3,
+      "name": "MarioVblank"
+    },
+    {
+      "bank": 13,
+      "cpu": 42682,
+      "size": 3,
+      "name": "FireCombat"
+    },
+    {
+      "bank": 13,
+      "cpu": 44811,
+      "size": 3,
+      "name": "PaletteUpload"
+    },
+    {
+      "bank": 13,
+      "cpu": 43111,
+      "size": 3,
+      "name": "PortraitEntry"
+    },
+    {
+      "bank": 13,
+      "cpu": 42502,
+      "size": 3,
+      "name": "OptionalVram"
+    },
+    {
+      "bank": 13,
+      "cpu": 43749,
+      "size": 3,
+      "name": "FightInit"
+    },
+    {
+      "file_offset": 85062,
+      "size": 10,
+      "name": "Mario name"
+    },
+    {
+      "file_offset": 86402,
+      "size": 10,
+      "name": "Mario name"
+    },
+    {
+      "file_offset": 99343,
+      "size": 10,
+      "name": "Mario name"
+    },
+    {
+      "file_offset": 102665,
+      "size": 10,
+      "name": "Mario name"
+    }
+  ],
+  "reference": {
+    "base_rom": "C:/nes/Mike Tyson's Punch-Out!! (Japan, USA) (En) (Rev 1).nes",
+    "base_sha256": "e1e7ea03309e370240e90ad80815b484e1c537107d8620e2479f8169cf237c8f",
+    "prg_sha256": "f6df2e41658aaac6aa2564844d96a04616fd8640a5231f2535633b6024c47295",
+    "chr_sha256": "264f86cd778d52eabb20d7d6c3c757ffba743a1fa0176121cbece114f46f803c",
+    "matching_prg": true,
+    "matching_chr": true,
+    "source_revision": "60b2fa0e61d57b10b5fadc04be96241d25755d25"
+  },
+  "art": {
+    "file": "${DEVELOPMENT_WORKSPACE}\\assets\\mario-directional-sheet.png",
+    "sha256": "ae395caae88ade3c2d6b3f2503c45e9f2b92ff5c84020d3f1891277a6bcf2a4d",
+    "permission": "User supplied with stated permission, 23 October 2026",
+    "credit": "Artist name not supplied"
+  },
+  "native": {
+    "MacStatus": 80,
+    "MacPose": 97,
+    "OppState": 144,
+    "MacHP": 914,
+    "OppHP": 921
+  },
+  "adaptation": "Native boxing and health, B also fires; Up+B aims high; no platform gravity.",
+  "work_ram": "NES 2.0 volatile 8 KiB; $6000-$6029 private state, $6400-$67ff Mac tile shadow"
+}

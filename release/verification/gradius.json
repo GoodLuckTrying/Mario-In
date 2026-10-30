@@ -1,0 +1,321 @@
+{
+  "rom_sha256": "901272163fba47a64b06bc236b2d29f9fe8f9cf02e295a41ee4e19af9e0169a0",
+  "passed": true,
+  "checks": [
+    {
+      "name": "6502-fireball-physics",
+      "passed": true,
+      "seconds": 0.94
+    },
+    {
+      "name": "boot-flight-render-performance",
+      "passed": true,
+      "seconds": 1.92
+    },
+    {
+      "name": "busy-frame-rendering",
+      "passed": true,
+      "seconds": 1.87
+    },
+    {
+      "name": "cheat-controller-0",
+      "passed": true,
+      "seconds": 1.67
+    },
+    {
+      "name": "cheat-controller-1",
+      "passed": true,
+      "seconds": 1.72
+    },
+    {
+      "name": "cheat-held-a",
+      "passed": true,
+      "seconds": 1.66
+    },
+    {
+      "name": "cheat-no-up",
+      "passed": true,
+      "seconds": 1.72
+    },
+    {
+      "name": "cheat-outside",
+      "passed": true,
+      "seconds": 1.71
+    },
+    {
+      "name": "cheat-wrong",
+      "passed": true,
+      "seconds": 1.66
+    },
+    {
+      "name": "controller-fireballs-native-waves",
+      "passed": true,
+      "seconds": 3.78
+    },
+    {
+      "name": "damage-bullet-0",
+      "passed": true,
+      "seconds": 1.19
+    },
+    {
+      "name": "damage-bullet-1",
+      "passed": true,
+      "seconds": 1.31
+    },
+    {
+      "name": "damage-enemy-0",
+      "passed": true,
+      "seconds": 1.19
+    },
+    {
+      "name": "damage-enemy-1",
+      "passed": true,
+      "seconds": 1.19
+    },
+    {
+      "name": "damage-terrain-0",
+      "passed": true,
+      "seconds": 1.21
+    },
+    {
+      "name": "damage-terrain-1",
+      "passed": true,
+      "seconds": 1.32
+    },
+    {
+      "name": "double-independent-0-0",
+      "passed": true,
+      "seconds": 1.52
+    },
+    {
+      "name": "double-independent-0-2",
+      "passed": true,
+      "seconds": 1.55
+    },
+    {
+      "name": "double-independent-1-0",
+      "passed": true,
+      "seconds": 1.51
+    },
+    {
+      "name": "double-independent-1-2",
+      "passed": true,
+      "seconds": 1.52
+    },
+    {
+      "name": "full-fireball-load-0",
+      "passed": true,
+      "seconds": 11.06
+    },
+    {
+      "name": "full-fireball-load-1",
+      "passed": true,
+      "seconds": 10.91
+    },
+    {
+      "name": "full-fireball-load-2",
+      "passed": true,
+      "seconds": 11.04
+    },
+    {
+      "name": "full-fireball-load-3",
+      "passed": true,
+      "seconds": 10.81
+    },
+    {
+      "name": "full-fireball-load-4",
+      "passed": true,
+      "seconds": 10.93
+    },
+    {
+      "name": "full-fireball-load-5",
+      "passed": true,
+      "seconds": 10.95
+    },
+    {
+      "name": "full-fireball-load-6",
+      "passed": true,
+      "seconds": 10.43
+    },
+    {
+      "name": "gravity-lift-0-0",
+      "passed": true,
+      "seconds": 2.04
+    },
+    {
+      "name": "gravity-lift-0-4",
+      "passed": true,
+      "seconds": 1.99
+    },
+    {
+      "name": "gravity-lift-0-8",
+      "passed": true,
+      "seconds": 1.92
+    },
+    {
+      "name": "gravity-lift-1-0",
+      "passed": true,
+      "seconds": 2.02
+    },
+    {
+      "name": "gravity-lift-1-4",
+      "passed": true,
+      "seconds": 2.05
+    },
+    {
+      "name": "gravity-lift-1-8",
+      "passed": true,
+      "seconds": 1.93
+    },
+    {
+      "name": "mario-options-0",
+      "passed": true,
+      "seconds": 2.16
+    },
+    {
+      "name": "mario-options-1",
+      "passed": true,
+      "seconds": 2.14
+    },
+    {
+      "name": "native-alternating-mario-luigi",
+      "passed": true,
+      "seconds": 3.23
+    },
+    {
+      "name": "stage-0",
+      "passed": true,
+      "seconds": 2.34
+    },
+    {
+      "name": "stage-1",
+      "passed": true,
+      "seconds": 2.37
+    },
+    {
+      "name": "stage-2",
+      "passed": true,
+      "seconds": 2.39
+    },
+    {
+      "name": "stage-3",
+      "passed": true,
+      "seconds": 2.43
+    },
+    {
+      "name": "stage-4",
+      "passed": true,
+      "seconds": 2.55
+    },
+    {
+      "name": "stage-5",
+      "passed": true,
+      "seconds": 2.49
+    },
+    {
+      "name": "stage-6",
+      "passed": true,
+      "seconds": 2.48
+    },
+    {
+      "name": "swimming-animation",
+      "passed": true,
+      "seconds": 1.89
+    },
+    {
+      "name": "title-pointer-and-selector",
+      "passed": true,
+      "seconds": 1.32
+    },
+    {
+      "name": "visible-attract-demo",
+      "passed": true,
+      "seconds": 5.99
+    },
+    {
+      "name": "weapon-0-0",
+      "passed": true,
+      "seconds": 1.91
+    },
+    {
+      "name": "weapon-0-2",
+      "passed": true,
+      "seconds": 1.96
+    },
+    {
+      "name": "weapon-1-0",
+      "passed": true,
+      "seconds": 1.97
+    },
+    {
+      "name": "weapon-1-2",
+      "passed": true,
+      "seconds": 1.95
+    },
+    {
+      "name": "weapon-2-0",
+      "passed": true,
+      "seconds": 1.88
+    },
+    {
+      "name": "weapon-2-2",
+      "passed": true,
+      "seconds": 2.04
+    }
+  ],
+  "cpu": {
+    "passed": true,
+    "cases": [
+      "gravity-lift-controller-0-speed-0",
+      "gravity-lift-controller-0-speed-1",
+      "gravity-lift-controller-0-speed-4",
+      "gravity-lift-controller-0-speed-8",
+      "gravity-lift-controller-0-speed-14",
+      "gravity-lift-controller-1-speed-0",
+      "gravity-lift-controller-1-speed-1",
+      "gravity-lift-controller-1-speed-4",
+      "gravity-lift-controller-1-speed-8",
+      "gravity-lift-controller-1-speed-14",
+      "gentler-gravity-and-terminal-fall",
+      "independent-double-pools-0-options",
+      "independent-double-pools-1-options",
+      "independent-double-pools-2-options",
+      "extra-fireball-native-kill",
+      "all-extra-lanes-native-big-core-defeat",
+      "native-arm-weakpoint",
+      "extra-arm-weakpoint",
+      "all-sixteen-native-arm-rendering-angles",
+      "two-hundred-native-shot-collision-comparisons",
+      "fireball-gravity-slot-0",
+      "fireball-floor-bounce-slot-0",
+      "fireball-wall-slot-0",
+      "fireball-gravity-slot-1",
+      "fireball-floor-bounce-slot-1",
+      "fireball-wall-slot-1",
+      "fireball-gravity-slot-2",
+      "fireball-floor-bounce-slot-2",
+      "fireball-wall-slot-2",
+      "fireball-gravity-slot-3",
+      "fireball-floor-bounce-slot-3",
+      "fireball-wall-slot-3",
+      "fireball-gravity-slot-4",
+      "fireball-floor-bounce-slot-4",
+      "fireball-wall-slot-4",
+      "fireball-gravity-slot-5",
+      "fireball-floor-bounce-slot-5",
+      "fireball-wall-slot-5",
+      "native-laser-motion",
+      "double-upward-fireball",
+      "fireball-native-enemy-kill",
+      "fireball-native-big-core-defeat",
+      "native-death-gate-0",
+      "native-death-gate-1"
+    ]
+  },
+  "originals_unchanged": true,
+  "ips_reconstructs_rom": true,
+  "native_background_and_enemy_chr_unchanged": true,
+  "limits": [
+    "Stage openings and integration fixtures are tested; this is not a full unassisted campaign clear."
+  ]
+}

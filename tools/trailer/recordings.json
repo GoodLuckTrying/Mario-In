@@ -1,0 +1,112 @@
+[
+  {
+    "game": "kidicarus",
+    "fixture": "tests/baseline.lua",
+    "defines": []
+  },
+  {
+    "game": "kidicarus",
+    "fixture": "tests/hammers.lua",
+    "defines": [
+      "POWER=2"
+    ]
+  },
+  {
+    "game": "contra",
+    "fixture": "tests/video.lua",
+    "defines": [
+      "POWER=2"
+    ]
+  },
+  {
+    "game": "rangers",
+    "fixture": "tests/carry.lua",
+    "defines": [
+      "POWER=2"
+    ]
+  },
+  {
+    "game": "rangers",
+    "fixture": "tests/combat.lua",
+    "defines": [
+      "POWER=2"
+    ]
+  },
+  {
+    "game": "gradius",
+    "fixture": "tests/options.lua",
+    "defines": []
+  },
+  {
+    "game": "kungfu",
+    "fixture": "tests/melee.lua",
+    "defines": []
+  },
+  {
+    "game": "snake",
+    "fixture": "tests/runtime.lua",
+    "defines": []
+  },
+  {
+    "game": "tetris",
+    "fixture": "tests/runtime.lua",
+    "defines": []
+  },
+  {
+    "game": "tetris",
+    "fixture": "tests/interaction.lua",
+    "defines": []
+  },
+  {
+    "game": "tetris",
+    "fixture": "tests/head-break.lua",
+    "defines": []
+  },
+  {
+    "game": "smb2",
+    "fixture": "tests/runtime.lua",
+    "defines": []
+  },
+  {
+    "game": "zelda",
+    "fixture": "tests/visual.lua",
+    "defines": []
+  },
+  {
+    "game": "wwf",
+    "fixture": "tests/game.lua",
+    "defines": []
+  },
+  {
+    "game": "megaman2",
+    "fixture": "tests/gameplay.lua",
+    "defines": [
+      "STAGE=0"
+    ]
+  },
+  {
+    "game": "metroid",
+    "fixture": "tests/arrival_and_shots.lua",
+    "defines": []
+  },
+  {
+    "game": "ghosts",
+    "fixture": "tests/gameplay.lua",
+    "defines": []
+  },
+  {
+    "game": "ghosts",
+    "fixture": "tests/combat.lua",
+    "defines": []
+  },
+  {
+    "game": "punchout",
+    "fixture": "tests/fire_visuals.lua",
+    "defines": []
+  },
+  {
+    "game": "castlevania",
+    "fixture": "tests/playthrough.lua",
+    "defines": []
+  }
+]

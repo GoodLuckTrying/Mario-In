@@ -1,0 +1,213 @@
+{
+  "rom_sha256": "ef99a7b03c55a4f85115c84c520b52262a4916780fc5eed010b15d4930cdd2c2",
+  "passed": true,
+  "verified_utc": "2026-10-30T13:14:54.500002+00:00",
+  "checks": [
+    {
+      "name": "instructions",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\instructions.log",
+      "log_sha256": "b078ac51d2a83c2e9a80880ac25eaa7f6d373500388063f3f927eaacfb589425"
+    },
+    {
+      "name": "fire_visuals",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\fire_visuals.log",
+      "log_sha256": "22adf55f0591bf653f899f1c54bb87d5b6e7b52bf1c421122f2c444ddcf20690"
+    },
+    {
+      "name": "gameplay",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\gameplay.log",
+      "log_sha256": "72198336279723a5345ef187c295d726d37f1120712652fa9540cb47321af0e7"
+    },
+    {
+      "name": "progression",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\progression.log",
+      "log_sha256": "33d37ae072b017ee11e401d47741407f724cae3a7ddcb26bb5d4d20992381a74"
+    },
+    {
+      "name": "referee",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\referee.log",
+      "log_sha256": "6fc77c9b87b7c568d9e7292cb407ef4dc859013641c28c98a0d18b7d37ad0071"
+    },
+    {
+      "name": "hurt",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\hurt.log",
+      "log_sha256": "16c429928ec3c20e44318930606a3b4f070df74f9f23ed801d2d7b7cbd6460f1"
+    },
+    {
+      "name": "roster-0",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-0.log",
+      "log_sha256": "857465d0dcfbeff30d0f8eaa4a662f9f3e62b53097615cabac540ee710e82e85"
+    },
+    {
+      "name": "demo",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\demo.log",
+      "log_sha256": "7acc103e065ad48ba9264d85ca6bc85d91861c6afe39965cdbc4c28927405eab"
+    },
+    {
+      "name": "roster-1",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-1.log",
+      "log_sha256": "f02aea71dc62e692bd18b749444cf003ebf1c91fdfcd9dab890c0865713fc7ca"
+    },
+    {
+      "name": "roster-2",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-2.log",
+      "log_sha256": "4cc5c8876c7dda87e4d5d6809d7f25daf0221efb2ba5d947c09f1056396c655f"
+    },
+    {
+      "name": "roster-3",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-3.log",
+      "log_sha256": "9207370cab1e4408c10437170adf38ebcac7a315ded3d675af20bfe61f78fef7"
+    },
+    {
+      "name": "roster-4",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-4.log",
+      "log_sha256": "1687680d3fe952d4b391af9054244ac127e5b61a2702681b9376ffff27d86d6c"
+    },
+    {
+      "name": "roster-5",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-5.log",
+      "log_sha256": "d0b6f7d3b8b2e9c59a608f2e1c9afc826a75fbb1f7c02b9d314adaa7033b50bd"
+    },
+    {
+      "name": "roster-6",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-6.log",
+      "log_sha256": "23aaa74c45f5c1c53cb65f287a2af0b1a18ccd58c9b6586419bc97d875b2a2f8"
+    },
+    {
+      "name": "roster-7",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-7.log",
+      "log_sha256": "241531f8619f89164273c14ca45453235697ae5d28fd043be36f6e55f411ed25"
+    },
+    {
+      "name": "roster-8",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-8.log",
+      "log_sha256": "5a8bed73239e42242afea1c9eee6c1db90bf07faab23298c429c6b4edb525a34"
+    },
+    {
+      "name": "roster-9",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-9.log",
+      "log_sha256": "5228990ed6aebafc8efcc9ccf712dc9ee70200fb641bf56e9f14cf4f4ed42fa9"
+    },
+    {
+      "name": "roster-10",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-10.log",
+      "log_sha256": "cbcdac76f397a36a8c07cc1af68dccee2bc9f7b91bdc0b7be3232bdac4816ff2"
+    },
+    {
+      "name": "roster-11",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-11.log",
+      "log_sha256": "8fd4958e75c9bd9894fd3a7ae39655f8fd64a30688de0c2ea1786a67f438ecb9"
+    },
+    {
+      "name": "roster-12",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-12.log",
+      "log_sha256": "e3849e3543cd8ebfc4ea6049b118aa0600bbd3d4e2a79387be56003f56b182ec"
+    },
+    {
+      "name": "roster-13",
+      "passed": true,
+      "log": "punchout\\build\\verification-logs\\roster-13.log",
+      "log_sha256": "66502ffe6bb64f7329cb09f24002c6712b147cd35af2a549f9278fe5922b255a"
+    },
+    {
+      "name": "196 pose transitions: nametable output, no trails, mapper restore, private underlay, OAM preserved",
+      "passed": true,
+      "cases": 196
+    },
+    {
+      "name": "All 98 linked poses respect the floor anchor; 12 ordinary recoil poses stand upright and true knockdown stays horizontal",
+      "passed": true,
+      "cases": 98
+    },
+    {
+      "name": "All 47 referee/count/announcement commands match actual original 6502 VRAM writes, including nested runs",
+      "passed": true,
+      "cases": 47
+    },
+    {
+      "name": "All referee tiles coexist unchanged with Mario in the combined background bank",
+      "passed": true,
+      "cases": 116
+    },
+    {
+      "name": "Native FD atlas byte-identical; replacement portrait is isolated from the referee",
+      "passed": true,
+      "cases": 256
+    },
+    {
+      "name": "Native combat oracle: defenses, both heights, self-damage prevention, stars, score and knockdowns",
+      "passed": true,
+      "cases": 392
+    },
+    {
+      "name": "No shots during intros, transitions, either knockdown, defeat or engine-disabled states",
+      "passed": true,
+      "cases": 9
+    },
+    {
+      "name": "Input edges, head/body selection, bounded two-shot pool and lifetime",
+      "passed": true,
+      "cases": 103
+    },
+    {
+      "name": "Palette composition preserves native buffers, other palettes and fade levels",
+      "passed": true,
+      "cases": 4
+    },
+    {
+      "name": "Exact pinned Tyson Rev 1 disassembly PRG/CHR reconstruction",
+      "passed": true
+    }
+  ],
+  "dependencies": {
+    "punchout\\src\\generated.inc": "8e980515f35dfff4eb5127bbf7223000c25120bebff30282d538fd4d03ae66e1",
+    "punchout\\src\\hack.cfg": "ff5a3e9069bf92f6d82db891e1845347b44f7626c9e7fd9babd9496f233724f2",
+    "punchout\\src\\mario.s": "14bd5242f815559d7c6ccba4ce248c51afb6495424b4b8463970b93f3633d52c",
+    "punchout\\src\\portrait.inc": "3fd0cbbe6f8fef3c2abbebc5b66fd53e8d32721a287c552c782a3f93ab008e6b",
+    "punchout\\tools\\analyze_art.py": "76edefbfc2432efcb39bbff4519330938ab2ccb87be505c1b198b8aefddaf4f1",
+    "punchout\\tools\\art.py": "16116aa166d7d0c8b99d87cecd0370e9daf68e248d7d81bc38700c9be5e2dc83",
+    "punchout\\tools\\build.py": "516d08eb5eb019f578b6ffea3d87a80b648f8dc4d570ce82e962fdc96d493f5a",
+    "punchout\\tools\\build_reference.py": "6bfeb9f0e153716e39d577c5854f3440c3b6f87ba9e9f74b97d37a997680b3fe",
+    "punchout\\tools\\verify.py": "33a717ba79d42165908a796829ddeccdcd7e64a82194b2e40f8a3c54422dbe7d",
+    "punchout\\tests\\instructions.py": "2b45faceb18645e77fbbf67ccf2837c1688dbc8be9de2e1bd87d5fb7ab04b8ca",
+    "punchout\\tests\\demo.lua": "44ad3b100f7c7a5c46a87b93bef47255d37645ac598b6172a14e49025e2d70bd",
+    "punchout\\tests\\fire_visuals.lua": "3464c91ca5ffcac17e00f4d71a96b119c294e45406a0aa120fd606ac784de4bb",
+    "punchout\\tests\\gameplay.lua": "b1894635b07a84c03ff1dc1a11b3ed98daeb723cde5e9baea0bd8610784762a6",
+    "punchout\\tests\\hurt.lua": "0674db689aae4b5bdd22d1c3d56cc30f5823cc5bacf1e699aa1405b5ee88147f",
+    "punchout\\tests\\native_probe.lua": "7bd6f7819bd145a49e6f0532fbdaabedd0a2cef76a44959f372278b2fb55bd2e",
+    "punchout\\tests\\progression.lua": "393550f8e55532f50f7d9352cebabfd26b1b97ddcfa273c0b9739c6791ad82a1",
+    "punchout\\tests\\referee.lua": "20699623b369dea5ced5bb5966aba762a32f4cc7250dd26b97cb08a41c391abf",
+    "punchout\\tests\\roster.lua": "ef2c1d2c5f55e6aaf417d22f55f5899acce301dd29444b3f6b8c9267e111b3a1",
+    "punchout\\tests\\timing.lua": "fad0461d59ace07045ac18df48f14d74d558848c7d2d9eeb4e667c1368164233",
+    "tools\\port_probe.py": "a965308867ca1d0f2b5a36876903ad41bf3ab34e96d28eac776e17bacb95aea5",
+    "tools\\native_port_common.py": "371580ee979829082fe75ffeee10cbb2474396863babcc6302f254cc54421e7a",
+    "tools\\directional_art.py": "4cb74ac6f996a699ac63507e430d1cf42a3e8f1f6581b05c94a5527290d35cdf",
+    "assets\\mario-directional-sheet.png": "ae395caae88ade3c2d6b3f2503c45e9f2b92ff5c84020d3f1891277a6bcf2a4d"
+  },
+  "limits": [
+    "Native boxing adaptation, without platform gravity or jumping.",
+    "No full campaign, ending or physical cartridge verification.",
+    "Progression uses a staged third-knockdown finishing fireball; roster tests use the native fight loader.",
+    "Fireballs use background tiles and move on the native 8-pixel tile grid."
+  ]
+}

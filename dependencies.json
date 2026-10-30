@@ -1,0 +1,59 @@
+{
+  "submodules": [
+    {
+      "path": "vendor/smb1base",
+      "url": "https://github.com/smbstudio/smb1base.git",
+      "commit": "46ff88f7d9e854db80bf8d50e5bf74340fcc64ce"
+    },
+    {
+      "path": "vendor/contra-us",
+      "url": "https://github.com/vermiceli/nes-contra-us.git",
+      "commit": "687d651c021fd7020f10d05b970ccb62663c94bd"
+    },
+    {
+      "path": "vendor/tetris-nes",
+      "url": "https://github.com/CelestialAmber/TetrisNESDisasm.git",
+      "commit": "94581c0306fa0009fe11fde48222875549d15b8b"
+    },
+    {
+      "path": "vendor/smb2",
+      "url": "https://github.com/Xkeeper0/smb2.git",
+      "commit": "b73415e1953d7fdffd4957d5fb43fa7a13844c1c"
+    },
+    {
+      "path": "vendor/zelda",
+      "url": "https://github.com/aldonunez/zelda1-disassembly.git",
+      "commit": "50a1c869a8d8e2eb8b5b60acea325f44b4341762"
+    },
+    {
+      "path": "vendor/mm2-reference",
+      "url": "https://github.com/plasticsmoke/megaman2-disassembly-ca65.git",
+      "commit": "da9b91ae1793db0c736f92d96554eb724882326d"
+    },
+    {
+      "path": "vendor/metroid-reference",
+      "url": "https://github.com/metroidret/m1disasm.git",
+      "commit": "efbd348d7251463d6179775fc6e901207d210610"
+    },
+    {
+      "path": "vendor/punchout-disassembly",
+      "url": "https://github.com/nmikstas/mike-tysons-punch-out-disassembly.git",
+      "commit": "60b2fa0e61d57b10b5fadc04be96241d25755d25"
+    },
+    {
+      "path": "castlevania/reference/smb",
+      "url": "https://github.com/threecreepio/smb-disassembly.git",
+      "commit": "da964553b3695fde607d796acde21b3f4b282dfe"
+    },
+    {
+      "path": "castlevania/reference/castlevania",
+      "url": "https://github.com/josephstevenspgh/Castlevania-Labelled-Disassembly.git",
+      "commit": "c512a677827cd78411df1f4c6824c64421d7a7b9"
+    }
+  ],
+  "wla_dx": {
+    "version": "10.7",
+    "url": "https://github.com/vhelin/wla-dx/releases/download/v10.7/wla_dx_v10.7_Win64.zip",
+    "sha256": "82922a530ae989bd5f8057fa4cfef3d0022d7353b5aeb7858b9320eae9b56ebd"
+  }
+}

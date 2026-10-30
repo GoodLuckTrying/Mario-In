@@ -1,0 +1,292 @@
+{
+  "candidate_sha256": "6f2948358135e50d33ecbf5c5ff742709886faea752ec65d71f37f9611152c51",
+  "verified_at": "2026-10-23T05:30:50.855622+00:00",
+  "motion_passed": true,
+  "tiles_passed": true,
+  "graphics_passed": true,
+  "artifact_passed": true,
+  "physics_passed": true,
+  "tests": [
+    {
+      "name": "actor-reuse",
+      "evidence_type": "Controlled native actor slot reuse fixtures",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "all-subweapons",
+      "evidence_type": "Controlled native subweapon integration",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "brick-route",
+      "evidence_type": "Fresh-start controller-only power-ups and B attack brick destruction, including native background removal",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "candle-persistence",
+      "evidence_type": "Controlled candle persistence, whip and native axe integration",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "candles",
+      "evidence_type": "Fresh-start controller-only mushroom and flower collection",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "coin-contact",
+      "evidence_type": "Controlled pickup contact safety fixture",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "combat-animation",
+      "evidence_type": "Controlled original enemy animation holds versus live damage timers; whip, fireball, stomp and native friendly projectile immunity",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "damage-low-health",
+      "evidence_type": "Controlled native hits at both sides of the 16/64 HP threshold, all Mario sizes, native damage and lethal clamp",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "dracula-head",
+      "evidence_type": "Controlled repeated native head hits, blocked cooldown hits, natural timer expiry and both Dracula forms",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "fireball-bricks",
+      "evidence_type": "Controlled original wall records: both directions, floor, ordinary terrain, room, persistence and hidden drops",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "fireball-lifecycle",
+      "evidence_type": "Controlled projectile capacity, input, lifetime, camera and bounce",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "fixtures",
+      "evidence_type": "Controlled stomp, shrink and surviving small-Mario health damage",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "floor-candle",
+      "evidence_type": "Fresh-start controller-only first indoor floor lamp weapon hit and heart pickup",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "food-art",
+      "evidence_type": "Controlled native food rendering in both directions, original CHR pixels and healing at all Mario sizes",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "full-door",
+      "evidence_type": "Controlled full native door sequence integration",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "health-food",
+      "evidence_type": "Controlled native stage damage, shrinking, small-Mario survival, invincibility, lethal clamp, food and health HUD",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "heart-contact",
+      "evidence_type": "Controlled pickup and HUD fixture",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "holy-water-damage",
+      "evidence_type": "Controlled native II/III pickups and real Up+B throws through bottle landing, simultaneous projectile capacity, heart costs, flame damage and native enemy death",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "local-bounds",
+      "evidence_type": "Controlled local screen boundary crossings",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "moving-platforms",
+      "evidence_type": "Natively initialized platform rooms in stages 4, 5 and 10 at all three sizes; controlled player placement and terrain isolation, real controller input for riding, steering, jumps, landings and walk-offs",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "native-ai-banks",
+      "evidence_type": "Native fish-man spawn/shoot/splash, contact damage and mixed banked enemy dispatch in initialized stair and moving-platform rooms",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "native-damage",
+      "evidence_type": "Isolated native boss, multipart damage, cooldown and pickup immunity fixtures",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "native-items",
+      "evidence_type": "Controlled original money bag/orb OAM and pixel rendering, points, health and native stage completion",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "performance",
+      "evidence_type": "Read-only first-room/exterior missed-vblank budget on the fresh controller route",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "playthrough",
+      "evidence_type": "Fresh-start controller-only upgrades, heart, combat, stairs and first door",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "real-door",
+      "evidence_type": "Native gate and door route with forced power and invincibility",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "regressions",
+      "evidence_type": "Controlled lamp bump immunity, native lamp position, power cap, intro and stair rendering fixtures",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "respawn",
+      "evidence_type": "Controlled lethal contact followed by native death and respawn",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "scroll-background",
+      "evidence_type": "Native initialized boss/vertical rooms, both scroll directions, original nametable tiles and palette attributes, authored candle and enemy-spawner positions on directed collision support",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "scroll-crossing",
+      "evidence_type": "Controlled camera center crossings in both directions",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "scroll-limits",
+      "evidence_type": "All native stage/room camera limits, subpixels, active boss locks and first-boss running activation",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "scroll-run",
+      "evidence_type": "Fresh-start controller-only exterior run and gate route",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "sprite-budget",
+      "evidence_type": "Directed native renderer saturation at underfull, exact-full and overflowing OAM capacity; unique allocations, HUD reservation, cleanup and bounded CPU cycles",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "sprite-inactive",
+      "evidence_type": "Controlled retained stale actor pose with native auxiliary and Mario rendering preserved",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "sprite-lifecycle",
+      "evidence_type": "Fresh controller-only route covers small and grown Mario, forward/backtracking scrolling, native empty spawn slots, active candle camera shifts and complete unused OAM cleanup",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "stair-transitions",
+      "evidence_type": "Native Up/Down stair round trips at every Mario size, room seams and Mario palette checks",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "stomp",
+      "evidence_type": "Controlled stomp priority before and after native enemy movement",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "subweapon-multiplier",
+      "evidence_type": "Native II/III pickup contact, real Up+B throws for all four projectile weapons, allowed last slot and full capacity with heart costs",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "terrain",
+      "evidence_type": "Controlled small/grown wall probes and thin ceilings at all three sizes and standing/running speeds",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "top-and-pit",
+      "evidence_type": "Controlled top coordinate safeguard and native pit death",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "transition-weapons",
+      "evidence_type": "Controlled subweapon, scripted door and whip cancellation integration",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "whip-bricks",
+      "evidence_type": "Controlled small/grown whip wall reach, direction, room, persistence, original hidden items and fireball independence",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "whip-combat",
+      "evidence_type": "Controlled whip reach, facing, size damage, candles, stairs, multiple targets and native boss cooldown",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "whip-lifecycle",
+      "evidence_type": "Actual B button edges with controlled size, whip graphics, simultaneous fireballs and Up+B separation",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "whip-lower",
+      "evidence_type": "Actual Down+B native crouch attacks at all three sizes and both facings, with low targets and matching graphics",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "name": "whip-route",
+      "evidence_type": "Fresh-start controller-only small whip combat and original zombie death handler",
+      "passed": true,
+      "exit_code": 0
+    }
+  ],
+  "limitations": [
+    "Controller-only route ends after the first indoor door; no full-game clear is claimed",
+    "Boss damage uses isolated native handlers; background routes initialize real rooms with directed collision support and are not full-level clears",
+    "Moving platform coverage uses native room initialization with controlled player placement and terrain isolation; it does not claim full platform-level clears"
+  ]
+}
