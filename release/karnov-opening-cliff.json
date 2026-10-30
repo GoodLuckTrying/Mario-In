@@ -1,0 +1,121 @@
+{
+  "rom_sha256": "be71bd9a670bd7d10821ae90ca3f91ea8c210cd580e366c1c23172595e169d05",
+  "passed": true,
+  "test": "karnov/tests/opening-cliff.lua",
+  "test_sha256": "f8b43621bced90fb6b4fe7169e639c21e735b2955e5ec858e345f5df724c8049",
+  "scope": "Actual first-stage opening ledge loaded from a fresh boot. Native map, camera and player positions retained. Right and B held; A held for 25 frames at the specified offset from the first player update; -1 means no jump. Hostile actor activations cleared to isolate terrain falling from damage. Each run requires six consecutive grounded updates on the actual lower floor.",
+  "cases": 22,
+  "results": [
+    {
+      "jump": -1,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=-1, run=true, 32 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 0,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=0, run=true, 95 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 5,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=5, run=true, 96 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 10,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=10, run=true, 96 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 15,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=15, run=true, 96 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 20,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=20, run=true, 96 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 25,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=25, run=true, 99 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 30,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=30, run=true, 99 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 35,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=35, run=true, 111 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 40,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=40, run=true, 111 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 45,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=45, run=true, 111 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 50,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=50, run=true, 111 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 55,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=55, run=true, 109 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 60,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=60, run=true, 111 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 65,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=65, run=true, 110 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 70,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=70, run=true, 106 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 75,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=75, run=true, 110 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 80,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=80, run=true, 110 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 85,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=85, run=true, 110 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 90,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=90, run=true, 32 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 95,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=95, run=true, 32 pixel drop, six supported lower-floor updates"
+    },
+    {
+      "jump": 100,
+      "passed": true,
+      "result": "PASS native opening cliff: jump=100, run=true, 32 pixel drop, six supported lower-floor updates"
+    }
+  ],
+  "limits": "Targeted opening route in Mesen; not an unassisted campaign clear or physical-console test."
+}

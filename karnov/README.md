@@ -81,7 +81,7 @@ scroll locks; a missing lower area remains a pit.
 
 ## Verification and limits
 
-The current receipt contains 21 checks. The source comparison executes 110
+The current receipt contains 23 checks. The source comparison executes 110
 cases and 15,400 movement updates against verbatim assembled routines from
 `smb1base` commit `46ff88f7d9e854db80bf8d50e5bf74340fcc64ce`, with SMB2J features
 disabled. Separate 6502 cases exercise native enemy damage, stomp rejection,
@@ -105,6 +105,11 @@ The physical jump test measures world displacement as the camera moves.
 Two longer fall fixtures cover a 232-pixel drop, at least eight vertical
 terrain strips, moving/stationary inputs, the horizontal-to-vertical camera
 handoff and four consecutive updates supported by the lower floor.
+The actual first-stage opening ledge is replayed with walking and running/jump
+inputs, requiring six consecutive lower-floor support updates. Its native map,
+camera and player positions are retained; hostile actors are disabled to isolate
+terrain falls from damage. A separate 22-run jump-timing sweep also passed on
+this exact ROM; see [the recorded results](../release/karnov-opening-cliff.json).
 
 Sprite-sheet credit for the collection: **metalwario64** and **superphanto**.
 Project testing credits: **cecilou**, **jroweboy** and **fanatik**. Original SMB1

@@ -31,6 +31,8 @@ def main(game):
   jobs.append(('native-fall-boundary',['karnov/tools/verify_fall_boundary.py']))
   replay('tall-cliff-moving','karnov/tests/tall-cliff.lua')
   replay('tall-cliff-stationary','karnov/tests/tall-cliff.lua',MOVE='false')
+  replay('opening-cliff-run-jump','karnov/tests/opening-cliff.lua')
+  replay('opening-cliff-walk-off','karnov/tests/opening-cliff.lua',RUN='false',JUMP=-1)
   for stage in range(9):replay(f'graphics-stage-{stage}',f'{game}/tests/graphics.lua',STAGE=stage)
  else:
   replay('graphics-side',f'{game}/tests/graphics.lua')

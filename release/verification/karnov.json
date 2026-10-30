@@ -9,102 +9,112 @@
     {
       "name": "native-combat",
       "passed": true,
-      "seconds": 0.1
+      "seconds": 0.09
     },
     {
       "name": "native-state-adapters",
       "passed": true,
-      "seconds": 0.37
+      "seconds": 0.36
     },
     {
       "name": "movement",
       "passed": true,
-      "seconds": 1.92
+      "seconds": 1.87
     },
     {
       "name": "fire",
       "passed": true,
-      "seconds": 2.53
+      "seconds": 2.44
     },
     {
       "name": "source-physics",
       "passed": true,
-      "seconds": 2.92
+      "seconds": 2.75
     },
     {
       "name": "camera-presentation",
       "passed": true,
-      "seconds": 1.31
+      "seconds": 1.32
     },
     {
       "name": "health",
       "passed": true,
-      "seconds": 2.23
+      "seconds": 2.06
     },
     {
       "name": "native-fall-boundary",
       "passed": true,
-      "seconds": 0.35
+      "seconds": 0.41
     },
     {
       "name": "moving-camera-fire",
       "passed": true,
-      "seconds": 2.33
+      "seconds": 2.26
     },
     {
       "name": "tall-cliff-stationary",
       "passed": true,
-      "seconds": 1.4
+      "seconds": 1.38
     },
     {
       "name": "tall-cliff-moving",
       "passed": true,
-      "seconds": 1.48
+      "seconds": 1.81
+    },
+    {
+      "name": "opening-cliff-run-jump",
+      "passed": true,
+      "seconds": 1.41
+    },
+    {
+      "name": "opening-cliff-walk-off",
+      "passed": true,
+      "seconds": 1.41
     },
     {
       "name": "graphics-stage-0",
       "passed": true,
-      "seconds": 3.19
-    },
-    {
-      "name": "graphics-stage-2",
-      "passed": true,
-      "seconds": 3.13
+      "seconds": 3.29
     },
     {
       "name": "graphics-stage-1",
       "passed": true,
-      "seconds": 3.17
+      "seconds": 3.18
+    },
+    {
+      "name": "graphics-stage-2",
+      "passed": true,
+      "seconds": 3.3
     },
     {
       "name": "graphics-stage-3",
       "passed": true,
-      "seconds": 3.25
-    },
-    {
-      "name": "graphics-stage-5",
-      "passed": true,
-      "seconds": 2.99
+      "seconds": 3.28
     },
     {
       "name": "graphics-stage-4",
       "passed": true,
-      "seconds": 3.08
+      "seconds": 3.44
+    },
+    {
+      "name": "graphics-stage-5",
+      "passed": true,
+      "seconds": 3.29
     },
     {
       "name": "graphics-stage-6",
       "passed": true,
-      "seconds": 3.09
-    },
-    {
-      "name": "graphics-stage-8",
-      "passed": true,
-      "seconds": 3.13
+      "seconds": 3.29
     },
     {
       "name": "graphics-stage-7",
       "passed": true,
-      "seconds": 3.35
+      "seconds": 3.54
+    },
+    {
+      "name": "graphics-stage-8",
+      "passed": true,
+      "seconds": 3.44
     }
   ],
   "originals_unchanged": true,

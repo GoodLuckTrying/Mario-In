@@ -15,7 +15,7 @@ The Zelda patch also fixes the item-lift pose, and WrestleMania preserves the or
 
 Karnov and Rygar start as Fire Mario while retaining native health, equipment,
 attacks and progression. B adds fireballs alongside the native attack. Their
-current suites pass 21 and 17 checks, including assembled SMB1 movement
+current suites pass 23 and 17 checks, including assembled SMB1 movement
 comparisons, native damage, scrolling projectiles and displayed graphics.
 Karnov also fixes slow vertical scrolling, viewport fall deaths, life portraits
 and entrance graphics. Rygar fixes the moving/weapon screen shake and floor
@@ -23,6 +23,8 @@ rebounds. Before/after failures are recorded in
 [karnov-rygar-regressions.json](karnov-rygar-regressions.json).
 Karnov's tall-cliff follow-up covers long falls during horizontal scrolling,
 with 232-pixel moving/stationary drop tests and native map-boundary comparisons.
+The actual first-stage opening ledge also passes walking/running replays and a
+[22-run jump-timing sweep](karnov-opening-cliff.json) on the current ROM.
 
 `verification/` contains the existing hash-bound test receipts for these ROMs,
 and `manifests/` records their build metadata. Most receipts describe tests in the original development workspace, before the sources were reorganized. Zelda and WrestleMania were reverified here after the trailer graphics repairs (41 and 72 checks); `trailer-graphics-regressions.json` records the reproduced earlier failures. Run the included game suites for new builds. Targeted fixtures are not full
