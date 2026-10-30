@@ -46,7 +46,7 @@ emu.addMemoryCallback(function()
   for i=32,1023 do if i<0x2f0 or i>=0x300 then
    assert(emu.read(0xc00+i,emu.memType.nesPpuDebug)==background:byte(i+1),'HUD/font CHR differs from original at '..string.format('%04X',0xc00+i))
   end end
-  for i=0,1919 do assert(emu.read(0x1000+i,emu.memType.nesPpuDebug)==background:byte(1025+i),'ring background CHR must match the original game')end
+  for i=0,3119 do assert(emu.read(0x1000+i,emu.memType.nesPpuDebug)==background:byte(1025+i),'ring and deformable rope CHR must match the original game')end
  end
  local front
  if r(0xd4)~=0 then front=1
@@ -71,3 +71,39 @@ emu.addMemoryCallback(function()
  for a,v in pairs(nativeBody)do assert(r(a)==v,'Mario overlay must preserve original CPU body/shadow OAM at '..string.format('%04X',a))end
  nativeBody=nil
 end,emu.callbackType.exec,0xAD6A)
+
+-- Compare every displayed human body cell with the complete authored pose,
+-- including side/melee art. Ropes share the pattern table with the bodies.
+local streamFile=assert(io.open(TEST_ROOT..'/build/streamed-poses.chr','rb'))
+local stream=streamFile:read('*a');streamFile:close()
+WWF_BODY_FRAMES=0
+emu.addMemoryCallback(function()
+ if r(0xc)~=0 or not first or mode()~=0xABFF then return end
+ for actor=0,1 do
+  if r(0x12d+actor)~=255 and r(0x6104+actor)~=0 then
+   local pose=r(0x4d8+actor);local group=r(0x4ea+actor)
+   for cell=0,11 do
+    local at=group+cell*4
+    if emu.read(at,emu.memType.nesSpriteRam)<240 then
+     local tile=emu.read(at+1,emu.memType.nesSpriteRam)
+     for n=0,15 do
+      assert(emu.read(0x1000+tile*16+n,emu.memType.nesPpuDebug)==stream:byte(pose*224+cell*16+n+1),
+       'complete displayed body packet, frame '..(f-first)..' actor '..actor..' pose '..pose..' cell '..cell)
+     end
+    end
+   end
+   WWF_BODY_FRAMES=WWF_BODY_FRAMES+1
+  end
+ end
+ for shot=0,3 do
+  local at=0xf0+shot*4
+  if emu.read(at,emu.memType.nesSpriteRam)<240 then
+   local tile=emu.read(at+1,emu.memType.nesSpriteRam)
+   local owner=shot//2;local phase=tile-r(0x6102+owner)
+   assert(phase==12 or phase==13,'fireballs use their owner native packet spare cells')
+   for n=0,15 do
+    assert(emu.read(0x1000+tile*16+n,emu.memType.nesPpuDebug)==stream:byte(phase*16+n+1),'visible fireball CHR must be complete')
+   end
+  end
+ end
+end,emu.callbackType.exec,0xADFE)

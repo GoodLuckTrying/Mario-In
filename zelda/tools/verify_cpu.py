@@ -94,13 +94,13 @@ for ring in [0,1,2]:
  c.memory[0x0d]=0;c.memory[0x0e]=128;c.x=1;call(c,'Link_BeHarmed')
  assert c.memory[H['HeartPartial']]==255-(128>>ring)and c.memory[H['HeartValues']]==0x22
 passed('native heart health and both defensive ring upgrades keep their damage reduction',3)
-for item,right in [(1,0x0a),(0x0e,0x78)]:
+for item,right in [(1,0x0a),(12,0x56),(0x0e,0x56),(27,0x56)]:
  c=fresh(5);setv(c,ItemTypeToLift=item)
  c.memory[H['ObjX']+19]=120;c.memory[H['ObjY']+19]=112;c.x=0
  call(c,'DrawLinkLiftingItem')
  assert c.memory[H['Sprites']+73]==0x78 and c.memory[H['Sprites']+77]==right,(item,c.memory[H['Sprites']+73],c.memory[H['Sprites']+77])
- assert c.memory[H['Sprites']+78]&0x40==(0 if item==1 else 0x40)
-passed('one-handed equipment and two-handed triforce lifts use matching Mario body halves',2)
+ assert c.memory[H['Sprites']+78]&0x40==0
+passed('one-handed equipment and two-handed triforce lifts use complete unmirrored Mario body halves',4)
 n=0
 for direction,frame,step in [(4,2,(0x5c,0x5e)),(8,3,(0x54,0x60))]:
  for mode in [4,5,16]:

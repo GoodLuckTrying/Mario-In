@@ -1,6 +1,6 @@
 """Capture native video/audio from a bounded emulator fixture for the trailer."""
 from pathlib import Path
-import argparse,hashlib,json,os,subprocess
+import argparse,hashlib,json,os,re,subprocess
 ROOT=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser();p.add_argument('game');p.add_argument('fixture');p.add_argument('--define',action='append',default=[]);p.add_argument('--limit',type=int,default=5000);a=p.parse_args()
 project=ROOT/a.game
@@ -45,5 +45,14 @@ r=subprocess.run(['C:/mesen2/Mesen.exe','--testRunner','--enableStdout','--timeo
 (out/(tag+'.log')).write_text(r.stdout+'\n'+r.stderr)
 assert r.returncode==0 and 'FAIL 'not in r.stdout,r.stdout[-1800:]+r.stderr[-500:]
 assert 'CAPTURE START: active=1'in r.stderr and 'CAPTURE STOP'in r.stderr
-(out/(tag+'.json')).write_text(json.dumps(dict(game=a.game,fixture=a.fixture,defines=a.define,rom_sha256=item['rom_sha256'],native_capture=True,fixture_sha256=hashlib.sha256(fixture.read_bytes()).hexdigest()),indent=2)+'\n')
+dependencies={}
+def fixture_dependencies(path):
+ relative=path.relative_to(project).as_posix()
+ if relative in dependencies:return
+ dependencies[relative]=hashlib.sha256(path.read_bytes()).hexdigest()
+ for child in re.findall(r"dofile\(\s*TEST_ROOT\s*\.\.\s*['\"]([^'\"]+)['\"]\s*\)",path.read_text()):
+  fixture_dependencies(project/child.lstrip('/'))
+fixture_dependencies(fixture)
+if a.game in ('kungfu','snake'):fixture_dependencies(project/'tests/graphics_oracle.lua')
+(out/(tag+'.json')).write_text(json.dumps(dict(game=a.game,fixture=a.fixture,defines=a.define,rom_sha256=item['rom_sha256'],native_capture=True,fixture_sha256=hashlib.sha256(fixture.read_bytes()).hexdigest(),fixture_dependencies=dependencies),indent=2)+'\n')
 print('CAPTURED '+tag,flush=True)

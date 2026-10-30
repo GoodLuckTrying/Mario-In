@@ -34,3 +34,5 @@ setup. Generated captures and intermediate video remain under ignored `build/`.
 The render uses the Windows Bahnschrift font. Verification checks all 15 source
 ROM and fixture hashes, complete video decoding, frame count, resolution,
 chapters, non-silent audio, and matching audio/video duration.
+
+The Zelda and WrestleMania clips were recaptured after repairing asymmetric item-lift art and deformable rope pattern ownership. Their capture fixtures now audit the relevant displayed graphics, including the final Zelda pickup and every WrestleMania rope frame.

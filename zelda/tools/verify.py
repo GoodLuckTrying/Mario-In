@@ -28,7 +28,7 @@ def main():
  assert sha==meta['output_sha256']and hashlib.sha256(old).hexdigest()==SHA and hashlib.sha256(SMB.read_bytes()).hexdigest()==SMBSHA
  assert (ROOT/'build/native.nes').read_bytes()==old
  common=(ROOT/'build/source/bin/dat/CommonSpritePatterns.dat').read_bytes()
- allowed=set(range(28))|set(range(0x54,0x56))|set(range(0x58,0x62))
+ allowed=set(range(28))|set(range(0x54,0x58))|set(range(0x58,0x62))
  for tile in range(112):
   if tile not in allowed:assert common[tile*16:(tile+1)*16]==old[16+32895+tile*16:16+32895+(tile+1)*16]
  demo=(ROOT/'build/source/bin/dat/DemoSpritePatterns.dat').read_bytes()

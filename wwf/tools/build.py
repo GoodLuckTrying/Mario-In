@@ -73,7 +73,7 @@ def main():
  hook(0xAE52,'UpdateBridge','20 4A A2')
  hook(0xAF4D,'ControlBridge','B5 CB F0',0x4C)
  # Native dynamic wrestler CHR and split code stay intact. The Mario
- # sheet occupies separate immutable slots; selection uploads retain the
+ # poses share the native wrestler packets; selection uploads retain the
  # native unrolled transfer cadence to finish inside their blanking window.
  put(0xAD08,b'\xEF','D2')
  put(0xA0A0,b'\xEF','D2')

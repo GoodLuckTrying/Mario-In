@@ -86,6 +86,7 @@ def patch(source,smb):
  edit(source,'Z_07.asm','@UpdateWeapons:\n','@UpdateWeapons:\n    LDA #0\n    JSR SwitchBank\n    JSR MarioFireUpdate\n    LDA #5\n    JSR SwitchBank\n')
  edit(source,'Z_07.asm','UpdateHeartsAndRupees:\n','UpdateHeartsAndRupees:\n    LDA #0\n    JSR SwitchBank\n    JSR MarioFireRender\n')
  edit(source,'Z_07.asm','ResetPlayerState:\n    LDA #$00','ResetPlayerState:\n    LDA #0\n    STA M_TTL\n    STA M_TTL+1\n    LDA #$00')
+ edit(source,'Z_07.asm','    JSR Anim_WriteSpecificItemSprites\n    INC LeftAlignHalfWidthObj','    JSR Anim_WriteSpecificItemSprites\n    LDA #$56\n    STA Sprites+77\n    LDA Sprites+78\n    AND #$BF\n    STA Sprites+78\n    INC LeftAlignHalfWidthObj')
  edit(source,'Z_07.asm','    LDA #$08\n    STA Sprites+77','    LDA #$0A\n    STA Sprites+77\n    LDA Sprites+78\n    AND #$BF\n    STA Sprites+78')
  # Preserve shield behavior, but its replacement head tiles are Link art.
  p=source/'src/Z_07.asm';s=p.read_text();a=s.index("    ; See if there's special processing needed for the shield.");b=s.index('L1F36A_Exit:',a);p.write_text(s[:a]+s[b:])

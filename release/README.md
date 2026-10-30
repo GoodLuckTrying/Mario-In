@@ -11,12 +11,10 @@ header; use the exact headered input listed in the catalog.
 
 All 15 patches here match the current installed development builds. The
 Ghosts 'n Goblins patch includes the color-flashing, injury-CHR and moving-platform support repairs.
-Start that updated port from a fresh boot; old save states contain old RAM code.
+The Zelda patch also fixes the item-lift pose, and WrestleMania preserves the original deformable rope graphics while streaming every Mario/Luigi pose and fireball through native wrestler buffers. Start updated ports from a fresh boot; older save states contain earlier graphics/RAM state.
 
 `verification/` contains the existing hash-bound test receipts for these ROMs,
-and `manifests/` records their build metadata. Those receipts describe tests
-in the original development workspace, before the sources were reorganized;
-run the included game suites for new builds. Targeted fixtures are not full
+and `manifests/` records their build metadata. Most receipts describe tests in the original development workspace, before the sources were reorganized. Zelda and WrestleMania were reverified here after the trailer graphics repairs (41 and 72 checks); `trailer-graphics-regressions.json` records the reproduced earlier failures. Run the included game suites for new builds. Targeted fixtures are not full
 campaign clears or physical-console tests. New checks of the source-package
 builds are recorded separately in `source-package-verification.json`.
 

@@ -93,8 +93,8 @@
       "game": "zelda",
       "name": "Mario in The Legend of Zelda",
       "patch": "Mario in The Legend of Zelda.ips",
-      "patch_sha256": "a0300d4a279a9194733c5e70d6b07db234629e16ecfe79668e0fa402a0e6adf7",
-      "rom_sha256": "257d2216d0e2cd81b45dd5b09be4a89f5333ac66609f80ebcc992b6eff0cb821",
+      "patch_sha256": "d6c301458443625449d10903728c2b27d8fc68f790f9f37b713ff34b97045c0c",
+      "rom_sha256": "7f76197d084d48759fb6f6fb14079cbd5863a3c6e59e4398a70adc2e925a8891",
       "base_filename": "Legend of Zelda, The (USA).nes",
       "base_sha256": "1dff2d002168e0234d206938afc5189a79eb0ec055ada12f2cd4e105f713fc7d",
       "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
@@ -104,12 +104,12 @@
       "game": "wwf",
       "name": "Mario and Luigi in WWF WrestleMania",
       "patch": "Mario and Luigi in WWF WrestleMania.ips",
-      "patch_sha256": "6cb63867a5bff14633a0b909f88b4017bb8caeb176cc50407462db1445970060",
-      "rom_sha256": "36bedfd032103e301a0c349b09ce1748ce679b333c826cef4ca2cbe77dd78d50",
+      "patch_sha256": "b877c561c9b6b6540609cd0b04c6d130ebefc59539cc53c9321bc5cc671448b1",
+      "rom_sha256": "e3bb70a314a5f346d18d42dab9cd2142577051bda4a0bc5dc7abbb84478143b5",
       "base_filename": "WWF WrestleMania (USA).nes",
       "base_sha256": "0d294769d55984684f8fe3299f47b7f4da8667b1dabb94ab8e4c620750bf7f87",
       "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
-      "verification_checks": 70
+      "verification_checks": 72
     },
     {
       "game": "megaman2",

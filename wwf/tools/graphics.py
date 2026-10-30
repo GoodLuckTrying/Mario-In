@@ -24,41 +24,21 @@ def build(smb):
    poses.append([row+[0]*8 for row in directional_pose('big',view,state,step)])
  for view in ['front_right','back_right']:
   for state in ['idle','walk']:poses.append([row+[0]*8 for row in directional_pose('big',view,state)])
- tiles=[];maps=[];flips=[];stream=bytearray()
- def mirrored(data,flip):
-  rows=[data[:8],data[8:]]
-  if flip&128:rows=[r[::-1]for r in rows]
-  if flip&64:rows=[bytes(int(f'{v:08b}'[::-1],2)for v in r)for r in rows]
-  return b''.join(rows)
- for pose_index,pixels in enumerate(poses):
-  row=[]
-  for ty in range(0,32,8):
-   for tx in range(0,24,8):
-    data=bytes(sum(((pixels[ty+y][tx+x]>>bit)&1)<<(7-x)for x in range(8))for bit in range(2)for y in range(8))
-    if pose_index>=11:stream+=data
-    if not any(data):row.append(255);flips.append(0);continue
-    if pose_index>=11:row.append((ty//8)*3+tx//8);flips.append(0);continue
-    flip=0
-    for f in [0,64,128,192]:
-     test=mirrored(data,f)
-     if test in tiles:flip=f;data=test;break
-    if data not in tiles:tiles.append(data)
-    row.append(tiles.index(data));flips.append(flip)
-  maps += [255 if t==255 else t if pose_index>=11 else 0x83+t for t in row]
- for t in [0x64,0x65]:
-  data=smb[0x8010+t*16:0x8020+t*16]
-  if data not in tiles:tiles.append(data)
-  maps.append(0x83+tiles.index(data))
- slots=list(range(0x83,0xC3))
- assert len(tiles)<=len(slots),(len(tiles),len(slots))
- (ROOT/'build/tiles.chr').write_bytes(b''.join(tiles))
- (ROOT/'build/tile-slots.bin').write_bytes(bytes(slots[:len(tiles)]))
+ # All body poses live in the human's native 20-tile upload packet.
+ # $83..$C2 are deformable rope/background patterns, not spare CHR.
+ maps=[];stream=bytearray()
+ fire=b''.join(smb[0x8010+t*16:0x8020+t*16]for t in [0x64,0x65])
+ for pixels in poses:
+  for cell,(ty,tx)in enumerate((y,x)for y in range(0,32,8)for x in range(0,24,8)):
+   data=bytes(sum(((pixels[ty+y][tx+x]>>bit)&1)<<(7-x)for x in range(8))for bit in range(2)for y in range(8))
+   stream+=data;maps.append(cell if any(data)else 255)
+  stream+=fire
  (ROOT/'build/pose-map.bin').write_bytes(bytes(maps))
- (ROOT/'build/pose-attrs.bin').write_bytes(bytes(flips))
- (ROOT/'build/pose-masks.bin').write_bytes(bytes(0 if t==255 else 1 for t in maps[:-2]))
+ (ROOT/'build/pose-attrs.bin').write_bytes(bytes(len(maps)))
+ (ROOT/'build/pose-masks.bin').write_bytes(bytes(0 if t==255 else 1 for t in maps))
  (ROOT/'build/streamed-poses.chr').write_bytes(stream)
  (ROOT/'build/directional-fixtures.lua').write_text('return {'+','.join('{'+','.join(json.dumps(''.join(map(str,row)))for row in art)+'}'for art in poses)+'}\n')
- (ROOT/'src/art.inc').write_text(f'TILE_COUNT={len(tiles)}\nFIRE0=${maps[-2]:02X}\nFIRE1=${maps[-1]:02X}\nPOSE_COUNT={len(poses)}\n')
+ (ROOT/'src/art.inc').write_text(f'FIRE0=12\nFIRE1=13\nPOSE_COUNT={len(poses)}\n')
  colors=[(0,0,0),(255,254,255),(234,158,34),(181,49,32)]
  preview=Image.new('RGB',(len(poses)*96,144));dr=ImageDraw.Draw(preview)
  for i,pixels in enumerate(poses):
@@ -69,7 +49,7 @@ def build(smb):
   for x in range(24):portrait.putpixel((12+x,8+y),poses[0][y][x])
  data=bytes(sum(((portrait.getpixel((tx+x,ty+y))>>b)&1)<<(7-x)for x in range(8))for ty in range(0,48,8)for tx in range(0,48,8)for b in range(2)for y in range(8))
  (ROOT/'build/portrait.chr').write_bytes(data)
- return {'unique_tiles':len(tiles),'slots':slots[:len(tiles)],'poses':['idle','walk1','walk2','walk3','punch','kick','air','crouch','guard/grapple','climb/win','down','front','front-step1','front-step2','back','back-step1','back-step2','front-diagonal','front-diagonal-step','back-diagonal','back-diagonal-step'],'source':'SMB1 side and existing Kung Fu melee art; supplied directional cells through the native CHR streamer','directional_source':source_info(),'streamed_pose_bytes':len(stream),'work_ram_kib':8}
+ return {'native_static_chr_preserved_through':'$1C2F','poses':['idle','walk1','walk2','walk3','punch','kick','air','crouch','guard/grapple','climb/win','down','front','front-step1','front-step2','back','back-step1','back-step2','front-diagonal','front-diagonal-step','back-diagonal','back-diagonal-step'],'source':'SMB1 side and existing Kung Fu melee art; all poses and fireballs through the native CHR streamer','directional_source':source_info(),'streamed_pose_bytes':len(stream),'packet_bytes':224,'work_ram_kib':8}
 def unpack12(data):
  p=[[0]*24 for _ in range(32)]
  for tile,(tx,ty)in enumerate([(x,y)for y in range(0,32,8)for x in [0,8]]+[(16,y)for y in range(0,32,8)]):

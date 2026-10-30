@@ -59,14 +59,14 @@ end,emu.callbackType.exec,0xad6a)
 emu.addMemoryCallback(function()
  if r(0xc)~=0 or not drawn then return end
  for p=0,1 do local d=drawn[p+1]
-  if d.pose>=11 then
+  if r(0x6104+p)~=0 then
    for cell=0,11 do
     local at=d.group+cell*4
     local sy=emu.read(at,emu.memType.nesSpriteRam)
     local tile=emu.read(at+1,emu.memType.nesSpriteRam)
     if sy<240 then for n=0,15 do
      local actual=emu.read(0x1000+tile*16+n,emu.memType.nesPpuDebug)
-     local expected=stream:byte((d.pose-11)*192+cell*16+n+1)
+     local expected=stream:byte(d.pose*224+cell*16+n+1)
      assert(actual==expected,'displayed pose packet changed at frame '..(f-first)..' body '..p)
      pixels=pixels+1
     end end

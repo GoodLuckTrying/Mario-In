@@ -25,7 +25,7 @@ emu.addMemoryCallback(function(a,value)
  dma={}
  for p=0,1 do
   local d=drawn[p];local pose=d.pose
-  if r(0x12d+p)~=255 and pose>=11 then
+  if r(0x12d+p)~=255 and r(0x6104+p)~=0 then
    seen[p+1][pose]=true
    local ref=source[pose+1]
    for cell=0,11 do

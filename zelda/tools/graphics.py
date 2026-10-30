@@ -64,10 +64,15 @@ def build(source,smb):
  rear=pack(back_walk)
  patterns[0x54*16:0x56*16]=rear[:32]
  patterns[0x60*16:0x62*16]=rear[32:]
+ # The lift's right half needs its own tiles: Mario is asymmetric and
+ # cannot use Link's mirrored single-half drawing convention.
+ patterns[0x56*16:0x58*16]=pack(lift)[32:]
+ one_hand=[row[:8]+front[y][8:]for y,row in enumerate(lift)]
+ (ROOT/'build/lift-fixtures.lua').write_text('return {'+','.join('{'+','.join(json.dumps(''.join(map(str,row)))for row in art)+'}'for art in [one_hand,lift])+'}\n')
  path.write_bytes(patterns)
  demo=source/'bin/dat/DemoSpritePatterns.dat';data=bytearray(demo.read_bytes())
- # The native lift is a mirrored 8x16 half at $78. $7A is the magic
- # projectile, so preserve it and let the native renderer mirror $78.
+ # Keep the native lift left half at $78 and preserve the adjacent
+ # magic projectile at $7A. The freed shield pair $56 holds its right.
  data[0x80:0xa0]=pack(lift)[:32];demo.write_bytes(data)
  (ROOT/'build/player-patterns.chr').write_bytes(patterns)
  # Mesen's rendered NES shades, including Zelda's sand background.

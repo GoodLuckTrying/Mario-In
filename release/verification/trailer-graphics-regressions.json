@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "scope": "Trailer graphics regressions, reproduced on the previous published ROMs and repaired in native ROM code; the overworld Zelda fixture also now uses a scene-valid wide item.",
+  "regressions": [
+    {
+      "game": "zelda",
+      "previous_rom_sha256": "257d2216d0e2cd81b45dd5b09be4a89f5333ac66609f80ebcc992b6eff0cb821",
+      "previous_rom_fails": "a lift uses a full Mario right half, never a mirrored left face",
+      "fixed_rom_sha256": "7f76197d084d48759fb6f6fb14079cbd5863a3c6e59e4398a70adc2e925a8891",
+      "full_suite_passed": true,
+      "full_suite_checks": 41
+    },
+    {
+      "game": "wwf",
+      "previous_rom_sha256": "36bedfd032103e301a0c349b09ce1748ce679b333c826cef4ca2cbe77dd78d50",
+      "previous_rom_fails": "ring and deformable rope CHR must match the original game",
+      "fixed_rom_sha256": "e3bb70a314a5f346d18d42dab9cd2142577051bda4a0bc5dc7abbb84478143b5",
+      "full_suite_passed": true,
+      "full_suite_checks": 72
+    }
+  ]
+}

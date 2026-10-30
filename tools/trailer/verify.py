@@ -23,7 +23,10 @@ for game in edit['games']:
   capture=json.loads((ROOT/'build/trailer/captures'/(c['capture']+'.json')).read_text())
   assert capture['rom_sha256']==item['rom_sha256'] and capture['native_capture']
   source=ROOT/game['game']/capture['fixture'];assert hashlib.sha256(source.read_bytes()).hexdigest()==capture['fixture_sha256']
-  proof.append(dict(game=game['game'],capture=c['capture'],rom_sha256=capture['rom_sha256'],fixture_sha256=capture['fixture_sha256']))
+  dependencies=capture.get('fixture_dependencies',{})
+  if game['game']in ('zelda','wwf'):assert 'tests/common.lua'in dependencies,'repaired clips must bind their helper fixtures'
+  for path,sha in dependencies.items():assert hashlib.sha256((ROOT/game['game']/path).read_bytes()).hexdigest()==sha
+  proof.append(dict(game=game['game'],capture=c['capture'],rom_sha256=capture['rom_sha256'],fixture_sha256=capture['fixture_sha256'],fixture_dependencies=dependencies))
 report=dict(sha256=hashlib.sha256(p.read_bytes()).hexdigest(),bytes=p.stat().st_size,seconds=float(v['duration']),frames=int(v['nb_frames']),resolution=[v['width'],v['height']],fps=60,chapters=len(j['chapters']),full_decode_passed=True,audio_mean_db=mean,audio_peak_db=peak,av_duration_delta=abs(float(v['duration'])-float(a['duration'])),native_av_capture=True,sources=proof)
 (ROOT/'media/trailer-verification.json').write_text(json.dumps(report,indent=2)+'\n')
 print('PASS trailer: 15 games, 1080p60, 5514 frames, native audio, complete decode, current ROM/fixture hashes; '+str(round(p.stat().st_size/1048576,1))+' MiB')

@@ -92,41 +92,31 @@ def run():
    before=m[0x125:0x125+n];call(p,'Roster');assert m[0x125:0x125+n]==before and all(i<6 for i in m[0x125:0x12b]);cases+=1
  checks.append({'name':'all eight native modes keep chosen human brothers and valid original CPU identities','cases':cases,'passed':True})
  # Render native 8x8 OAM cells back into their unmirrored 24x32 poses.
- slots=(ROOT/'build/tile-slots.bin').read_bytes();data=(ROOT/'build/tiles.chr').read_bytes();maps=(ROOT/'build/pose-map.bin').read_bytes();attrs=(ROOT/'build/pose-attrs.bin').read_bytes()
- tiledata={s:data[i*16:(i+1)*16]for i,s in enumerate(slots)}
- def pixels(tile,flip):
-  d=tiledata[tile];r=[[(d[y]>>(7-x)&1)|((d[y+8]>>(7-x)&1)*2)for x in range(8)]for y in range(8)]
-  if flip&128:r=r[::-1]
-  if flip&64:r=[row[::-1]for row in r]
-  return r
  # Compare canonical packed art with the pre-deduplication preview pixels.
  from PIL import Image
  preview=Image.open(ROOT/'build/poses.png').convert('RGB');palette=[(0,0,0),(255,254,255),(234,158,34),(181,49,32)]
  streamed=(ROOT/'build/streamed-poses.chr').read_bytes()
  for pose in range(21):
   for cell in range(12):
-   idx=pose*12+cell;t=maps[idx]
-   if pose<11:p=[[0]*8 for _ in range(8)]if t==255 else pixels(t,attrs[idx])
-   else:
-    tile=streamed[(pose-11)*192+cell*16:][:16]
-    p=[[((tile[y]>>(7-x))&1)|(((tile[y+8]>>(7-x))&1)<<1)for x in range(8)]for y in range(8)]
+   tile=streamed[pose*224+cell*16:][:16]
+   p=[[((tile[y]>>(7-x))&1)|(((tile[y+8]>>(7-x))&1)<<1)for x in range(8)]for y in range(8)]
    for y in range(8):
     for x in range(8):assert palette[p[y][x]]==preview.getpixel((pose*96+(cell%3*8+x)*4,(cell//3*8+y)*4))
- checks.append({'name':'all 21 immutable/streamed body, melee and directional poses exactly reconstruct','cases':21*12*64,'passed':True})
+ checks.append({'name':'all 21 streamed body, melee and directional poses exactly reconstruct','cases':21*12*64,'passed':True})
  cases=0
  for phase in range(6):
   actor=phase&1
-  for pose in range(11,21):
+  for pose in range(21):
    p,m=machine();m[0x27]=255;m[0x28]=0xab;m[0x71]=phase;m[0x4d8+actor]=pose
    m[0x200:0x340]=[0x55]*320
    call(p,'StageDirectional')
-   assert bytes(m[0x200:0x2c0])==streamed[(pose-11)*192:(pose-10)*192]
-   assert m[0x2c0:0x340]==[0x55]*128,'the remainder of the original 20-tile packet is untouched'
+   assert bytes(m[0x200:0x2e0])==streamed[pose*224:(pose+1)*224]
+   assert m[0x2e0:0x340]==[0x55]*96,'the remainder of the original 20-tile packet is untouched'
    assert m[0x6100+actor]==pose and m[0x6102+actor]==[0xeb,0xc3,0xd7,0xeb,0xc3,0xd7][phase]and m[0x6104+actor]==1
    p,m=machine();m[0x27]=255;m[0x28]=0xab;m[0x71]=phase;m[0x12d+actor]=255;m[0x4d8+actor]=pose;m[0x200:0x340]=[0x55]*320
    call(p,'StageDirectional');assert m[0x200:0x340]==[0x55]*320,'original CPU wrestler CHR packets must remain untouched'
    cases+=2
- checks.append({'name':'native six-phase CHR packets, both owners, directional poses and original CPU packet preservation','cases':cases,'passed':True})
+ checks.append({'name':'native six-phase CHR packets, both owners, all poses/fireballs and original CPU packet preservation','cases':cases,'passed':True})
  for actor,fresh in [(0,0x10),(1,0x0e)]:
   for button,pose in [(0x40,4),(0x80,5)]:
    p,m=machine();m[fresh]=button;call(p,'Update');assert m[0x4d0+actor]==pose and m[0x4d2+actor]>0

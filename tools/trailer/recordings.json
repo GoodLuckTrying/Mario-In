@@ -74,7 +74,7 @@
   },
   {
     "game": "wwf",
-    "fixture": "tests/game.lua",
+    "fixture": "tests/rope_graphics.lua",
     "defines": []
   },
   {

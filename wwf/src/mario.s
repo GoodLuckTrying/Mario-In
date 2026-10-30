@@ -67,8 +67,8 @@ InitBridge:
  lda #4
  ldy #0
  jsr $FF00
- ; The bulk CHR upload crossed a frame. Rejoin the native setup at its
- ; original late-vblank phase, before its fixed-delay first HUD reveal.
+ ; Rejoin the native setup at its original late-vblank phase, before
+ ; its fixed-delay first HUD reveal.
 @vblank:
  bit $2002
  bpl @vblank
@@ -208,43 +208,8 @@ Init:
  inx
  cpx #2
  bne @prev
- ; All CHR writes happen during the native forced-blank match setup.
- lda #<TileData
- sta $17
- lda #>TileData
- sta $18
- ldx #0
-@tiles:
- lda TileSlots,x
- lsr
- lsr
- lsr
- lsr
- ora #$10
- sta $2006
- lda TileSlots,x
- asl
- asl
- asl
- asl
- sta $2006
- ldy #0
-@bytes:
- lda ($17),y
- sta $2007
- iny
- cpy #16
- bne @bytes
- clc
- lda $17
- adc #16
- sta $17
- bcc :+
- inc $18
-:
- inx
- cpx #TILE_COUNT
- bne @tiles
+ ; Keep every native ring/rope pattern intact. Human body and fireball
+ ; patterns now travel in the existing alternating wrestler packets.
  jsr PaletteRam
  ; A fixed two-pixel marker keeps the native raster split independent
  ; of which letter begins the renamed right-hand wrestler label.
@@ -709,8 +674,6 @@ Prepare:
  beq @selectNext
  jsr SelectPose
  lda POSE,x
- cmp #11
- bcc @selectNext
  sta STREAM_REQUEST,x
 @selectNext:
  inx
@@ -722,15 +685,7 @@ Prepare:
  lda $012D,x
  cmp #$FF
  jeq @last
- lda POSE,x
- cmp #11
- bcc @effective
- lda STREAM_READY,x
- beq @fallback
  lda STREAM_POSE,x
- bne @effective
-@fallback:
- lda #0
 @effective:
  sta POSE,x
  lda POSE,x
@@ -834,16 +789,8 @@ StageDirectional:
  cmp #$FF
  jeq @done
  lda POSE,x
- cmp #11
- bcs @request
- lda STREAM_REQUEST,x
- cmp #11
- jcc @done
-@request:
  sta STREAM_REQUEST,x
  sta STREAM_POSE,x
- sec
- sbc #11
  tay
  lda StreamLo,y
  sta $17
@@ -854,7 +801,7 @@ StageDirectional:
  sta STREAM_BASE,x
  lda #1
  sta STREAM_READY,x
- jmp ($17)
+ jmp StreamCopy
 @done:
  rts
 
@@ -878,11 +825,9 @@ BuildBodyCache:
  sta BUILD_Y
  lda STREAM_BASE,x
  sta BUILD_TILE
- lda POSE,x
- cmp #11
- bcs :+
- lda #0
- sta BUILD_TILE
+ lda STREAM_READY,x
+ bne :+
+ rts
 :
  lda CacheLow,x
  tax
@@ -1275,9 +1220,13 @@ BuildFireCache:
 :
  lda #FIRE0
 @ft:
- sta CACHE_FIRE-$F0+1,y
+ sta TMP
  lda OWNER,x
  tax
+ lda STREAM_BASE,x
+ clc
+ adc TMP
+ sta CACHE_FIRE-$F0+1,y
  txa
  eor #1
  asl
@@ -1612,16 +1561,26 @@ Cols:.byte 0,8,16,0,8,16,0,8,16,0,8,16
 Rows:.byte 0,0,0,8,8,8,16,16,16,24,24,24
 CacheLow:.byte 0,48
 NativeChrBase:.byte $EB,$C3,$D7,$EB,$C3,$D7
-StreamLo: .byte <StreamCopy0,<StreamCopy1,<StreamCopy2,<StreamCopy3,<StreamCopy4,<StreamCopy5,<StreamCopy6,<StreamCopy7,<StreamCopy8,<StreamCopy9
-StreamHi: .byte >StreamCopy0,>StreamCopy1,>StreamCopy2,>StreamCopy3,>StreamCopy4,>StreamCopy5,>StreamCopy6,>StreamCopy7,>StreamCopy8,>StreamCopy9
- .repeat 10,P
- .ident(.sprintf("StreamCopy%d",P)):
-  .repeat 192,I
-  lda StreamData+P*192+I
-  sta $0200+I
-  .endrepeat
-  rts
+StreamLo:
+ .repeat POSE_COUNT,P
+ .byte <(StreamData+P*224)
  .endrepeat
+StreamHi:
+ .repeat POSE_COUNT,P
+ .byte >(StreamData+P*224)
+ .endrepeat
+StreamCopy:
+ ldy #0
+ ; Only 14 of the native packet's 20 tiles are needed. An unrolled
+ ; indirect copy fits one code bank and runs outside the HUD split.
+ .repeat 224,I
+ lda ($17),y
+ sta $0200+I
+ .if I<223
+ iny
+ .endif
+ .endrepeat
+ rts
 StreamData:.incbin "../build/streamed-poses.chr"
 HurtAction:.incbin "../build/hurt.bin"
 HurtBack:.incbin "../build/hurt-back.bin"
@@ -1632,12 +1591,10 @@ PinHold:.incbin "../build/pin-hold.bin"
 Actions:
 .byte 0,0,0,0,0,8,10,10,8,8,10,10,8,5,6,6,8,4,8,8,8,8,8,8,8,8,8,8,8,8,8,8
 .byte 0,0,0,0,0,8,5,6,6,8,8,4,10,10,8,8,10,8,8,8,10,8,8,8,8,8,8,8,8,8,8,8
-TileSlots:.incbin "../build/tile-slots.bin"
 .align $100
 PoseMap:.incbin "../build/pose-map.bin"
 .align $100
 PoseAttrs:.incbin "../build/pose-attrs.bin"
-TileData:.incbin "../build/tiles.chr"
 .align $100
 PortraitData:.incbin "../build/portrait.chr"
 NativePortraits:.incbin "../build/native-portraits.bin"
