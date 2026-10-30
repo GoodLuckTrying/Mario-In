@@ -170,12 +170,12 @@
       "game": "karnov",
       "name": "Mario in Karnov",
       "patch": "Mario in Karnov.ips",
-      "patch_sha256": "c73970e374a71dfd4529b91fe43488546df4b07df7f51fa4880099022fc299d6",
-      "rom_sha256": "68c2e24f1ce5817b50f649a719d02f52416c94f51084f0710afe2266ddec44bb",
+      "patch_sha256": "0a8f62b9e5eaa7809e0b11e20ec8c2beccffcde88bb5ce8a44b8023c0eb98e20",
+      "rom_sha256": "be71bd9a670bd7d10821ae90ca3f91ea8c210cd580e366c1c23172595e169d05",
       "base_filename": "Karnov (USA).nes",
       "base_sha256": "0d49c1120fc13ead1efe4429f7cbb4f01b90e2486c66661c46e922dda6dc830a",
       "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
-      "verification_checks": 18
+      "verification_checks": 21
     },
     {
       "game": "rygar",

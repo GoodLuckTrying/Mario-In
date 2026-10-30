@@ -28,6 +28,9 @@ def main(game):
  replay('moving-camera-fire','tools/tests/pair_fire_camera.lua')
  replay('camera-presentation'if game=='karnov'else'weapon-scroll',f'{game}/tests/'+('camera-presentation.lua'if game=='karnov'else'weapon-scroll.lua'))
  if game=='karnov':
+  jobs.append(('native-fall-boundary',['karnov/tools/verify_fall_boundary.py']))
+  replay('tall-cliff-moving','karnov/tests/tall-cliff.lua')
+  replay('tall-cliff-stationary','karnov/tests/tall-cliff.lua',MOVE='false')
   for stage in range(9):replay(f'graphics-stage-{stage}',f'{game}/tests/graphics.lua',STAGE=stage)
  else:
   replay('graphics-side',f'{game}/tests/graphics.lua')

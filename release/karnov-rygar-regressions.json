@@ -1,5 +1,5 @@
 {
-  "scope": "Same native-address fixtures replayed against previous installed and current candidate ROMs. Camera fixture uses controlled terrain and native stage 8 loading; complete campaigns and hardware remain unverified.",
+  "scope": "Before/after replays with exact ROM hashes. Each entry retains its tested versions; the release catalog may contain later fixes. Camera/fall fixtures use controlled terrain and native eighth-stage loading. Complete campaigns and hardware remain unverified.",
   "checks": [
     {
       "game": "karnov",
@@ -27,6 +27,20 @@
       "current_rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
       "current_check": "weapon-scroll",
       "current_passed": true
+    },
+    {
+      "game": "karnov",
+      "fixture": "karnov/tests/tall-cliff.lua",
+      "previous_rom_sha256": "68c2e24f1ce5817b50f649a719d02f52416c94f51084f0710afe2266ddec44bb",
+      "previous_failure": "long cliff must reach its lower floor alive: y=184 camera=-16 c4=176 phase=14 worldRow=1 horizontal=15",
+      "current_rom_sha256": "be71bd9a670bd7d10821ae90ca3f91ea8c210cd580e366c1c23172595e169d05",
+      "current_check": "tall-cliff-moving",
+      "current_passed": true,
+      "additional_checks": [
+        "tall-cliff-stationary",
+        "native-fall-boundary"
+      ],
+      "native_permission_cases": 4536
     }
   ]
 }

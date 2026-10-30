@@ -75,15 +75,20 @@ Vertical camera strips advance two pixels per update, preserving both original
 tile/attribute packets and any HUD rows. An airborne viewport guard waits for
 an available native scroll instead of treating its lower edge as a pit. Grounded
 support remains native, and falling into a real pit still triggers death.
+This also covers a horizontal strip that must finish before the camera can
+follow a long fall downward. Permission uses the host's level-map bounds and
+scroll locks; a missing lower area remains a pit.
 
 ## Verification and limits
 
-The current receipt contains 18 checks. The source comparison executes 110
+The current receipt contains 21 checks. The source comparison executes 110
 cases and 15,400 movement updates against verbatim assembled routines from
 `smb1base` commit `46ff88f7d9e854db80bf8d50e5bf74340fcc64ce`, with SMB2J features
 disabled. Separate 6502 cases exercise native enemy damage, stomp rejection,
 paired contacts and the two-shot limit. Another 654 cases cover native state
 handoffs, metatile decoding, camera wrap and crowded injury palettes.
+An additional 4,536 cases compare downward-scroll permission with the actual
+native level-map query and scroll-lock rules across all nine stage maps.
 
 Mesen fixtures check all nine stage openings, actual displayed 8x16 CHR and
 all three Mario colors, vblank timing, physical jump/run/brake/crouch controls,
@@ -97,6 +102,9 @@ The presentation/camera regression checks the first visible life/entrance
 sprites, up/down strip speed and upload timing. Controlled terrain checks
 separately require lower-ground landing, continued support, and real-pit death.
 The physical jump test measures world displacement as the camera moves.
+Two longer fall fixtures cover a 232-pixel drop, at least eight vertical
+terrain strips, moving/stationary inputs, the horizontal-to-vertical camera
+handoff and four consecutive updates supported by the lower floor.
 
 Sprite-sheet credit for the collection: **metalwario64** and **superphanto**.
 Project testing credits: **cecilou**, **jroweboy** and **fanatik**. Original SMB1

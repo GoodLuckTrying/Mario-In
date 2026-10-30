@@ -10,6 +10,7 @@
 .export UpdateCamera
 .export AttackGate
 .export CameraStep,ScrollUpload
+.export CanScrollDown,CameraBoundary
 .export M_STATE,M_HELD,M_PREV,M_FACING,M_SMB_X_SPEED,M_SMB_X_FORCE,M_SMB_X_ABS,M_X_FRAC,M_Y_FRAC,M_VY,M_VY_FRAC,M_GRAVITY,M_FALL_FORCE,M_POSE
 .segment "BOOT"
 Boot:
@@ -190,19 +191,21 @@ CameraBoundary:
  ; boundary can mean a pit. Keep the feet on screen while terrain arrives.
  lda M_STATE
  beq @done
- lda $C4
- bpl @done
- and #$20
- bne @done
  lda M_VY
  bmi @up
  lda $64
  cmp #172
  bcc @done
+ jsr CanScrollDown
+ bcc @done
  lda #172
  sta $64
 @done:rts
 @up:
+ lda $C4
+ bpl @done
+ and #$20
+ bne @done
  lda $64
  cmp #72
  bcs @done

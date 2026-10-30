@@ -1,5 +1,5 @@
 {
-  "rom_sha256": "68c2e24f1ce5817b50f649a719d02f52416c94f51084f0710afe2266ddec44bb",
+  "rom_sha256": "be71bd9a670bd7d10821ae90ca3f91ea8c210cd580e366c1c23172595e169d05",
   "passed": true,
   "checks": [
     {
@@ -14,88 +14,103 @@
     {
       "name": "native-state-adapters",
       "passed": true,
-      "seconds": 0.4
+      "seconds": 0.37
     },
     {
       "name": "movement",
       "passed": true,
-      "seconds": 2.04
+      "seconds": 1.92
     },
     {
       "name": "fire",
       "passed": true,
-      "seconds": 2.55
+      "seconds": 2.53
     },
     {
       "name": "source-physics",
       "passed": true,
-      "seconds": 3.06
+      "seconds": 2.92
     },
     {
       "name": "camera-presentation",
       "passed": true,
-      "seconds": 1.37
+      "seconds": 1.31
     },
     {
       "name": "health",
       "passed": true,
-      "seconds": 2.16
+      "seconds": 2.23
+    },
+    {
+      "name": "native-fall-boundary",
+      "passed": true,
+      "seconds": 0.35
     },
     {
       "name": "moving-camera-fire",
       "passed": true,
-      "seconds": 2.37
+      "seconds": 2.33
+    },
+    {
+      "name": "tall-cliff-stationary",
+      "passed": true,
+      "seconds": 1.4
+    },
+    {
+      "name": "tall-cliff-moving",
+      "passed": true,
+      "seconds": 1.48
     },
     {
       "name": "graphics-stage-0",
       "passed": true,
-      "seconds": 3.25
-    },
-    {
-      "name": "graphics-stage-1",
-      "passed": true,
-      "seconds": 3.25
+      "seconds": 3.19
     },
     {
       "name": "graphics-stage-2",
       "passed": true,
-      "seconds": 3.07
+      "seconds": 3.13
+    },
+    {
+      "name": "graphics-stage-1",
+      "passed": true,
+      "seconds": 3.17
     },
     {
       "name": "graphics-stage-3",
       "passed": true,
-      "seconds": 3.24
-    },
-    {
-      "name": "graphics-stage-4",
-      "passed": true,
-      "seconds": 3.38
+      "seconds": 3.25
     },
     {
       "name": "graphics-stage-5",
       "passed": true,
-      "seconds": 3.13
+      "seconds": 2.99
+    },
+    {
+      "name": "graphics-stage-4",
+      "passed": true,
+      "seconds": 3.08
     },
     {
       "name": "graphics-stage-6",
       "passed": true,
-      "seconds": 3.26
+      "seconds": 3.09
     },
     {
       "name": "graphics-stage-8",
       "passed": true,
-      "seconds": 3.11
+      "seconds": 3.13
     },
     {
       "name": "graphics-stage-7",
       "passed": true,
-      "seconds": 3.32
+      "seconds": 3.35
     }
   ],
   "originals_unchanged": true,
   "ips_reconstructs_rom": true,
   "physics": {
-    "rom_sha256": "68c2e24f1ce5817b50f649a719d02f52416c94f51084f0710afe2266ddec44bb",
+    "rom_sha256": "be71bd9a670bd7d10821ae90ca3f91ea8c210cd580e366c1c23172595e169d05",
     "reference_commit": "46ff88f7d9e854db80bf8d50e5bf74340fcc64ce",
     "cases": 110,
     "updates": 15400,
@@ -764,13 +779,13 @@
     ]
   },
   "combat": {
-    "rom_sha256": "68c2e24f1ce5817b50f649a719d02f52416c94f51084f0710afe2266ddec44bb",
+    "rom_sha256": "be71bd9a670bd7d10821ae90ca3f91ea8c210cd580e366c1c23172595e169d05",
     "passed": true,
     "cases": 8,
     "scope": "Actual native damage/state handlers and patched gates under a 6502 CPU; native sound/score calls are isolated where noted."
   },
   "native_state": {
-    "rom_sha256": "68c2e24f1ce5817b50f649a719d02f52416c94f51084f0710afe2266ddec44bb",
+    "rom_sha256": "be71bd9a670bd7d10821ae90ca3f91ea8c210cd580e366c1c23172595e169d05",
     "passed": true,
     "cases": 654
   },

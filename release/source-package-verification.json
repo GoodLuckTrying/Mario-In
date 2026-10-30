@@ -1,5 +1,5 @@
 {
-  "verified_utc": "2026-10-30T21:49:51.898011+00:00",
+  "verified_utc": "2026-10-30T23:26:21.384627+00:00",
   "passed": true,
   "checks": [
     {
@@ -140,8 +140,8 @@
     {
       "game": "karnov",
       "passed": true,
-      "rom_sha256": "68c2e24f1ce5817b50f649a719d02f52416c94f51084f0710afe2266ddec44bb",
-      "patch_sha256": "c73970e374a71dfd4529b91fe43488546df4b07df7f51fa4880099022fc299d6",
+      "rom_sha256": "be71bd9a670bd7d10821ae90ca3f91ea8c210cd580e366c1c23172595e169d05",
+      "patch_sha256": "0a8f62b9e5eaa7809e0b11e20ec8c2beccffcde88bb5ce8a44b8023c0eb98e20",
       "rebuilt_rom_matches": true,
       "rebuilt_patch_matches": true,
       "ips_round_trip": true

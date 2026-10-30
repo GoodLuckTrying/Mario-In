@@ -1,3 +1,39 @@
+CanScrollDown:
+ ; A horizontal strip must finish before the host can choose a vertical one.
+ ; Use the same level bounds and two map columns as native $B19F/$B124,
+ ; including its down-scroll lock, rather than treating that wait as a pit.
+ lda $C4
+ and #$B0
+ cmp #$90
+ beq @yes
+ lda $5D
+ and #$20
+ bne @no
+ lda $A0
+ cmp #$24
+ bcs @no
+ clc
+ adc #12
+ tay
+ ldx $9F
+ jsr $C36B
+ bmi @no
+ lda $A0
+ clc
+ adc #12
+ tay
+ lda $9F
+ clc
+ adc #15
+ tax
+ jsr $C36B
+ bmi @no
+@yes:
+ sec
+ rts
+@no:
+ clc
+ rts
 CameraStep:
  jsr $B643
  lda M_ACTIVE
