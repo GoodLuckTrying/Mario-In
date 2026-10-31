@@ -59,10 +59,13 @@ def main():
  patch.hook(15,0xC117,h['Palette'],'Fire palette during native vblank','AD 02 20',True)
  for tile,pair in atlas.items():
   patch.put(0,0x8000+tile*16,pair,'Retired side-view player CHR pair')
-  patch.put(2,0x8800+tile*16,pair,'Retired overhead player CHR pair')
- patch.put(2,0x8800,dynamic[:128],'Preloaded complete front pose in first overhead buffer')
+  if tile in fire:patch.put(2,0x8800+tile*16,pair,'Overhead fireball CHR pair')
+ # Native overhead Diskarmor frames use $0A/$12/$1E/$26. Leave those and
+ # all enemy patterns intact; $30..$3F belong to retired player poses only.
+ for tile in [0x30,0x38]:
+  patch.put(2,0x8800+tile*16,dynamic[:128],'Preloaded complete overhead front-pose buffer')
  rom=bytes(patch.rom);(P/'dist'/f'{NAME}.nes').write_bytes(rom);(P/'dist'/f'{NAME}.ips').write_bytes(ips(old,rom))
  manifest=dict(base_rom=str(BASE),base_sha256=BASE_SHA,smb_sha256=SMB_SHA,output_sha256=sha(rom),mapper=2,submapper=2,prg_kib=256,work_ram_kib=8,labels=h,native={},hooks=patch.changes,poses=selected,player_chr_pairs=sorted(atlas),protected_chr_start=0x460,
-  source_method='Exact USA byte hooks and physical-bank/native-controller traces',source_revision='smb1base 46ff88f7d9e854db80bf8d50e5bf74340fcc64ce; USE_SMB2J_FEATURES=0',directional_source=source_info(),directional_buffers=[0,8])
+  source_method='Exact USA byte hooks and physical-bank/native-controller traces',source_revision='smb1base 46ff88f7d9e854db80bf8d50e5bf74340fcc64ce; USE_SMB2J_FEATURES=0',directional_source=source_info(),directional_buffers=[0,8],overhead_directional_buffers=[0x30,0x38])
  (P/'build/manifest.json').write_text(json.dumps(manifest,indent=2));print(NAME,sha(rom))
 if __name__=='__main__':main()

@@ -181,12 +181,12 @@
       "game": "rygar",
       "name": "Mario in Rygar",
       "patch": "Mario in Rygar.ips",
-      "patch_sha256": "99c9d4f07711881dc45be26cfab7647f5fda6238e9a2cf22b6c4adeb43d823ca",
-      "rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+      "patch_sha256": "8941f770f388a6b83b7e7e35ee871cfe64b282704dfcf4963fb17aa4f42d324f",
+      "rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
       "base_filename": "Rygar (USA).nes",
       "base_sha256": "965330fed9f5b8492452f3b53084752e83b7f899a1f88f3c475ece2fde6f9231",
       "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
-      "verification_checks": 17
+      "verification_checks": 22
     }
   ]
 }

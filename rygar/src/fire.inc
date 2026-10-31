@@ -37,6 +37,8 @@ FireUpdate:
  lda #0
  sta FB+4,x
  sta FB+5,x
+ sta FB+8,x
+ sta FB+9,x
  lda $04B2
  and #3
  sta FB+6,x
@@ -69,8 +71,11 @@ FireOne:
  jcc @kill
  cmp #216
  jcs @kill
+ lda #4
+ sta M_STEPS
  lda FB+7,x
  beq @horizontal
+ jsr OverheadSpeed
  lda FB+6,x
  cmp #2
  bcc @horizontal
@@ -79,12 +84,12 @@ FireOne:
  cpy #3
  beq @up
  clc
- adc #4
+ adc M_STEPS
  jcs @kill
  jmp @overheadY
 @up:
  sec
- sbc #4
+ sbc M_STEPS
  jcc @kill
 @overheadY:
  sta FB+2,x
@@ -95,13 +100,13 @@ FireOne:
  bne @left
  lda FB+1,x
  clc
- adc #4
+ adc M_STEPS
  jcs @kill
  jmp @x
 @left:
  lda FB+1,x
  sec
- sbc #4
+ sbc M_STEPS
  jcc @kill
 @x:
  sta FB+1,x
@@ -208,7 +213,8 @@ FireOne:
  ldy M_POINT_Y
  jsr FirePoint
  ldx M_FB
- cmp #0
+ ; In overhead areas plane one is walkable ground, not a one-way floor.
+ and #2
  bne @kill
  lda FB+2,x
  cmp #8
@@ -224,6 +230,38 @@ FireOne:
  lda #0
  sta FB,x
  rts
+; Zelda's projected SMB bounce: move in one straight direction, slowing at
+; the top of the arc and accelerating toward the next rebound. Independent
+; phase/fraction state keeps both shots on the same 20-update speed curve.
+OverheadSpeed:
+ ldy FB+8,x
+ lda BounceSpeed,y
+ lsr
+ lsr
+ lsr
+ lsr
+ sta M_STEPS
+ lda BounceSpeed,y
+ asl
+ asl
+ asl
+ asl
+ clc
+ adc FB+9,x
+ sta FB+9,x
+ lda M_STEPS
+ adc #0
+ sta M_STEPS
+ iny
+ cpy #20
+ bcc :+
+ ldy #0
+:
+ tya
+ sta FB+8,x
+ rts
+BounceSpeed:
+ .byte 48,43,38,33,28,23,18,13,8,8,8,8,12,17,22,27,32,37,42,47
 FireFeet:
  ; Probe both feet (or both top corners on ascent), never a host actor box.
  sty M_POINT_Y
@@ -359,10 +397,18 @@ FireCell:
  sta $0203,y
  lda FB+2,x
  sta $0200,y
+ lda FB+7,x
+ beq @side
+ lda FB+8,x
+ and #2
+ lsr
+ jmp @tile
+@side:
  lda $32
  and #4
  lsr
  lsr
+@tile:
  tax
  lda FireTiles,x
  sta $0201,y

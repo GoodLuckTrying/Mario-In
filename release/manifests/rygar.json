@@ -2,29 +2,29 @@
   "base_rom": "C:\\nes\\Rygar (USA).nes",
   "base_sha256": "965330fed9f5b8492452f3b53084752e83b7f899a1f88f3c475ece2fde6f9231",
   "smb_sha256": "0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea",
-  "output_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+  "output_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
   "mapper": 2,
   "submapper": 2,
   "prg_kib": 256,
   "work_ram_kib": 8,
   "labels": {
-    "BeginOverhead": 24877,
-    "BeginStep": 24741,
+    "BeginOverhead": 24934,
+    "BeginStep": 24746,
     "Boot": 57010,
-    "Calculate": 24903,
-    "ContactDamage": 25139,
-    "DrawGate": 25611,
+    "Calculate": 24960,
+    "ContactDamage": 25247,
+    "DrawGate": 25688,
     "DynamicFrames": 28672,
     "FB": 32256,
-    "FinishFrame": 25978,
-    "FireDraw": 26764,
-    "FirePoint": 26570,
-    "FireTiles": 27450,
-    "FireUpdate": 26042,
-    "GetPlayerAnimSpeed": 27584,
-    "Horizontal": 25464,
-    "ImposeFriction": 27649,
-    "Jump": 25372,
+    "FinishFrame": 26081,
+    "FireDraw": 26952,
+    "FirePoint": 26758,
+    "FireTiles": 27657,
+    "FireUpdate": 26145,
+    "GetPlayerAnimSpeed": 27791,
+    "Horizontal": 25541,
+    "ImposeFriction": 27856,
+    "Jump": 25449,
     "M_FACING": 32007,
     "M_FALL_FORCE": 32023,
     "M_GRAVITY": 32022,
@@ -39,48 +39,50 @@
     "M_VY_FRAC": 32021,
     "M_X_FRAC": 32036,
     "M_Y_FRAC": 32037,
-    "MarioTiles": 27426,
-    "Palette": 25984,
-    "Response": 25019,
+    "MarioTiles": 27633,
+    "Palette": 26087,
+    "Response": 25083,
     "SpawnReset": 24631,
-    "Step": 25178,
-    "StompBounce": 25088,
-    "StreamArt": 26916,
-    "UpdateCamera": 27260,
-    "Vertical": 25504,
-    "X_Physics": 27462,
-    "XSpdSign": 27731,
-    "LeftFrict": 27668,
-    "RghtFrict": 27701,
-    "SetAbsSpd": 27740,
-    "JoypFrict": 27665,
-    "ProcSkid": 27621,
-    "SetAnimSpd": 27642,
-    "ChkSkid": 27599,
-    "SetRunSpd": 27615,
-    "PlayerAnimTmrData": 27581,
-    "ExitPhy": 27580,
-    "GetXPhy2": 27547,
-    "FastXSp": 27522,
-    "SetRTmr": 27527,
-    "ChkRFast": 27507,
-    "GetXPhy": 27532,
-    "ProcPRun": 27480,
-    "FrictionData": 27459,
-    "MaxRightXSpdData": 27455,
-    "MaxLeftXSpdData": 27452,
-    "FireCell": 26775,
-    "FireEnemy": 26686,
-    "FireFeet": 26534,
-    "FireOne": 26155,
-    "DirectionalPose": 26811,
-    "JumpSpeed": 25459,
-    "FallForce": 25454,
-    "JumpForce": 25449,
-    "AnimateMario": 27342,
-    "AnimateInterval": 27367,
-    "AnimateClimb": 27401,
-    "ResetMotion": 25148,
+    "Step": 25286,
+    "StompBounce": 25196,
+    "StreamArt": 27118,
+    "UpdateCamera": 27467,
+    "Vertical": 25581,
+    "X_Physics": 27669,
+    "XSpdSign": 27938,
+    "LeftFrict": 27875,
+    "RghtFrict": 27908,
+    "SetAbsSpd": 27947,
+    "JoypFrict": 27872,
+    "ProcSkid": 27828,
+    "SetAnimSpd": 27849,
+    "ChkSkid": 27806,
+    "SetRunSpd": 27822,
+    "PlayerAnimTmrData": 27788,
+    "ExitPhy": 27787,
+    "GetXPhy2": 27754,
+    "FastXSp": 27729,
+    "SetRTmr": 27734,
+    "ChkRFast": 27714,
+    "GetXPhy": 27739,
+    "ProcPRun": 27687,
+    "FrictionData": 27666,
+    "MaxRightXSpdData": 27662,
+    "MaxLeftXSpdData": 27659,
+    "FireCell": 26963,
+    "BounceSpeed": 26702,
+    "FireEnemy": 26874,
+    "FireFeet": 26722,
+    "OverheadSpeed": 26655,
+    "FireOne": 26264,
+    "DirectionalPose": 27013,
+    "JumpSpeed": 25536,
+    "FallForce": 25531,
+    "JumpForce": 25526,
+    "AnimateMario": 27549,
+    "AnimateInterval": 27574,
+    "AnimateClimb": 27608,
+    "ResetMotion": 25256,
     "Init": 24576,
     "BankEight": 57069
   },
@@ -177,22 +179,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35072,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33056,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35104,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -201,22 +191,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35136,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33120,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35168,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -225,22 +203,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35200,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33184,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35232,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -249,22 +215,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35264,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33248,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35296,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -273,22 +227,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35328,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33312,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35360,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -297,22 +239,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35392,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33376,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35424,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -321,22 +251,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35456,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33440,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35488,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -345,22 +263,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35520,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33504,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35552,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -369,22 +275,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35584,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33568,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35616,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -393,22 +287,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35648,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33632,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35680,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -417,22 +299,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35712,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33696,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35744,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -441,22 +311,10 @@
       "name": "Retired side-view player CHR pair"
     },
     {
-      "bank": 2,
-      "cpu": 35776,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
-    },
-    {
       "bank": 0,
       "cpu": 33760,
       "size": 32,
       "name": "Retired side-view player CHR pair"
-    },
-    {
-      "bank": 2,
-      "cpu": 35808,
-      "size": 32,
-      "name": "Retired overhead player CHR pair"
     },
     {
       "bank": 0,
@@ -468,7 +326,7 @@
       "bank": 2,
       "cpu": 35840,
       "size": 32,
-      "name": "Retired overhead player CHR pair"
+      "name": "Overhead fireball CHR pair"
     },
     {
       "bank": 0,
@@ -480,13 +338,19 @@
       "bank": 2,
       "cpu": 35872,
       "size": 32,
-      "name": "Retired overhead player CHR pair"
+      "name": "Overhead fireball CHR pair"
     },
     {
       "bank": 2,
-      "cpu": 34816,
+      "cpu": 35584,
       "size": 128,
-      "name": "Preloaded complete front pose in first overhead buffer"
+      "name": "Preloaded complete overhead front-pose buffer"
+    },
+    {
+      "bank": 2,
+      "cpu": 35712,
+      "size": 128,
+      "name": "Preloaded complete overhead front-pose buffer"
     }
   ],
   "poses": [
@@ -537,5 +401,9 @@
   "directional_buffers": [
     0,
     8
+  ],
+  "overhead_directional_buffers": [
+    48,
+    56
   ]
 }

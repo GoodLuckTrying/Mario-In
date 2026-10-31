@@ -1,5 +1,5 @@
 {
-  "rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+  "rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
   "passed": true,
   "checks": [
     {
@@ -9,88 +9,113 @@
     {
       "name": "native-combat",
       "passed": true,
-      "seconds": 0.1
+      "seconds": 0.08
     },
     {
       "name": "native-state-adapters",
       "passed": true,
-      "seconds": 0.55
+      "seconds": 0.48
     },
     {
       "name": "movement",
       "passed": true,
-      "seconds": 1.64
+      "seconds": 1.61
     },
     {
       "name": "fire",
       "passed": true,
-      "seconds": 2.2
+      "seconds": 2.17
     },
     {
       "name": "source-physics",
       "passed": true,
-      "seconds": 2.52
+      "seconds": 2.34
     },
     {
       "name": "health",
       "passed": true,
-      "seconds": 1.88
+      "seconds": 1.83
     },
     {
       "name": "moving-camera-fire",
       "passed": true,
-      "seconds": 2.14
+      "seconds": 1.91
+    },
+    {
+      "name": "traversal-and-Zelda-fireballs",
+      "passed": true,
+      "seconds": 0.54
     },
     {
       "name": "weapon-scroll",
       "passed": true,
-      "seconds": 2.74
+      "seconds": 2.37
+    },
+    {
+      "name": "wall-ledge",
+      "passed": true,
+      "seconds": 1.29
+    },
+    {
+      "name": "walls",
+      "passed": true,
+      "seconds": 1.32
+    },
+    {
+      "name": "ropes",
+      "passed": true,
+      "seconds": 1.11
+    },
+    {
+      "name": "overhead-weapons",
+      "passed": true,
+      "seconds": 1.73
     },
     {
       "name": "graphics-side",
       "passed": true,
-      "seconds": 5.08
+      "seconds": 4.81
     },
     {
       "name": "graphics-overhead-0",
       "passed": true,
-      "seconds": 6.19
+      "seconds": 6.03
     },
     {
       "name": "graphics-overhead-12",
       "passed": true,
-      "seconds": 6.08
+      "seconds": 6.27
     },
     {
       "name": "graphics-overhead-20",
       "passed": true,
-      "seconds": 5.74
+      "seconds": 5.84
     },
     {
       "name": "graphics-side-24",
       "passed": true,
-      "seconds": 5.38
+      "seconds": 5.53
     },
     {
       "name": "graphics-side-42",
       "passed": true,
-      "seconds": 5.65
+      "seconds": 5.95
     },
     {
       "name": "graphics-side-52",
       "passed": true,
-      "seconds": 5.2
+      "seconds": 5.86
     },
     {
       "name": "graphics-side-60",
       "passed": true,
-      "seconds": 5.19
+      "seconds": 5.72
     }
   ],
   "originals_unchanged": true,
   "ips_reconstructs_rom": true,
   "physics": {
-    "rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+    "rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
     "reference_commit": "46ff88f7d9e854db80bf8d50e5bf74340fcc64ce",
     "cases": 110,
     "updates": 15400,
@@ -759,13 +784,13 @@
     ]
   },
   "combat": {
-    "rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+    "rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
     "passed": true,
     "cases": 4,
     "scope": "Actual native damage/state handlers and patched gates under a 6502 CPU; native sound/score calls are isolated where noted."
   },
   "native_state": {
-    "rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+    "rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
     "passed": true,
     "cases": 811
   },
@@ -774,5 +799,12 @@
     "Native health, collision state machines, equipment and scripted/overhead movement are intentional host adaptations.",
     "Controlled enemy contacts and native stage/entry loading are used to exercise injury, death and graphics without an unassisted campaign replay.",
     "The source motor matches isolated SMB1 cases; native terrain, camera cadence and required traversal states remain host-specific."
-  ]
+  ],
+  "traversal": {
+    "rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
+    "passed": true,
+    "cases": 1393,
+    "zelda_reference_sha256": "7f76197d084d48759fb6f6fb14079cbd5863a3c6e59e4398a70adc2e925a8891",
+    "scope": "1,280 update comparisons with assembled Zelda fireball code; native directional contact and rope/grapple handoffs under 6502 execution. Camera and enemy contacts are isolated here; Mesen fixtures cover their integration."
+  }
 }

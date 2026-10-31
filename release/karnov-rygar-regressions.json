@@ -1,5 +1,5 @@
 {
-  "scope": "Before/after replays with exact ROM hashes. Each entry retains its tested versions; the release catalog may contain later fixes. Camera/fall fixtures use controlled terrain and native eighth-stage loading. Complete campaigns and hardware remain unverified.",
+  "scope": "Before/after replays with exact ROM hashes. Each entry retains its tested versions; the release catalog may contain later fixes. Camera/fall fixtures use controlled terrain and native stage loading where documented. Rygar also has a native opening wall route, controlled wall room, staged native rope/contact query and real overhead weapon entry. Complete campaigns and hardware remain unverified.",
   "checks": [
     {
       "game": "karnov",
@@ -41,6 +41,51 @@
         "native-fall-boundary"
       ],
       "native_permission_cases": 4536
+    },
+    {
+      "game": "rygar",
+      "fixture": "rygar/tests/wall-ledge.lua",
+      "previous_rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+      "previous_failure": "falling beside the native ledge must not hang on a wall",
+      "current_rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
+      "current_check": "wall-ledge",
+      "current_passed": true
+    },
+    {
+      "game": "rygar",
+      "fixture": "rygar/tests/walls.lua",
+      "previous_rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+      "previous_failure": "wall contact must not repeatedly restart the falling arc",
+      "current_rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
+      "current_check": "walls",
+      "current_passed": true
+    },
+    {
+      "game": "rygar",
+      "fixture": "rygar/tests/ropes.lua",
+      "previous_rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+      "previous_failure": "native rope/grappling state must bypass SMB integration",
+      "current_rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
+      "current_check": "ropes",
+      "current_passed": true
+    },
+    {
+      "game": "rygar",
+      "fixture": "rygar/tests/overhead-weapons.lua",
+      "previous_rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+      "previous_failure": "displayed native overhead Diskarmor CHR: tile 18 byte 0",
+      "current_rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
+      "current_check": "overhead-weapons",
+      "current_passed": true
+    },
+    {
+      "game": "rygar",
+      "fixture": "rygar/tests/overhead-weapons.lua --define SKIP_ART=true",
+      "previous_rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
+      "previous_failure": "overhead B throws persistent fireballs: 0",
+      "current_rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
+      "current_check": "overhead-weapons",
+      "current_passed": true
     }
   ]
 }

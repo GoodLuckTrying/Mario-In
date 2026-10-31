@@ -91,7 +91,11 @@ StreamArt:
  ora $00
  sta $00
  lda $2002
- lda #0
+ lda M_DYN_WRITE
+ lsr
+ lsr
+ lsr
+ lsr
  sta $2006
  lda M_DYN_WRITE
  asl

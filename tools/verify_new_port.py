@@ -15,7 +15,7 @@ def main(game):
  if game=='karnov':
   assert data[16+262144:16+262144+65536]==base[16+131072:],'all original background/enemy CHR retained'
  else:
-  for bank,regions in [(0,[(0x440,16384)]),(2,[(0,0x800),(0xC40,16384)])]:
+  for bank,regions in [(0,[(0x440,16384)]),(2,[(0,0xB00),(0xC40,16384)])]:
    for lo,hi in regions:assert data[16+bank*16384+lo:16+bank*16384+hi]==base[16+bank*16384+lo:16+bank*16384+hi],'native weapon/enemy/background CHR preserved'
  logs=p/'build/verification';logs.mkdir(exist_ok=True)
  jobs=[('source-physics',['tools/verify_land_pair.py',game]),('native-combat',['tools/verify_pair_combat.py',game])]
@@ -35,6 +35,8 @@ def main(game):
   replay('opening-cliff-walk-off','karnov/tests/opening-cliff.lua',RUN='false',JUMP=-1)
   for stage in range(9):replay(f'graphics-stage-{stage}',f'{game}/tests/graphics.lua',STAGE=stage)
  else:
+  jobs.append(('traversal-and-Zelda-fireballs',['rygar/tools/verify_traversal.py']))
+  for fixture in ['wall-ledge','walls','ropes','overhead-weapons']:replay(fixture,f'rygar/tests/{fixture}.lua')
   replay('graphics-side',f'{game}/tests/graphics.lua')
   for entry in [0,12,20]:replay(f'graphics-overhead-{entry}',f'{game}/tests/graphics.lua',ENTRY=entry)
   for entry in [24,42,52,60]:replay(f'graphics-side-{entry}',f'{game}/tests/graphics.lua',ENTRY=entry,SIDE='true')
@@ -51,6 +53,7 @@ def main(game):
   physics=json.loads((p/'build/physics-results.json').read_text()),combat=json.loads((p/'build/combat-results.json').read_text()),
   native_state=json.loads((p/'build/state-results.json').read_text()),
   limits=['Mesen 2 and isolated 6502 instruction fixtures; no physical-console test or complete campaign clear.','Native health, collision state machines, equipment and scripted/overhead movement are intentional host adaptations.','Controlled enemy contacts and native stage/entry loading are used to exercise injury, death and graphics without an unassisted campaign replay.','The source motor matches isolated SMB1 cases; native terrain, camera cadence and required traversal states remain host-specific.'])
+ if game=='rygar':receipt['traversal']=json.loads((p/'build/traversal-results.json').read_text())
  (p/'dist/verification.json').write_text(json.dumps(receipt,indent=2)+'\n')
  print('PASS',game,len(rows),'checks bound to',receipt['rom_sha256'],flush=True)
 if __name__=='__main__':main(sys.argv[1])

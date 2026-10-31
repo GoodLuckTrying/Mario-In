@@ -1,5 +1,5 @@
 {
-  "verified_utc": "2026-10-30T23:26:21.384627+00:00",
+  "verified_utc": "2026-10-31T00:09:00.713000+00:00",
   "passed": true,
   "checks": [
     {
@@ -149,8 +149,8 @@
     {
       "game": "rygar",
       "passed": true,
-      "rom_sha256": "a2a9c69a728aadde8e72b9b195b91ed9df8952eb4b6ae44bbfe3832b5084818e",
-      "patch_sha256": "99c9d4f07711881dc45be26cfab7647f5fda6238e9a2cf22b6c4adeb43d823ca",
+      "rom_sha256": "9a5880cc16e3f05654c4d06189aaafe88d4c0fc8e3f90609dbc277d5ce116b53",
+      "patch_sha256": "8941f770f388a6b83b7e7e35ee871cfe64b282704dfcf4963fb17aa4f42d324f",
       "rebuilt_rom_matches": true,
       "rebuilt_patch_matches": true,
       "ips_round_trip": true

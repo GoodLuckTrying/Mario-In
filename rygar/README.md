@@ -4,7 +4,9 @@ Mario starts in permanent Fire form while retaining Rygar's native energy,
 equipment, Diskarmor and progression. A jumps in side-view areas. B keeps the
 Diskarmor/native action and adds up to two Mario fireballs; holding B while
 moving enables SMB1 running. Fireballs bounce on side-view terrain and travel
-in the native facing direction in overhead areas. They use the original
+in the native facing direction in overhead areas. Overhead shots use the same
+20-update speed curve as the Zelda port: a straight path that slows near the
+projected bounce apex and speeds up toward the next rebound. They use the original
 enemy weapon-hit processing, so native boss and equipment rules remain relevant.
 
 The native stomp window is more forgiving and now updates Mario's own bounce
@@ -26,6 +28,10 @@ python rygar/tools/build.py
 python rygar/tools/verify.py
 python tools/install_new_port.py rygar
 ```
+
+The overhead movement comparison uses the assembled Zelda port as its
+reference. Build that once with `python zelda/tools/build.py` before verifying
+Rygar; the comparison validates the reference ROM against its manifest hash.
 
 Required inputs in `C:/nes`:
 
@@ -62,7 +68,12 @@ actor updates, item stats, dialogue and room transfer handlers stay native.
 SMB fractions are kept separately from native fields whose low bits also
 hold collision flags. Grounded terrain detection receives the original
 downward probe without adding that displacement to Mario's free movement.
-Decoded collision response controls walls, ceilings and landing. Fireball
+Decoded directional collision response controls walls, ceilings and landing.
+A wall's corner bitmap cannot establish ground support or restart a fall;
+opposite-facing contacts cannot prevent leaving a wall. Native camera-resolved
+position fractions are imported before the next SMB prediction. Native
+no-gravity rope/grappling states bypass the SMB integrator, including attachment
+states that share an ordinary movement action group. Fireball
 terrain probes read the native two-plane collision bitmap at the visible
 ball's edges, with pixel-by-pixel vertical movement. One-way floors only catch
 descending balls; a rebound cannot be deleted by its former floor overlap.
@@ -78,16 +89,23 @@ only a complete frame is displayed. Transfers are 32 bytes per vblank and
 wait behind larger native VRAM queues. Mario's animation timer is independent
 of the counter reused by native enemy spawning. Native sprite priority is
 retained when drawing behind foreground terrain.
+Overhead buffers occupy player-only patterns `$30..$3F`, preserving the native
+Diskarmor patterns `$0A/$12/$1E/$26`. Both buffers contain a complete front
+pose at area entry, before the first overhead player update. The native
+overhead ground plane is walkable for fireballs; solid walls still stop them.
 
 ## Verification and limits
 
-The current receipt contains 17 checks. The motor comparison executes 110
+The current receipt contains 22 checks. The motor comparison executes 110
 cases and 15,400 updates against assembled `smb1base` movement routines at
 commit `46ff88f7d9e854db80bf8d50e5bf74340fcc64ce`, with SMB2J features disabled.
 Additional CPU cases exercise native stomp flags, rejection of ascending
 contacts, paired contacts and fireball damage without moving the Diskarmor.
 Another 811 cases cover native movement handoffs, integer camera wrap and
 shot lookup coordinates compared with the native bitmap-reading instructions.
+Another 1,393 checks include 1,280 projectile updates compared directly with
+the assembled Zelda port in four directions, plus directional wall responses
+and native rope/grappling handoffs.
 
 Mesen checks physical controls, floor bounces with the Diskarmor still active,
 fireball world speed through camera movement, energy damage and death/game-over
@@ -98,6 +116,11 @@ contacts isolate those scenarios. The constrained overhead entry uses short
 movement pulses so its art check does not intentionally walk into water.
 Sustained moving/fire stress also checks that rendering resumes before the
 visible scanlines, while the Diskarmor and repeatedly bouncing shots stay active.
+New terrain checks replay the actual first-stage pit wall, jump/land/reverse
+against controlled solid walls, and climb up/down from a staged native rope
+attachment. The latter retains native movement and supplies its rope-contact
+query. Hardware OAM and CHR checks cover both climb frames and the original
+Diskarmor frames during overhead firing, with two independent shots active.
 
 These fixtures are not a full campaign clear or a physical-console test.
 Native traversal, camera cadence and scene geometry are intentional host

@@ -84,6 +84,7 @@ SpawnReset:
  sta M_DYN_PHASE
  sta M_DYNAMIC
  sta M_VIEW_FLIP
+ sta M_DYN_BUFFER
  lda #2
  sta M_VIEW
  lda #$FF
@@ -97,9 +98,10 @@ SpawnReset:
  sta M_DYN_READY
  lda #0
  sta M_DYN_SHOWN
- sta M_DYN_BUFFER
  sta M_DYN_WANT
  sta M_VIEW
+ lda #$30
+ sta M_DYN_BUFFER
  lda $1C
  sta M_ART_WORLD
 :
@@ -129,6 +131,11 @@ BeginStep:
  sta FB+16
 :
  jsr FireUpdate
+ ; Bit 2 disables native gravity during rope/grappling traversal. Those
+ ; states own their velocities even when their action group resembles a jump.
+ lda $0492
+ and #4
+ bne @native
  ; Low action groups are normal side-view movement. All equipment,
  ; overhead paths, hurt, death and scripted actions keep native integration.
  lda $04B2
@@ -142,14 +149,17 @@ BeginStep:
  cmp #$68
  beq @ordinary
 @native:
+ lda $0492
+ and #4
+ beq :+
  lda $04B2
  and #$78
- cmp #$30
+ cmp #$20
  bcc :+
- cmp #$40
+ cmp #$58
  bcs :+
  lda $28
- and #$0C
+ and #$0F
  beq :+
  jsr AnimateClimb
 :
@@ -161,6 +171,24 @@ BeginStep:
  lda $0492
  and #$A0
  beq @native
+ ; Camera centering transfers resolved subpixels into $14/$15 and clears
+ ; the native screen-position fraction. Start from that resolved position;
+ ; retaining our old screen fraction counts the camera's fraction twice.
+ ; The low three private bits are finer than the native collision flags.
+ lda M_X_FRAC
+ and #7
+ sta M_TMP
+ lda $0502
+ and #$F8
+ ora M_TMP
+ sta M_X_FRAC
+ lda M_Y_FRAC
+ and #7
+ sta M_TMP
+ lda $04E2
+ and #$F8
+ ora M_TMP
+ sta M_Y_FRAC
  jsr Step
  ldx #3
 @save:
@@ -210,8 +238,8 @@ Calculate:
  clc
  jsr $962B
  lda M_CONTACT
- and #3
- bne @x
+ and #2
+ bne @verticalContact
  lda M_STATE
  bne :+
  lda #2
@@ -219,6 +247,10 @@ Calculate:
  lda M_FALL_FORCE
  sta M_GRAVITY
 :
+@verticalContact:
+ lda M_CONTACT
+ and #3
+ bne @x
  lda M_PRED
  sta $04
  lda M_PRED+1
@@ -256,11 +288,37 @@ Calculate:
 Response:
  lda M_ACTIVE
  beq @native
+ ; The native diagonal resolver can include the opposite face at an
+ ; already-overlapping ledge corner. It must not stop a fall on a ceiling,
+ ; or stop Mario leaving a wall. Keep only faces blocking this prediction.
+ lda $09
+ ldx M_VY
+ bmi @rising
+ and #$FE
+ jmp @xFace
+@rising:
+ and #$FD
+@xFace:
+ ldx M_SMB_X_SPEED
+ beq @facesReady
+ bmi @leftFace
+ and #$FB
+ jmp @facesReady
+@leftFace:
+ and #$F7
+@facesReady:
+ sta $09
+ ldy $FF
+ sta $0100,y
  lda $09
  and #3
  beq @horizontal
+ ; Native bit 1 is a floor and bit 0 is a ceiling. Velocity sign cannot
+ ; substitute for this distinction at a wall/ledge corner.
+ and #2
+ beq @ceiling
  lda M_VY
- bmi @ceiling
+ bmi @horizontal
  lda #0
  sta M_STATE
  sta M_VY
@@ -268,6 +326,8 @@ Response:
  sta M_Y_FRAC
  jmp @horizontal
 @ceiling:
+ lda M_VY
+ bpl @horizontal
  lda #1
  sta M_VY
  lda #0
@@ -337,18 +397,8 @@ Step:
  beq :+
  dec M_RUNNING_TIMER
 :
- lda M_STATE
- beq @input
- lda M_VY
- bmi @input
- lda $0522
- and #$A0
- beq @input
- lda #0
- sta M_STATE
- sta M_VY
- sta M_VY_FRAC
- jmp @input
+ ; Only decoded vertical collision response establishes support. A native
+ ; corner bitmap bit also appears on walls and cannot mean "grounded".
 @input:
  lda M_HELD
  and #3
@@ -562,14 +612,26 @@ DrawGate:
  sta M_DYN_READY
  lda #$FF
  sta M_DYN_SHOWN
+ lda $20
+ and #2
+ beq :+
+ ; The native overhead CHR load includes this complete initial frame.
+ lda #$30
+ sta M_DYN_BUFFER
+ lda #0
+ sta M_DYN_SHOWN
+ lda #1
+ sta M_DYN_READY
 :
  lda #0
  sta M_DYNAMIC
  lda $04F2
  sta M_OAMY
- lda $04A2
- cmp #1
- bne @side
+ ; Scene orientation is valid before the first native player update sets
+ ; $04A2, including the first visible frame after CHR loading.
+ lda $20
+ and #2
+ beq @side
  jsr DirectionalPose
  lda M_DYN_WANT
  jmp @dynamic
@@ -596,11 +658,14 @@ DrawGate:
  sta M_POSE
  bne @render
 @nativePose:
+ lda $0492
+ and #4
+ beq @walk
  lda $04B2
  and #$78
- cmp #$30
+ cmp #$20
  bcc @walk
- cmp #$40
+ cmp #$58
  bcs @walk
  lda M_ANIM
  and #1
@@ -643,9 +708,9 @@ DrawGate:
  lda #$40
 :
  sta M_ATTR
- lda $04A2
- cmp #1
- bne :+
+ lda $20
+ and #2
+ beq :+
  lda M_VIEW_FLIP
  sta M_ATTR
 :
