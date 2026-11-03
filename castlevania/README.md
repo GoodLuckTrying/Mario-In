@@ -5,7 +5,7 @@ installed build, SHA-256 `6f2948358135e50d33ecbf5c5ff742709886faea752ec65d71f37f
 
 Mario in Castlevania - native NES ROM hack
 
-Open Mario in Castlevania.nes in an NES 2.0 emulator supporting MMC5
+Open `C:\nes\Mario In\Mario in Castlevania.nes` in an NES 2.0 emulator supporting MMC5
 (mapper 5) with 16KB CHR RAM, such as Mesen. Reload the ROM and start a new game.
 
 Left/Right: move with SMB acceleration, friction and reversal.

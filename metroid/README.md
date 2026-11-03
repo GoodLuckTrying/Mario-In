@@ -1,6 +1,6 @@
 # Mario in Metroid
 
-Open `C:\nes\Mario in Metroid.nes` and start a new game. The original USA ROM
+Open `C:\nes\Mario In\Mario in Metroid.nes` and start a new game. The original USA ROM
 remains unchanged. This native MMC1 build expands PRG ROM to 256 KiB.
 
 - **Left/Right:** Mario movement; holding **B** also permits running.

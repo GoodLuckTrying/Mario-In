@@ -1,8 +1,11 @@
 """Build a native MMC1 ROM and IPS patch from the user's local originals."""
 from pathlib import Path
+import sys
 import argparse, hashlib, json, re, subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent / 'tools'))
+from port_paths import ensure_install_dir
 CC65 = ROOT.parent / 'vendor/smb1base/tools/Windows/cc65/bin'
 KI = Path('C:/nes/Kid Icarus (USA, Europe).nes')
 SMB = Path('C:/nes/Super Mario Bros. (World).nes')
@@ -139,7 +142,7 @@ def main():
     (ROOT/'build/manifest.json').write_text(json.dumps(info,indent=2))
     if args.install:
         for ext in ('nes','ips'):
-            dest=Path('C:/nes')/f'Mario in Kid Icarus.{ext}'
+            dest=ensure_install_dir()/f'Mario in Kid Icarus.{ext}'
             data=(ROOT/f'dist/Mario in Kid Icarus.{ext}').read_bytes()
             if dest.exists() and dest.read_bytes()!=data:
                 backup=dest.with_name(dest.stem+' - backup '+hashlib.sha256(dest.read_bytes()).hexdigest()[:8]+dest.suffix)

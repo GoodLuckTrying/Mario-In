@@ -2,6 +2,8 @@
 from pathlib import Path
 import argparse,hashlib,importlib.util,json,re,shutil,subprocess,xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent / 'tools'))
+from port_paths import ensure_install_dir
 REPO=ROOT.parent/'vendor/zelda'
 CC65=ROOT.parent/'vendor/smb1base/tools/Windows/cc65/bin'
 BASE=Path('C:/nes/Legend of Zelda, The (USA).nes')
@@ -55,13 +57,13 @@ def main():
  if args.install:
   receipt=json.loads((ROOT/'dist/verification.json').read_text());assert receipt['passed']and receipt['rom_sha256']==meta['output_sha256']and all(x['passed']for x in receipt['checks'])
   for ext in ['nes','ips']:
-   data=(ROOT/'dist'/f'{NAME}.{ext}').read_bytes();target=Path('C:/nes')/f'{NAME}.{ext}'
+   data=(ROOT/'dist'/f'{NAME}.{ext}').read_bytes();target=ensure_install_dir()/f'{NAME}.{ext}'
    if target.exists()and target.read_bytes()!=data:
     backup=target.with_name(target.stem+' - backup '+hashlib.sha256(target.read_bytes()).hexdigest()[:8]+target.suffix)
     if not backup.exists():backup.write_bytes(target.read_bytes())
    target.write_bytes(data)
   for src,suffix in [(ROOT/'dist/verification.json',' - verification.json'),(ROOT/'README.md',' - Readme.txt')]:
-   (Path('C:/nes')/(NAME+suffix)).write_bytes(src.read_bytes())
+   (ensure_install_dir()/(NAME+suffix)).write_bytes(src.read_bytes())
  print('Built',NAME,meta['output_sha256'])
 def patch(source,smb):
  sys_path=str(ROOT/'tools')

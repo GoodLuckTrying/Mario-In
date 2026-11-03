@@ -2,7 +2,7 @@
 
 A native NES port built from the local Japan/USA English Kung Fu ROM and SMB1 graphics. The original ROM is not modified.
 
-Load `C:/nes/Mario in Kung Fu.nes` from a fresh reset. Old Kung Fu save states are incompatible with the added character state and mapper.
+Load `C:/nes/Mario In/Mario in Kung Fu.nes` from a fresh reset. Old Kung Fu save states are incompatible with the added character state and mapper.
 
 Controls:
 - Left/right: SMB acceleration and friction; hold B to run.

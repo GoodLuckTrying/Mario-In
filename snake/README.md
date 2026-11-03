@@ -2,7 +2,7 @@
 
 A native NES port built from the local USA Snake Rattle 'n' Roll ROM and SMB1 graphics. The original ROM is not modified.
 
-Load `C:/nes/Mario and Luigi in Snake Rattle n Roll.nes` from a fresh reset. Existing Snake save states are incompatible with the added character state and WRAM.
+Load `C:/nes/Mario In/Mario and Luigi in Snake Rattle n Roll.nes` from a fresh reset. Existing Snake save states are incompatible with the added character state and WRAM.
 
 Select the original one- or two-player mode. Player 1 is Mario; player 2 is Luigi.
 

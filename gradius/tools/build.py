@@ -1,6 +1,8 @@
 from pathlib import Path
 import argparse,hashlib,importlib.util,json,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent / 'tools'))
+from port_paths import ensure_install_dir
 CC65=ROOT.parent/'vendor/smb1base/tools/Windows/cc65/bin'
 NAME='Mario in Gradius'
 SHA='38c44e0e6f531a2779271f10cd4daa08ee2616c59c49d476b6f4e9dc482bf5f3'
@@ -100,15 +102,15 @@ def main():
   receipt=json.loads(receipt_path.read_text())
   assert receipt.get('passed') and receipt.get('rom_sha256')==report['output_sha256'] and all(c['passed']for c in receipt['checks']),'Install requires a successful verification receipt for this exact ROM'
   for ext in ['nes','ips']:
-   source=ROOT/'dist'/f'{NAME}.{ext}';target=Path('C:/nes')/source.name
+   source=ROOT/'dist'/f'{NAME}.{ext}';target=ensure_install_dir()/source.name
    if target.exists() and source.read_bytes()!=target.read_bytes():
     backup=target.with_name(target.stem+' - backup '+hashlib.sha256(target.read_bytes()).hexdigest()[:8]+target.suffix)
     if not backup.exists():backup.write_bytes(target.read_bytes())
    target.write_bytes(source.read_bytes())
-  if (ROOT/'README.md').exists():(Path('C:/nes')/f'{NAME} - Readme.txt').write_bytes((ROOT/'README.md').read_bytes())
+  if (ROOT/'README.md').exists():(ensure_install_dir()/f'{NAME} - Readme.txt').write_bytes((ROOT/'README.md').read_bytes())
   receipt=ROOT/'dist/verification.json'
   if receipt.exists():
    v=json.loads(receipt.read_text())
-   if v.get('rom_sha256')==report['output_sha256'] and all(c['passed'] for c in v['checks']):(Path('C:/nes')/f'{NAME} - verification.json').write_bytes(receipt.read_bytes())
+   if v.get('rom_sha256')==report['output_sha256'] and all(c['passed'] for c in v['checks']):(ensure_install_dir()/f'{NAME} - verification.json').write_bytes(receipt.read_bytes())
  print('Built',NAME,report['output_sha256'])
 if __name__=='__main__':main()

@@ -28,6 +28,7 @@ Required inputs in `C:/nes`:
 - `Karnov (USA).nes`: SHA-256 `0d49c1120fc13ead1efe4429f7cbb4f01b90e2486c66661c46e922dda6dc830a`.
 - `Super Mario Bros. (World).nes`: SHA-256 `0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea`.
 
+Installable ROMs and patches go in `C:/nes/Mario In`.
 Outputs are `dist/Mario in Karnov.nes` and `.ips`. Installation requires a
 passing receipt for the exact output hash and preserves a hash-named backup
 of a differing previous modified ROM. Original inputs are never overwritten.

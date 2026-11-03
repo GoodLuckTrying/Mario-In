@@ -1,6 +1,6 @@
 # Mario in Mega Man 2
 
-Open `C:\nes\Mario in Mega Man 2.nes` and start a new game. The original USA
+Open `C:\nes\Mario In\Mario in Mega Man 2.nes` and start a new game. The original USA
 ROM remains unchanged. NES 2.0/MMC1 support and 8 KiB work RAM are required.
 
 - **Left/Right:** Mario movement; **B + direction:** run and shoot.

@@ -8,7 +8,7 @@ import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'analysis/physics-audit-2026-10-23'
-rom=Path('C:/nes/Mario in Castlevania.nes')
+rom=Path('C:/nes/Mario In/Mario in Castlevania.nes')
 manifest=json.loads((ROOT/'analysis/fullgame/stage18-credits-route.json').read_text())
 sha=hashlib.sha256(rom.read_bytes()).hexdigest()
 assert sha==manifest['rom_sha256']

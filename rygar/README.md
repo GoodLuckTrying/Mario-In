@@ -38,6 +38,7 @@ Required inputs in `C:/nes`:
 - `Rygar (USA).nes`: SHA-256 `965330fed9f5b8492452f3b53084752e83b7f899a1f88f3c475ece2fde6f9231`.
 - `Super Mario Bros. (World).nes`: SHA-256 `0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea`.
 
+Installable ROMs and patches go in `C:/nes/Mario In`.
 Outputs are `dist/Mario in Rygar.nes` and `.ips`. Installation validates the
 exact-hash verification receipt and backs up a differing previous modified
 ROM. It leaves original inputs alone. Use a fresh boot with the new ROM;

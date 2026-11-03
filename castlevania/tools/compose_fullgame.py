@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 folder=ROOT/'analysis/fullgame'
 parser=argparse.ArgumentParser()
 parser.add_argument('endpoint')
-parser.add_argument('--rom',type=Path,default=Path('C:/nes/Mario in Castlevania.nes'))
+parser.add_argument('--rom',type=Path,default=Path('C:/nes/Mario In/Mario in Castlevania.nes'))
 args=parser.parse_args()
 chain=[]
 name=args.endpoint

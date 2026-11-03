@@ -1,6 +1,6 @@
 # Mario in Mike Tyson's Punch-Out!!
 
-Open `C:\nes\Mario in Mike Tyson's Punch-Out!!.nes` and start a fresh game.
+Open `C:\nes\Mario In\Mario in Mike Tyson's Punch-Out!!.nes` and start a fresh game.
 This uses the Tyson Revision 1 game, with the original opponents and circuits.
 
 - Original A/B punches, Up for head punches, left/right dodging, Down block/duck, and Start star uppercuts remain.

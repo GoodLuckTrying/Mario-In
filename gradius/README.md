@@ -16,7 +16,7 @@ Design references supplied by the user:
 
 ## Play
 
-Open `C:\nes\Mario in Gradius.nes` from a fresh boot in an NES 2.0 compatible
+Open `C:\nes\Mario In\Mario in Gradius.nes` from a fresh boot in an NES 2.0 compatible
 emulator such as the installed Mesen. Do not load an old unmodified-ROM save state.
 
 On the title screen, Select moves the restored ship pointer between **1 PLAYER**

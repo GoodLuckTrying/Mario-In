@@ -4,14 +4,14 @@ from concurrent.futures import ThreadPoolExecutor,as_completed
 import argparse,datetime,hashlib,importlib.util,json,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
-from native_port_common import sha,install,SMB
+from native_port_common import sha,install,SMB,INSTALL_DIR
 NAMES={'megaman2':'Mario in Mega Man 2','metroid':'Mario in Metroid'}
 
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--install',action='store_true');args=parser.parse_args()
  manifests={g:json.loads((ROOT/g/'build/manifest.json').read_text()) for g in NAMES}
  originals={Path(j['base_rom']):Path(j['base_rom']).read_bytes() for j in manifests.values()}
- existing={p:sha(p.read_bytes()) for p in Path('C:/nes').glob('*.nes') if ('Mario' in p.name or 'Luigi' in p.name) and p.stem not in NAMES.values()}
+ existing={p:sha(p.read_bytes()) for p in INSTALL_DIR.glob('*.nes') if ('Mario' in p.name or 'Luigi' in p.name) and p.stem not in NAMES.values()}
  expected={g:sha((ROOT/g/'dist'/(name+'.nes')).read_bytes()) for g,name in NAMES.items()}
  for g,j in manifests.items():assert expected[g]==j['output_sha256']
  all_checks={g:[] for g in NAMES};dependencies={}
@@ -74,7 +74,7 @@ def main():
  for game,name in NAMES.items():
   p=ROOT/game
   check=release.check_release(p/'dist'/(name+'.nes'),p/'build/manifest.json',p/'dist/verification.json',
-    base=Path(manifests[game]['base_rom']),smb=SMB,ips=p/'dist'/(name+'.ips'),installed=Path('C:/nes')/(name+'.nes') if args.install else None)
+    base=Path(manifests[game]['base_rom']),smb=SMB,ips=p/'dist'/(name+'.ips'),installed=INSTALL_DIR/(name+'.nes') if args.install else None)
   (p/'build/release-check.json').write_text(json.dumps(check,indent=2)+'\n')
   print(('INSTALLED ' if args.install else 'VERIFIED ')+name+' '+expected[game],flush=True)
  for p,digest in existing.items():assert sha(p.read_bytes())==digest,('existing port changed during install',p)

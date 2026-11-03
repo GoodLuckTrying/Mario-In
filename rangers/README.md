@@ -2,7 +2,7 @@
 
 Native NES ROM hack of the first **Chip 'n Dale: Rescue Rangers (USA)**. Mario replaces Chip; Luigi replaces Dale in the original two-player mode. Original ROMs and the existing Kid Icarus/Contra ports are left unchanged.
 
-Open `C:\nes\Mario and Luigi in Rescue Rangers.nes` in Mesen or an emulator supporting NES 2.0 MMC1 with 8 KiB work RAM. Start a new game; old save states contain different code and RAM layouts.
+Open `C:\nes\Mario In\Mario and Luigi in Rescue Rangers.nes` in Mesen or an emulator supporting NES 2.0 MMC1 with 8 KiB work RAM. Start a new game; old save states contain different code and RAM layouts.
 
 ## Controls
 

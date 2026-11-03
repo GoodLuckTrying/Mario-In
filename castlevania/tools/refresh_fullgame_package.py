@@ -2,7 +2,7 @@
 from pathlib import Path
 import hashlib,json,zipfile
 ROOT=Path(__file__).resolve().parents[1]
-installed=Path('C:/nes/Mario in Castlevania.nes')
+installed=Path('C:/nes/Mario In/Mario in Castlevania.nes')
 sha=hashlib.sha256(installed.read_bytes()).hexdigest()
 proof=json.loads((ROOT/'analysis/fullgame-results.json').read_text())
 assert proof['candidate_sha256']==sha and proof['full_game_clear'] and proof['fresh_boot_verified']

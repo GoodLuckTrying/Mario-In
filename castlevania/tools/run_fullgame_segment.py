@@ -7,7 +7,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-ROM = Path('C:/nes/Mario in Castlevania.nes')
+ROM = Path('C:/nes/Mario In/Mario in Castlevania.nes')
 parser = argparse.ArgumentParser()
 parser.add_argument('checkpoint', type=Path)
 parser.add_argument('name')

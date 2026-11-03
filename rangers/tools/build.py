@@ -1,6 +1,8 @@
 from pathlib import Path
 import argparse,hashlib,json,re,subprocess,sys,importlib.util
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent / 'tools'))
+from port_paths import ensure_install_dir
 sys.path.insert(0,str(ROOT/'tools'))
 from research import BASE,rom as original
 from native_art import sequence
@@ -96,16 +98,16 @@ def main():
   receipt=json.loads(verification.read_text())
   assert receipt.get('rom_sha256')==report['output_sha256'] and receipt.get('checks') and all(check['passed'] for check in receipt['checks']),'Installation requires every check to pass for this exact ROM'
   for ext in ['nes','ips']:
-   source=dest.with_suffix('.'+ext);target=Path('C:/nes')/source.name
+   source=dest.with_suffix('.'+ext);target=ensure_install_dir()/source.name
    if target.exists() and target.read_bytes()!=source.read_bytes():
     backup=target.with_name(target.stem+' - backup '+hashlib.sha256(target.read_bytes()).hexdigest()[:8]+target.suffix)
     if not backup.exists():backup.write_bytes(target.read_bytes())
    target.write_bytes(source.read_bytes())
-  if (ROOT/'README.md').exists():(Path('C:/nes')/f'{NAME} - Readme.txt').write_bytes((ROOT/'README.md').read_bytes())
+  if (ROOT/'README.md').exists():(ensure_install_dir()/f'{NAME} - Readme.txt').write_bytes((ROOT/'README.md').read_bytes())
   verification=ROOT/'dist/verification.json'
   if verification.exists():
    receipt=json.loads(verification.read_text())
    if receipt.get('rom_sha256')==report['output_sha256'] and all(check['passed'] for check in receipt['checks']):
-    (Path('C:/nes')/f'{NAME} - verification.json').write_bytes(verification.read_bytes())
+    (ensure_install_dir()/f'{NAME} - verification.json').write_bytes(verification.read_bytes())
  print('Built',len(out),'bytes;',report['output_sha256'],'CHR slots',len(packed))
 if __name__=='__main__':main()

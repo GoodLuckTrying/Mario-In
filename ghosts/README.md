@@ -1,6 +1,6 @@
 # Mario in Ghosts 'n Goblins
 
-Open `C:\nes\Mario in Ghosts n Goblins.nes` and start fresh. Old original-ROM save states do not contain this port's RAM code. The original USA ROM and other ports are preserved.
+Open `C:\nes\Mario In\Mario in Ghosts n Goblins.nes` and start fresh. Old original-ROM save states do not contain this port's RAM code. The original USA ROM and other ports are preserved.
 
 - Left/right move Mario; hold B to run. A jumps, with variable height while held.
 - B retains the equipped native weapon. In Fire form, a fresh B press also throws a bouncing fireball; two private fireballs can coexist with the native weapon pool.

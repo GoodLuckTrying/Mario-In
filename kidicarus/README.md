@@ -22,7 +22,7 @@ The Mario in Mike Tyson's Punch-Out!! port has separate [boxing controls, fireba
 
 ## Play
 
-Open `C:\nes\Mario in Kid Icarus.nes` in Mesen or another NES emulator supporting MMC1 and NES 2.0. Start a new game instead of loading a state made with the original game or an earlier build.
+Open `C:\nes\Mario In\Mario in Kid Icarus.nes` in Mesen or another NES emulator supporting MMC1 and NES 2.0. Start a new game instead of loading a state made with the original game or an earlier build.
 
 - **A:** jump; holding A changes jump height.
 - **B + direction:** run. With fire power, a fresh B press also throws a fireball; two can be active.

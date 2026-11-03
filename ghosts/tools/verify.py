@@ -8,7 +8,7 @@ NAME='Mario in Ghosts n Goblins'
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--install',action='store_true');a=parser.parse_args()
  meta=json.loads((P/'build/manifest.json').read_text());rom=P/'dist'/(NAME+'.nes');digest=sha(rom.read_bytes());assert digest==meta['output_sha256']
- preserved={p:sha(p.read_bytes())for p in Path('C:/nes').glob('*.nes')if ('Mario' in p.name or 'Luigi' in p.name)and p.stem!=NAME}
+ preserved={p:sha(p.read_bytes())for p in INSTALL_DIR.glob('*.nes')if ('Mario' in p.name or 'Luigi' in p.name)and p.stem!=NAME}
  originals={Path(meta['base_rom']):meta['base_sha256'],SMB:meta['smb_sha256']}
  jobs=[('physics',[sys.executable,str(P/'tools/audit_physics.py')],'Source-assembled SMB1 motion, both forms and directions, 272 cases / 38,080 updates'),('cpu',[sys.executable,str(P/'tools/check_cpu.py')],'Native OAM/CHR ownership, ordinary stomps, excluded enemies, independent shots and world seams')]
  for n in ('menus','hud','gameplay','fire_bounce','combat','ladder','two_players','demo','progression','timing'):
@@ -45,7 +45,7 @@ def main():
  kwargs=dict(base=Path(meta['base_rom']),smb=SMB,ips=P/'dist'/(NAME+'.ips'))
  release.check_release(rom,P/'build/manifest.json',P/'dist/verification.json',**kwargs)
  if a.install:install(P,NAME)
- report=release.check_release(rom,P/'build/manifest.json',P/'dist/verification.json',installed=Path('C:/nes')/(NAME+'.nes')if a.install else None,**kwargs)
+ report=release.check_release(rom,P/'build/manifest.json',P/'dist/verification.json',installed=INSTALL_DIR/(NAME+'.nes')if a.install else None,**kwargs)
  (P/'build/release-check.json').write_text(json.dumps(report,indent=2)+'\n')
  for p,d in {**preserved,**originals}.items():assert sha(p.read_bytes())==d,('ROM changed during install',p)
  (P/'build/delivery.json').write_text(json.dumps(dict(installed=a.install,sha256=digest,preserved_existing_roms={str(p):d for p,d in preserved.items()},preserved_originals={str(p):d for p,d in originals.items()}),indent=2)+'\n')

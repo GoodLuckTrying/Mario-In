@@ -1,6 +1,9 @@
 from pathlib import Path
+import sys
 import argparse,hashlib,importlib.util,json,re,subprocess
 ROOT=Path(__file__).resolve().parents[1];BASE=ROOT.parent
+sys.path.insert(0, str(ROOT.parent / 'tools'))
+from port_paths import ensure_install_dir
 NAME='Mario and Luigi in WWF WrestleMania'
 ORIGINAL=Path('C:/nes/WWF WrestleMania (USA).nes')
 SHA='0d294769d55984684f8fe3299f47b7f4da8667b1dabb94ab8e4c620750bf7f87'
@@ -93,11 +96,11 @@ def main():
  if args.install:
   receipt=json.loads((ROOT/'dist/verification.json').read_text());assert receipt['rom_sha256']==meta['output_sha256']and receipt['passed']and all(c['passed']for c in receipt['checks'])
   for ext in ['nes','ips']:
-   src=ROOT/'dist'/f'{NAME}.{ext}';dest=Path('C:/nes')/src.name
+   src=ROOT/'dist'/f'{NAME}.{ext}';dest=ensure_install_dir()/src.name
    if dest.exists()and dest.read_bytes()!=src.read_bytes():
     backup=dest.with_name(dest.stem+' - backup '+hashlib.sha256(dest.read_bytes()).hexdigest()[:8]+dest.suffix)
     if not backup.exists():backup.write_bytes(dest.read_bytes())
    dest.write_bytes(src.read_bytes())
-  for src,suffix in [(ROOT/'README.md',' - Readme.txt'),(ROOT/'dist/verification.json',' - verification.json')]: (Path('C:/nes')/(NAME+suffix)).write_bytes(src.read_bytes())
+  for src,suffix in [(ROOT/'README.md',' - Readme.txt'),(ROOT/'dist/verification.json',' - verification.json')]: (ensure_install_dir()/(NAME+suffix)).write_bytes(src.read_bytes())
  print('Built',NAME,meta['output_sha256'])
 if __name__=='__main__':main()

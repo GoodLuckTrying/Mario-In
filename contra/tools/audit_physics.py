@@ -81,7 +81,7 @@ def main():
     code, V, S = reference()
     manifest = json.loads((ROOT / 'build/manifest.json').read_text())
     H, N = manifest['labels'], manifest['native']
-    rom_path=(ROOT/'dist/Mario and Luigi in Contra.nes')if options.candidate else Path('C:/nes/Mario and Luigi in Contra.nes')
+    rom_path=(ROOT/'dist/Mario and Luigi in Contra.nes')if options.candidate else Path('C:/nes/Mario In/Mario and Luigi in Contra.nes')
     installed = rom_path.read_bytes()
     assert hashlib.sha256(installed).hexdigest() == manifest['output_sha256']
     pairs = {'vx': ('Player_X_Speed', 6), 'xforce': ('Player_X_MoveForce', 7),

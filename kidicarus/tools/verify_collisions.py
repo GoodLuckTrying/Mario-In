@@ -10,7 +10,7 @@ parser.add_argument('--previous',action='store_true')
 args=parser.parse_args()
 manifest=json.loads((ROOT/('dist/build-manifest.json' if args.previous else 'build/manifest.json')).read_text())
 labels=manifest['labels']
-rom=Path('C:/nes/Mario in Kid Icarus.nes').read_bytes() if args.previous else (ROOT/'dist/Mario in Kid Icarus.nes').read_bytes()
+rom=Path('C:/nes/Mario In/Mario in Kid Icarus.nes').read_bytes() if args.previous else (ROOT/'dist/Mario in Kid Icarus.nes').read_bytes()
 assert hashlib.sha256(rom).hexdigest()==manifest['output_sha256']
 bank=rom[16+8*16384:16+9*16384]
 failures=[]

@@ -8,7 +8,8 @@ import shutil
 import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
-TARGET=Path('C:/nes')
+SOURCE_DIR=Path('C:/nes')
+TARGET=SOURCE_DIR/'Mario In'
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -118,12 +119,13 @@ for name,expected in {
     'Castlevania (USA) (Rev 1).nes':'5e859d77bc0e3a9f30a7c14d2637b9c2aae6ce19f6520a7c9b252a86974f7800',
     'Super Mario Bros. (World).nes':'0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea',
 }.items():
-    assert digest(TARGET/name)==expected, 'Original source ROM must remain unchanged'
+    assert digest(SOURCE_DIR/name)==expected, 'Original source ROM must remain unchanged'
 graphics=json.loads((ROOT/'analysis/native-graphics-results.json').read_text())
 assert graphics['candidate_sha256']==sha and graphics['passed']
 physics=json.loads((ROOT/'analysis/physics-results.json').read_text())
 assert physics['candidate_sha256']==sha and physics['passed']
 assert physics['cases']==160 and physics['updates']==12800 and 'crouch' in physics['fields']
+TARGET.mkdir(parents=True,exist_ok=True)
 previous=digest(TARGET/candidate.name)
 backup=ROOT/'build/previous-installed'/previous[:12]
 backup.mkdir(parents=True,exist_ok=True)

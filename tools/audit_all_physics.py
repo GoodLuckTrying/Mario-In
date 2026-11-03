@@ -7,6 +7,7 @@ import json
 import re
 import sys
 from py65.devices.mpu6502 import MPU
+from port_paths import INSTALL_DIR
 
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'build/physics-audit'
@@ -36,7 +37,7 @@ class Port:
     def __init__(self,game,p,power,direction,speed):
         self.game=game;self.root=ROOT/game
         self.meta=json.loads((self.root/'build/manifest.json').read_text());self.H=self.meta['labels'];self.N=self.meta.get('native',{})
-        rom_path=(self.root/'dist'/(NAMES[game]+'.nes'))if CANDIDATE else Path('C:/nes',NAMES[game]+'.nes')
+        rom_path=(self.root/'dist'/(NAMES[game]+'.nes'))if CANDIDATE else INSTALL_DIR/(NAMES[game]+'.nes')
         self.rom=rom_path.read_bytes();self.c=MPU();self.m=self.c.memory
         self.p=p;self.power=power;self.floor=True;self.traps={}
         self.hold=0;self.first=True
@@ -247,7 +248,7 @@ def main():
     for game in a.game or NAMES:
         name=NAMES[game]
         root=ROOT/game
-        installed=Path('C:/nes',name+'.nes').read_bytes();dist=(root/'dist'/(name+'.nes')).read_bytes()
+        installed=(INSTALL_DIR/(name+'.nes')).read_bytes();dist=(root/'dist'/(name+'.nes')).read_bytes()
         sha=hashlib.sha256(installed).hexdigest()
         meta=json.loads((root/'build/manifest.json').read_text());receipt={}if CANDIDATE else json.loads((root/'dist/verification.json').read_text())
         if not CANDIDATE:assert installed==dist and sha==meta['output_sha256']==receipt['rom_sha256'],game+' hash mismatch'

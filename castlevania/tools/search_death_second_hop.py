@@ -59,7 +59,7 @@ end,emu.eventType.endFrame)
 '''
 script=script.replace('CHOICES',lua(choices)).replace('ROOTSTATE',lua((ROOT/'analysis/fullgame/stage15-death-center-pre-hit.state').as_posix())).replace('POLICY',lua((ROOT/'analysis/fullgame/death-second-hop-controller.lua').as_posix())).replace('OUT',lua(out.as_posix()))
 out.with_suffix('.lua').write_text(script)
-p=subprocess.run(['C:/mesen2/Mesen.exe','--testRunner','--enableStdout','--timeout=180','--doNotSaveSettings',str(out.with_suffix('.lua')),'C:/nes/Mario in Castlevania.nes'],capture_output=True,text=True,timeout=195)
+p=subprocess.run(['C:/mesen2/Mesen.exe','--testRunner','--enableStdout','--timeout=180','--doNotSaveSettings',str(out.with_suffix('.lua')),'C:/nes/Mario In/Mario in Castlevania.nes'],capture_output=True,text=True,timeout=195)
 out.with_suffix('.log').write_text(p.stdout+p.stderr)
 print('\n'.join(line for line in p.stdout.splitlines() if line.startswith(('BEST','WIN','SEARCH','Error','Lua'))))
 sys.exit(p.returncode)

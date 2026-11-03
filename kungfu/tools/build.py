@@ -1,6 +1,9 @@
 from pathlib import Path
+import sys
 import argparse,hashlib,importlib.util,json,re,subprocess
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent / 'tools'))
+from port_paths import ensure_install_dir
 BASE=ROOT.parent
 NAME='Mario in Kung Fu'
 SHA='2275213352411a23df7428496ad03991348ddee3034ac6db83d2d16f0d1f8554'
@@ -94,12 +97,12 @@ def main():
   verified=json.loads(receipt.read_text())
   assert verified['rom_sha256']==report['output_sha256'] and verified['passed'] and all(c['passed'] for c in verified['checks']),'Verify this exact build before installing'
   for ext in ['nes','ips']:
-   source=ROOT/'dist'/f'{NAME}.{ext}';target=Path('C:/nes')/source.name
+   source=ROOT/'dist'/f'{NAME}.{ext}';target=ensure_install_dir()/source.name
    if target.exists() and target.read_bytes()!=source.read_bytes():
     backup=target.with_name(target.stem+' - backup '+hashlib.sha256(target.read_bytes()).hexdigest()[:8]+target.suffix)
     if not backup.exists():backup.write_bytes(target.read_bytes())
    target.write_bytes(source.read_bytes())
-  (Path('C:/nes')/f'{NAME} - Readme.txt').write_bytes((ROOT/'README.md').read_bytes())
-  (Path('C:/nes')/f'{NAME} - verification.json').write_bytes(receipt.read_bytes())
+  (ensure_install_dir()/f'{NAME} - Readme.txt').write_bytes((ROOT/'README.md').read_bytes())
+  (ensure_install_dir()/f'{NAME} - verification.json').write_bytes(receipt.read_bytes())
  print('Built',NAME,report['output_sha256'])
 if __name__=='__main__':main()

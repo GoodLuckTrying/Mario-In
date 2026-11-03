@@ -38,7 +38,7 @@ emu.stop=function(code) file:close();stop(code) end
 s=(ROOT/'analysis/fullgame/stage18-credits-fresh.lua').read_text()
 s=re.sub(r'^OUTPUT=.*$', 'OUTPUT='+json.dumps((OUT/'baseline-profile').as_posix()),s,count=1,flags=re.MULTILINE)
 script=OUT/'baseline-profile.lua';script.write_text(prefix+s)
-r=subprocess.run(['C:/mesen2/Mesen.exe','--testRunner','--enableStdout','--timeout=240','--doNotSaveSettings',str(script),'C:/nes/Mario in Castlevania.nes'],capture_output=True,text=True,timeout=255)
+r=subprocess.run(['C:/mesen2/Mesen.exe','--testRunner','--enableStdout','--timeout=240','--doNotSaveSettings',str(script),'C:/nes/Mario In/Mario in Castlevania.nes'],capture_output=True,text=True,timeout=255)
 (OUT/'baseline-profile.log').write_text(r.stdout+r.stderr)
 assert r.returncode==0,r.stdout[-1000:]+r.stderr[-1000:]
 with (OUT/'baseline-cycles.csv').open() as f:rows=[{k:int(v) for k,v in r.items()} for r in csv.DictReader(f)]

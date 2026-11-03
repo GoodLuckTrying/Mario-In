@@ -15,7 +15,7 @@ from verify_physics import lua
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'analysis/physics-audit-2026-10-23'
-ROM = Path('C:/nes/Mario in Castlevania.nes')
+ROM = Path('C:/nes/Mario In/Mario in Castlevania.nes')
 FIELDS = ('x','xfrac','y','yfrac','state','xspeed','xforce','xabs','vhi','vlo',
           'gravity','fallforce','facing','moving','runflag','runtimer','crouch')
 

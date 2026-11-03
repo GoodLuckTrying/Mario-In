@@ -6,7 +6,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument('stage',type=int)
 parser.add_argument('room',type=int)
 args=parser.parse_args()
-prg=Path('C:/nes/Mario in Castlevania.nes').read_bytes()[16:]
+prg=Path('C:/nes/Mario In/Mario in Castlevania.nes').read_bytes()[16:]
 def read(address):
     assert 0xC000<=address<=0xFFFF
     return prg[0x10000+address]

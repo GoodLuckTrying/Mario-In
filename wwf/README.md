@@ -1,6 +1,6 @@
 # Mario and Luigi in WWF WrestleMania
 
-Load `C:/nes/Mario and Luigi in WWF WrestleMania.nes` from a fresh reset. The original USA WrestleMania and SMB1 ROMs remain untouched. Previous original-game save states do not initialize this port's additional graphics/state.
+Load `C:/nes/Mario In/Mario and Luigi in WWF WrestleMania.nes` from a fresh reset. The original USA WrestleMania and SMB1 ROMs remain untouched. Previous original-game save states do not initialize this port's additional graphics/state.
 
 Human players choose Mario or Luigi. In one-player Standard mode, the opponent carousel offers all six original wrestlers, with their original portraits, names, graphics, AI, and wrestling moves. CPU opponents in tournaments also use the original wrestlers. All eight original game modes, including two-player Standard and party tournaments, remain available. Human participants may choose the same brother.
 

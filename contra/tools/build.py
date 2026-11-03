@@ -2,6 +2,8 @@
 from pathlib import Path
 import argparse,hashlib,json,re,subprocess,sys
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent / 'tools'))
+from port_paths import ensure_install_dir
 sys.path.insert(0,str(ROOT/'tools'))
 from native import CC65,BASE,SHA
 sys.path.insert(0,str(ROOT.parent/'tools'))
@@ -168,16 +170,16 @@ def main():
         receipt=json.loads(verification.read_text())
         assert receipt.get('rom_sha256')==report['output_sha256'] and receipt.get('passed') and receipt.get('checks') and all(check['passed'] for check in receipt['checks']),'Installation requires every check to pass for this exact ROM'
         for ext in ['nes','ips']:
-            source=out.with_suffix('.'+ext);dest=Path('C:/nes')/source.name
+            source=out.with_suffix('.'+ext);dest=ensure_install_dir()/source.name
             if dest.exists() and dest.read_bytes()!=source.read_bytes():
                 backup=dest.with_name(dest.stem+' - backup '+hashlib.sha256(dest.read_bytes()).hexdigest()[:8]+dest.suffix)
                 if not backup.exists():backup.write_bytes(dest.read_bytes())
             dest.write_bytes(source.read_bytes())
-        (Path('C:/nes')/'Mario and Luigi in Contra - Readme.txt').write_bytes((ROOT/'README.md').read_bytes())
+        (ensure_install_dir()/'Mario and Luigi in Contra - Readme.txt').write_bytes((ROOT/'README.md').read_bytes())
         verification=ROOT/'dist/verification.json'
         if verification.exists():
             receipt=json.loads(verification.read_text())
             if receipt.get('rom_sha256')==report['output_sha256'] and receipt.get('passed') and all(check['passed'] for check in receipt['checks']):
-                (Path('C:/nes')/'Mario and Luigi in Contra - verification.json').write_bytes(verification.read_bytes())
+                (ensure_install_dir()/'Mario and Luigi in Contra - verification.json').write_bytes(verification.read_bytes())
     print('Built Contra Mario/Luigi:',report['output_sha256'])
 if __name__=='__main__':main()

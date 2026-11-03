@@ -3,11 +3,11 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor,as_completed
 import argparse,datetime,importlib.util,json,subprocess,sys
 ROOT=Path(__file__).resolve().parents[2];P=ROOT/'punchout';sys.path.insert(0,str(ROOT/'tools'))
-from native_port_common import sha,install
+from native_port_common import sha,install,INSTALL_DIR
 def main():
     p=argparse.ArgumentParser();p.add_argument('--install',action='store_true');a=p.parse_args()
     m=json.loads((P/'build/manifest.json').read_text());name=m['name'];rom=P/'dist'/f'{name}.nes';digest=sha(rom.read_bytes());assert digest==m['output_sha256']
-    preserved={q:sha(q.read_bytes())for q in Path('C:/nes').glob('*.nes')if q.stem!=name}
+    preserved={q:sha(q.read_bytes())for q in INSTALL_DIR.glob('*.nes')if q.stem!=name}
     jobs=[('instructions',[sys.executable,str(P/'tests/instructions.py')])]
     def probe(test,defs=()):
         cmd=[sys.executable,str(ROOT/'tools/port_probe.py'),'punchout',str(P/f'tests/{test}.lua'),'--rom',str(rom),'--timeout','55']
@@ -35,7 +35,7 @@ def main():
     kwargs=dict(base=Path(m['base_rom']),ips=P/'dist'/f'{name}.ips')
     release.check_release(rom,P/'build/manifest.json',P/'dist/verification.json',**kwargs)
     if a.install:install(P,name)
-    report=release.check_release(rom,P/'build/manifest.json',P/'dist/verification.json',installed=Path('C:/nes')/f'{name}.nes'if a.install else None,**kwargs)
+    report=release.check_release(rom,P/'build/manifest.json',P/'dist/verification.json',installed=INSTALL_DIR/f'{name}.nes'if a.install else None,**kwargs)
     (P/'build/release-check.json').write_text(json.dumps(report,indent=2)+'\n')
     for q,d in preserved.items():assert sha(q.read_bytes())==d,('unrelated ROM modified',q)
     (P/'build/delivery.json').write_text(json.dumps(dict(installed=a.install,sha256=digest,preserved_roms={str(q):d for q,d in preserved.items()}),indent=2)+'\n')

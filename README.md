@@ -49,7 +49,8 @@ python tools/build_port.py ghosts
 # Or: python tools/build_port.py all
 ```
 
-Each output goes into `<game>/dist/`. Building does not install over the ROMs
+Each output goes into `<game>/dist/`. Verified installed ROMs, IPS patches,
+and launch notes go in `C:\nes\Mario In`; original game ROMs remain directly
 in `C:\nes`. Individual project READMEs document their verification and optional
 installation commands. Kid Icarus's original commands run from `kidicarus/`.
 The shared source and helpers remain under `src/` and `tools/`.

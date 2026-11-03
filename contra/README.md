@@ -2,7 +2,7 @@
 
 Native NES hack of the local US Contra ROM. Player 1 is Mario; player 2 is Luigi, with shared Mario character art and separate red/green palettes. Both players have independent movement, power, animation, damage and fireballs.
 
-Open `C:\nes\Mario and Luigi in Contra.nes` in Mesen or an emulator supporting NES 2.0 UxROM with 8 KiB of work RAM. Reopen the ROM and start a new game when updating; save states contain the previous code. Select 2 players on Contra's original menu for Luigi.
+Open `C:\nes\Mario In\Mario and Luigi in Contra.nes` in Mesen or an emulator supporting NES 2.0 UxROM with 8 KiB of work RAM. Reopen the ROM and start a new game when updating; save states contain the previous code. Select 2 players on Contra's original menu for Luigi.
 
 ## Controls and power-ups
 

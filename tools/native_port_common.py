@@ -1,6 +1,7 @@
 """Small, deterministic helpers shared by the two source-backed native ports."""
 from pathlib import Path
 import hashlib, json, re, subprocess, sys
+from port_paths import INSTALL_DIR, ensure_install_dir
 
 ROOT = Path(__file__).resolve().parents[1]
 CC65 = ROOT / 'vendor/smb1base/tools/Windows/cc65/bin'
@@ -101,7 +102,7 @@ class Patcher:
 
 def install(project, name):
     for suffix in ('nes','ips'):
-        source=project/'dist'/f'{name}.{suffix}'; dest=Path('C:/nes')/source.name
+        source=project/'dist'/f'{name}.{suffix}'; dest=ensure_install_dir()/source.name
         data=source.read_bytes()
         if dest.exists() and dest.read_bytes()!=data:
             backup=dest.with_name(dest.stem+' - backup '+sha(dest.read_bytes())[:8]+dest.suffix)

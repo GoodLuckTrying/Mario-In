@@ -1,7 +1,10 @@
 """Build from an exact local SMB2 USA payload and a pinned disassembly."""
 from pathlib import Path
+import sys
 import argparse,hashlib,importlib.util,json,re,shutil,subprocess
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT.parent / 'tools'))
+from port_paths import ensure_install_dir
 REPO=ROOT.parent/'vendor/smb2'
 BASE=Path('C:/nes/Super Mario Bros. 2 (USA).nes')
 SMB=Path('C:/nes/Super Mario Bros. (World).nes')
@@ -145,12 +148,12 @@ MarioPhysics_Native:
     if args.install:
         receipt=json.loads((ROOT/'dist/verification.json').read_text());assert receipt['passed']and receipt['rom_sha256']==meta['output_sha256']and all(c['passed']for c in receipt['checks'])
         for ext in ['nes','ips']:
-            src=ROOT/'dist'/f'{NAME}.{ext}';target=Path('C:/nes')/src.name
+            src=ROOT/'dist'/f'{NAME}.{ext}';target=ensure_install_dir()/src.name
             if target.exists()and target.read_bytes()!=src.read_bytes():
                 backup=target.with_name(target.stem+' - backup '+hashlib.sha256(target.read_bytes()).hexdigest()[:8]+target.suffix)
                 if not backup.exists():backup.write_bytes(target.read_bytes())
             target.write_bytes(src.read_bytes())
         for src,suffix in [(ROOT/'dist/verification.json',' - verification.json'),(ROOT/'README.md',' - Readme.txt')]:
-            (Path('C:/nes')/(NAME+suffix)).write_bytes(src.read_bytes())
+            (ensure_install_dir()/(NAME+suffix)).write_bytes(src.read_bytes())
     print('Built',NAME,meta['output_sha256'])
 if __name__=='__main__':main()

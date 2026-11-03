@@ -1,6 +1,6 @@
 # SMB1 Mario and Luigi in Super Mario Bros. 2 USA
 
-Native MMC3 ROM hack using the local USA SMB2 ROM. Open `C:\nes\SMB1 Mario and Luigi in Super Mario Bros 2.nes` from a fresh reset. Original ROMs are unchanged.
+Native MMC3 ROM hack using the local USA SMB2 ROM. Open `C:\nes\Mario In\SMB1 Mario and Luigi in Super Mario Bros 2.nes` from a fresh reset. Original ROMs are unchanged.
 
 Only **Mario and Luigi** appear on character selection. Left or Right switches between them; A confirms. Both use SMB1 sprite art, all three walking frames, walking/running acceleration, friction, reversal and air steering. Walk cadence follows speed. Jump height changes with how long A is held. SMB2's charged crouch jump remains available for its level geometry. The native engine handles terrain, moving platforms, sand, vines, jars, doors, camera movement and transitions.
 

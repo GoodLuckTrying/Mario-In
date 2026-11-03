@@ -19,7 +19,7 @@ parser.add_argument('endpoint', nargs='?', default='stage18-credits')
 parser.add_argument('--timeout', type=int, default=1200)
 args = parser.parse_args()
 manifest = json.loads((FOLDER / (args.endpoint + '-route.json')).read_text())
-rom = Path('C:/nes/Mario in Castlevania.nes')
+rom = Path('C:/nes/Mario In/Mario in Castlevania.nes')
 inputs = FOLDER / (args.endpoint + '-composed-input.csv')
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 assert sha(rom) == manifest['rom_sha256']

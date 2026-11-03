@@ -10,7 +10,8 @@ from pathlib import Path
 import hashlib,json,shutil,zipfile
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'analysis/physics-fix-2026-10-23'
-TARGET=Path('C:/nes')
+SOURCE_DIR=Path('C:/nes')
+TARGET=SOURCE_DIR/'Mario In'
 PREVIOUS='a0f346441b7fd5f73006b3c7491042667645b83949f16e18b4aee6653bd5abd4'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def report(p):return json.loads((ROOT/p).read_text())
@@ -47,7 +48,8 @@ def main():
     for name,expected in {
         'Castlevania (USA) (Rev 1).nes':'5e859d77bc0e3a9f30a7c14d2637b9c2aae6ce19f6520a7c9b252a86974f7800',
         'Super Mario Bros. (World).nes':'0b3d9e1f01ed1668205bab34d6c82b0e281456e137352e4f36a9b2cfa3b66dea',
-    }.items():assert sha(TARGET/name)==expected
+    }.items():assert sha(SOURCE_DIR/name)==expected
+    TARGET.mkdir(parents=True,exist_ok=True)
     previous=sha(TARGET/candidate.name)
     assert previous in (PREVIOUS,digest),'Preserve an unrecognized newer installed build'
     backup=ROOT/'build/previous-installed'/PREVIOUS[:12]

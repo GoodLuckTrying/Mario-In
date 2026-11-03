@@ -1,6 +1,6 @@
 # Mario in The Legend of Zelda
 
-Native MMC1 ROM hack built from the local USA PRG0 Zelda ROM. Open `C:\nes\Mario in The Legend of Zelda.nes` from a fresh reset. The original ROM is untouched, and the new filename uses a separate emulator save file.
+Native MMC1 ROM hack built from the local USA PRG0 Zelda ROM. Open `C:\nes\Mario In\Mario in The Legend of Zelda.nes` from a fresh reset. The original ROM is untouched, and the new filename uses a separate emulator save file.
 
 Mario is permanently **small Fire Mario**, with SMB1 side sprites and the front/back idle, walking and throwing cells from the directional sheet supplied with permission on 23 October 2026. Item-lifting poses use that front view. His cap and overalls use bright NES white so they stay visible against Zelda's sand. He keeps Zelda's four-direction movement, terrain collision, heart meter, damage, inventory, dungeons, secrets, and progression. He does not grow or shrink with hearts. The unchanged shared source and permission note are in the parent workspace's `assets/mario-directional-sheet.png` and `assets/DIRECTIONAL-SOURCE.md`. The earlier reference and its attribution remain in `assets/SOURCE.md` as historical material.
 

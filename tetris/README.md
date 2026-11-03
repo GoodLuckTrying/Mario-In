@@ -1,6 +1,6 @@
 # Mario in Tetris
 
-Native NES ROM hack of the user's Nintendo USA Tetris, with small Mario inside the original 10 by 20 playfield. Open `C:\nes\Mario in Tetris.nes` and start a new game. The original ROM is unchanged.
+Native NES ROM hack of the user's Nintendo USA Tetris, with small Mario inside the original 10 by 20 playfield. Open `C:\nes\Mario In\Mario in Tetris.nes` and start a new game. The original ROM is unchanged.
 
 After the title, choose **Solo** or **VS**. VS opens a second menu with **VS CPU** and **VS HUMAN**. Use the D-pad to select, A or Start to confirm, and B to return. Solo then opens the original A-Type/B-Type and music menus. VS uses A-Type's board, with the original starting-level menu.
 
